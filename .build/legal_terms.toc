@@ -1,0 +1,13 @@
+1-general	1. General
+2-use-of-services	2. Use of Services
+3-patient-obligations	3. Patient Obligations
+4-payments-and-billing	4. Payments and Billing
+5-privacy-and-confidentiality	5. Privacy and Confidentiality
+6-use-of-website-and-online-services	6. Use of Website and Online Services
+7-intellectual-property	7. Intellectual Property
+8-limitation-of-liability	8. Limitation of Liability
+9-cancellation-and-refund-policy	9. Cancellation and Refund Policy
+10-complaints-and-feedback	10. Complaints and Feedback
+11-governing-law	11. Governing Law
+12-changes-to-terms	12. Changes to Terms
+13-contact-information	13. Contact Information

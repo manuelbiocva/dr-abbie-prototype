@@ -1,0 +1,149 @@
+<main id="main">
+
+  <!-- HERO — the post's featured photograph behind the title -->
+  <section class="hero hero--photo hero--compact">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/{{HERO_IMG}}.webp" srcset="assets/img/{{HERO_IMG}}.webp 1x, assets/img/{{HERO_IMG}}@2x.webp 2x" width="{{HERO_W}}" height="{{HERO_H}}" alt="" loading="eager" decoding="async" sizes="100vw">
+    </div>
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><a href="blog.html">Blog</a><span>/</span>{{CATEGORY}}
+        </nav>
+        <span class="eyebrow eyebrow--invert">{{CATEGORY}}</span>
+        <h1 class="post-title">{{TITLE}}</h1>
+        <p class="hero__intro">{{EXCERPT}}</p>
+        <div class="post-byline">
+          <span class="post-byline__avatar" aria-hidden="true">DA</span>
+          <span class="post-byline__text">
+            <span class="post-byline__name" data-temp>{{AUTHOR}}</span>
+            <span class="post-byline__meta"><span data-temp>{{DATE}}</span> &middot; {{READ_TIME}} min read</span>
+          </span>
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--book" href="#" data-track="book" data-source="post-hero">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="tel:+61295454378">Call <span class="callrail-number">(02) 9545 4378</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE — body left, contents and booking right (sticky from 1000px) -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="article">
+        <article class="post-body">
+          <div class="post-summary">
+            <h2 class="post-summary__h">In short</h2>
+            <ul class="tick-list">
+{{SUMMARY_ITEMS}}
+            </ul>
+          </div>
+
+          <div class="prose post-prose">
+{{BODY}}
+          </div>
+
+          <p class="post-disclaimer">This article is general information, not a diagnosis. Everyone’s
+            situation is different, so if you have pain or a concern about your feet or legs, have it
+            assessed by a health professional.</p>
+
+          <div class="post-author">
+            <span class="post-byline__avatar" aria-hidden="true">DA</span>
+            <div>
+              <p class="post-author__name" data-temp>Written by the {{AUTHOR}}</p>
+              <p class="post-author__bio">Dr. Abbie Clinics has treated lower limb pain across New
+                South Wales since 1990, using the Najjarine Biomechanical Assessment to find the cause
+                rather than treat the symptom. <a href="team.html">Meet the team</a></p>
+            </div>
+          </div>
+        </article>
+
+        <aside class="article__aside">
+          <nav class="aside-box post-toc" aria-label="In this article" data-toc>
+            <h2 class="post-toc__h">In this article</h2>
+            <ol class="post-toc__list">
+{{TOC_ITEMS}}
+            </ol>
+          </nav>
+          <div class="aside-book">
+            <span class="eyebrow eyebrow--invert">Start here</span>
+            <h2 class="aside-book__h">Book an assessment</h2>
+            <p>Find out what is actually causing your pain, at the clinic nearest you.</p>
+            <a class="btn btn--book btn--sm" href="#" data-track="book" data-source="post-aside">Book a session</a>
+            <a class="aside-book__call" href="tel:+61295454378">Or call <span class="callrail-number">(02) 9545 4378</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED — the condition it discusses and the treatments involved -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Related</span>
+          <h2 class="split-head"><span>Conditions and</span><span>treatments</span></h2>
+        </div>
+        <p class="lede">The pages behind this article: what the condition is, how it is assessed,
+          and the treatments that may be involved.</p>
+      </div>
+      <div class="grid-auto cond-grid" data-stagger>
+{{RELATED_CARDS}}      </div>
+    </div>
+  </section>
+
+  <!-- CLINICS -->
+  <section class="section section--white" id="clinics">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Where to get assessed</span>
+          <h2 class="split-head"><span>Eleven clinics</span><span>across New South Wales</span></h2>
+        </div>
+        <p class="lede">Every clinic books into its own diary. Choose the one nearest you.</p>
+      </div>
+      <div class="grid-auto grid-auto--sm" data-stagger>
+{{CLINIC_CARDS}}
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE FROM THE BLOG -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">More from the blog</span>
+          <h2 class="split-head"><span>Keep</span><span>reading</span></h2>
+        </div>
+        <p class="lede">More plain-English advice from our practitioners. <a href="blog.html">See all articles</a></p>
+      </div>
+      <div class="grid-auto blog-grid blog-grid--3" data-stagger>
+{{MORE_POSTS}}      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book your</span><span>assessment</span></h2>
+          <p>Choose your clinic and book straight into its diary, or call and we will point you to
+            the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="post-closing">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

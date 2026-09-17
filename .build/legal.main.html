@@ -1,0 +1,69 @@
+<main id="main">
+
+  <!-- HERO — plain deep blue: a legal page does not need a photograph, and the
+       header still needs the dark ground behind it. -->
+  <section class="hero hero--photo hero--compact hero--legal hex-texture">
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span>{{TITLE}}
+        </nav>
+        <span class="eyebrow eyebrow--invert">Legal</span>
+        <h1 class="legal-title">{{TITLE}}</h1>
+        <p class="hero__intro">{{INTRO}}</p>
+        <p class="legal-hero__meta">Effective date: {{EFFECTIVE}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENT — the text, with a contents list that tracks the section being read -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="article">
+        <article class="prose post-prose legal">
+{{BODY}}
+        </article>
+
+        <aside class="article__aside article__aside--legal">
+          <div class="aside-box legal-help">
+            <h2 class="post-toc__h">Questions about this {{NOUN}}?</h2>
+            <p>Contact the Practice Manager at our Kirrawee head office.</p>
+            <ul class="legal-help__list">
+              <li><a href="tel:+61295454378">(02) 9545 4378</a></li>
+              <li><a href="mailto:reception@dr-abbie.com">reception@dr-abbie.com</a></li>
+            </ul>
+            <p class="legal-help__other"><a href="{{OTHER_HREF}}">{{OTHER_LABEL}}</a></p>
+          </div>
+          <nav class="aside-box post-toc" aria-label="On this page" data-toc>
+            <h2 class="post-toc__h">On this page</h2>
+            <ol class="post-toc__list">
+{{TOC_ITEMS}}
+            </ol>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book your</span><span>assessment</span></h2>
+          <p>Choose your clinic and book straight into its diary, or call and we will point you to
+            the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="legal-closing">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

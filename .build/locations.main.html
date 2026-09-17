@@ -1,0 +1,86 @@
+<main id="main">
+
+  <!-- HERO — the booking page. Every generic "Book a Session" button on the
+       site lands here, so the first job is to get a visitor to their clinic. -->
+  <section class="hero hero--photo hero--compact">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/band-clinic.webp" srcset="assets/img/band-clinic.webp 1x, assets/img/band-clinic@2x.webp 2x" width="1400" height="600" alt="" loading="eager" decoding="async" sizes="100vw">
+    </div>
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span>Clinics
+        </nav>
+        <h1 class="split-head"><span>Book at your</span><span>nearest clinic</span></h1>
+        <p class="hero__intro">Eleven podiatry clinics across New South Wales. Choose yours below to
+          book online, or call and we will book you in.</p>
+        <div class="hero__actions">
+          <a class="btn btn--book" href="#" data-track="book" data-source="booking-hero">Choose a clinic <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 3v8M3.5 7.5 7 11l3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="tel:+61295454378">Call <span class="callrail-number">(02) 9545 4378</span></a>
+        </div>
+        <ul class="hero__facts">
+          <li>Eleven clinics across NSW</li>
+          <li>Online booking at {{ONLINE_COUNT}} clinics</li>
+          <li>Choose your practitioner, or Any Available</li>
+          <li>Head office in Kirrawee</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHOOSE — grouped by region; each card books into that clinic's own diary -->
+  <section class="section section--white" id="choose">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Choose your clinic</span>
+          <h2 class="split-head"><span>Where would you</span><span>like to be seen?</span></h2>
+        </div>
+        <p class="lede">Each clinic has its own diary. Book online opens that clinic’s booking page in
+          a new tab; Clinic details has the map, hours and treatments.</p>
+      </div>
+{{REGION_BLOCKS}}
+    </div>
+  </section>
+
+  <!-- HOW BOOKING WORKS -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">How booking works</span>
+          <h2 class="split-head"><span>Booked in</span><span>three steps</span></h2>
+        </div>
+        <p class="lede">No referral is needed to book. Not sure which practitioner or treatment you
+          need? Choose Any Available, or call and we will point you in the right direction.</p>
+      </div>
+      <ol class="book-steps__list book-steps__list--large">
+        <li class="reveal"><span class="book-steps__n">1</span><span><strong>Choose your clinic</strong> from the list above.</span></li>
+        <li class="reveal" data-reveal-delay="60"><span class="book-steps__n">2</span><span><strong>Choose a practitioner</strong>, or Any Available for the soonest appointment.</span></li>
+        <li class="reveal" data-reveal-delay="120"><span class="book-steps__n">3</span><span><strong>Pick a time</strong> and confirm your details.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Not sure which clinic?</p>
+          <h2 class="split-head"><span>Call and we will</span><span>book you in</span></h2>
+          <p>Reception can find the clinic and practitioner that suit you, and book the appointment
+            while you are on the phone.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="tel:+61295454378" data-track="book" data-book-method="phone" data-source="booking-closing">Call (02) 9545 4378</a>
+            <a class="btn btn--ghost-invert" href="#choose">Back to the clinic list</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

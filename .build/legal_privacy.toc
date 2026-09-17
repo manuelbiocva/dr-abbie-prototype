@@ -1,0 +1,15 @@
+1-who-we-are	1. Who We Are
+2-types-of-information-we-collect	2. Types of Information We Collect
+3-how-we-collect-information	3. How We Collect Information
+4-use-of-your-information	4. Use of Your Information
+5-disclosure-of-your-information	5. Disclosure of Your Information
+6-consent	6. Consent
+7-access-correction-and-deletion	7. Access, Correction, and Deletion
+8-storage-and-security-of-information	8. Storage and Security of Information
+9-retention-of-information	9. Retention of Information
+10-direct-marketing	10. Direct Marketing
+11-cross-border-disclosure	11. Cross-Border Disclosure
+12-cookies-and-website-analytics	12. Cookies and Website Analytics
+13-data-breach-response	13. Data Breach Response
+14-complaints	14. Complaints
+15-changes-to-this-policy	15. Changes to this Policy

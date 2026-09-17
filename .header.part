@@ -1,0 +1,135 @@
+<!-- ============================================================ HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="logo" href="index.html" aria-label="Dr. Abbie Clinics — home">
+      <img class="logo__img logo__img--dark" src="assets/img/logo.webp" srcset="assets/img/logo.webp 1x, assets/img/logo@2x.webp 2x" width="360" height="183" alt="Dr. Abbie Clinics" loading="eager" decoding="async">
+      <img class="logo__img logo__img--light" src="assets/img/logo-white.webp" srcset="assets/img/logo-white.webp 1x, assets/img/logo-white@2x.webp 2x" width="360" height="183" alt="" aria-hidden="true" loading="eager" decoding="async">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li class="nav__item nav__item--has-dropdown nav__item--mega">
+          <a class="nav__link" href="#" aria-expanded="false" aria-haspopup="true" aria-controls="mega-services">
+            Services
+            <svg class="nav__chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          {{MEGA_SERVICES}}
+
+        </li>
+        <li class="nav__item nav__item--has-dropdown nav__item--mega">
+          <a class="nav__link" href="#" aria-expanded="false" aria-haspopup="true" aria-controls="mega-conditions">
+            Conditions
+            <svg class="nav__chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          {{MEGA_CONDITIONS}}
+
+        </li>
+        <li class="nav__item nav__item--has-dropdown nav__item--mega">
+          <a class="nav__link" href="locations.html" aria-expanded="false" aria-haspopup="true" aria-controls="mega-clinics">
+            Clinics
+            <svg class="nav__chev" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          {{MEGA_CLINICS}}
+
+        </li>
+        <li class="nav__item"><a class="nav__link" href="team.html">Meet the Team</a></li>
+        <li class="nav__item"><a class="nav__link" href="blog.html">Blog</a></li>
+        <li class="nav__item"><a class="nav__link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+61295454378" data-location="sitewide" aria-label="Call (02) 9545 4378">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5.2 2.5 6.6 5.3 5.3 6.6a8 8 0 0 0 4.1 4.1l1.3-1.3 2.8 1.4v2.3a1 1 0 0 1-1.1 1A11.6 11.6 0 0 1 2.2 3.6a1 1 0 0 1 1-1.1h2Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <span class="header-phone__num">(02) 9545 4378</span>
+      </a>
+      <a class="btn btn--book btn--sm btn--header-book" href="#" data-track="book" data-source="header">Book a Session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ==================================================== MOBILE DRAWER -->
+<div class="drawer" id="mobile-drawer" inert>
+  <div class="drawer__head">
+    <span class="logo__name">Dr. Abbie Clinics</span>
+    <button class="drawer__close nav-toggle" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="drawer__body">
+    <nav aria-label="Mobile">
+      <div class="drawer__group">
+        <button aria-expanded="false">
+          Services
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="drawer__sub"><div>
+          <a href="service.html">Biomechanics</a>
+          <a href="service.html">Children's Podiatry</a>
+          <a href="service.html">Custom Orthotics</a>
+          <a href="service.html">Dry Needling</a>
+          <a href="service.html">Foot Mobilisation</a>
+          <a href="service.html">General Foot Care</a>
+          <a href="service.html">Neural Therapy</a>
+          <a href="service.html">Shockwave Therapy</a>
+          <a href="service.html">Sports Podiatry</a>
+          <a href="service.html">Foot Strapping</a>
+          <a class="drawer__all" href="index.html#treatments">All treatments</a>
+        </div></div>
+      </div>
+      <div class="drawer__group">
+        <button aria-expanded="false">
+          Conditions
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="drawer__sub"><div>
+          <a href="condition.html">Heel Pain</a>
+          <a href="condition.html">Plantar Fasciitis</a>
+          <a href="condition.html">Achilles Pain</a>
+          <a href="condition.html">Shin Splints</a>
+          <a href="condition.html">Forefoot Pain</a>
+          <a href="condition.html">Knee Pain</a>
+          <a href="condition.html">Flat Feet</a>
+          <a href="condition.html">Pigeon Toe</a>
+          <a href="condition.html">Out Toe</a>
+          <a href="condition.html">Running Injuries</a>
+          <a href="condition.html">Ingrown Toenails</a>
+          <a class="drawer__all" href="index.html#conditions">All conditions</a>
+        </div></div>
+      </div>
+      <div class="drawer__group">
+        <button aria-expanded="false">
+          Clinics
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="drawer__sub"><div>
+          <a href="locations/podiatrist-kirrawee.html">Kirrawee</a>
+          <a href="locations/podiatrist-mortlake.html">Mortlake</a>
+          <a href="locations/podiatrist-sydney-city.html">Sydney City</a>
+          <a href="locations/podiatrist-manly.html">Manly</a>
+          <a href="locations/podiatrist-hornsby.html">Hornsby</a>
+          <a href="locations/podiatrist-glenhaven.html">Glenhaven</a>
+          <a href="locations/podiatrist-bowral.html">Bowral</a>
+          <a href="locations/podiatrist-wallsend.html">Wallsend</a>
+          <a href="locations/podiatrist-morisset.html">Morisset</a>
+          <a href="locations/podiatrist-forster-tuncurry.html">Forster/Tuncurry</a>
+          <a href="locations/podiatrist-narrabri.html">Narrabri</a>
+          <a class="drawer__all" href="locations.html">All clinics</a>
+        </div></div>
+      </div>
+      <a class="drawer__link" href="team.html">Meet the Team</a>
+      <a class="drawer__link" href="blog.html">Blog</a>
+      <a class="drawer__link" href="contact.html">Contact Us</a>
+    </nav>
+    <div class="drawer__actions">
+      <a class="btn btn--book btn--block" href="#" data-track="book" data-source="mobile-drawer">Book a Session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="btn btn--call btn--block" href="tel:+61295454378">Call (02) 9545 4378</a>
+    </div>
+  </div>
+</div>
+

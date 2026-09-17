@@ -1,0 +1,219 @@
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero hero--photo">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/{{HERO_IMG}}.webp" srcset="assets/img/{{HERO_IMG}}.webp 1x, assets/img/{{HERO_IMG}}@2x.webp 2x" width="1400" height="1400" alt="" loading="eager" decoding="async" sizes="100vw">
+    </div>
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><a href="index.html#conditions">Conditions</a><span>/</span>{{NAME}}
+        </nav>
+        <h1>{{NAME}}</h1>
+        <p class="hero__intro">{{INTRO}}</p>
+        <div class="hero__actions">
+          <a class="btn btn--book" href="#" data-track="book" data-source="condition-hero">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="tel:+61295454378">Call <span class="callrail-number">(02) 9545 4378</span></a>
+        </div>
+        <ul class="hero__facts">
+          <li>{{FACT1}}</li>
+          <li>{{FACT2}}</li>
+          <li><span data-temp>{{FACT3}}</span></li>
+          <li>Eleven NSW clinics</li>
+        </ul>
+      </div>
+    </div>
+
+{{PRACTITIONER_SLIDER}}
+  </section>
+
+  <!-- ACCREDITATION STRIP -->
+  <section class="logo-band section--pale">
+    <div class="container">
+      <div class="logo-strip">
+        <p class="logo-strip__label">Trusted by patients from Sydney to Narrabri</p>
+        <div class="logo-strip__viewport">
+          <div class="logo-strip__track" data-logo-marquee>
+          <img class="logo-strip__item" src="assets/img/assoc-podiatry-nsw.webp" srcset="assets/img/assoc-podiatry-nsw.webp 1x, assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="Podiatry NSW/ACT" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-aapsm.webp" srcset="assets/img/assoc-aapsm.webp 1x, assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="American Academy of Podiatric Sports Medicine (AAPSM)" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-sports-med.webp" srcset="assets/img/assoc-sports-med.webp 1x, assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="Sports Medicine Australia" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-ahpra.webp" srcset="assets/img/assoc-ahpra.webp 1x, assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="AHPRA — Australian Health Practitioner Regulation Agency" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-podiatry-nsw.webp" srcset="assets/img/assoc-podiatry-nsw.webp 1x, assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-aapsm.webp" srcset="assets/img/assoc-aapsm.webp 1x, assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-sports-med.webp" srcset="assets/img/assoc-sports-med.webp 1x, assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-ahpra.webp" srcset="assets/img/assoc-ahpra.webp 1x, assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYMPTOMS AND CAUSES -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">What you notice</span>
+          <h2 class="split-head"><span>Symptoms</span><span>and causes</span></h2>
+        </div>
+        <p class="lede">If this sounds like your pain, there is a structural reason for it. The
+          assessment is what finds it.</p>
+      </div>
+
+      <div class="cond-split">
+        <div class="cond-split__copy reveal">
+          <h3 class="cond-split__h">Common symptoms</h3>
+          <ul class="tick-list">
+{{SYMPTOM_ITEMS}}
+          </ul>
+          <h3 class="cond-split__h mt-8">What causes it</h3>
+          <div class="prose"><p>{{CAUSES}}</p></div>
+        </div>
+        <figure class="cond-split__figure reveal">
+          <img src="assets/img/{{DIAGRAM}}.webp" srcset="assets/img/{{DIAGRAM}}.webp 1x, assets/img/{{DIAGRAM}}@2x.webp 2x" width="720" height="720" alt="{{DIAGRAM_ALT}}" loading="lazy" decoding="async" sizes="(min-width: 900px) 40vw, 100vw">
+          <figcaption>{{DIAGRAM_ALT}}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE DIAGNOSE IT -->
+  <section class="section section--dark nba hex-texture">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow eyebrow--invert">How we diagnose it</span>
+          <h2 class="split-head"><span>The cause,</span><span>not the sore spot</span></h2>
+        </div>
+        <p class="lede lede--invert">{{NAME}} is diagnosed with the Najjarine Biomechanical
+          Assessment, so treatment is prescribed against a finding rather than a symptom.</p>
+      </div>
+
+      <div class="nba-bento">
+        <article class="nba-cell nba-cell--tall reveal">
+          <div class="nba-cell__media">
+            <img src="assets/img/nba-gait.webp" srcset="assets/img/nba-gait.webp 1x, assets/img/nba-gait@2x.webp 2x" width="640" height="400" alt="Dr Abbie Najjarine assessing a patient’s gait on a treadmill" loading="lazy" decoding="async" sizes="(min-width: 900px) 34vw, 100vw">
+          </div>
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">01</span>
+            <h3>Assess</h3>
+            <p>{{DIAGNOSE1}}</p>
+          </div>
+        </article>
+
+        <article class="nba-cell reveal" data-reveal-delay="60">
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">02</span>
+            <h3>Diagnose</h3>
+            <p>{{DIAGNOSE2}}</p>
+          </div>
+        </article>
+
+        <article class="nba-cell reveal" data-reveal-delay="120">
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">03</span>
+            <h3>Treat</h3>
+            <p>{{DIAGNOSE3}}</p>
+          </div>
+        </article>
+
+        <article class="nba-cell nba-cell--wide reveal" data-reveal-delay="180">
+          <div class="nba-cell__media">
+            <img src="assets/img/nba-teaching.webp" srcset="assets/img/nba-teaching.webp 1x, assets/img/nba-teaching@2x.webp 2x" width="480" height="480" alt="Dr Abbie Najjarine demonstrating a lower limb assessment, with alignment marked on the leg and practitioners observing" loading="lazy" decoding="async" sizes="(min-width: 900px) 260px, 100vw">
+          </div>
+          <div class="nba-cell__body">
+            <span class="eyebrow eyebrow--invert">Start here</span>
+            <h3>Book an assessment</h3>
+            <p>Find out what is actually causing your {{NAME_LC}}.</p>
+            <div class="cluster mt-5">
+              <a class="btn btn--book" href="#" data-track="book" data-source="condition-nba">Book a session <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENT OPTIONS -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">How we treat it</span>
+          <h2 class="split-head"><span>Treatment options</span><span>for {{NAME_LC}}</span></h2>
+        </div>
+        <p class="lede">Which of these you need is decided at the assessment. Most plans combine
+          more than one.</p>
+      </div>
+      <div class="grid-auto cond-grid" data-stagger>
+{{TREATMENT_CARDS}}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE TO GET TREATED -->
+  <section class="section section--white" id="clinics">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Where to get treated</span>
+          <h2 class="split-head"><span>{{NAME}} clinics</span><span>across New South Wales</span></h2>
+        </div>
+        <p class="lede">Every clinic books into its own diary. Choose the one nearest you.</p>
+      </div>
+      <div class="grid-auto grid-auto--sm" data-stagger>
+{{CLINIC_CARDS}}
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Patient feedback</span>
+          <h2 class="split-head"><span>What patients say</span><span>about {{NAME_LC}}</span></h2>
+        </div>
+{{RATING_BLOCK}}      </div>
+      <div class="grid-auto" data-stagger>
+{{REVIEW_CARDS}}      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--white">
+    <div class="container container--narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow">Questions</span>
+        <h2 class="split-head"><span>{{NAME}}</span><span>questions</span></h2>
+      </div>
+      <div class="accordion accordion--plain">
+{{FAQ_ITEMS}}
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book your</span><span>assessment</span></h2>
+          <p>Choose your clinic and book straight into its diary, or call and we will point you to
+            the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="condition-closing">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

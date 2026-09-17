@@ -1,0 +1,263 @@
+<main id="main">
+
+  <!-- HERO. NOTE: the developer brief's build rule 1 is "no contact forms", with
+       every conversion a tracked call or booking. The enquiry form below was added
+       at the developer's request (17 September 2026) and needs LH Media sign-off. -->
+  <section class="hero hero--photo hero--compact">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/clinic-reception.webp" srcset="assets/img/clinic-reception.webp 1x, assets/img/clinic-reception@2x.webp 2x" width="1000" height="667" alt="" loading="eager" decoding="async" sizes="100vw">
+    </div>
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span>Contact
+        </nav>
+        <h1 class="split-head"><span>Contact</span><span>Dr. Abbie Clinics</span></h1>
+        <p class="hero__intro">Call, email or book online. For appointments, booking online or
+          calling is the quickest way to get a time.</p>
+        <div class="hero__actions">
+          <a class="btn btn--book" href="#" data-track="book" data-source="contact-hero">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="tel:+61295454378">Call <span class="callrail-number">(02) 9545 4378</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYS TO REACH US -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Get in touch</span>
+          <h2 class="split-head"><span>Four ways</span><span>to reach us</span></h2>
+        </div>
+        <p class="lede">Choose whichever suits you. Please do not email urgent medical concerns;
+          call the clinic, your GP, or 000 in an emergency.</p>
+      </div>
+      <div class="contact-methods" data-stagger>
+        <article class="contact-method reveal">
+          <span class="contact-method__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 6.2 2 2 0 0 1 6.5 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+          <h3>Call us</h3>
+          <p>Book, change or cancel an appointment, or ask which clinic and practitioner suit you.</p>
+          <a class="contact-method__action" href="tel:+61295454378"><span class="callrail-number">(02) 9545 4378</span></a>
+        </article>
+        <article class="contact-method reveal" data-reveal-delay="60">
+          <span class="contact-method__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Email us</h3>
+          <p>General questions, billing, and requests about your records or personal information.</p>
+          <a class="contact-method__action" href="mailto:reception@dr-abbie.com">reception@dr-abbie.com</a>
+        </article>
+        <article class="contact-method reveal" data-reveal-delay="120">
+          <span class="contact-method__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <h3>Book online</h3>
+          <p>{{ONLINE_COUNT_CAP}} clinics take online bookings. Choose your clinic, then your practitioner or Any Available.</p>
+          <a class="contact-method__action" href="locations.html">Choose a clinic</a>
+        </article>
+        <article class="contact-method reveal" data-reveal-delay="180">
+          <span class="contact-method__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H9l-5 4V5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <h3>Send an enquiry</h3>
+          <p>Leave your details and a message, and we will get back to you.</p>
+          <a class="contact-method__action" href="#enquiry">Go to the form</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENQUIRY FORM — see the note at the top of this file. Prototype only: it
+       validates in the browser and shows the success state, but sends nothing.
+       In WordPress this becomes a WPForms Lite or Contact Form 7 form (Elementor
+       Free has no form widget), posting to reception@dr-abbie.com. -->
+  <section class="section section--pale" id="enquiry">
+    <div class="container">
+      <div class="enquiry">
+        <div class="enquiry__copy reveal">
+          <span class="eyebrow">Send a message</span>
+          <h2 class="split-head mt-4"><span>Send us</span><span>an enquiry</span></h2>
+          <p class="lede mt-6">Fill in the form and we will respond, usually within 48 hours.</p>
+          <ul class="tick-list mt-6">
+            <li>For an appointment, <a href="locations.html">booking online</a> is quicker</li>
+            <li>To change or cancel an appointment, please call</li>
+            <li>For anything urgent, call the clinic, your GP, or 000 in an emergency</li>
+          </ul>
+        </div>
+
+        <div class="enquiry__panel reveal" data-reveal-delay="60">
+          <form class="enquiry-form" action="#" method="post" novalidate data-enquiry-form>
+            <div class="enquiry-form__grid">
+              <div class="field">
+                <label for="enq-name">Full name <span class="field__req" aria-hidden="true">*</span></label>
+                <input id="enq-name" name="name" type="text" autocomplete="name" required
+                       aria-describedby="enq-name-err">
+                <p class="field__error" id="enq-name-err" hidden>Please enter your name.</p>
+              </div>
+              <div class="field">
+                <label for="enq-phone">Phone number <span class="field__req" aria-hidden="true">*</span></label>
+                <input id="enq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required
+                       aria-describedby="enq-phone-err">
+                <p class="field__error" id="enq-phone-err" hidden>Please enter a phone number we can call you on.</p>
+              </div>
+              <div class="field">
+                <label for="enq-email">Email address <span class="field__req" aria-hidden="true">*</span></label>
+                <input id="enq-email" name="email" type="email" autocomplete="email" required
+                       aria-describedby="enq-email-err">
+                <p class="field__error" id="enq-email-err" hidden>Please enter a valid email address.</p>
+              </div>
+              <div class="field">
+                <label for="enq-clinic">Preferred clinic</label>
+                <select id="enq-clinic" name="clinic">
+                  <option value="">No preference</option>
+{{CLINIC_OPTIONS}}
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="enq-topic">What is your enquiry about?</label>
+                <select id="enq-topic" name="topic">
+                  <option>General enquiry</option>
+                  <option>Treatments and services</option>
+                  <option>Fees, billing and health funds</option>
+                  <option>My records or personal information</option>
+                  <option>Feedback or a complaint</option>
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="enq-message">Message <span class="field__req" aria-hidden="true">*</span></label>
+                <textarea id="enq-message" name="message" rows="5" required
+                          aria-describedby="enq-message-hint enq-message-err"></textarea>
+                <p class="field__hint" id="enq-message-hint">Please keep health details brief. Your practitioner will go through them with you.</p>
+                <p class="field__error" id="enq-message-err" hidden>Please tell us how we can help.</p>
+              </div>
+            </div>
+
+            <!-- spam trap: hidden from people, filled in by bots -->
+            <div class="enquiry-form__trap" aria-hidden="true">
+              <label for="enq-website">Leave this field empty</label>
+              <input id="enq-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field field--check">
+              <input id="enq-consent" name="consent" type="checkbox" required aria-describedby="enq-consent-err">
+              <label for="enq-consent">I agree to Dr. Abbie Clinics using these details to respond to my
+                enquiry, as set out in the <a href="privacy-policy.html">Privacy Policy</a>. <span class="field__req" aria-hidden="true">*</span></label>
+              <p class="field__error" id="enq-consent-err" hidden>Please agree so we can respond to you.</p>
+            </div>
+
+            <div class="enquiry-form__foot">
+              <button class="btn btn--submit" type="submit">Send enquiry</button>
+              <p class="field__hint"><span aria-hidden="true">*</span> Required</p>
+            </div>
+          </form>
+
+          <div class="enquiry-done" data-enquiry-done hidden tabindex="-1" role="status">
+            <span class="enquiry-done__icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Thanks, your enquiry has been sent</h3>
+            <p>We will respond, usually within 48 hours. If it is about an appointment, you can also
+              <a href="locations.html">book online</a> or call <a href="tel:+61295454378">(02) 9545 4378</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEAD OFFICE -->
+  <section class="section section--white" id="head-office">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Head office</span>
+        <h2 class="split-head"><span>Dr. Abbie Clinics</span><span>Kirrawee</span></h2>
+      </div>
+      <div class="visit">
+        <div>
+          <dl>
+            <div><dt>Address</dt><dd>27 Monro Ave<br>Kirrawee NSW 2232</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+61295454378"><span class="callrail-number">(02) 9545 4378</span></a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:reception@dr-abbie.com">reception@dr-abbie.com</a></dd></div>
+            <div><dt>Fax</dt><dd>(02) 9521 7444</dd></div>
+            <div><dt>Opening hours</dt><dd>
+              <!-- From the live site footer. The Kirrawee location page still carries
+                   stand-in hours; the client should confirm one set for both. -->
+              <table class="hours-table">
+                <caption class="sr-only">Head office opening hours</caption>
+                <tbody>
+                  <tr data-day="mon"><th scope="row">Monday</th><td><span data-temp>9:00am &ndash; 5:00pm</span></td></tr>
+                  <tr data-day="tue"><th scope="row">Tuesday</th><td><span data-temp>9:00am &ndash; 5:00pm</span></td></tr>
+                  <tr data-day="wed"><th scope="row">Wednesday</th><td><span data-temp>7:30am &ndash; 4:00pm</span></td></tr>
+                  <tr data-day="thu"><th scope="row">Thursday</th><td><span data-temp>9:00am &ndash; 5:00pm</span></td></tr>
+                  <tr data-day="fri"><th scope="row">Friday</th><td><span data-temp>9:00am &ndash; 5:00pm</span></td></tr>
+                  <tr data-day="sat"><th scope="row">Saturday</th><td><span data-temp>Closed</span></td></tr>
+                  <tr data-day="sun"><th scope="row">Sunday</th><td><span data-temp>Closed</span></td></tr>
+                </tbody>
+              </table>
+            </dd></div>
+          </dl>
+          <div class="cluster mt-8">
+            <a class="btn btn--call" href="locations/podiatrist-kirrawee.html">Kirrawee clinic details</a>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?q=27%20Monro%20Ave%2C%20Kirrawee%20NSW%202232%2C%20Australia&amp;z=15&amp;output=embed"
+            title="Map showing Dr. Abbie Clinics head office at 27 Monro Ave, Kirrawee NSW 2232"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINICS -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Our clinics</span>
+          <h2 class="split-head"><span>Contact a clinic</span><span>near you</span></h2>
+        </div>
+        <p class="lede">Every clinic books into its own diary. Book online where it is available, or
+          call and we will book you in.</p>
+      </div>
+      <div class="book-grid" data-stagger>
+{{CLINIC_CARDS}}      </div>
+    </div>
+  </section>
+
+  <!-- COMMON REQUESTS — the policy sections people most often contact a clinic about -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Before you get in touch</span>
+          <h2 class="split-head"><span>Common</span><span>requests</span></h2>
+        </div>
+        <p class="lede">The answers to these are set out in our policies.</p>
+      </div>
+      <div class="grid-auto grid-auto--sm" data-stagger>
+        <a class="loc-card reveal" href="dr-abbie-clinics-terms-and-conditions.html#9-cancellation-and-refund-policy"><h3>Cancelling or changing an appointment</h3><span class="loc-card__meta">Cancellation and refund policy</span></a>
+        <a class="loc-card reveal" href="dr-abbie-clinics-terms-and-conditions.html#10-complaints-and-feedback"><h3>Feedback and complaints</h3><span class="loc-card__meta">How complaints are handled</span></a>
+        <a class="loc-card reveal" href="privacy-policy.html#7-access-correction-and-deletion"><h3>Accessing your records</h3><span class="loc-card__meta">Access, correction and deletion</span></a>
+        <a class="loc-card reveal" href="privacy-policy.html"><h3>Your privacy</h3><span class="loc-card__meta">Privacy Policy</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book your</span><span>assessment</span></h2>
+          <p>Choose your clinic and book straight into its diary, or call and we will point you to
+            the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="contact-closing">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

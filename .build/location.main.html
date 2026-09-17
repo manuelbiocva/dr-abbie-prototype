@@ -1,0 +1,397 @@
+<main id="main">
+
+  <!-- HERO — photograph behind the copy, the same treatment as the home hero
+       but at inner-page height. The image is the {{NAME}} shopfront. -->
+  <section class="hero hero--photo">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/hero-clinic.webp" srcset="assets/img/hero-clinic.webp 1x, assets/img/hero-clinic@2x.webp 2x" width="1800" height="1047" alt="" loading="eager" decoding="async" sizes="100vw">
+    </div>
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><a href="locations.html">Clinics</a><span>/</span>{{NAME}}
+        </nav>
+        <h1>Podiatrist in <strong>{{NAME}}</strong></h1>
+        <p class="hero__intro">
+          {{INTRO}} Full biomechanical
+          assessment for heel pain, forefoot pain, sports injuries and children's feet.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="location-hero">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="tel:+61295454378" data-location="{{SLUG}}">Call <span class="callrail-number">(02) 9545 4378</span></a>
+        </div>
+        <ul class="hero__facts">
+          <li>{{STREET}}, {{POST}}</li>
+          <li><span data-temp>Open today 8:30am&ndash;5:30pm</span></li>
+          <li><span data-temp>4.9 (128 Google reviews)</span></li>
+          <li>{{FACT4}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Practitioners at this clinic. Same stepped slider as the home hero,
+         driven by the shared initSlider(); the first 3 are cloned at the end
+         so the wrap is seamless, and the clones are aria-hidden. -->
+{{PRACTITIONER_SLIDER}}
+  </section>
+
+  <!-- LOGO CAROUSEL — professional memberships. The set is rendered twice so
+       the marquee wraps seamlessly; the duplicate is hidden from assistive
+       tech. AHPRA has no logo file in the supplied assets. -->
+  <section class="logo-band section--pale">
+    <div class="container">
+      <div class="logo-strip">
+        <p class="logo-strip__label">Trusted by patients from Sydney to Narrabri</p>
+        <div class="logo-strip__viewport">
+          <div class="logo-strip__track" data-logo-marquee>
+          <img class="logo-strip__item" src="assets/img/assoc-podiatry-nsw.webp" srcset="assets/img/assoc-podiatry-nsw.webp 1x, assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="Podiatry NSW/ACT" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-aapsm.webp" srcset="assets/img/assoc-aapsm.webp 1x, assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="American Academy of Podiatric Sports Medicine (AAPSM)" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-sports-med.webp" srcset="assets/img/assoc-sports-med.webp 1x, assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="Sports Medicine Australia" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-ahpra.webp" srcset="assets/img/assoc-ahpra.webp 1x, assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="AHPRA — Australian Health Practitioner Regulation Agency" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-podiatry-nsw.webp" srcset="assets/img/assoc-podiatry-nsw.webp 1x, assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-aapsm.webp" srcset="assets/img/assoc-aapsm.webp 1x, assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-sports-med.webp" srcset="assets/img/assoc-sports-med.webp 1x, assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-ahpra.webp" srcset="assets/img/assoc-ahpra.webp 1x, assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TREATMENTS — index rows with per-row booking -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Treatments here</span>
+        <h2 class="split-head"><span>What we treat</span><span>at {{NAME}}</span></h2>
+        <p class="lede">{{TREATMENT_LEDE}}</p>
+      </div>
+
+      <div class="accordion" data-single>
+        <div class="acc-item is-open">
+          <h3><button class="acc-trigger" aria-expanded="true">Biomechanics &amp; NBA Assessment
+            <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p>A full lower limb assessment of how you stand, walk and load — the starting point for every treatment plan here. Treats <a href="condition.html">heel pain</a>, <a href="condition.html">knee pain</a> and <a href="condition.html">shin splints</a>.</p>
+            <div class="acc-panel__actions">
+              <a class="btn btn--book btn--sm" href="#" data-track="book" data-location="{{SLUG}}" data-source="treatment-biomechanics">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+              <a class="link-arrow" href="service.html">About Biomechanics</a>
+            </div>
+          </div></div></div>
+        </div>
+        <div class="acc-item">
+          <h3><button class="acc-trigger" aria-expanded="false">Custom Orthotics{{ORTHO_SUFFIX}}
+            <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p>{{ORTHO_BLURB}} Prescribed against your assessment. Commonly used for <a href="condition.html">flat feet</a> and <a href="condition.html">plantar fasciitis</a>.</p>
+            <div class="acc-panel__actions">
+              <a class="btn btn--book btn--sm" href="#" data-track="book" data-location="{{SLUG}}" data-source="treatment-orthotics">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+              <a class="link-arrow" href="service.html">About Custom Orthotics</a>
+            </div>
+          </div></div></div>
+        </div>
+        <div class="acc-item">
+          <h3><button class="acc-trigger" aria-expanded="false">Shockwave Therapy
+            <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p>Acoustic waves using kinetic energy to repair tissue and reduce chronic inflammation. Used for persistent <a href="condition.html">heel pain</a> and <a href="condition.html">Achilles pain</a>.</p>
+            <div class="acc-panel__actions">
+              <a class="btn btn--book btn--sm" href="#" data-track="book" data-location="{{SLUG}}" data-source="treatment-shockwave">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+              <a class="link-arrow" href="service.html">About Shockwave Therapy</a>
+            </div>
+          </div></div></div>
+        </div>
+        <div class="acc-item">
+          <h3><button class="acc-trigger" aria-expanded="false">Dry Needling
+            <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p>Fine needles inserted into trigger points to break down restrictive tissue.</p>
+            <div class="acc-panel__actions">
+              <a class="btn btn--book btn--sm" href="#" data-track="book" data-location="{{SLUG}}" data-source="treatment-dry-needling">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+              <a class="link-arrow" href="service.html">About Dry Needling</a>
+            </div>
+          </div></div></div>
+        </div>
+        <div class="acc-item">
+          <h3><button class="acc-trigger" aria-expanded="false">Sports Podiatry
+            <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p>Assessment and treatment for <a href="condition.html">running injuries</a>, <a href="condition.html">shin splints</a> and return to sport.</p>
+            <div class="acc-panel__actions">
+              <a class="btn btn--book btn--sm" href="#" data-track="book" data-location="{{SLUG}}" data-source="treatment-sports">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+              <a class="link-arrow" href="service.html">About Sports Podiatry</a>
+            </div>
+          </div></div></div>
+        </div>
+      </div>
+
+      <p class="text-small text-muted mt-6"><span data-temp>{{TREATMENTS_NOTE}}</span></p>
+    </div>
+  </section>
+
+  <!-- PRACTITIONERS — for a clinic with online booking, the people its Nookal
+       page lists (clinics.ROSTER); otherwise the whole team, headed as such,
+       because nobody is claimed to work at a clinic without a roster. -->
+  <section class="section section--pale" id="practitioners">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">{{PRAC_EYEBROW}}</span>
+          <h2 class="split-head"><span>{{PRAC_H1}}</span><span>{{PRAC_H2}}</span></h2>
+        </div>
+        <p class="lede">{{ROSTER_LEDE}}</p>
+      </div>
+      <div class="pcard-grid pcard-grid--center" data-stagger>
+{{PRACTITIONER_GRID}}      </div>
+{{BOOKING_STEPS}}
+    </div>
+  </section>
+
+  <!-- NBA — the home page's bento. Three named stages; the fourth cell is the
+       booking prompt for this clinic, not an invented fourth stage. -->
+  <section class="section section--dark nba hex-texture">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow eyebrow--invert">How we work</span>
+          <h2 class="split-head"><span>Assess. Diagnose.</span><span>Treat.</span></h2>
+        </div>
+        <p class="lede lede--invert">Every appointment here starts with the Najjarine Biomechanical
+          Assessment, so treatment is prescribed against a diagnosis rather than a symptom.</p>
+      </div>
+
+      <div class="nba-bento">
+        <article class="nba-cell nba-cell--tall reveal">
+          <div class="nba-cell__media">
+            <img src="assets/img/nba-gait.webp" srcset="assets/img/nba-gait.webp 1x, assets/img/nba-gait@2x.webp 2x" width="640" height="400" alt="Dr Abbie Najjarine assessing a patient’s gait on a treadmill" loading="lazy" decoding="async" sizes="(min-width: 900px) 34vw, 100vw">
+          </div>
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">01</span>
+            <h3>Assess</h3>
+            <p>A full biomechanical examination of how you stand, walk and load &mdash; not just the
+              painful area.</p>
+          </div>
+        </article>
+
+        <article class="nba-cell reveal" data-reveal-delay="60">
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">02</span>
+            <h3>Diagnose</h3>
+            <p>We identify the structural or muscular irregularity causing the pain, and explain
+              what we found.</p>
+          </div>
+        </article>
+
+        <article class="nba-cell reveal" data-reveal-delay="120">
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">03</span>
+            <h3>Treat</h3>
+            <p>A treatment regime prescribed against that diagnosis, drawing on all ten
+              treatments.</p>
+          </div>
+        </article>
+
+        <article class="nba-cell nba-cell--wide reveal" data-reveal-delay="180">
+          <div class="nba-cell__media">
+            <img src="assets/img/nba-teaching.webp" srcset="assets/img/nba-teaching.webp 1x, assets/img/nba-teaching@2x.webp 2x" width="480" height="480" alt="Dr Abbie Najjarine demonstrating a lower limb assessment, with alignment marked on the leg and practitioners observing" loading="lazy" decoding="async" sizes="(min-width: 900px) 260px, 100vw">
+          </div>
+          <div class="nba-cell__body">
+            <span class="eyebrow eyebrow--invert">Start here</span>
+            <h3>Book at {{NAME}}</h3>
+            <p>{{NBA_BLURB}}</p>
+            <div class="cluster mt-5">
+              <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="location-nba">Book a session <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONS — same card as the home page, descriptions included. -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Commonly treated here</span>
+          <h2 class="split-head"><span>Conditions we see</span><span>at {{NAME}}</span></h2>
+        </div>
+        <p class="lede">If your pain is in this list, there is a structural reason for it. Start
+          with the condition, and we will show you the assessment and the treatment.</p>
+      </div>
+      <div class="grid-auto grid-auto--sm" data-stagger>
+        <a class="card card--condition reveal" href="condition.html"><h3>Heel Pain</h3><p>Including first-step pain in the morning</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="condition.html"><h3>Plantar Fasciitis</h3><p>Arch and heel pain under load</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="condition.html"><h3>Achilles Pain</h3><p>Tendon pain and tendonitis</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="condition.html"><h3>Forefoot Pain</h3><p>Including Morton&rsquo;s neuroma</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="condition.html"><h3>Flat Feet</h3><p>Fallen arches in children and adults</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="condition.html"><h3>Running Injuries</h3><p>Overuse injury and return to sport</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="condition.html"><h3>Shin Splints</h3><p>Pain along the shin with activity</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="condition.html"><h3>Ingrown Toenails</h3><p>Routine and recurrent</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Visiting us</span>
+        <h2 class="split-head"><span>Finding the</span><span>{{NAME}} clinic</span></h2>
+      </div>
+      <div class="visit">
+        <div>
+          <dl>
+            <div><dt>Address</dt><dd>{{STREET}}<br>{{NAME}} {{POST}}</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+61295454378" data-location="{{SLUG}}"><span class="callrail-number">(02) 9545 4378</span></a></dd></div>
+            <div><dt>Opening hours</dt><dd>
+              <table class="hours-table">
+                <caption class="sr-only">Opening hours for the {{NAME}} clinic</caption>
+                <tbody>
+                  <tr data-day="mon"><th scope="row">Monday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="tue"><th scope="row">Tuesday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="wed"><th scope="row">Wednesday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="thu"><th scope="row">Thursday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="fri"><th scope="row">Friday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="sat"><th scope="row">Saturday</th><td><span data-temp>8:30am &ndash; 12:00pm</span></td></tr>
+                  <tr data-day="sun"><th scope="row">Sunday</th><td><span data-temp>Closed</span></td></tr>
+                </tbody>
+              </table>
+            </dd></div>
+            <div><dt>Parking</dt><dd><span data-temp>{{PARKING}}</span></dd></div>
+            <div><dt>Public transport</dt><dd><span data-temp>{{TRANSPORT}}</span></dd></div>
+          </dl>
+          <div class="cluster mt-8">
+            <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="visit-block">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          </div>
+        </div>
+        <div class="map-embed">
+          <!-- Keyless. This is the plain Google Maps embed form, which needs no
+               API key -- unlike the Static Maps URL in the clinic finder, which
+               does. Before launch, replace the src with the official embed from
+               Google Maps > Share > Embed a map for this clinic's Business
+               Profile, so the pin, zoom and business card are the client's own. -->
+          <iframe
+            src="https://maps.google.com/maps?q={{MAPQ}}&amp;z=15&amp;output=embed"
+            title="Map showing Dr. Abbie Clinics at {{STREET}}, {{NAME}} {{POST}}"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--white">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2 class="split-head"><span>{{NAME}}</span><span>clinic FAQs</span></h2>
+      </div>
+      <div class="accordion accordion--plain">
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Do I need a referral to see a podiatrist at {{NAME}}? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>No. Podiatry is a primary contact profession in Australia, so you can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that.</span></p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">{{FAQ2_Q}} <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p>{{FAQ2_A}}</p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Do you treat children at this clinic? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>{{FAQ3_A}}</span></p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">How long is a first appointment? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>Allow about 45 minutes. That covers the biomechanical assessment, the diagnosis and an explanation of the treatment plan before anything is prescribed.</span></p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Can I claim my health fund rebate on the spot? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>Yes. {{NAME}} has HICAPS, so private health rebates come off at reception. Medicare care plans and NDIS plans are accepted.</span></p></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS — the home page's Google widget. Names and text are stand-ins
+       (data-temp); no Review or AggregateRating schema is emitted. -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Patient reviews</span>
+          <h2 class="split-head"><span>What {{NAME}}</span><span>patients say</span></h2>
+        </div>
+        <div class="grating">
+          <img class="grating__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          <span class="grating__body">
+            <span class="grating__row"><span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span><span class="grating__score" data-temp>4.9</span></span>
+            <span class="grating__count" data-temp>Based on 128 Google reviews for this clinic</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="grid-auto" data-stagger>
+        <article class="gcard reveal">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">M</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>Michael B.</span>
+              <span class="gcard__meta" data-temp>{{NAME}} &middot; 2 weeks ago</span>
+            </span>
+            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>{{REVIEW1}}</p>
+        </article>
+        <article class="gcard reveal" data-reveal-delay="60">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">A</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>Anita K.</span>
+              <span class="gcard__meta" data-temp>{{NAME}} &middot; 3 weeks ago</span>
+            </span>
+            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>They showed me on the screen exactly what my gait was doing before anything was prescribed. No guesswork.</p>
+        </article>
+        <article class="gcard reveal" data-reveal-delay="120">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">T</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>Tom H.</span>
+              <span class="gcard__meta" data-temp>{{NAME}} &middot; 1 month ago</span>
+            </span>
+            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>Straightforward, on time, and the reception team sorted my health fund rebate on the spot.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA — full-bleed photograph, same treatment as the home page. -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">{{CTA_EYEBROW}}</p>
+          <h2 class="split-head"><span>Book at our</span><span>{{NAME}} clinic</span></h2>
+          <p>{{STREET}}, {{NAME}}. Book straight into this clinic's diary, or call and reception
+            will find you the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="location-closing">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378" data-location="{{SLUG}}">Call this clinic</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,98 @@
+<main id="main">
+
+  <!-- HERO — compact photo hero. The header is transparent over it until the
+       page scrolls, so every template has to open on the dark ground. -->
+  <section class="hero hero--photo hero--compact">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/hero-blog.webp" srcset="assets/img/hero-blog.webp 1x, assets/img/hero-blog@2x.webp 2x" width="1400" height="770" alt="" loading="eager" decoding="async" sizes="100vw">
+    </div>
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span>Blog
+        </nav>
+        <h1 class="split-head"><span>Advice from</span><span>our practitioners</span></h1>
+        <p class="hero__intro">Plain-English answers to the questions patients ask most about foot,
+          heel and leg pain, and when it is worth having it assessed.</p>
+        <div class="hero__actions">
+          <a class="btn btn--book" href="#" data-track="book" data-source="blog-hero">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="tel:+61295454378">Call <span class="callrail-number">(02) 9545 4378</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED — the newest post, given the width -->
+  <section class="section section--white">
+    <div class="container">
+{{FEATURED_POST}}
+    </div>
+  </section>
+
+  <!-- ALL ARTICLES -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">All articles</span>
+          <h2 class="split-head"><span>More advice</span><span>from the clinic</span></h2>
+        </div>
+        <p class="lede">Written for patients, not for other clinicians. Each article links to the
+          condition it covers and the treatments involved.</p>
+      </div>
+      <div class="grid-auto blog-grid" data-stagger>
+{{POST_CARDS}}      </div>
+    </div>
+  </section>
+
+  <!-- BROWSE BY TOPIC — every condition and treatment page, so the hub feeds
+       authority into the commercial pages rather than sitting as a silo -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Browse by topic</span>
+          <h2 class="split-head"><span>Start with</span><span>what hurts</span></h2>
+        </div>
+        <p class="lede">Every condition we treat and every treatment we offer has its own page,
+          with what to expect and where to get it.</p>
+      </div>
+      <div class="topic-groups">
+        <div class="topic-group reveal">
+          <h3 class="cond-split__h">Conditions</h3>
+          <ul class="topic-links">
+{{CONDITION_LINKS}}
+          </ul>
+        </div>
+        <div class="topic-group reveal" data-reveal-delay="60">
+          <h3 class="cond-split__h">Treatments</h3>
+          <ul class="topic-links">
+{{SERVICE_LINKS}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book your</span><span>assessment</span></h2>
+          <p>Choose your clinic and book straight into its diary, or call and we will point you to
+            the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="blog-closing">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,135 @@
+<main id="main">
+
+  <!-- HERO — the team photograph behind the copy -->
+  <section class="hero hero--photo hero--compact">
+    <div class="hero__bg" aria-hidden="true">
+      {{HERO_IMG_TAG}}
+    </div>
+    <div class="container">
+      <div class="hero__anchor">
+        <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span>Meet the Team
+        </nav>
+        <h1 class="split-head"><span>Meet the</span><span>practitioners</span></h1>
+        <p class="hero__intro">One assessment method across eleven clinics. Our podiatrists assess
+          from the feet up with the Najjarine Biomechanical Assessment, so treatment is prescribed
+          against a finding rather than a symptom.</p>
+        <div class="hero__actions">
+          <a class="btn btn--book" href="#" data-track="book" data-source="team-hero">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="tel:+61295454378">Call <span class="callrail-number">(02) 9545 4378</span></a>
+        </div>
+        <ul class="hero__facts">
+          <li>{{TEAM_COUNT}} podiatrists</li>
+          <li>Eleven NSW clinics</li>
+          <li>In private practice since 1990</li>
+          <li>Assessment first, always</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCREDITATION STRIP -->
+  <section class="logo-band section--pale">
+    <div class="container">
+      <div class="logo-strip">
+        <p class="logo-strip__label">Memberships held across our team</p>
+        <div class="logo-strip__viewport">
+          <div class="logo-strip__track" data-logo-marquee>
+          <img class="logo-strip__item" src="assets/img/assoc-podiatry-nsw.webp" srcset="assets/img/assoc-podiatry-nsw.webp 1x, assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="Podiatry NSW/ACT" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-aapsm.webp" srcset="assets/img/assoc-aapsm.webp 1x, assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="American Academy of Podiatric Sports Medicine (AAPSM)" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-sports-med.webp" srcset="assets/img/assoc-sports-med.webp 1x, assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="Sports Medicine Australia" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-ahpra.webp" srcset="assets/img/assoc-ahpra.webp 1x, assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="AHPRA — Australian Health Practitioner Regulation Agency" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="assets/img/assoc-podiatry-nsw.webp" srcset="assets/img/assoc-podiatry-nsw.webp 1x, assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-aapsm.webp" srcset="assets/img/assoc-aapsm.webp 1x, assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-sports-med.webp" srcset="assets/img/assoc-sports-med.webp 1x, assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="assets/img/assoc-ahpra.webp" srcset="assets/img/assoc-ahpra.webp 1x, assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTITIONERS -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Our practitioners</span>
+          <h2 class="split-head"><span>Who you</span><span>will see</span></h2>
+        </div>
+        <p class="lede">Choose a practitioner to read their qualifications, special interests and
+          the treatments they provide.</p>
+      </div>
+      <div class="pcard-grid pcard-grid--center" data-stagger>
+{{TEAM_GRID}}      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER — where the assessment method comes from -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="founder">
+        <figure class="founder__photo reveal">
+          <img src="assets/img/founder-najjarine.webp" srcset="assets/img/founder-najjarine.webp 1x, assets/img/founder-najjarine@2x.webp 2x" width="640" height="800" alt="Dr Abbie Najjarine, Podiatrist, owner and Director of Dr. Abbie Clinics" loading="lazy" decoding="async" sizes="(min-width: 900px) 420px, 100vw">
+        </figure>
+        <div class="founder__copy reveal" data-reveal-delay="60">
+          <span class="eyebrow">The NBA method</span>
+          <h2 class="split-head mt-4"><span>Developed in our clinics,</span><span>taught internationally</span></h2>
+          <div class="prose mt-6">
+            <p>Dr Abbie Najjarine (Podiatrist) developed the Najjarine Biomechanical Assessment
+              and has lectured throughout Australia, New Zealand, the United Kingdom, Europe and
+              Asia. It assesses alignment from the feet up, and it is the starting point for every
+              treatment plan at Dr. Abbie Clinics.</p>
+          </div>
+          <ul class="tick-list mt-6">
+            <li>In private practice since 1990</li>
+            <li>Author of <em>The Orthotic Revolution</em></li>
+            <li>Co-founder and inventor of the patented ICB Dual Density Orthotic</li>
+            <li>Former board member, Australian Podiatry Association (NSW &amp; ACT)</li>
+          </ul>
+          <div class="cluster mt-8">
+            <a class="btn btn--call" href="team/dr-abbie-najjarine.html">Read Abbie’s profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINICS -->
+  <section class="section section--white" id="clinics">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Where to book</span>
+          <h2 class="split-head"><span>Who books</span><span>at each clinic</span></h2>
+        </div>
+        <p class="lede">{{ONLINE_COUNT_CAP}} clinics take online bookings: choose your practitioner
+          when you book, or Any Available. For the others, call and we will book you in.</p>
+      </div>
+      <div class="book-grid" data-stagger>
+{{CLINIC_CARDS}}      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book your</span><span>assessment</span></h2>
+          <p>Choose your clinic and book straight into its diary, or call and we will point you to
+            the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="team-closing">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

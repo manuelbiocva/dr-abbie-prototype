@@ -1,0 +1,141 @@
+<main id="main">
+
+  <!-- HERO — portrait beside the copy on the deep blue ground -->
+  <section class="hero hero--photo hero--compact hero--profile hex-texture">
+    <div class="container">
+      <div class="profile-hero">
+        <div class="hero__anchor">
+          <nav class="crumbs crumbs--invert" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span>/</span><a href="team.html">Meet the Team</a><span>/</span>{{NAME}}
+          </nav>
+          <span class="eyebrow eyebrow--invert">{{ROLE}}</span>
+          <h1>{{NAME}}</h1>
+          <p class="profile-hero__quals">{{QUALS_LINE}}</p>
+          <p class="hero__intro">{{INTRO}}</p>
+          <div class="hero__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="practitioner-hero" data-practitioner="{{SLUG}}">Book with {{FIRST}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call <span class="callrail-number">(02) 9545 4378</span></a>
+          </div>
+        </div>
+        <figure class="profile-hero__photo">
+          {{PHOTO_BLOCK}}
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT — biography left, qualifications and booking right -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="article">
+        <div class="profile-bio">
+          <span class="eyebrow">About {{FIRST}}</span>
+          <h2 class="split-head mt-4"><span>Meet</span><span>{{NAME}}</span></h2>
+          <div class="prose mt-6">
+{{BIO_PARAS}}
+          </div>
+{{QUOTE_BLOCK}}
+        </div>
+
+        <aside class="article__aside">
+{{FACTS_BLOCK}}
+          <div class="aside-book">
+            <span class="eyebrow eyebrow--invert">Book</span>
+            <h2 class="aside-book__h">See {{FIRST}}</h2>
+            <p>{{ASIDE_BOOK_TEXT}}</p>
+            <a class="btn btn--book btn--sm" href="#" data-track="book" data-source="practitioner-aside" data-practitioner="{{SLUG}}">Book with {{FIRST}}</a>
+            <a class="aside-book__call" href="tel:+61295454378">Or call <span class="callrail-number">(02) 9545 4378</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+<!--IF:SERVICES-->
+  <!-- TREATMENTS -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Treatments</span>
+          <h2 class="split-head"><span>Treatments</span><span>{{FIRST}} provides</span></h2>
+        </div>
+        <p class="lede">Based on {{FIRST}}’s special interests. Which of these you need is decided at
+          your assessment.</p>
+      </div>
+      <div class="grid-auto cond-grid" data-stagger>
+{{SERVICE_CARDS}}      </div>
+    </div>
+  </section>
+<!--/IF:SERVICES-->
+
+<!--IF:CONDITIONS-->
+  <!-- CONDITIONS -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Conditions</span>
+          <h2 class="split-head"><span>Conditions</span><span>commonly treated</span></h2>
+        </div>
+        <p class="lede">Conditions these treatments are commonly used for. If yours is here, start
+          with the condition page.</p>
+      </div>
+      <div class="grid-auto cond-grid" data-stagger>
+{{CONDITION_CARDS}}      </div>
+    </div>
+  </section>
+<!--/IF:CONDITIONS-->
+
+  <!-- WHERE TO BOOK — the clinics whose Nookal diary lists this practitioner.
+       Each button opens that clinic's own booking page. -->
+  <section class="section section--pale" id="book">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Where to book</span>
+          <h2 class="split-head"><span>Book with {{FIRST}}</span><span>{{BOOK_H2}}</span></h2>
+        </div>
+        <p class="lede">{{BOOK_LEDE}}</p>
+      </div>
+      <div class="book-grid" data-stagger>
+{{BOOK_CARDS}}      </div>
+    </div>
+  </section>
+
+  <!-- THE REST OF THE TEAM -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">The team</span>
+          <h2 class="split-head"><span>Our other</span><span>practitioners</span></h2>
+        </div>
+        <p class="lede">Every treatment plan starts with the same assessment. <a href="team.html">Meet the whole team</a></p>
+      </div>
+      <div class="pcard-grid pcard-grid--center" data-stagger>
+{{OTHER_TEAM}}      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true">
+        <img data-parallax src="assets/img/cta-band.webp" srcset="assets/img/cta-band.webp 1x, assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book with</span><span>{{FIRST}}</span></h2>
+          <p>{{ASIDE_BOOK_TEXT}}</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="#" data-track="book" data-source="practitioner-closing" data-practitioner="{{SLUG}}">Book with {{FIRST}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
