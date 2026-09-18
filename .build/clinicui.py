@@ -40,10 +40,11 @@ def book_btn(slug, source, cls='btn btn--book btn--sm'):
                 'data-book-method="online" data-location="%s" data-source="%s">%s Book online'
                 '<span class="sr-only"> at %s (opens in a new tab)</span></a>'
                 % (cls, url, slug, source, CAL, name))
-    tel, _ = phone(slug)
+    # no online booking: the button is the phone number itself, so it is visible
+    tel, shown = phone(slug)
     return ('<a class="%s" href="tel:%s" data-track="book" data-book-method="phone" '
-            'data-location="%s" data-source="%s">%s Call to book<span class="sr-only"> at %s'
-            '</span></a>' % (cls, tel, slug, source, TEL, name))
+            'data-location="%s" data-source="%s">%s Call <span class="callrail-number">%s'
+            '</span><span class="sr-only"> to book at %s</span></a>' % (cls, tel, slug, source, TEL, shown, name))
 
 
 def call_btn(slug, cls='btn btn--phone btn--sm'):
