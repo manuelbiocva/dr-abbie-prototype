@@ -40,10 +40,10 @@ CLINICS = [
         'REVIEW1': 'Orthotics made on site and fitted the same week. First time in years I have '
                    'walked the dog without heel pain afterwards.',
     }),
-    ('Mortlake', 'mortlake', 'Level 1/15 Tennyson Rd', 'NSW 2137', {}),
+    ('Mortlake', 'mortlake', '15 Tennyson Rd, cnr Herbert St', 'NSW 2137', {}),
     ('Sydney City', 'sydney-city', 'Suite 35, Level 7, 88 Pitt St', 'NSW 2000', {}),
     ('Manly', 'manly', 'Shop 8/48–52 Sydney Rd', 'NSW 2095', {}),
-    ('Hornsby', 'hornsby', '15/14 Edgeworth David Ave', 'NSW 2077', {
+    ('Hornsby', 'hornsby', 'Unit 15/14 Edgeworth David Ave', 'NSW 2077', {
         'INTRO': 'Our children-only clinic on Edgeworth David Ave.',
         'FACT4': 'Children only',
         'CTA_EYEBROW': 'Children only &middot; treating young feet since 1990',
@@ -53,7 +53,7 @@ CLINICS = [
     ('Glenhaven', 'glenhaven', 'Shop 9/78 Glenhaven Rd', 'NSW 2156', {}),
     ('Bowral', 'bowral', 'Shop 3, 2–4 Boolwey St', 'NSW 2576', {}),
     ('Wallsend', 'wallsend', '8 Metcalfe St', 'NSW 2287', {}),
-    ('Morisset', 'morisset', '4/59 Dora St', 'NSW 2264', {}),
+    ('Morisset', 'morisset', 'Shop 4/59 Dora St', 'NSW 2264', {}),
     ('Forster/Tuncurry', 'forster-tuncurry', '111 Macintosh St', 'NSW 2428', {}),
     ('Narrabri', 'narrabri', 'Suite 4/159 Maitland St', 'NSW 2390', {}),
 ]
@@ -131,26 +131,30 @@ def _embed(pb):
 
 
 GOOGLE = {
+    # Google Business Profiles found on Google Maps, 18 Sept 2026 (place IDs from each
+    # listing; the link opens that exact listing, the embed shows its pin and card).
     'kirrawee': ('profile', _cid(10499536010005564975), _embed(
-        '!1m18!1m12!1m3!1d26452.13763005133!2d151.03543677431637!3d-34.030601700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12c768feddef85%3A0x91b5d85f46cdce2f!2sDr.%20Abbie%20Clinics%20-%20Podiatry%2C%20Lower%20Limb%20Biomechanics!5e0!3m2!1sen!2sau!4v1784779046058!5m2!1sen!2sau')),
+        '!1m18!1m12!1m3!1d1650!2d151.0735456!3d-34.0306017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12c768feddef85%3A0x91b5d85f46cdce2f!2sDr.%20Abbie%20Clinics%20-%20Podiatry%2C%20Lower%20Limb%20Biomechanics!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr. Abbie Clinics - Podiatry, Lower Limb Biomechanics
+    'mortlake': ('profile', _cid(17770434117263619916), _embed(
+        '!1m18!1m12!1m3!1d1650!2d151.1079126!3d-33.8449173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a5c5fd0b6a83%3A0xf69d43ad87faf74c!2sDr%20Abbie%20Clinics%20Mortlake%20Podiatrists!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr Abbie Clinics Mortlake Podiatrists
+    'manly': ('profile', _cid(17765673780551382427), _embed(
+        '!1m18!1m12!1m3!1d1650!2d151.2858639!3d-33.7968317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ab416f3e3625%3A0xf68c5a2d453c759b!2sDr%20Abbie%20Clinics%20-%20Podiatry%20Lower%20Limb%20Biomechanics%20%28Manly%29!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr Abbie Clinics - Podiatry Lower Limb Biomechanics (Manly)
+    'hornsby': ('profile', _cid(12950514141101368338), _embed(
+        '!1m18!1m12!1m3!1d1650!2d151.1021375!3d-33.7061413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a759f889033d%3A0xb3b977ff1f052412!2sDr%20Abbie%20Clinics%20-%20Podiatry%20Lower%20Limb%20Biomechanics%20%28Hornsby%29!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr Abbie Clinics - Podiatry Lower Limb Biomechanics (Hornsby)
+    'glenhaven': ('profile', _cid(2245276739669225483), _embed(
+        '!1m18!1m12!1m3!1d1650!2d151.0011555!3d-33.6982865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a1cf69e190ef%3A0x1f28d34c7a6e700b!2sDr%20Abbie%20Clinics%20-%20Podiatry%20Lower%20Limb%20Biomechanics%20%28Glenhaven%29!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr Abbie Clinics - Podiatry Lower Limb Biomechanics (Glenhaven)
     'bowral': ('profile', _cid(6356753673856291458), _embed(
-        '!1m18!1m12!1m3!1d3288.9106999630176!2d150.4137165757349!3d-34.47978957299905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b13a296b836c485%3A0x5837b9c96edd1282!2sThe%20Bowral%20Foot%20Clinic!5e0!3m2!1sen!2sau!4v1784782206580!5m2!1sen!2sau')),
+        '!1m18!1m12!1m3!1d1650!2d150.4162915!3d-34.4797896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b13a296b836c485%3A0x5837b9c96edd1282!2sThe%20Bowral%20Foot%20Clinic!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # The Bowral Foot Clinic
+    'morisset': ('profile', _cid(18170367588417253921), _embed(
+        '!1m18!1m12!1m3!1d1650!2d151.489752!3d-33.1075437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b732842a37926c3%3A0xfc2a1d0d09e1b221!2sPodiatrist%20Morisset%20%7C%20Custom%20Foot%20Australia!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Podiatrist Morisset | Custom Foot Australia
     'forster-tuncurry': ('profile', _cid(10310421264267720003), _embed(
-        '!1m18!1m12!1m3!1d3376.4374385683864!2d152.51164147563867!3d-32.1924415739134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b7437114f27484b%3A0x8f15f9834d4fb543!2sPodiatrist%20Forster%20Tuncurry%20Sports%20Podiatry!5e0!3m2!1sen!2sau!4v1784783138796!5m2!1sen!2sau')),
+        '!1m18!1m12!1m3!1d1650!2d152.5142164!3d-32.1924416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b7437114f27484b%3A0x8f15f9834d4fb543!2sPodiatrist%20Forster%20Tuncurry%20Sports%20Podiatry!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Podiatrist Forster Tuncurry Sports Podiatry
+    # No Business Profile found on Google Maps for these three (searched by name and
+    # by street address). CLIENT TO CONFIRM whether one exists.
     'sydney-city': ('address', _cid(12836701620138019130), _embed(
         '!1m18!1m12!1m3!1d3312.8799405829755!2d151.20623277570854!3d-33.866984873227324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae40389f5703%3A0xb225201c9c02093a!2sSte%2035%20Level%207%2F88%20Pitt%20St%2C%20Sydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1784784971780!5m2!1sen!2sau')),
-    'hornsby': ('address', _cid(8602366673586220600), _embed(
-        '!1m18!1m12!1m3!1d3319.1084996368027!2d151.09956257570178!3d-33.70614127328921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a784fec66f1b%3A0x7761bee98ec3ee38!2sUnit%2015%2F14%20Edgeworth%20David%20Ave%2C%20Hornsby%20NSW%202077!5e0!3m2!1sen!2sau!4v1784783708687!5m2!1sen!2sau')),
-    'glenhaven': ('address', _cid(10101308842849973922), _embed(
-        '!1m18!1m12!1m3!1d3319.4120019518223!2d150.99858057570134!3d-33.69828647329237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a0f6066fffff%3A0x8c2f0edfa095b6a2!2sshop%209%2F78%20Glenhaven%20Rd%2C%20Glenhaven%20NSW%202156!5e0!3m2!1sen!2sau!4v1784783590655!5m2!1sen!2sau')),
-    'morisset': ('address', _cid(10864524636155690434), _embed(
-        '!1m18!1m12!1m3!1d3342.0585825930775!2d151.4871770756764!3d-33.107543673527346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b732842a46f95ed%3A0x96c68b98078a3dc2!2s59%20Dora%20St%2C%20Morisset%20NSW%202264!5e0!3m2!1sen!2sau!4v1784781848507!5m2!1sen!2sau')),
     'narrabri': ('address', _cid(1703924822551671635), _embed(
         '!1m18!1m12!1m3!1d3443.9349992407706!2d149.77965337556446!3d-30.324366674783896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ba73444dcbb2ea9%3A0x17a58e992c29b353!2s4%2F159%20Maitland%20St%2C%20Narrabri%20NSW%202390!5e0!3m2!1sen!2sau!4v1784783948622!5m2!1sen!2sau')),
-    'mortlake': ('address', _cid(2623586381872282655), _embed(
-        '!1m18!1m12!1m3!1d417.098395416091!2d151.10716852532522!3d-33.84485690217039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a53d05e1edcf%3A0x2468d9e9f90cbc1f!2sLevel%201%2F15%20Tennyson%20Rd%2C%20Mortlake%20NSW%202137!5e0!3m2!1sen!2sau!4v1784780044269!5m2!1sen!2sau')),
-    'manly': ('search', 'https://www.google.com/maps/search/?api=1&query=Dr+Abbie+Clinics+Manly+NSW',
-              'https://maps.google.com/maps?q=-33.79686386496303,151.28604594638827&z=16&output=embed'),
     'wallsend': ('search', 'https://www.google.com/maps/search/?api=1&query=Dr+Abbie+Clinics+Wallsend+NSW',
                  'https://maps.google.com/maps?q=-32.90391048516466,151.66938021069777&z=16&output=embed'),
 }
@@ -161,10 +165,15 @@ GOOGLE = {
 # until the client supplies its own (or its CallRail number).
 HEAD_OFFICE_PHONE = ('+61295454378', '(02) 9545 4378')
 PHONES = {
-    'bowral':   ('+61248613123', '(02) 4861 3123'),
-    'morisset': ('+61249732532', '(02) 4973 2532'),
-    # from each clinic's page on the live site (dr-abbie.com/clinics/...)
-    'forster-tuncurry': ('+61265572034', '(02) 6557 2034'),
+    # The number shown on each clinic's Google Business Profile (18 Sept 2026), so
+    # the website and the listing match, as the client asked. Kirrawee, Hornsby and
+    # Glenhaven list the head office number there too.
+    'mortlake': ('+61258393160', '(02) 5839 3160'),
+    'manly': ('+61295387183', '(02) 9538 7183'),
+    'bowral': ('+61240052668', '(02) 4005 2668'),
+    'morisset': ('+61250185116', '(02) 5018 5116'),
+    'forster-tuncurry': ('+61264216618', '(02) 6421 6618'),
+    # no Google listing: from the clinic's page on the live site
     'narrabri': ('+61438922249', '0438 922 249'),
 }
 
