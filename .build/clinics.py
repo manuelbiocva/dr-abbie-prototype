@@ -54,7 +54,7 @@ CLINICS = [
     ('Bowral', 'bowral', 'Shop 3, 2–4 Boolwey St', 'NSW 2576', {}),
     ('Wallsend', 'wallsend', '8 Metcalfe St', 'NSW 2287', {}),
     ('Morisset', 'morisset', 'Shop 4/59 Dora St', 'NSW 2264', {}),
-    ('Forster/Tuncurry', 'forster-tuncurry', '111 Macintosh St', 'NSW 2428', {}),
+    ('Forster/Tuncurry', 'forster-tuncurry', '111 MacIntosh St', 'NSW 2428', {}),
     ('Narrabri', 'narrabri', 'Suite 4/159 Maitland St', 'NSW 2390', {}),
 ]
 
