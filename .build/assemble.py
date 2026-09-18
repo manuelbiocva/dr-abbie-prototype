@@ -710,6 +710,9 @@ def build(page, out_name, title, desc, canonical, booklabel='Book a Session',
                           % (tokens['PHONE_TEL'], tokens['SLUG'], tokens['PHONE_SHOWN']))
         out = out.replace('<span class="header-phone__num">(02) 9545 4378</span>',
                           '<span class="header-phone__num">%s</span>' % tokens['PHONE_SHOWN'])
+        out = out.replace('<a class="btn btn--call btn--block" href="tel:+61295454378">Call (02) 9545 4378</a>',
+                          '<a class="btn btn--call btn--block" href="tel:%s" data-location="%s">Call %s</a>'
+                          % (tokens['PHONE_TEL'], tokens['SLUG'], tokens['PHONE_SHOWN']))
         out = out.replace('<a class="btn btn--call btn--sm" href="tel:+61295454378">Call</a>',
                           '<a class="btn btn--call btn--sm" href="tel:%s" data-location="%s">Call</a>'
                           % (tokens['PHONE_TEL'], tokens['SLUG']))
@@ -917,8 +920,9 @@ if __name__ == '__main__':
             f['PRAC_EYEBROW'] = 'Our team'
             f['PRAC_H1'], f['PRAC_H2'] = 'Our', 'practitioners'
             f['ROSTER_LEDE'] = ('<span data-temp>Call <a href="tel:%s" data-location="%s">'
-                                '(02) 9545 4378</a> to check who is consulting at %s, and we '
-                                'will book you in.</span>' % (PHONE, slug, name))
+                                '%s</a> to check who is consulting at %s, and we '
+                                'will book you in.</span>' % (clinic_phone(slug)[0], slug,
+                                                               clinic_phone(slug)[1], name))
             f['TREATMENT_LEDE'] = ('Call to book any of these treatments at %s.' % name)
             f['BOOKING_STEPS'] = ''
             f['RESERVE_ACTION'] = ''
