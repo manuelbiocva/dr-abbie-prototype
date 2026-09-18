@@ -141,8 +141,10 @@ SERVICES = [
              'TEMP:There is no fixed age. If you have noticed something about the way they walk '
              'or they are complaining of pain, that is the time to have it looked at.'),
             ('Is in-toeing something they grow out of?',
-             'Often, but not always, and the assessment is what tells you which. That is the '
-             'reason to have it looked at rather than waiting to find out.'),
+             'It often looks better with age. Where it comes from a twist in the shin bone, the '
+             'body tends to hide it by tightening the hip muscles rather than correcting it, so '
+             'measuring it is how you know. That is the reason to have it looked at rather than '
+             'waiting.'),
             ('Do you have a clinic just for children?',
              'Yes. Our Hornsby clinic sees children only. Children are also seen at our other '
              'clinics.'),

@@ -31,7 +31,7 @@
 
         <div class="hero__actions">
           <a class="btn btn--book" href="#" data-track="book" data-source="home-hero">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          <a class="btn btn--ghost-invert" href="index.html#clinics">Find your clinic</a>
+          <a class="btn btn--ghost-invert" href="locations.html">Find your clinic</a>
         </div>
 
       </div>
@@ -117,148 +117,106 @@
     </div>
   </section>
 
-  <!-- TREATMENTS — MindCare's four-up programs grid with Read More.
-       #treatments is the "All treatments" destination in the menu. -->
-  <section class="section section--white" id="treatments">
+  <!-- TEAM — stepped slider, same mechanism as the hero treatment slider.
+       The first 4 cards are cloned at the end so the wrap is seamless; the
+       clones are aria-hidden and untabbable. Every portrait is the one
+       dr-abbie.com/practitioners/ uses for that person. -->
+  <section class="section team section--white">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">What we do</span>
-        <h2 class="split-head"><span>Ten treatments,</span><span>one starting point</span></h2>
-      </div>
-
-      <div class="grid-auto grid-auto--badged" data-stagger>
-
-        <a class="card reveal" href="services/biomechanics.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 20h18M7 20L14 5M11 20C11 18.3 10.2 17.2 8.7 16.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-biomechanics.webp" srcset="assets/img/tx-biomechanics.webp 1x, assets/img/tx-biomechanics@2x.webp 2x" width="640" height="400" alt="A Dr. Abbie Clinics podiatrist examining a patient’s lower leg and foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Biomechanics</h3>
-          <p>A full lower limb assessment from the feet up. The foundation of every treatment plan
-            we prescribe.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/custom-orthotics.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.6C15 2.6 16.6 4.7 16.6 7C16.6 8.9 15.6 10 15.1 11.6C14.5 13.5 14.8 15 14.6 16.7C14.4 18.6 13.5 21.4 12 21.4C10.5 21.4 9.6 18.6 9.4 16.7C9.2 15 9.5 13.5 8.9 11.6C8.4 10 7.4 8.9 7.4 7C7.4 4.7 9 2.6 12 2.6ZM9.7 12.6C10.9 11.8 13.1 11.8 14.3 12.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-orthotics.webp" srcset="assets/img/tx-orthotics.webp 1x, assets/img/tx-orthotics@2x.webp 2x" width="640" height="400" alt="A custom orthotic device being fitted against a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Custom Orthotics</h3>
-          <p>Prescribed devices that correct how your foot meets the ground. Manufactured on site at
-            our Kirrawee head office.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/shockwave-therapy.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h2.4M6.6 12h.01M9.4 9.4C11.2 10.4 11.2 13.6 9.4 14.6M12.7 7.2C15.4 8.6 15.4 15.4 12.7 16.8M16 5C19.6 6.8 19.6 17.2 16 19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-shockwave.webp" srcset="assets/img/tx-shockwave.webp 1x, assets/img/tx-shockwave@2x.webp 2x" width="640" height="400" alt="A shockwave therapy handpiece being applied to a patient’s heel" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Shockwave Therapy</h3>
-          <p>Acoustic waves that use kinetic energy to repair tissue and reduce chronic
-            inflammation.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/childrens-podiatry.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12.4 21C10.5 21 9.5 19.6 9.5 17.9C9.5 16.5 9.9 15.7 9.9 14.5C9.9 13 8.7 12.1 8.7 10.4C8.7 8.3 10.3 6.9 12.4 6.9C14.5 6.9 16.1 8.3 16.1 10.4C16.1 12.1 14.9 13 14.9 14.5C14.9 15.7 15.3 16.5 15.3 17.9C15.3 19.6 14.3 21 12.4 21ZM9.7 5.2h.01M11.7 4h.01M13.8 3.9h.01M15.7 4.8h.01M17.2 6.4h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-childrens.webp" srcset="assets/img/tx-childrens.webp 1x, assets/img/tx-childrens@2x.webp 2x" width="640" height="400" alt="Dr Abbie Najjarine assessing a child’s foot in clinic" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Children's Podiatry</h3>
-          <p>Pigeon toe, flat feet and growing pains, assessed while the foot is still
-            developing.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/dry-needling.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3.5 19h17M14.5 4.2L9.6 19M13.1 4.7L15.3 5.5M12.5 6.5L14.7 7.3M11.9 8.3L14.1 9.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-dry-needling.webp" srcset="assets/img/tx-dry-needling.webp 1x, assets/img/tx-dry-needling@2x.webp 2x" width="640" height="400" alt="Dry needling being applied to a patient’s lower leg" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Dry Needling</h3>
-          <p>Fine needles inserted into trigger points to break down restrictive tissue.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/foot-mobilisation.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 12h.01M6.5 8.5C8 5.8 11.2 4.6 14.2 5.6M12.4 3.6L14.6 5.7L12.6 7.6M17.5 15.5C16 18.2 12.8 19.4 9.8 18.4M11.6 20.4L9.4 18.3L11.4 16.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-mobilisation.webp" srcset="assets/img/tx-mobilisation.webp 1x, assets/img/tx-mobilisation@2x.webp 2x" width="640" height="400" alt="A podiatrist mobilising a patient’s foot by hand" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Foot Mobilisation</h3>
-          <p>Hands-on work addressing restrictions across the foot’s 26 bones.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/sports-podiatry.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.6 4.6C14.6 3.7 15.3 3 16.2 3C17.1 3 17.8 3.7 17.8 4.6C17.8 5.5 17.1 6.2 16.2 6.2C15.3 6.2 14.6 5.5 14.6 4.6ZM17.2 7.8L13.6 10.2L14.6 13.6L17.4 15.8L18 20.6M14.6 13.6L11 15.2L9.4 19.4M13.6 10.2L9.8 9.2L7.2 11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-sports.webp" srcset="assets/img/tx-sports.webp 1x, assets/img/tx-sports@2x.webp 2x" width="640" height="400" alt="A runner holding their knee" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Sports Podiatry</h3>
-          <p>Running injuries, return to sport, and footwear that matches your gait.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/general-foot-care.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M11.4 21.2C9.3 21.2 8.2 19.6 8.2 17.7C8.2 16.1 8.6 15.1 8.6 13.8C8.6 12.1 7.2 11 7.2 9.1C7.2 6.8 8.9 5 11.4 5C13.9 5 15.6 6.8 15.6 9.1C15.6 11 14.2 12.1 14.2 13.8C14.2 15.1 14.6 16.1 14.6 17.7C14.6 19.6 13.5 21.2 11.4 21.2ZM18.6 3.4v4M16.6 5.4h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-foot-care.webp" srcset="assets/img/tx-foot-care.webp 1x, assets/img/tx-foot-care@2x.webp 2x" width="640" height="400" alt="A foot being treated with a podiatry tool" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>General Foot Care</h3>
-          <p>Routine care including ingrown toenails, corns and calluses.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/neural-therapy.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v3M9.6 5h4.8M10.2 5h3.6v11h-3.6zM12 16v5M10.2 8h1.4M10.2 10.4h1.4M10.2 12.8h1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-neural.webp" srcset="assets/img/tx-neural.webp 1x, assets/img/tx-neural@2x.webp 2x" width="300" height="188" alt="An injection being administered to a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Neural Therapy</h3>
-          <p>Injectable therapy to stimulate a repair response. Paired with prolotherapy.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-        <a class="card reveal" href="services/foot-strapping.html">
-          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.2 13.4L13.4 6.2C14.6 5 16.5 5 17.7 6.2C18.9 7.4 18.9 9.3 17.7 10.5L10.5 17.7C9.3 18.9 7.4 18.9 6.2 17.7C5 16.5 5 14.6 6.2 13.4ZM9.4 10.2L13.8 14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="card__media"><img src="assets/img/tx-strapping.webp" srcset="assets/img/tx-strapping.webp 1x, assets/img/tx-strapping@2x.webp 2x" width="640" height="400" alt="Therapeutic strapping being applied to a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
-          <h3>Foot Strapping</h3>
-          <p>Therapeutic support to offload tissue while it recovers.</p>
-          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT — copy left, photograph bleeding off the right edge -->
-  <section class="section about--bleed section--pale" id="about">
-    <div class="container">
-      <div class="about__copy reveal">
-        <span class="eyebrow">About us</span>
-        <h2 class="split-head"><span>Thirty-five years of</span><span>looking further up the leg</span></h2>
-        <div class="prose mt-6">
-          <p>Dr. Abbie Clinics, previously known as AOL Footcare Centres, has been assessing and
-            treating lower limb pain since 1990. What began as a single practice is now eleven
-            clinics across New South Wales, from Sydney City to Narrabri.</p>
-          <p>The practice is built around one idea: the place that hurts is rarely the place that
-            is wrong. Our founder, Dr. Abbie Najjarine, developed the Najjarine Biomechanical
-            Assessment to work out which structure is actually causing the pain &mdash; and to explain
-            that to the patient, rather than simply treating the sore spot.</p>
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Our practitioners</span>
+          <h2 class="split-head"><span>Our podiatry</span><span>specialists</span></h2>
         </div>
-        <div class="cluster mt-8">
-          <a class="btn btn--call" href="team.html">Meet the team</a>
-          <a class="link-arrow" href="locations.html">Find your nearest clinic
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <p class="lede">Our podiatrists work across eleven clinics, and every treatment plan starts
+          with the same biomechanical assessment.</p>
+      </div>
+
+      <div class="team-slider reveal" data-slider-root data-per-view="4" data-interval="4200">
+        <div class="team-slider__head">
+          <span class="team-slider__label">Meet the team</span>
+          <div class="team-slider__nav">
+            <button class="team-slider__btn" type="button" data-slider="prev" aria-label="Previous practitioners"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4 6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="team-slider__btn" type="button" data-slider="next" aria-label="Next practitioners"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m7 4 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+        <div class="team-slider__viewport">
+          <div class="team-slider__track" data-slider-track>
+{{HOME_TEAM_RAIL}}          </div>
         </div>
       </div>
-    </div>
 
-    <div class="about__media">
-      <img src="assets/img/clinic-reception.webp" srcset="assets/img/clinic-reception.webp 1x, assets/img/clinic-reception@2x.webp 2x" width="1000" height="667" alt="Reception at a Dr. Abbie Clinics practice" loading="lazy" decoding="async" sizes="(min-width: 900px) 46vw, 100vw">
-    </div>
-  </section>
-
-
-
-
-  <!-- POSITIONING -->
-  <section class="positioning section--white">
-    <div class="container reveal">
-      <p>We find and treat the <strong>cause</strong>. Not just the symptoms.</p>
+      <div class="cluster cluster--center mt-8">
+        <a class="btn btn--call" href="team.html">Show all practitioners</a>
+      </div>
     </div>
   </section>
 
+  <!-- TESTIMONIALS — shaped like the Google review widget that will replace it.
+       The card chrome is real; the review bodies are skeleton bars, not sample
+       copy, so nothing here can be mistaken for a published patient review.
+       No Review or AggregateRating schema until a real feed is connected. -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Patient feedback</span>
+          <h2 class="split-head"><span>What our</span><span>patients say</span></h2>
+        </div>
+        <div class="grating">
+          <img class="grating__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          <span class="grating__body">
+            <span class="grating__row"><span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span><span class="grating__score" data-temp>4.9</span></span>
+            <span class="grating__count" data-temp>Based on 286 Google reviews</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="grid-auto swipe" data-stagger>
+        <article class="gcard reveal">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">S</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>Sarah M.</span>
+              <span class="gcard__meta" data-temp>Kirrawee &middot; 2 weeks ago</span>
+            </span>
+            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>Six months of heel pain and the first appointment was the first time anyone explained what was actually causing it. Walked out with a plan rather than a guess.</p>
+          </article>
+        <article class="gcard reveal">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">D</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>David T.</span>
+              <span class="gcard__meta" data-temp>Wallsend &middot; 1 month ago</span>
+            </span>
+            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>Took my son in for in-toeing. They took the time to show us what they were seeing and what to watch for as he grows. No pressure, no upsell.</p>
+          </article>
+        <article class="gcard reveal">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">P</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>Priya R.</span>
+              <span class="gcard__meta" data-temp>Sydney City &middot; 1 month ago</span>
+            </span>
+            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>The orthotics were made on site and adjusted twice until they were right. Back running three months later.</p>
+          </article>
+      </div>
+
+      </div>
+  </section>
 
   <!-- CONDITIONS — card grid. #conditions is the "All conditions" destination
        in the menu. -->
-  <section class="section section--pale" id="conditions">
+  <section class="section section--white" id="conditions">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Conditions</span>
@@ -266,7 +224,7 @@
         <p class="lede">If your pain is in this list, there is a structural reason for it. Start
           with the condition, and we will show you the assessment and the treatment.</p>
       </div>
-      <div class="grid-auto grid-auto--sm" data-stagger>
+      <div class="grid-auto grid-auto--sm swipe swipe--two" data-stagger>
         <a class="card card--condition reveal" href="condition.html"><h3>Heel Pain</h3><p>Including first-step pain in the morning</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         <a class="card card--condition reveal" href="condition.html"><h3>Plantar Fasciitis</h3><p>Arch and heel pain under load</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         <a class="card card--condition reveal" href="condition.html"><h3>Achilles Pain</h3><p>Tendon pain and tendonitis</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
@@ -345,101 +303,143 @@
     </div>
   </section>
 
-  <!-- TEAM — stepped slider, same mechanism as the hero treatment slider.
-       The first 4 cards are cloned at the end so the wrap is seamless; the
-       clones are aria-hidden and untabbable. Every portrait is the one
-       dr-abbie.com/practitioners/ uses for that person. -->
-  <section class="section team section--white">
+  <!-- ABOUT — copy left, photograph bleeding off the right edge -->
+  <section class="section about--bleed section--pale" id="about">
     <div class="container">
-      <div class="section-head section-head--split reveal">
-        <div>
-          <span class="eyebrow">Our practitioners</span>
-          <h2 class="split-head"><span>Our podiatry</span><span>specialists</span></h2>
+      <div class="about__copy reveal">
+        <span class="eyebrow">About us</span>
+        <h2 class="split-head"><span>Thirty-five years of</span><span>looking further up the leg</span></h2>
+        <div class="prose mt-6">
+          <p>Dr. Abbie Clinics, previously known as AOL Footcare Centres, has been assessing and
+            treating lower limb pain since 1990. What began as a single practice is now eleven
+            clinics across New South Wales, from Sydney City to Narrabri.</p>
+          <p>The practice is built around one idea: the place that hurts is rarely the place that
+            is wrong. Our founder, Dr. Abbie Najjarine, developed the Najjarine Biomechanical
+            Assessment to work out which structure is actually causing the pain &mdash; and to explain
+            that to the patient, rather than simply treating the sore spot.</p>
         </div>
-        <p class="lede">Our podiatrists work across eleven clinics, and every treatment plan starts
-          with the same biomechanical assessment.</p>
+        <div class="cluster mt-8">
+          <a class="btn btn--call" href="team.html">Meet the team</a>
+          <a class="link-arrow" href="locations.html">Find your nearest clinic
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
       </div>
+    </div>
 
-      <div class="team-slider reveal" data-slider-root data-per-view="4" data-interval="4200">
-        <div class="team-slider__head">
-          <span class="team-slider__label">Meet the team</span>
-          <div class="team-slider__nav">
-            <button class="team-slider__btn" type="button" data-slider="prev" aria-label="Previous practitioners"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4 6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-            <button class="team-slider__btn" type="button" data-slider="next" aria-label="Next practitioners"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m7 4 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </div>
-        </div>
-        <div class="team-slider__viewport">
-          <div class="team-slider__track" data-slider-track>
-{{HOME_TEAM_RAIL}}          </div>
-        </div>
-      </div>
-
-      <div class="cluster cluster--center mt-8">
-        <a class="btn btn--call" href="team.html">Show all practitioners</a>
-      </div>
+    <div class="about__media">
+      <img src="assets/img/clinic-reception.webp" srcset="assets/img/clinic-reception.webp 1x, assets/img/clinic-reception@2x.webp 2x" width="1000" height="667" alt="Reception at a Dr. Abbie Clinics practice" loading="lazy" decoding="async" sizes="(min-width: 900px) 46vw, 100vw">
     </div>
   </section>
 
-  <!-- TESTIMONIALS — shaped like the Google review widget that will replace it.
-       The card chrome is real; the review bodies are skeleton bars, not sample
-       copy, so nothing here can be mistaken for a published patient review.
-       No Review or AggregateRating schema until a real feed is connected. -->
-  <section class="section section--pale">
+
+
+
+  <!-- POSITIONING -->
+  <section class="positioning section--white">
+    <div class="container reveal">
+      <p>We find and treat the <strong>cause</strong>. Not just the symptoms.</p>
+    </div>
+  </section>
+
+
+  <!-- TREATMENTS — MindCare's four-up programs grid with Read More.
+       #treatments is the "All treatments" destination in the menu. -->
+  <section class="section section--pale" id="treatments">
     <div class="container">
-      <div class="section-head section-head--split reveal">
-        <div>
-          <span class="eyebrow">Patient feedback</span>
-          <h2 class="split-head"><span>What our</span><span>patients say</span></h2>
-        </div>
-        <div class="grating">
-          <img class="grating__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
-          <span class="grating__body">
-            <span class="grating__row"><span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span><span class="grating__score" data-temp>4.9</span></span>
-            <span class="grating__count" data-temp>Based on 286 Google reviews</span>
-          </span>
-        </div>
+      <div class="section-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2 class="split-head"><span>Ten treatments,</span><span>one starting point</span></h2>
       </div>
 
-      <div class="grid-auto" data-stagger>
-        <article class="gcard reveal">
-          <div class="gcard__head">
-            <span class="gcard__avatar" aria-hidden="true">S</span>
-            <span class="gcard__who">
-              <span class="gcard__name" data-temp>Sarah M.</span>
-              <span class="gcard__meta" data-temp>Kirrawee &middot; 2 weeks ago</span>
-            </span>
-            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
-          </div>
-          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
-          <p class="gcard__text" data-temp>Six months of heel pain and the first appointment was the first time anyone explained what was actually causing it. Walked out with a plan rather than a guess.</p>
-          </article>
-        <article class="gcard reveal">
-          <div class="gcard__head">
-            <span class="gcard__avatar" aria-hidden="true">D</span>
-            <span class="gcard__who">
-              <span class="gcard__name" data-temp>David T.</span>
-              <span class="gcard__meta" data-temp>Wallsend &middot; 1 month ago</span>
-            </span>
-            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
-          </div>
-          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
-          <p class="gcard__text" data-temp>Took my son in for in-toeing. They took the time to show us what they were seeing and what to watch for as he grows. No pressure, no upsell.</p>
-          </article>
-        <article class="gcard reveal">
-          <div class="gcard__head">
-            <span class="gcard__avatar" aria-hidden="true">P</span>
-            <span class="gcard__who">
-              <span class="gcard__name" data-temp>Priya R.</span>
-              <span class="gcard__meta" data-temp>Sydney City &middot; 1 month ago</span>
-            </span>
-            <img class="gcard__mark" src="assets/img/google-wordmark.webp" srcset="assets/img/google-wordmark.webp 1x, assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
-          </div>
-          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
-          <p class="gcard__text" data-temp>The orthotics were made on site and adjusted twice until they were right. Back running three months later.</p>
-          </article>
-      </div>
+      <div class="grid-auto grid-auto--badged swipe" data-stagger>
+
+        <a class="card reveal" href="services/biomechanics.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12.6 4C12.6 4.88 11.88 5.6 11 5.6C10.12 5.6 9.4 4.88 9.4 4C9.4 3.12 10.12 2.4 11 2.4C11.88 2.4 12.6 3.12 12.6 4ZM14.2 11.2C14.2 12.08 13.48 12.8 12.6 12.8C11.72 12.8 11 12.08 11 11.2C11 10.32 11.72 9.6 12.6 9.6C13.48 9.6 14.2 10.32 14.2 11.2ZM12.8 17.2C12.8 17.97 12.17 18.6 11.4 18.6C10.63 18.6 10 17.97 10 17.2C10 16.43 10.63 15.8 11.4 15.8C12.17 15.8 12.8 16.43 12.8 17.2ZM11.35 5.55L12.25 9.65M12.45 12.8L11.6 15.8M10.3 18.3L9 20.6H18.4C19.3 20.6 19.4 19.5 18.6 19.2L12.8 17.6M4.5 3v2.2M4.5 7.6v2.2M4.5 12.2v2.2M4.5 16.8v2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-biomechanics.webp" srcset="assets/img/tx-biomechanics.webp 1x, assets/img/tx-biomechanics@2x.webp 2x" width="640" height="400" alt="A Dr. Abbie Clinics podiatrist examining a patient’s lower leg and foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Biomechanics</h3>
+          <p>A full lower limb assessment from the feet up. The foundation of every treatment plan
+            we prescribe.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/custom-orthotics.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3.6 9.4C3.3 12.6 3.9 16 7 16.5C10.6 17 15.2 16.2 20.4 14.2L20.1 13.1C16.6 14 14.1 13.2 12 12.1C9.9 11 8.4 12.4 6.9 12.3C5.6 12.2 5.2 11 5.1 9.4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-orthotics.webp" srcset="assets/img/tx-orthotics.webp 1x, assets/img/tx-orthotics@2x.webp 2x" width="640" height="400" alt="A custom orthotic device being fitted against a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Custom Orthotics</h3>
+          <p>Prescribed devices that correct how your foot meets the ground. Manufactured on site at
+            our Kirrawee head office.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/shockwave-therapy.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3.4 12.9L8.7 7.6C9.3 7 10.2 7 10.8 7.6L11.8 8.6C12.4 9.2 12.4 10.1 11.8 10.7L6.5 16C5.9 16.6 5 16.6 4.4 16L3.4 15C2.8 14.4 2.8 13.5 3.4 12.9ZM11.6 10.9L13.4 12.7M16.46 12.75C16.61 13.58 16.34 14.44 15.74 15.04C15.14 15.64 14.28 15.91 13.45 15.76M18.73 11.91C19.19 13.63 18.7 15.47 17.44 16.74C16.17 18 14.33 18.49 12.61 18.03M20.94 10.91C21.8 13.56 21.1 16.46 19.13 18.43C17.16 20.4 14.26 21.1 11.61 20.24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-shockwave.webp" srcset="assets/img/tx-shockwave.webp 1x, assets/img/tx-shockwave@2x.webp 2x" width="640" height="400" alt="A shockwave therapy handpiece being applied to a patient’s heel" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Shockwave Therapy</h3>
+          <p>Acoustic waves that use kinetic energy to repair tissue and reduce chronic
+            inflammation.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/childrens-podiatry.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12.4 21C10.5 21 9.5 19.6 9.5 17.9C9.5 16.5 9.9 15.7 9.9 14.5C9.9 13 8.7 12.1 8.7 10.4C8.7 8.3 10.3 6.9 12.4 6.9C14.5 6.9 16.1 8.3 16.1 10.4C16.1 12.1 14.9 13 14.9 14.5C14.9 15.7 15.3 16.5 15.3 17.9C15.3 19.6 14.3 21 12.4 21ZM9.7 5.2h.01M11.7 4h.01M13.8 3.9h.01M15.7 4.8h.01M17.2 6.4h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-childrens.webp" srcset="assets/img/tx-childrens.webp 1x, assets/img/tx-childrens@2x.webp 2x" width="640" height="400" alt="Dr Abbie Najjarine assessing a child’s foot in clinic" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Children's Podiatry</h3>
+          <p>Pigeon toe, flat feet and growing pains, assessed while the foot is still
+            developing.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/dry-needling.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3.5 19h17M14.5 4.2L9.6 19M13.1 4.7L15.3 5.5M12.5 6.5L14.7 7.3M11.9 8.3L14.1 9.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-dry-needling.webp" srcset="assets/img/tx-dry-needling.webp 1x, assets/img/tx-dry-needling@2x.webp 2x" width="640" height="400" alt="Dry needling being applied to a patient’s lower leg" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Dry Needling</h3>
+          <p>Fine needles inserted into trigger points to break down restrictive tissue.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/foot-mobilisation.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8.2 11.2V15.6C8.2 16.3 8.6 16.7 9.3 16.7H16.4C17.2 16.7 17.3 15.8 16.7 15.5L13.1 14.2C12.2 13.9 11.6 13.2 11.4 12.3L11.1 11.2M3.54 8.92C4.64 5.9 7.27 3.7 10.44 3.14C13.6 2.58 16.83 3.75 18.89 6.21M4.3 5.9L3.6 8.9L6.5 9.2M20.46 15.08C19.36 18.1 16.73 20.3 13.56 20.86C10.4 21.42 7.17 20.25 5.11 17.79M19.7 18.1L20.4 15.1L17.5 14.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-mobilisation.webp" srcset="assets/img/tx-mobilisation.webp 1x, assets/img/tx-mobilisation@2x.webp 2x" width="640" height="400" alt="A podiatrist mobilising a patient’s foot by hand" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Foot Mobilisation</h3>
+          <p>Hands-on work addressing restrictions across the foot’s 26 bones.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/sports-podiatry.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.6 4.6C14.6 3.7 15.3 3 16.2 3C17.1 3 17.8 3.7 17.8 4.6C17.8 5.5 17.1 6.2 16.2 6.2C15.3 6.2 14.6 5.5 14.6 4.6ZM17.2 7.8L13.6 10.2L14.6 13.6L17.4 15.8L18 20.6M14.6 13.6L11 15.2L9.4 19.4M13.6 10.2L9.8 9.2L7.2 11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-sports.webp" srcset="assets/img/tx-sports.webp 1x, assets/img/tx-sports@2x.webp 2x" width="640" height="400" alt="A runner holding their knee" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Sports Podiatry</h3>
+          <p>Running injuries, return to sport, and footwear that matches your gait.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/general-foot-care.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12.4 21.4C10.3 21.4 9.2 19.9 9.2 18C9.2 16.4 9.7 15.4 9.7 14.1C9.7 12.4 8.2 11.3 8.2 9.4C8.2 7.3 9.8 6.1 11.9 6.1C14.6 6.1 16.4 7.9 16.4 10.4C16.4 12.4 15.1 13.4 15.1 15C15.1 16.2 15.6 17 15.6 18.3C15.6 20.1 14.4 21.4 12.4 21.4ZM10.6 3.6C10.6 4.32 10.02 4.9 9.3 4.9C8.58 4.9 8 4.32 8 3.6C8 2.88 8.58 2.3 9.3 2.3C10.02 2.3 10.6 2.88 10.6 3.6ZM13.2 2.9C13.2 3.45 12.75 3.9 12.2 3.9C11.65 3.9 11.2 3.45 11.2 2.9C11.2 2.35 11.65 1.9 12.2 1.9C12.75 1.9 13.2 2.35 13.2 2.9ZM15.35 3.4C15.35 3.87 14.97 4.25 14.5 4.25C14.03 4.25 13.65 3.87 13.65 3.4C13.65 2.93 14.03 2.55 14.5 2.55C14.97 2.55 15.35 2.93 15.35 3.4ZM17.05 4.7C17.05 5.11 16.71 5.45 16.3 5.45C15.89 5.45 15.55 5.11 15.55 4.7C15.55 4.29 15.89 3.95 16.3 3.95C16.71 3.95 17.05 4.29 17.05 4.7ZM18.25 6.4C18.25 6.76 17.96 7.05 17.6 7.05C17.24 7.05 16.95 6.76 16.95 6.4C16.95 6.04 17.24 5.75 17.6 5.75C17.96 5.75 18.25 6.04 18.25 6.4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-foot-care.webp" srcset="assets/img/tx-foot-care.webp 1x, assets/img/tx-foot-care@2x.webp 2x" width="640" height="400" alt="A foot being treated with a podiatry tool" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>General Foot Care</h3>
+          <p>Routine care including ingrown toenails, corns and calluses.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/neural-therapy.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v3M9.6 5h4.8M10.2 5h3.6v11h-3.6zM12 16v5M10.2 8h1.4M10.2 10.4h1.4M10.2 12.8h1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-neural.webp" srcset="assets/img/tx-neural.webp 1x, assets/img/tx-neural@2x.webp 2x" width="300" height="188" alt="An injection being administered to a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Neural Therapy</h3>
+          <p>Injectable therapy to stimulate a repair response. Paired with prolotherapy.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="services/foot-strapping.html">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M15.5 11.5C15.5 14.81 12.81 17.5 9.5 17.5C6.19 17.5 3.5 14.81 3.5 11.5C3.5 8.19 6.19 5.5 9.5 5.5C12.81 5.5 15.5 8.19 15.5 11.5ZM11.8 11.5C11.8 12.77 10.77 13.8 9.5 13.8C8.23 13.8 7.2 12.77 7.2 11.5C7.2 10.23 8.23 9.2 9.5 9.2C10.77 9.2 11.8 10.23 11.8 11.5ZM9.5 17.5H20.4L19.6 16.6L20.4 15.7L19.6 14.8L20.4 13.9H14.9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="assets/img/tx-strapping.webp" srcset="assets/img/tx-strapping.webp 1x, assets/img/tx-strapping@2x.webp 2x" width="640" height="400" alt="Therapeutic strapping being applied to a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Foot Strapping</h3>
+          <p>Therapeutic support to offload tissue while it recovers.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
 
       </div>
+    </div>
   </section>
 
   <!-- MEMBERSHIPS — static logo row.
@@ -461,30 +461,6 @@
   </section>
 
 
-  <!-- CLINIC FINDER — photographic background.
-       Was a generated map stand-in; replaced with a clinic photograph on
-       request. The Google Static Maps URL carrying all eleven clinic
-       addresses is kept in PROJECT-PLAN.md section 8 if the map is wanted
-       back; .clinics__map still accepts an iframe embed unchanged. -->
-  <section class="section clinics--map" id="clinics">
-    <div class="clinics__map" aria-hidden="true">
-      <img src="assets/img/clinics-bg.webp" srcset="assets/img/clinics-bg.webp 1x, assets/img/clinics-bg@2x.webp 2x" width="640" height="480" alt="" loading="lazy" decoding="async" sizes="100vw">
-    </div>
-
-    <div class="container">
-      <div class="section-head section-head--split reveal">
-        <div>
-          <span class="eyebrow">Clinic finder</span>
-          <h2 class="split-head"><span>Eleven clinics</span><span>across New South Wales</span></h2>
-        </div>
-      </div>
-
-      <div class="grid-auto grid-auto--sm" data-stagger>
-{{HOME_CLINIC_FINDER}}
-      </div>
-    </div>
-  </section>
-
   <!-- BLOG — the four newest posts, generated from blog_data.py so the cards
        always link to real posts. Article schema renders per post, not here. -->
   <section class="section section--pale">
@@ -498,7 +474,7 @@
           practitioners who do the assessments.</p>
       </div>
 
-      <div class="grid-auto blog-grid" data-stagger>
+      <div class="grid-auto blog-grid swipe" data-stagger>
 {{HOME_POST_CARDS}}      </div>
 
       <div class="cluster cluster--center mt-8">
@@ -547,7 +523,7 @@
         <div class="acc-item reveal">
           <h3><button class="acc-trigger" aria-expanded="false">Which clinic should I book at? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
           <div class="acc-panel"><div><div class="acc-panel__inner">
-            <p>Each of our <a href="index.html#clinics">eleven clinics</a> books into its own diary.
+            <p>Each of our <a href="locations.html">eleven clinics</a> books into its own diary.
               Choose the one nearest you and you will see the practitioners who work there.</p>
           </div></div></div>
         </div>

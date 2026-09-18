@@ -639,6 +639,90 @@
     });
   }
 
+  /* ------------------------------------------------------------------------
+     Swipe rows: arrows and an "n / total" counter under every .swipe row,
+     shown only while the row actually overflows (mobile, or always for
+     .swipe--always). Native scroll-snap does the swiping; this only adds the
+     buttons for people who do not think to swipe.
+     ------------------------------------------------------------------------ */
+  function initSwipe() {
+    var L = '<svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4 6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var R = '<svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m7 4 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    document.querySelectorAll('.swipe').forEach(function (row) {
+      var items = row.children;
+      if (items.length < 2) return;
+      var nav = document.createElement('div');
+      nav.className = 'swipe-nav' +
+        (row.classList.contains('swipe--always') ? ' swipe-nav--always' : '') +
+        (row.classList.contains('swipe--dark') ? ' swipe-nav--dark' : '');
+      nav.innerHTML = '<span class="swipe-nav__count" aria-live="polite"></span>' +
+        '<button type="button" class="swipe-nav__btn" data-dir="-1" aria-label="Previous">' + L + '</button>' +
+        '<button type="button" class="swipe-nav__btn" data-dir="1" aria-label="Next">' + R + '</button>';
+      row.parentNode.insertBefore(nav, row.nextSibling);
+      var count = nav.querySelector('.swipe-nav__count');
+      var prev = nav.querySelector('[data-dir="-1"]');
+      var next = nav.querySelector('[data-dir="1"]');
+
+      function step() {
+        var a = items[0].getBoundingClientRect(), b = items[1].getBoundingClientRect();
+        return Math.max(1, b.left - a.left);
+      }
+      function update() {
+        var overflow = row.scrollWidth > row.clientWidth + 2;
+        nav.hidden = !overflow;
+        if (!overflow) return;
+        var perView = Math.max(1, Math.round(row.clientWidth / step()));
+        var first = Math.round(row.scrollLeft / step()) + 1;
+        var last = Math.min(items.length, first + perView - 1);
+        count.textContent = (perView > 1 ? first + '–' + last : first) + ' / ' + items.length;
+        prev.disabled = row.scrollLeft <= 2;
+        next.disabled = row.scrollLeft + row.clientWidth >= row.scrollWidth - 2;
+      }
+      nav.addEventListener('click', function (e) {
+        var btn = e.target.closest('.swipe-nav__btn');
+        if (!btn) return;
+        row.scrollBy({ left: step() * parseInt(btn.getAttribute('data-dir'), 10),
+                       behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+      var ticking = false;
+      row.addEventListener('scroll', function () {
+        if (!ticking) { window.requestAnimationFrame(function () { update(); ticking = false; }); ticking = true; }
+      }, { passive: true });
+      window.addEventListener('resize', update);
+
+      // Auto-advance (client request): one card every 4.5s, back to the start
+      // after the last. Only while the row overflows and is on screen; paused
+      // while the visitor touches, hovers or focuses it, and for 8s after they
+      // swipe themselves. Off entirely under prefers-reduced-motion.
+      if (!reduceMotion) {
+        var visible = false, held = false, resumeAt = 0;
+        function hold() { held = true; }
+        function release() { held = false; resumeAt = Date.now() + 8000; }
+        row.addEventListener('pointerenter', hold);
+        row.addEventListener('pointerleave', release);
+        row.addEventListener('touchstart', hold, { passive: true });
+        row.addEventListener('touchend', release, { passive: true });
+        row.addEventListener('focusin', hold);
+        row.addEventListener('focusout', release);
+        nav.addEventListener('click', function () { resumeAt = Date.now() + 8000; });
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            visible = entries[0].isIntersecting;
+          }, { threshold: 0.5 }).observe(row);
+        }
+        setInterval(function () {
+          if (!visible || held || Date.now() < resumeAt || document.hidden) return;
+          if (row.scrollWidth <= row.clientWidth + 2) return;
+          var atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 2;
+          if (atEnd) row.scrollTo({ left: 0, behavior: 'smooth' });
+          else row.scrollBy({ left: step(), behavior: 'smooth' });
+        }, 4500);
+      }
+      update();
+    });
+  }
+
   /* ---------------------------------------------------------------------- */
 
   function init() {
@@ -658,6 +742,7 @@
     initTracking();
     initToc();
     initEnquiryForm();
+    initSwipe();
   }
 
   if (document.readyState === 'loading') {

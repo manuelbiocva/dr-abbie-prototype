@@ -10,7 +10,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from clinics import CLINICS, fields, BOOKING, ROSTER, REGIONS, TAGS
+from clinics import CLINICS, fields, BOOKING, ROSTER, REGIONS, TAGS, GOOGLE, phone as clinic_phone
 from services import SERVICES, TEMP_TEXT
 import people
 import conditions
@@ -34,6 +34,9 @@ HEADER = (HEADER.replace('{{MEGA_SERVICES}}', megamenu.services_menu())
                 .replace('{{MEGA_CONDITIONS}}', megamenu.conditions_menu())
                 .replace('{{MEGA_CLINICS}}', megamenu.clinics_menu()))
 FOOTER = open(os.path.join(ROOT, '.footer.part'), encoding='utf-8').read()
+# Every clinic in the footer: address to Google Maps, Book online, Call.
+import clinicui
+FOOTER = FOOTER.replace('{{FOOTER_CLINICS}}', clinicui.footer_clinics())
 
 # The direction signed off for the build. It renders without the review banner.
 
@@ -361,6 +364,8 @@ HEAD = """<!DOCTYPE html>
 <link rel="stylesheet" href="assets/css/design-system.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/theme.css">
+<!-- Google preferred sources button (footer) -->
+<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 {schema}
 </head>
 <body>
@@ -475,7 +480,7 @@ def apply_booking(html, mode, target=None, location=None):
                               'data-book-method="online"' % target, 1)
             body = body + NEW_TAB
         elif mode == 'phone':
-            tag = tag.replace('href="#"', 'href="tel:%s" data-book-method="phone"' % PHONE, 1)
+            tag = tag.replace('href="#"', 'href="tel:%s" data-book-method="phone"' % (clinic_phone(location)[0] if location else PHONE), 1)
             body = re.sub(r'^\s*[^<]+', 'Call to book ', body, count=1)
         else:
             tag = tag.replace('href="#"', 'href="%s"' % target, 1)
@@ -596,9 +601,76 @@ def post_feature(post):
 def clinic_cards():
     return ('\n').join(
         '        <a class="loc-card reveal" href="locations/podiatrist-%s.html">'
-        '<h3>%s</h3><span class="loc-card__meta">%s, %s</span></a>'
+        '<h3>%s</h3><span class="loc-card__meta">%s, %s</span>'
+            '<span class="card__more loc-card__more">View clinic <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 7h8M7.5 3.5L11 7l-3.5 3.5\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a>'
         % (slug, name, street, post)
         for name, slug, street, post, _ in CLINICS)
+
+
+import book_content
+
+
+# "Heel Pain" reads as "heel pain" mid-sentence, but proper nouns keep their
+# capitals ("Achilles pain", "Morton's", "Children's Podiatry" -> "children's podiatry").
+KEEP_CAPS = {'Achilles', 'Morton’s', 'Osgood-Schlatter', 'NBA'}
+
+
+def lc_name(name):
+    return ' '.join(w if w in KEEP_CAPS else w.lower() for w in name.split(' '))
+
+
+EDU_DIAGRAMS = {'edu-shin', 'edu-forefoot', 'edu-biomechanics', 'edu-childrens'}
+
+
+def book_tokens(entry, slug=None):
+    """Tokens for the 'Understanding ...' section, from book_content.py.
+
+    Layout: the page's image beside the types strip (stacked). Pages without
+    a types strip get the image beside their snapshot cards instead."""
+    if not entry:
+        return {'BOOK_INTRO': '', 'BOOK_TYPES': '', 'BOOK_POINTS': '', 'BOOK_SOURCE': ''}
+    slot, alt = book_content.EDU_IMAGES[slug]
+    w, h = img_size(slot)
+    figure = ('        <figure class="edu-figure%s reveal">\n'
+              '          <img src="assets/img/%s.webp" srcset="assets/img/%s.webp 1x, '
+              'assets/img/%s@2x.webp 2x" width="%d" height="%d" alt="%s" loading="lazy" '
+              'decoding="async" sizes="(min-width: 900px) 340px, 100vw">\n'
+              '        </figure>\n' % (' edu-figure--diagram' if slot in EDU_DIAGRAMS else '',
+                                       slot, slot, slot, w, h, alt))
+    cards = ''.join(
+        '        <article class="edu-card reveal"%s>\n'
+        '          <span class="edu-card__n" aria-hidden="true">%02d</span>\n'
+        '          <h3 class="edu-card__h">%s</h3>\n'
+        '          <div class="edu-card__body">%s</div>\n'
+        '        </article>\n' % ((' data-reveal-delay="%d"' % (i * 60)) if i else '', i + 1, h_, body)
+        for i, (h_, body) in enumerate(entry['POINTS']))
+    if entry.get('TYPES'):
+        cells = ''.join(
+            '            <div class="edu-type">\n'
+            '              <span class="edu-type__sub">%s</span>\n'
+            '              <h3 class="edu-type__h">%s</h3>\n'
+            '              <p>%s</p>\n'
+            '            </div>\n' % (sub, label, text)
+            for label, sub, text in entry['TYPES'])
+        lead = ('      <div class="edu-lead">\n%s'
+                '        <div class="edu-types reveal" data-reveal-delay="60">\n'
+                '          <p class="edu-types__title">%s</p>\n'
+                '          <div class="edu-types__row edu-types__row--stack swipe">\n%s'
+                '          </div>\n'
+                '        </div>\n'
+                '      </div>' % (figure, entry['TYPES_TITLE'], cells))
+        points = cards
+    else:
+        lead = ('      <div class="edu-lead edu-lead--cards">\n%s'
+                '        <div class="edu-grid edu-grid--two swipe">\n%s        </div>\n'
+                '      </div>' % (figure, cards))
+        points = ''
+    return {
+        'BOOK_INTRO': entry['INTRO'],
+        'BOOK_TYPES': lead,
+        'BOOK_POINTS': points,
+        'BOOK_SOURCE': '',
+    }
 
 
 def build(page, out_name, title, desc, canonical, booklabel='Book a Session',
@@ -630,6 +702,17 @@ def build(page, out_name, title, desc, canonical, booklabel='Book a Session',
             # substituted directly
             if isinstance(v, str):
                 out = out.replace('{{%s}}' % k, v)
+    # A clinic page shows that clinic's number in the header and the mobile
+    # Call bar too (brief rule 7), not only in its body.
+    if tokens and tokens.get('PHONE_TEL') and tokens['PHONE_TEL'] != PHONE:
+        out = out.replace('href="tel:+61295454378" data-location="sitewide" aria-label="Call (02) 9545 4378"',
+                          'href="tel:%s" data-location="%s" aria-label="Call %s"'
+                          % (tokens['PHONE_TEL'], tokens['SLUG'], tokens['PHONE_SHOWN']))
+        out = out.replace('<span class="header-phone__num">(02) 9545 4378</span>',
+                          '<span class="header-phone__num">%s</span>' % tokens['PHONE_SHOWN'])
+        out = out.replace('<a class="btn btn--call btn--sm" href="tel:+61295454378">Call</a>',
+                          '<a class="btn btn--call btn--sm" href="tel:%s" data-location="%s">Call</a>'
+                          % (tokens['PHONE_TEL'], tokens['SLUG']))
     out = link_conditions(out, out_name)
     out = link_people(out, out_name)
     out = link_services(out, out_name)
@@ -766,15 +849,9 @@ if __name__ == '__main__':
                     'HOME_TEAM_RAIL': people.team_rail(4),
                     # Generated so each card links to its own clinic. The hand-written
                     # version sent all eleven to the Kirrawee page.
-                    'HOME_CLINIC_FINDER': '\n'.join(
-                        '        <a class="loc-card reveal" href="locations/podiatrist-%s.html">'
-                        '<h3>%s%s</h3><span class="loc-card__meta">%s, %s</span>'
-                        '<span class="loc-card__hours">%s</span></a>'
-                        % (slug, name,
-                           (' <span class="loc-card__tag">%s</span>' % TAGS[slug]) if slug in TAGS else '',
-                           street, post,
-                           'Book online' if slug in BOOKING else 'Book by phone')
-                        for name, slug, street, post, _ in CLINICS),
+                    'HOME_CLINIC_FINDER': ''.join(
+                        clinicui.card(c[1], 'home-finder', delay=(n % 4) * 60)
+                        for n, c in enumerate(CLINICS)),
                 }
             build(page, out_name, title, desc, canon, bl, tokens=tokens)
         else:
@@ -791,6 +868,15 @@ if __name__ == '__main__':
         for k in ('FAQ2_A', 'FAQ3_A'):
             f[k + '_TEXT'] = json.dumps(html_lib.unescape(re.sub(r'<[^>]+>', '', f[k])),
                                         ensure_ascii=False)[1:-1]
+        kind, f['MAPS_URL'], f['EMBED_URL'] = GOOGLE[slug]
+        f['MAPS_URL'] = f['MAPS_URL'].replace('&', '&amp;')
+        f['EMBED_URL'] = f['EMBED_URL'].replace('&', '&amp;')
+        f['EMBED_NOTE'] = {
+            'profile': 'Google Business Profile embed, from the live dr-abbie.com/clinics/ page.',
+            'address': 'CLIENT TO PROVIDE: this is the Google pin on the street address, not the Business Profile. Replace EMBED in clinics.GOOGLE with the Profile Share / Embed a map src.',
+            'search': 'CLIENT TO PROVIDE: coordinates only. Replace EMBED in clinics.GOOGLE with the Business Profile Share / Embed a map src.',
+        }[kind]
+        f['PHONE_TEL'], f['PHONE_SHOWN'] = clinic_phone(slug)
         url = BOOKING.get(slug)
         if url:
             here = [people.BY_SLUG[s] for s in ROSTER[slug]]
@@ -852,17 +938,24 @@ if __name__ == '__main__':
         f = dict(sv)
         for k, v in TEMP_TEXT.items():
             f = dict((kk, v if vv == k else vv) for kk, vv in f.items())
-        f['NAME_LC'] = sv['NAME'][0].lower() + sv['NAME'][1:]
+        f['NAME_LC'] = lc_name(sv['NAME'])
         f['PRACTITIONER_SLIDER'] = people.hero_slider('Our practitioners')
         f['REVIEW_CARDS'] = reviews.cards(reviews.REVIEWS[sv['SLUG']])
         f['RATING_BLOCK'] = reviews.rating_block('Based on 286 Google reviews across our clinics')
 
+        # Every condition, the ones this treatment is most used for first.
+        # Client (Loom): all condition pages on every service page and vice
+        # versa, as a swipe row, so everything is internally linked.
+        _first = [n for n, _ in sv['CONDITIONS']]
+        _blurb = dict(sv['CONDITIONS'])
         f['CONDITION_CARDS'] = ''.join(
-            conditions.card(n, d) for n, d in sv['CONDITIONS'])
+            conditions.card(n, _blurb.get(n) or megamenu.CONDITION_BLURBS[n].replace('&rsquo;', '’'))
+            for n in _first + [c['NAME'] for c in COND_PAGES if c['NAME'] not in _first])
 
         f['CLINIC_CARDS'] = ('\n').join(
             '        <a class="loc-card reveal" href="locations/podiatrist-%s.html">'
-            '<h3>%s</h3><span class="loc-card__meta">%s, %s</span></a>'
+            '<h3>%s</h3><span class="loc-card__meta">%s, %s</span>'
+            '<span class="card__more loc-card__more">View clinic <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 7h8M7.5 3.5L11 7l-3.5 3.5\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a>'
             % (slug, name, street, post)
             for name, slug, street, post, _ in CLINICS)
 
@@ -885,30 +978,36 @@ if __name__ == '__main__':
                                                'text': a[5:] if a.startswith('TEMP:') else a}}
                            for q, a in sv['FAQ']]}, indent=2, ensure_ascii=False)
 
+        _book = book_content.SERVICES.get(sv['SLUG'])
+        f.update(book_tokens(_book, sv['SLUG']))
         build('service', '%s.html' % sv['SLUG'],
               '%s | Dr. Abbie Clinics' % sv['NAME'],
               sv['INTRO'][:155],
               'https://dr-abbie.com/services/%s/' % sv['SLUG'],
-              'Book a Session', subdir='services', tokens=f)
+              'Book a Session', subdir='services', tokens=f, blocks={'BOOK': bool(_book), 'BOOKPOINTS': bool(_book and _book.get('TYPES'))})
 
     # One template, eleven conditions, written into /conditions/.
     for cd in COND_PAGES:
         f = dict(cd)
         for k, v in COND_TEMP.items():
             f = dict((kk, v if vv == k else vv) for kk, vv in f.items())
-        f['NAME_LC'] = cd['NAME'][0].lower() + cd['NAME'][1:]
+        f['NAME_LC'] = lc_name(cd['NAME'])
         f['PRACTITIONER_SLIDER'] = people.hero_slider('Our practitioners')
 
         f['SYMPTOM_ITEMS'] = ('\n').join(
             '            <li>%s</li>' % x for x in cd['SYMPTOMS'])
 
         by_slug = dict((s['SLUG'], s) for s in SERVICES)
+        # Every treatment, the ones most used for this condition first.
+        _first = [sl for sl in cd['TREATMENTS'] if sl in by_slug]
         f['TREATMENT_CARDS'] = ''.join(
-            service_card(by_slug[sl]) for sl in cd['TREATMENTS'] if sl in by_slug)
+            service_card(by_slug[sl])
+            for sl in _first + [sv['SLUG'] for sv in SERVICES if sv['SLUG'] not in _first])
 
         f['CLINIC_CARDS'] = ('\n').join(
             '        <a class="loc-card reveal" href="locations/podiatrist-%s.html">'
-            '<h3>%s</h3><span class="loc-card__meta">%s, %s</span></a>'
+            '<h3>%s</h3><span class="loc-card__meta">%s, %s</span>'
+            '<span class="card__more loc-card__more">View clinic <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 7h8M7.5 3.5L11 7l-3.5 3.5\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></a>'
             % (slug, name, street, post)
             for name, slug, street, post, _ in CLINICS)
 
@@ -941,11 +1040,13 @@ if __name__ == '__main__':
               'url': 'https://dr-abbie.com/services/%s/' % sl}
              for sl in cd['TREATMENTS'] if sl in by_slug], indent=2, ensure_ascii=False)
 
+        _book = book_content.CONDITIONS.get(cd['SLUG'])
+        f.update(book_tokens(_book, cd['SLUG']))
         build('condition', '%s.html' % cd['SLUG'],
               '%s | Dr. Abbie Clinics' % cd['NAME'],
               cd['INTRO'][:155],
               'https://dr-abbie.com/conditions/%s/' % cd['SLUG'],
-              'Book a Session', subdir='conditions', tokens=f)
+              'Book a Session', subdir='conditions', tokens=f, blocks={'BOOK': bool(_book), 'BOOKPOINTS': bool(_book and _book.get('TYPES'))})
 
     # Blog: the hub at /blog.html, and one template, five posts, in /blog/.
     by_slug = dict((sv['SLUG'], sv) for sv in SERVICES)
@@ -1055,35 +1156,17 @@ if __name__ == '__main__':
         return xs[0] if len(xs) == 1 else ', '.join(xs[:-1]) + ' and ' + xs[-1]
 
     def book_card(slug, source, show_roster=False, delay=0, level=3):
-        name, _, street, post, _ = CL[slug]
         url = BOOKING.get(slug)
-        lines = [
-            '        <article class="book-card reveal"%s>'
-            % ((' data-reveal-delay="%d"' % delay) if delay else ''),
-            '          <h%d class="book-card__name">%s%s</h%d>'
-            % (level, name,
-               (' <span class="loc-card__tag">%s</span>' % TAGS[slug]) if slug in TAGS else '',
-               level),
-            '          <p class="book-card__addr">%s, %s</p>' % (street, post),
-        ]
+        extra = ''
         if show_roster:
             if url:
-                lines.append('          <p class="book-card__who"><span class="book-card__label">'
-                             'Book with</span> %s</p>'
-                             % join_names([people.BY_SLUG[s]['NAME'] for s in ROSTER[slug]]))
+                extra = ('          <p class="clinic-card__who"><span class="clinic-card__label">'
+                         'Book with</span> %s</p>'
+                         % join_names([people.BY_SLUG[s_]['NAME'] for s_ in ROSTER[slug]]))
             else:
-                lines.append('          <p class="book-card__who">Online booking is not available '
-                             'for this clinic yet. Call and we will book you in.</p>')
-        lines += [
-            '          <div class="book-card__actions">',
-            '            ' + book_button(url, slug, source, 'Book online',
-                                         sr_place=' at %s' % name),
-            '            <a class="book-card__link" href="locations/podiatrist-%s.html">Clinic '
-            'details<span class="sr-only"> for %s</span></a>' % (slug, name),
-            '          </div>',
-            '        </article>',
-        ]
-        return '\n'.join(lines) + '\n'
+                extra = ('          <p class="clinic-card__who">Online booking is not available '
+                         'for this clinic yet. Call and we will book you in.</p>')
+        return clinicui.card(slug, source, extra=extra, level=level, delay=delay)
 
     def strip_blocks(html, keep):
         """<!--IF:X--> ... <!--/IF:X--> is kept when keep[X] is true."""
@@ -1110,7 +1193,7 @@ if __name__ == '__main__':
             '      <div class="region reveal">',
             '        <h3 class="region__h">%s <span class="region__count">%s clinic%s</span></h3>'
             % (region, NUMBER_WORDS[len(slugs)].capitalize(), '' if len(slugs) == 1 else 's'),
-            '        <div class="book-grid" data-stagger>',
+            '        <div class="clinic-grid" data-stagger>',
             ''.join(book_card(s, 'booking-page', show_roster=True, delay=i * 60, level=4)
                     for i, s in enumerate(slugs)) + '        </div>',
             '      </div>',

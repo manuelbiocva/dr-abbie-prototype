@@ -64,11 +64,13 @@
       <div class="cond-split">
         <div class="cond-split__copy reveal">
           <h3 class="cond-split__h">Common symptoms</h3>
-          <ul class="tick-list">
+          <ul class="tick-list symptom-list">
 {{SYMPTOM_ITEMS}}
           </ul>
-          <h3 class="cond-split__h mt-8">What causes it</h3>
-          <div class="prose"><p>{{CAUSES}}</p></div>
+          <div class="cond-cause">
+            <h3 class="cond-split__h">What causes it</h3>
+            <p>{{CAUSES}}</p>
+          </div>
         </div>
         <figure class="cond-split__figure reveal">
           <img src="assets/img/{{DIAGRAM}}.webp" srcset="assets/img/{{DIAGRAM}}.webp 1x, assets/img/{{DIAGRAM}}@2x.webp 2x" width="720" height="720" alt="{{DIAGRAM_ALT}}" loading="lazy" decoding="async" sizes="(min-width: 900px) 40vw, 100vw">
@@ -77,6 +79,26 @@
       </div>
     </div>
   </section>
+
+<!--IF:BOOK-->
+  <!-- UNDERSTANDING: snapshot education (book_content.py), left out where there is none. -->
+  <section class="section section--pale" id="understanding">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">In detail</span>
+          <h2 class="split-head"><span>Understanding</span><span>{{NAME_LC}}</span></h2>
+        </div>
+        <p class="lede">{{BOOK_INTRO}}</p>
+      </div>
+{{BOOK_TYPES}}
+<!--IF:BOOKPOINTS-->
+      <div class="edu-grid swipe" data-stagger>
+{{BOOK_POINTS}}      </div>
+<!--/IF:BOOKPOINTS-->
+    </div>
+  </section>
+<!--/IF:BOOK-->
 
   <!-- HOW WE DIAGNOSE IT -->
   <section class="section section--dark nba hex-texture">
@@ -143,10 +165,10 @@
           <span class="eyebrow">How we treat it</span>
           <h2 class="split-head"><span>Treatment options</span><span>for {{NAME_LC}}</span></h2>
         </div>
-        <p class="lede">Which of these you need is decided at the assessment. Most plans combine
-          more than one.</p>
+        <p class="lede">All ten treatments, starting with those most often used for
+          {{NAME_LC}}. Which you need is decided at the assessment; most plans combine more than one.</p>
       </div>
-      <div class="grid-auto cond-grid" data-stagger>
+      <div class="grid-auto cond-grid swipe swipe--always" data-stagger>
 {{TREATMENT_CARDS}}
       </div>
     </div>
@@ -162,7 +184,7 @@
         </div>
         <p class="lede">Every clinic books into its own diary. Choose the one nearest you.</p>
       </div>
-      <div class="grid-auto grid-auto--sm" data-stagger>
+      <div class="grid-auto grid-auto--sm swipe swipe--two" data-stagger>
 {{CLINIC_CARDS}}
       </div>
     </div>
@@ -177,7 +199,7 @@
           <h2 class="split-head"><span>What patients say</span><span>about {{NAME_LC}}</span></h2>
         </div>
 {{RATING_BLOCK}}      </div>
-      <div class="grid-auto" data-stagger>
+      <div class="grid-auto swipe" data-stagger>
 {{REVIEW_CARDS}}      </div>
     </div>
   </section>

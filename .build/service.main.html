@@ -69,6 +69,26 @@
     </div>
   </section>
 
+<!--IF:BOOK-->
+  <!-- UNDERSTANDING: snapshot education (book_content.py), left out where there is none. -->
+  <section class="section section--pale" id="understanding">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">In detail</span>
+          <h2 class="split-head"><span>Understanding</span><span>{{NAME_LC}}</span></h2>
+        </div>
+        <p class="lede">{{BOOK_INTRO}}</p>
+      </div>
+{{BOOK_TYPES}}
+<!--IF:BOOKPOINTS-->
+      <div class="edu-grid swipe" data-stagger>
+{{BOOK_POINTS}}      </div>
+<!--/IF:BOOKPOINTS-->
+    </div>
+  </section>
+<!--/IF:BOOK-->
+
   <!-- HOW IT WORKS HERE — NBA-led, the bento from the home and location pages -->
   <section class="section section--dark nba hex-texture">
     <div class="container">
@@ -134,10 +154,10 @@
           <span class="eyebrow">Commonly used for</span>
           <h2 class="split-head"><span>Conditions we treat</span><span>with {{NAME_LC}}</span></h2>
         </div>
-        <p class="lede">If your pain is in this list, start with the condition and we will show you
-          the assessment and the treatment.</p>
+        <p class="lede">Every condition we treat, starting with the ones {{NAME_LC}} is most often
+          used for. Choose yours to see the assessment and the treatment.</p>
       </div>
-      <div class="grid-auto cond-grid" data-stagger>
+      <div class="grid-auto cond-grid swipe swipe--always" data-stagger>
 {{CONDITION_CARDS}}
       </div>
     </div>
@@ -154,7 +174,7 @@
         <p class="lede"><span data-temp>Availability varies by clinic. Call the clinic nearest you
           before you book if this is the treatment you are after.</span></p>
       </div>
-      <div class="grid-auto grid-auto--sm" data-stagger>
+      <div class="grid-auto grid-auto--sm swipe swipe--two" data-stagger>
 {{CLINIC_CARDS}}
       </div>
     </div>
@@ -184,7 +204,7 @@
         </div>
 {{RATING_BLOCK}}      </div>
 
-      <div class="grid-auto" data-stagger>
+      <div class="grid-auto swipe" data-stagger>
 {{REVIEW_CARDS}}      </div>
     </div>
   </section>

@@ -475,7 +475,7 @@ CONDITIONS = [
      'DIAGRAM': 'cond-children-gait',
      'DIAGRAM_ALT': 'Dr Abbie Najjarine examining a child’s feet',
      'INTRO': 'In-toeing in children, where the feet point inwards when walking or running. '
-              'Common, and often something they grow out of.',
+              'Common, and worth measuring rather than waiting out.',
      'FACT1': 'Assessed as they grow',
      'FACT2': 'Children’s clinic at Hornsby',
      'SYMPTOMS': ['Feet that turn inwards when walking or running',
@@ -483,8 +483,9 @@ CONDITIONS = [
                   'A twisting appearance from the knee or the hip down',
                   'Complaints of tired or sore legs after activity'],
      'CAUSES': 'In-toeing can come from the foot, the shin or the hip, and which one it is matters '
-               'because they behave differently as a child grows. Many resolve on their own; some '
-               'do not, and telling the difference is what an assessment is for.',
+               'because they behave differently as a child grows. Where the shin bone itself is '
+               'twisted inwards, the body often hides it by tightening the hip muscles rather '
+               'than correcting it, so it can look better while the twist is still there.',
      'DIAGNOSE1': 'We assess how your child stands, walks and runs, and compare that against what '
                   'is expected for their age.',
      'DIAGNOSE2': 'We work out which level the rotation is coming from and explain it in plain '
@@ -493,8 +494,10 @@ CONDITIONS = [
                   'treatment is staged around growth.',
      'TREATMENTS': ['childrens-podiatry', 'biomechanics', 'custom-orthotics', 'foot-mobilisation'],
      'FAQ': [('Will my child grow out of it?',
-              'Many do. Which ones do not is the reason to have it assessed rather than waiting to '
-              'find out.'),
+              'The in-toeing you can see often lessens. But where it comes from a twist in the shin '
+              'bone, Dr Najjarine’s clinical view is that the body usually compensates at the '
+              'hips rather than the twist resolving. That is the reason to have it measured '
+              'rather than waiting to find out.'),
              ('At what age should it be looked at?',
               'TEMP:There is no fixed age. If you have noticed it or your child is complaining of '
               'pain, that is the time.'),

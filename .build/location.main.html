@@ -18,7 +18,7 @@
         </p>
         <div class="hero__actions">
           <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="location-hero">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          <a class="btn btn--ghost-invert" href="tel:+61295454378" data-location="{{SLUG}}">Call <span class="callrail-number">(02) 9545 4378</span></a>
+          <a class="btn btn--ghost-invert" href="tel:{{PHONE_TEL}}" data-location="{{SLUG}}">Call <span class="callrail-number">{{PHONE_SHOWN}}</span></a>
         </div>
         <ul class="hero__facts">
           <li>{{STREET}}, {{POST}}</li>
@@ -59,8 +59,26 @@
   </section>
 
 
+  <!-- PRACTITIONERS — for a clinic with online booking, the people its Nookal
+       page lists (clinics.ROSTER); otherwise the whole team, headed as such,
+       because nobody is claimed to work at a clinic without a roster. -->
+  <section class="section section--white" id="practitioners">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">{{PRAC_EYEBROW}}</span>
+          <h2 class="split-head"><span>{{PRAC_H1}}</span><span>{{PRAC_H2}}</span></h2>
+        </div>
+        <p class="lede">{{ROSTER_LEDE}}</p>
+      </div>
+      <div class="pcard-grid pcard-grid--center swipe swipe--two" data-stagger>
+{{PRACTITIONER_GRID}}      </div>
+{{BOOKING_STEPS}}
+    </div>
+  </section>
+
   <!-- TREATMENTS — index rows with per-row booking -->
-  <section class="section section--white">
+  <section class="section section--pale">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Treatments here</span>
@@ -130,24 +148,6 @@
     </div>
   </section>
 
-  <!-- PRACTITIONERS — for a clinic with online booking, the people its Nookal
-       page lists (clinics.ROSTER); otherwise the whole team, headed as such,
-       because nobody is claimed to work at a clinic without a roster. -->
-  <section class="section section--pale" id="practitioners">
-    <div class="container">
-      <div class="section-head section-head--split reveal">
-        <div>
-          <span class="eyebrow">{{PRAC_EYEBROW}}</span>
-          <h2 class="split-head"><span>{{PRAC_H1}}</span><span>{{PRAC_H2}}</span></h2>
-        </div>
-        <p class="lede">{{ROSTER_LEDE}}</p>
-      </div>
-      <div class="pcard-grid pcard-grid--center" data-stagger>
-{{PRACTITIONER_GRID}}      </div>
-{{BOOKING_STEPS}}
-    </div>
-  </section>
-
   <!-- NBA — the home page's bento. Three named stages; the fourth cell is the
        booking prompt for this clinic, not an invented fourth stage. -->
   <section class="section section--dark nba hex-texture">
@@ -210,7 +210,7 @@
   </section>
 
   <!-- CONDITIONS — same card as the home page, descriptions included. -->
-  <section class="section section--white">
+  <section class="section section--pale">
     <div class="container">
       <div class="section-head section-head--split reveal">
         <div>
@@ -220,7 +220,7 @@
         <p class="lede">If your pain is in this list, there is a structural reason for it. Start
           with the condition, and we will show you the assessment and the treatment.</p>
       </div>
-      <div class="grid-auto grid-auto--sm" data-stagger>
+      <div class="grid-auto grid-auto--sm swipe swipe--two" data-stagger>
         <a class="card card--condition reveal" href="condition.html"><h3>Heel Pain</h3><p>Including first-step pain in the morning</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         <a class="card card--condition reveal" href="condition.html"><h3>Plantar Fasciitis</h3><p>Arch and heel pain under load</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         <a class="card card--condition reveal" href="condition.html"><h3>Achilles Pain</h3><p>Tendon pain and tendonitis</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
@@ -233,90 +233,9 @@
     </div>
   </section>
 
-  <!-- VISIT -->
-  <section class="section section--pale">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Visiting us</span>
-        <h2 class="split-head"><span>Finding the</span><span>{{NAME}} clinic</span></h2>
-      </div>
-      <div class="visit">
-        <div>
-          <dl>
-            <div><dt>Address</dt><dd>{{STREET}}<br>{{NAME}} {{POST}}</dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:+61295454378" data-location="{{SLUG}}"><span class="callrail-number">(02) 9545 4378</span></a></dd></div>
-            <div><dt>Opening hours</dt><dd>
-              <table class="hours-table">
-                <caption class="sr-only">Opening hours for the {{NAME}} clinic</caption>
-                <tbody>
-                  <tr data-day="mon"><th scope="row">Monday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
-                  <tr data-day="tue"><th scope="row">Tuesday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
-                  <tr data-day="wed"><th scope="row">Wednesday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
-                  <tr data-day="thu"><th scope="row">Thursday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
-                  <tr data-day="fri"><th scope="row">Friday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
-                  <tr data-day="sat"><th scope="row">Saturday</th><td><span data-temp>8:30am &ndash; 12:00pm</span></td></tr>
-                  <tr data-day="sun"><th scope="row">Sunday</th><td><span data-temp>Closed</span></td></tr>
-                </tbody>
-              </table>
-            </dd></div>
-            <div><dt>Parking</dt><dd><span data-temp>{{PARKING}}</span></dd></div>
-            <div><dt>Public transport</dt><dd><span data-temp>{{TRANSPORT}}</span></dd></div>
-          </dl>
-          <div class="cluster mt-8">
-            <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="visit-block">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          </div>
-        </div>
-        <div class="map-embed">
-          <!-- Keyless. This is the plain Google Maps embed form, which needs no
-               API key -- unlike the Static Maps URL in the clinic finder, which
-               does. Before launch, replace the src with the official embed from
-               Google Maps > Share > Embed a map for this clinic's Business
-               Profile, so the pin, zoom and business card are the client's own. -->
-          <iframe
-            src="https://maps.google.com/maps?q={{MAPQ}}&amp;z=15&amp;output=embed"
-            title="Map showing Dr. Abbie Clinics at {{STREET}}, {{NAME}} {{POST}}"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section--white">
-    <div class="container container--narrow">
-      <div class="section-head">
-        <span class="eyebrow">Questions</span>
-        <h2 class="split-head"><span>{{NAME}}</span><span>clinic FAQs</span></h2>
-      </div>
-      <div class="accordion accordion--plain">
-        <div class="acc-item reveal">
-          <h3><button class="acc-trigger" aria-expanded="false">Do I need a referral to see a podiatrist at {{NAME}}? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
-          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>No. Podiatry is a primary contact profession in Australia, so you can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that.</span></p></div></div></div>
-        </div>
-        <div class="acc-item reveal">
-          <h3><button class="acc-trigger" aria-expanded="false">{{FAQ2_Q}} <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
-          <div class="acc-panel"><div><div class="acc-panel__inner"><p>{{FAQ2_A}}</p></div></div></div>
-        </div>
-        <div class="acc-item reveal">
-          <h3><button class="acc-trigger" aria-expanded="false">Do you treat children at this clinic? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
-          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>{{FAQ3_A}}</span></p></div></div></div>
-        </div>
-        <div class="acc-item reveal">
-          <h3><button class="acc-trigger" aria-expanded="false">How long is a first appointment? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
-          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>Allow about 45 minutes. That covers the biomechanical assessment, the diagnosis and an explanation of the treatment plan before anything is prescribed.</span></p></div></div></div>
-        </div>
-        <div class="acc-item reveal">
-          <h3><button class="acc-trigger" aria-expanded="false">Can I claim my health fund rebate on the spot? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
-          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>Yes. {{NAME}} has HICAPS, so private health rebates come off at reception. Medicare care plans and NDIS plans are accepted.</span></p></div></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- REVIEWS — the home page's Google widget. Names and text are stand-ins
        (data-temp); no Review or AggregateRating schema is emitted. -->
-  <section class="section section--pale">
+  <section class="section section--white">
     <div class="container">
       <div class="section-head section-head--split reveal">
         <div>
@@ -332,7 +251,7 @@
         </div>
       </div>
 
-      <div class="grid-auto" data-stagger>
+      <div class="grid-auto swipe" data-stagger>
         <article class="gcard reveal">
           <div class="gcard__head">
             <span class="gcard__avatar" aria-hidden="true">M</span>
@@ -373,6 +292,84 @@
     </div>
   </section>
 
+  <!-- VISIT -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Visiting us</span>
+        <h2 class="split-head"><span>Finding the</span><span>{{NAME}} clinic</span></h2>
+      </div>
+      <div class="visit">
+        <div>
+          <dl>
+            <div><dt>Address</dt><dd><a class="visit__maps" href="{{MAPS_URL}}" target="_blank" rel="noopener" data-track="maps" data-location="{{SLUG}}">{{STREET}}<br>{{NAME}} {{POST}}<span class="sr-only"> (opens in Google Maps)</span></a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:{{PHONE_TEL}}" data-location="{{SLUG}}"><span class="callrail-number">{{PHONE_SHOWN}}</span></a></dd></div>
+            <div><dt>Opening hours</dt><dd>
+              <table class="hours-table">
+                <caption class="sr-only">Opening hours for the {{NAME}} clinic</caption>
+                <tbody>
+                  <tr data-day="mon"><th scope="row">Monday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="tue"><th scope="row">Tuesday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="wed"><th scope="row">Wednesday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="thu"><th scope="row">Thursday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="fri"><th scope="row">Friday</th><td><span data-temp>8:30am &ndash; 5:30pm</span></td></tr>
+                  <tr data-day="sat"><th scope="row">Saturday</th><td><span data-temp>8:30am &ndash; 12:00pm</span></td></tr>
+                  <tr data-day="sun"><th scope="row">Sunday</th><td><span data-temp>Closed</span></td></tr>
+                </tbody>
+              </table>
+            </dd></div>
+            <div><dt>Parking</dt><dd><span data-temp>{{PARKING}}</span></dd></div>
+            <div><dt>Public transport</dt><dd><span data-temp>{{TRANSPORT}}</span></dd></div>
+          </dl>
+          <div class="cluster mt-8">
+            <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="visit-block">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          </div>
+        </div>
+        <div class="map-embed">
+          <!-- {{EMBED_NOTE}} -->
+          <iframe
+            src="{{EMBED_URL}}"
+            title="Google map: Dr. Abbie Clinics {{NAME}}, {{STREET}}, {{NAME}} {{POST}}"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+          <a class="map-embed__open" href="{{MAPS_URL}}" target="_blank" rel="noopener" data-track="maps" data-location="{{SLUG}}">Open in Google Maps <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--white">
+    <div class="container container--narrow">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2 class="split-head"><span>{{NAME}}</span><span>clinic FAQs</span></h2>
+      </div>
+      <div class="accordion accordion--plain">
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Do I need a referral to see a podiatrist at {{NAME}}? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>No. Podiatry is a primary contact profession in Australia, so you can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that.</span></p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">{{FAQ2_Q}} <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p>{{FAQ2_A}}</p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Do you treat children at this clinic? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>{{FAQ3_A}}</span></p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">How long is a first appointment? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>Allow about 45 minutes. That covers the biomechanical assessment, the diagnosis and an explanation of the treatment plan before anything is prescribed.</span></p></div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Can I claim my health fund rebate on the spot? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner"><p><span data-temp>Yes. {{NAME}} has HICAPS, so private health rebates come off at reception. Medicare care plans and NDIS plans are accepted.</span></p></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CLOSING CTA — full-bleed photograph, same treatment as the home page. -->
   <section class="cta-band cta-band--photo">
     <div class="cta-band__inner">
@@ -387,7 +384,7 @@
             will find you the right practitioner.</p>
           <div class="cta-band__actions">
             <a class="btn btn--book" href="#" data-track="book" data-location="{{SLUG}}" data-source="location-closing">Book at {{NAME}} <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-            <a class="btn btn--ghost-invert" href="tel:+61295454378" data-location="{{SLUG}}">Call this clinic</a>
+            <a class="btn btn--ghost-invert" href="tel:{{PHONE_TEL}}" data-location="{{SLUG}}">Call this clinic</a>
           </div>
         </div>
       </div>

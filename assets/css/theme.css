@@ -2918,3 +2918,486 @@ a.post-feature:hover .post-feature__img img { transform: scale(1.03); }
   color: var(--azure-deep);
 }
 .mega__link:hover .mega__tag { background: #fff; }
+
+/* --------------------------------------------------------------------------
+   CLINIC CARD — one card wherever clinics are listed (clinicui.py)
+   Address links to Google Maps; Book online is orange; Call is outlined
+   azure so the two read as different actions.
+   -------------------------------------------------------------------------- */
+.clinic-grid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17.5rem), 1fr));
+}
+.clinic-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-5);
+  background: #fff;
+  border: 1px solid var(--hairline-soft);
+  border-radius: var(--radius-card);
+}
+.clinic-card .clinic-card__name {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+.clinic-card__name a { color: var(--deep-blue); text-decoration: none; }
+.clinic-card__name a:hover { color: var(--azure-deep); text-decoration: underline; }
+.clinic-card .clinic-card__addr {
+  margin-top: var(--sp-2);
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+.clinic-card__addr svg { flex: none; margin-top: 2px; color: var(--azure-deep); }
+.clinic-card .clinic-card__addr:hover span:first-of-type { text-decoration: underline; color: var(--azure-deep); }
+.clinic-card .clinic-card__who {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--hairline-soft);
+  font-size: var(--fs-small);
+  line-height: 1.55;
+}
+.clinic-card__label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azure-deep);
+}
+.clinic-card__actions {
+  margin-top: auto;
+  padding-top: var(--sp-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.clinic-card__actions .btn { flex: 1 1 auto; gap: 6px; padding-inline: var(--sp-4); white-space: nowrap; }
+.clinic-card__actions .btn svg { flex: none; }
+
+/* the phone button: outlined azure, never orange */
+.btn.btn--phone {
+  background: #fff;
+  color: var(--azure-deep);
+  border-color: var(--azure-deep);
+}
+.btn.btn--phone:hover { background: var(--azure-deep); color: #fff; }
+
+/* home clinic finder sits on a photo wash: cards stay solid */
+.clinic-grid--finder { grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr)); }
+.clinics--map .clinic-card { background: rgba(255, 255, 255, 0.96); }
+
+/* footer: the same card on the lifted charcoal band */
+.site-footer .footer-locations {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr));
+  gap: var(--sp-3);
+}
+.clinic-card--dark {
+  padding: var(--sp-4);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--hairline-invert);
+}
+.clinic-card--dark .clinic-card__name { font-size: 1rem; }
+.clinic-card--dark .clinic-card__name a { color: #fff; }
+.clinic-card--dark .clinic-card__name a:hover { color: #9FD3EF; }
+.clinic-card--dark .clinic-card__addr { color: rgba(255, 255, 255, 0.74); }
+.clinic-card--dark .clinic-card__addr svg { color: #9FD3EF; }
+.clinic-card--dark .clinic-card__addr:hover span:first-of-type { color: #fff; }
+.clinic-card--dark .clinic-card__actions { padding-top: var(--sp-4); }
+.clinic-card--dark .btn { min-height: 40px; font-size: 0.8125rem; }
+.clinic-card--dark .btn.btn--phone { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.55); }
+.clinic-card--dark .btn.btn--phone:hover { background: #fff; color: var(--deep-blue); border-color: #fff; }
+.clinic-card--dark .loc-card__tag { background: rgba(255, 255, 255, 0.12); color: #9FD3EF; }
+.footer-top .footer-top__lede { margin-top: var(--sp-2); font-size: var(--fs-small); color: rgba(255, 255, 255, 0.7); }
+
+/* location page: address and map both open the clinic in Google Maps */
+.visit .visit__maps { color: inherit; text-decoration: underline; text-decoration-color: rgba(15, 120, 181, 0.4); text-underline-offset: 3px; }
+.visit .visit__maps:hover { color: var(--azure-deep); text-decoration-color: currentColor; }
+.map-embed { position: relative; }
+.map-embed .map-embed__open {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(12, 46, 71, 0.18);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--azure-deep);
+  text-decoration: none;
+}
+.map-embed .map-embed__open:hover { background: var(--azure-deep); color: #fff; }
+
+/* treatments accordion now sits on the pale ground: items go white so they
+   still read as rows */
+.section--pale .accordion:not(.accordion--plain) .acc-item { background: #fff; }
+
+/* --------------------------------------------------------------------------
+   SWIPE ROWS
+   Client (Loom): on mobile, long card lists "scroll forever". Below 768px
+   every tagged grid becomes one horizontal row the visitor flicks through,
+   the next card peeking in so the row reads as swipeable. .swipe--two shows
+   two small cards at once. .swipe--always stays a row at every width (the
+   full condition / treatment cross-link rows). Arrows and a counter are
+   added by initSwipe() and only appear when the row actually overflows.
+   `html .swipe.swipe` outranks every grid rule it overrides.
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  html .swipe.swipe:not(.swipe--always) {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    gap: var(--sp-4);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    padding-bottom: var(--sp-2);
+    scrollbar-width: none;
+  }
+  html .swipe.swipe--two:not(.swipe--always) { grid-auto-columns: calc(50% - var(--sp-2)); gap: var(--sp-3); }
+  /* flex-based grids (practitioners) */
+  html .swipe.pcard-grid--center:not(.swipe--always) { display: grid; }
+  html .swipe.pcard-grid--center > * { flex: none; width: auto; }
+}
+html .swipe.swipe--always {
+  display: grid;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: 84%;
+  gap: var(--sp-4);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--sp-2);
+  scrollbar-width: none;
+}
+@media (min-width: 560px)  { html .swipe.swipe--always { grid-auto-columns: calc((100% - var(--sp-4)) / 2); } }
+@media (min-width: 1000px) { html .swipe.swipe--always { grid-auto-columns: calc((100% - 3 * var(--sp-4)) / 4); } }
+@media (max-width: 767px) {
+  html .swipe.swipe--always { margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+}
+.swipe::-webkit-scrollbar { display: none; }
+.swipe > * { scroll-snap-align: start; min-width: 0; }
+/* cards off to the side never scroll "into view" vertically, so the reveal
+   fade would leave them blank: inside a row they are always shown */
+.swipe > .reveal { opacity: 1; transform: none; }
+
+.swipe-nav {
+  margin-top: var(--sp-4);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--sp-3);
+}
+.swipe-nav[hidden] { display: none; }
+.swipe-nav__count { margin-right: auto; font-size: var(--fs-small); font-weight: 600; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.swipe-nav__btn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  background: #fff;
+  color: var(--deep-blue);
+  cursor: pointer;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+.swipe-nav__btn:hover:not([disabled]) { background: var(--azure-deep); border-color: var(--azure-deep); color: #fff; }
+.swipe-nav__btn[disabled] { opacity: 0.35; cursor: default; }
+.swipe-nav--dark .swipe-nav__count { color: rgba(255, 255, 255, 0.7); }
+.swipe-nav--dark .swipe-nav__btn { background: transparent; border-color: rgba(255, 255, 255, 0.35); color: #fff; }
+@media (min-width: 768px) {
+  .swipe-nav:not(.swipe-nav--always) { display: none; }
+}
+
+/* Google preferred-source button, footer. The script swaps the empty div for
+   Google's own button; until then (or if it is blocked) the deeplink shows. */
+.site-footer .preferred-source {
+  margin-top: var(--sp-6);
+  padding: var(--sp-4);
+  display: grid;
+  gap: var(--sp-2);
+  justify-items: start;
+  border: 1px solid var(--hairline-invert);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+}
+.preferred-source .preferred-source__label { font-size: var(--fs-small); font-weight: 600; color: #fff; }
+.preferred-source [google-add-preferred-source-btn]:empty { display: none; }
+.preferred-source [google-add-preferred-source-btn]:not(:empty) + .preferred-source__fallback { display: none; }
+.preferred-source .preferred-source__fallback {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--deep-blue);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.preferred-source .preferred-source__fallback::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  flex: none;
+  background: conic-gradient(#EA4335 0 25%, #FBBC05 0 50%, #34A853 0 75%, #4285F4 0);
+  border-radius: 50%;
+}
+.preferred-source .preferred-source__fallback:hover { background: var(--pale-blue); }
+
+/* --------------------------------------------------------------------------
+   UNDERSTANDING — snapshot education from Dr Najjarine's textbook
+   A "types" strip (where it hurts / which type) above numbered snapshot cards.
+   -------------------------------------------------------------------------- */
+.edu-types { margin-bottom: var(--sp-6); }
+.edu-types .edu-types__title {
+  margin-bottom: var(--sp-3);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--azure-deep);
+}
+.edu-types__row {
+  display: grid;
+  gap: 2px;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: rgba(12, 46, 71, 0.12);
+}
+@media (min-width: 760px) {
+  .edu-types__row--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .edu-types__row--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .edu-types__row--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.edu-type { padding: var(--sp-5); background: var(--deep-blue); color: #fff; }
+.edu-type .edu-type__sub {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9FD3EF;
+}
+.edu-type .edu-type__h { margin-top: var(--sp-3); font-size: 1.125rem; color: #fff; }
+.edu-type p { margin-top: var(--sp-2); font-size: var(--fs-small); line-height: 1.6; color: rgba(255, 255, 255, 0.84); }
+
+.edu-grid { display: grid; gap: var(--sp-4); }
+@media (min-width: 760px)  { .edu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .edu-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.edu-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-5);
+  background: #fff;
+  border: 1px solid var(--hairline-soft);
+  border-radius: var(--radius-card);
+}
+.edu-card .edu-card__n { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.06em; color: var(--azure-deep); }
+.edu-card .edu-card__h { margin-top: var(--sp-2); font-size: 1.0625rem; line-height: 1.35; color: var(--deep-blue); }
+.edu-card__body { margin-top: var(--sp-2); font-size: var(--fs-small); line-height: 1.6; color: var(--ink); }
+.edu-card__body ul, .edu-card__body ol { margin: 0; padding-left: 1.1em; display: grid; gap: 6px; }
+.edu-card__body ul { list-style: disc; }
+.edu-card__body ol { list-style: decimal; }
+.edu-card__body li::marker { color: var(--azure-deep); }
+.edu-card__body a { font-weight: 600; }
+.edu-source {
+  margin-top: var(--sp-5);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+.edu-source cite { font-style: italic; }
+
+/* --------------------------------------------------------------------------
+   CONDITION: SYMPTOMS AND CAUSES (client: "not formatted in the best way")
+   The "What causes it" heading had no space above it: .cond-split__h resets
+   its margin later than the .mt-8 utility loads. Symptoms are now scannable
+   tick cards, the cause a callout, and the diagram a supporting size.
+   -------------------------------------------------------------------------- */
+@media (min-width: 900px) {
+  .cond-split.cond-split { grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.75fr); gap: var(--sp-9); }
+}
+.tick-list.symptom-list { display: grid; gap: var(--sp-3); }
+@media (min-width: 640px) { .tick-list.symptom-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tick-list.symptom-list li {
+  padding: var(--sp-4) var(--sp-4) var(--sp-4) 2.75rem;
+  background: var(--pale-blue);
+  border-radius: 12px;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+.tick-list.symptom-list li::before { left: var(--sp-4); top: calc(var(--sp-4) + 0.45em); }
+.cond-cause {
+  margin-top: var(--sp-7);
+  padding: var(--sp-5) var(--sp-6);
+  border-left: 3px solid var(--azure-deep);
+  background: #fff;
+  box-shadow: 0 1px 0 var(--hairline-soft), 0 0 0 1px var(--hairline-soft);
+  border-radius: 0 12px 12px 0;
+}
+.cond-cause p { font-size: var(--fs-body); line-height: 1.65; color: var(--ink); }
+.cond-split__figure.cond-split__figure { max-width: 420px; justify-self: center; }
+@media (min-width: 900px) { .cond-split__figure.cond-split__figure { position: sticky; top: calc(var(--header-h) + var(--sp-5)); } }
+@media (max-width: 759px) {
+  html .edu-types__row.swipe { background: none; border-radius: 0; overflow-x: auto; }
+  .edu-types__row.swipe > .edu-type { border-radius: var(--radius-card); }
+  .cond-cause p { font-size: 1rem; }
+  .cond-cause { padding: var(--sp-4) var(--sp-5); }
+}
+/* preferred-source sits in the wide "Stay connected" band beside the socials */
+.site-footer .preferred-source.preferred-source--band {
+  margin: 0 var(--sp-5) 0 auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.preferred-source--band .preferred-source__label { color: rgba(255, 255, 255, 0.8); font-weight: 500; }
+.preferred-source .preferred-source__fallback { white-space: nowrap; }
+@media (max-width: 767px) {
+  .site-footer .preferred-source.preferred-source--band { margin: var(--sp-4) 0; }
+  .preferred-source .preferred-source__fallback { white-space: normal; border-radius: var(--radius-sm); }
+}
+
+/* Understanding section: image beside the types (stacked) or the cards */
+.edu-lead { display: grid; gap: var(--sp-5); align-items: start; margin-bottom: var(--sp-5); }
+@media (min-width: 900px) {
+  .edu-lead { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: var(--sp-6); }
+}
+.edu-lead .edu-types { margin-bottom: 0; }
+.edu-figure { margin: 0; overflow: hidden; border-radius: var(--radius-card); background: #fff; }
+.edu-figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+@media (min-width: 900px) { .edu-figure img { aspect-ratio: 4 / 5; } }
+/* the clinic's branded diagrams are shown whole, never cropped */
+.edu-figure.edu-figure--diagram img { object-fit: contain; aspect-ratio: 1 / 1; }
+@media (min-width: 760px) {
+  .edu-types__row.edu-types__row--stack { grid-template-columns: 1fr; }
+}
+.edu-types__row--stack .edu-type { padding: var(--sp-4) var(--sp-5); }
+.edu-types__row--stack .edu-type .edu-type__h { margin-top: var(--sp-2); }
+.edu-grid.edu-grid--two { margin: 0; }
+@media (min-width: 760px) { .edu-grid.edu-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 900px) {
+  .edu-lead { align-items: stretch; }
+  .edu-lead .edu-figure { display: flex; }
+  .edu-lead .edu-figure img { height: 100%; min-height: 300px; aspect-ratio: auto; }
+}
+
+/* With the sticky bar gone, the header keeps a compact Book button on phones
+   so booking is still one tap away without using any screen height. */
+@media (max-width: 560px) {
+  .site-header .btn--header-book { padding-inline: var(--sp-4); font-size: 0.8125rem; min-height: 40px; }
+  .site-header .btn--header-book .btn__icon { display: none; }
+  .site-header .header-actions { gap: var(--sp-2); }
+}
+@media (max-width: 360px) {
+  .site-header .btn--header-book { display: none; }
+}
+
+/* Team cards on phones: two to a row instead of one full-width portrait,
+   with a compact name plate so the photo is not hidden behind it. */
+@media (max-width: 519px) {
+  .team-slider { --per: 2; }
+  .team-slider__track { gap: var(--sp-3); }
+  .team-slider__track > .pcard { width: calc((100% - var(--sp-3)) / 2); }
+  .pcard .pcard__plate { left: 6px; right: 6px; bottom: 6px; padding: 8px 10px; border-radius: 10px; }
+  .pcard .pcard__plate h3 { font-size: 0.8125rem; line-height: 1.25; }
+  .pcard .pcard__role { font-size: 0.6875rem; line-height: 1.3; margin-top: 1px; }
+}
+
+/* --------------------------------------------------------------------------
+   HOME HERO ON PHONES (client: "cannot read much, the title is small")
+   The desktop scrim is a pool at the bottom-left; on a narrow screen the copy
+   spans the full width and runs up over the faces, so text sat on busy suits.
+   Phones get a bottom-up gradient that is near solid behind the copy and
+   clear over the faces, a larger headline, and a heavier light weight (300
+   is too thin to read on a photograph at this size).
+   -------------------------------------------------------------------------- */
+@media (max-width: 599px) {
+  .hero--bleed .hero__bg::after {
+    background: linear-gradient(to top,
+      rgba(12, 46, 71, 0.97) 0%,
+      rgba(12, 46, 71, 0.93) 38%,
+      rgba(12, 46, 71, 0.70) 56%,
+      rgba(12, 46, 71, 0.25) 72%,
+      rgba(12, 46, 71, 0.05) 86%);
+  }
+  .hero--bleed h1 {
+    font-size: clamp(2.6rem, 11.5vw, 3.1rem);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+  }
+  .hero--bleed .hero__intro { font-size: 1.0625rem; line-height: 1.55; color: #fff; margin-top: var(--sp-4); }
+  .hero--bleed .hero__trust-line { font-size: 0.75rem; letter-spacing: 0.08em; }
+  .hero--bleed .hero__anchor .hero__actions { margin-top: var(--sp-6); gap: var(--sp-3); }
+  .hero--bleed { min-height: min(92dvh, 760px); }
+}
+@media (max-width: 599px) {
+  .hero--bleed .hero__trust-line { display: none; }
+  .hero--bleed .hero__trust { margin-bottom: var(--sp-3); }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION HEADS ON PHONES (client: patient section spacing)
+   Stacked, the split head's right-hand block (rating box or intro) sat flush
+   against the heading while the eyebrow gap above and the gap before the
+   cards were large. Even rhythm: eyebrow 12px, heading, 20px, block, 28px.
+   -------------------------------------------------------------------------- */
+@media (max-width: 899px) {
+  .section-head .eyebrow { margin-bottom: var(--sp-3); }
+  .section-head.section-head--split > :nth-child(2) { margin-top: var(--sp-5); }
+  .section-head { margin-bottom: var(--sp-7); }
+  .section-head .grating { width: 100%; }
+}
+
+/* Visible call to action on cards that used to rely on hover alone */
+.loc-card { display: flex; flex-direction: column; }
+.loc-card .loc-card__more { margin-top: auto; padding-top: var(--sp-4); }
+a.loc-card:hover .loc-card__more svg { transform: translateX(4px); }
+.pcard .pcard__more {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--azure-deep);
+}
+.pcard .pcard__more svg { transition: transform var(--dur) var(--ease); }
+.pcard:hover .pcard__more svg { transform: translateX(3px); }
+@media (max-width: 519px) { .pcard .pcard__more { font-size: 0.6875rem; margin-top: 3px; } }
+/* the footer's generic link hover (white, underlined) was winning here */
+.site-footer .preferred-source a.preferred-source__fallback:hover,
+.site-footer .preferred-source a.preferred-source__fallback:focus-visible {
+  background: var(--pale-blue);
+  color: var(--deep-blue);
+  text-decoration: none;
+}

@@ -249,6 +249,31 @@ JOBS += [
 ]
 REGION['pc-eljabali'] = (135, 0, 540, 540)
 
+# "Understanding ..." section images (client, 18 Sept 2026): one per page,
+# none already shown elsewhere on that page. Natural aspect, so the
+# branded diagrams are never cropped.
+JOBS += [
+    ('edu-heel-pain', 'heel-pain (2).jpg', None, 560, 'center', False),
+    ('edu-plantar', 'heel-pain.jpg', None, 560, 'center', False),
+    ('edu-achilles', 'Achilles-Tendonitis.jpg', None, 560, 'center', False),
+    ('edu-shin', 'Shin-splint-ant.jpg', None, 560, 'center', False),
+    ('edu-forefoot', 'Metatarsagalia.jpg', None, 560, 'center', False),
+    ('edu-knee', 'knee-pain.jpg', None, 560, 'center', False),
+    ('edu-flat-feet', 'orthotic.jpg', None, 560, 'center', False),
+    ('edu-running', 'aching-legs.jpg', None, 560, 'center', False),
+    ('edu-pigeon', 'Kid_walking-in-sand.jpg', None, 560, 'center', False),
+    ('edu-out-toe', 'Ballet_crop.jpg', None, 560, 'center', False),
+    ('edu-biomechanics', 'Short-Leg.jpg', None, 560, 'center', False),
+    ('edu-orthotics', 'Orthotic-styles.jpg', None, 560, 'center', False),
+    ('edu-needling', 'dry-needling.png', None, 560, 'center', False),
+    ('edu-mobilisation', 'foot-mobilisations.png', None, 560, 'center', False),
+    ('edu-neural', 'Neutral-stance.jpg', None, 560, 'center', False),
+    ('edu-shockwave', 'shockwave-therapy.jpg', None, 560, 'center', False),
+    ('edu-strapping', 'Strapping.jpg', None, 560, 'center', False),
+    ('edu-sports', 'sports-condition.jpg', None, 560, 'center', False),
+    ('edu-childrens', 'SEVERS-DISEASE.jpg', None, 560, 'center', False),
+]
+
 def drop_white_matte(im):
     """Treat a logo on white as itself composited over white, and undo that.
 

@@ -250,7 +250,6 @@
   .header-actions { margin-left: auto; }
 }
 @media (max-width: 560px) {
-  .btn--header-book { display: none; }   /* mobile drawer + sticky bar carry it */
   .logo__sub { display: none; }
 }
 
@@ -316,25 +315,8 @@
 
 body.is-locked { overflow: hidden; }
 
-/* Mobile sticky booking bar ----------------------------------------------- */
-
-.mobile-bar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 90;
-  display: none;
-  gap: var(--sp-3);
-  padding: var(--sp-3) var(--sp-4);
-  padding-bottom: calc(var(--sp-3) + env(safe-area-inset-bottom, 0px));
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(8px);
-  border-top: 1px solid var(--hairline);
-}
-.mobile-bar .btn { flex: 1; }
-@media (max-width: 768px) {
-  .mobile-bar { display: flex; }
-  body { padding-bottom: 84px; }
-}
+/* Mobile sticky booking bar: removed at the client's request (it took screen
+   height on phones). Booking stays one tap away via the header button. */
 
 /* --------------------------------------------------------------------------
    HERO — left-aligned asymmetric, 7/5 split. Never centred, never a text wash.

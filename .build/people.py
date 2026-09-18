@@ -111,6 +111,7 @@ def card_grid(people=None, sizes='(min-width: 1000px) 25vw, (min-width: 560px) 5
             '          <div class="pcard__plate">',
             '            <h3>%s</h3>' % t['NAME'],
             '            <span class="pcard__role">%s</span>' % t['ROLE'],
+            '            <span class="pcard__more">View profile <svg width=\"12\" height=\"12\" viewBox=\"0 0 14 14\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 7h8M7.5 3.5L11 7l-3.5 3.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>',
             '          </div>',
             '        </a>',
         ]) + '\n')
@@ -131,6 +132,7 @@ def team_rail(per_view=4):
             '              <div class="pcard__plate">',
             '                <h3>%s</h3>' % t['NAME'],
             '                <span class="pcard__role">%s</span>' % t['ROLE'],
+            '                <span class="pcard__more">View profile <svg width=\"12\" height=\"12\" viewBox=\"0 0 14 14\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 7h8M7.5 3.5L11 7l-3.5 3.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>',
             '              </div>',
             '            </a>',
             '',
