@@ -202,37 +202,26 @@ TEAM = [
         'QUOTE': '',
     },
     {
-        'NAME': 'Dr Ahmad El-Jabali',
-        'FIRST': 'Ahmad',
-        'SLUG': 'dr-ahmad-el-jabali',
-        'ROLE': 'Podiatrist',
-        'ROLE_PLAIN': 'Podiatrist',
-        'PHOTO': 'pc-eljabali',
-        'INTRO': 'Podiatric biomechanical practitioner at Dr. Abbie Clinics.',
-        'QUALIFICATIONS': [],
-        'MEMBERSHIPS': [],
-        'INTERESTS': [],
-        'SERVICES': [],
-        'BIO': [
-            'Dr Ahmad El-Jabali (Podiatrist) is a podiatric biomechanical practitioner at '
-            'Dr. Abbie Clinics.',
-        ],
-        'QUOTE': '',
-    },
-    {
+        # CLIENT FEEDBACK V2, 29 Sept 2026: "she's just a GT [general treatment]
+        # podiatrist in Bowral ... make sure it's obvious she's not in one of our
+        # Dr. Abbie locations as a biomechanical podiatrist." Role, intro and bio
+        # all say so, and NOT_BIOMECHANICAL puts a note on her card and page.
         'NAME': 'Arega Sarkisian',
         'FIRST': 'Arega',
         'SLUG': 'arega-sarkisian',
-        'ROLE': 'Podiatrist',
-        'ROLE_PLAIN': 'Podiatrist',
+        'ROLE': 'General treatment podiatrist &middot; Bowral',
+        'ROLE_PLAIN': 'general treatment podiatrist at Bowral',
+        'NOT_BIOMECHANICAL': True,
         'PHOTO': None,
-        'INTRO': 'Podiatrist at Dr. Abbie Clinics.',
+        'INTRO': 'General treatment podiatry at The Bowral Foot Clinic.',
         'QUALIFICATIONS': ['B Pod'],
         'MEMBERSHIPS': [],
         'INTERESTS': [],
         'SERVICES': [],
         'BIO': [
-            'Arega Sarkisian (B Pod) is a podiatrist at Dr. Abbie Clinics.',
+            'Arega Sarkisian (B Pod) is a general treatment podiatrist at The Bowral '
+            'Foot Clinic, where she provides general foot care.',
+            'Arega does not practise at our other clinics.',
         ],
         'QUOTE': '',
     },

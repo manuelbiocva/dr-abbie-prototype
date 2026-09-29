@@ -33,6 +33,18 @@ import megamenu
 HEADER = (HEADER.replace('{{MEGA_SERVICES}}', megamenu.services_menu())
                 .replace('{{MEGA_CONDITIONS}}', megamenu.conditions_menu())
                 .replace('{{MEGA_CLINICS}}', megamenu.clinics_menu()))
+# The mobile drawer comes from the same data, so the phone menu cannot drift
+# from the desktop one.
+HEADER = (HEADER.replace('{{DRAWER_SERVICES}}', megamenu.drawer_services())
+                .replace('{{DRAWER_CONDITIONS}}', megamenu.drawer_conditions())
+                .replace('{{DRAWER_CLINICS}}', megamenu.drawer_clinics()))
+
+# The clinic count in body copy, so "nine clinics" is never typed by hand.
+COUNT_WORDS = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven',
+               8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve', 13: 'thirteen'}
+CLINIC_COUNT = COUNT_WORDS[len(CLINICS)]
+HEADER = (HEADER.replace('{{CLINIC_COUNT_CAP}}', CLINIC_COUNT.capitalize())
+                .replace('{{CLINIC_COUNT}}', CLINIC_COUNT))
 FOOTER = open(os.path.join(ROOT, '.footer.part'), encoding='utf-8').read()
 # Every clinic in the footer: address to Google Maps, Book online, Call.
 import clinicui
@@ -45,7 +57,7 @@ UTILITY_BAR = """
 <!-- UTILITY BAR (V4 only) — phone, reach and booking above the sticky header -->
 <div class="utility-bar">
   <div class="container utility-bar__inner">
-    <span class="utility-bar__hide"><strong>Eleven clinics</strong> across New South Wales</span>
+    <span class="utility-bar__hide"><strong>{{CLINIC_COUNT_CAP}} clinics</strong> across New South Wales</span>
     <span class="utility-bar__hide">Podiatry since 1990</span>
     <span class="utility-bar__sep">
       <a href="tel:+61295454378">(02) 9545 4378</a>
@@ -134,7 +146,7 @@ SCHEMA['home'] = """
       "name": "Which clinic should I book at?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Each of our eleven clinics books into its own diary. Choose the one nearest you and you will see the practitioners who work there."
+        "text": "Each of our clinics books into its own diary. Choose the one nearest you and you will see the practitioners who work there."
       }
     }
   ]
@@ -143,7 +155,7 @@ SCHEMA['home'] = """
 
 
 # Location template. Every [CLIENT TO PROVIDE] value becomes an ACF field on the
-# WordPress location post type, so the eleven clinics share one template.
+# WordPress location post type, so the clinics share one template.
 SCHEMA['location'] = """
 <script type="application/ld+json">
 {
@@ -612,7 +624,7 @@ import book_content
 
 # "Heel Pain" reads as "heel pain" mid-sentence, but proper nouns keep their
 # capitals ("Achilles pain", "Morton's", "Children's Podiatry" -> "children's podiatry").
-KEEP_CAPS = {'Achilles', 'Morton’s', 'Osgood-Schlatter', 'NBA'}
+KEEP_CAPS = {'Achilles', 'Morton’s', 'Osgood-Schlatter', 'NBA', "Sever's", 'Sever’s'}
 
 
 def lc_name(name):
@@ -694,6 +706,9 @@ def build(page, out_name, title, desc, canonical, booklabel='Book a Session',
             '<a class="btn btn--book btn--sm" href="#" data-track="book" data-source="mobile-bar">%s</a>' % booklabel)
 
     out = head + chrome + main + footer
+    # The clinic count, on every page, from the data rather than typed out.
+    out = (out.replace('{{CLINIC_COUNT_CAP}}', CLINIC_COUNT.capitalize())
+              .replace('{{CLINIC_COUNT}}', CLINIC_COUNT))
     if tokens:
         # the schema lives in <head>, so substitution runs over the whole page
         for k, v in tokens.items():
@@ -851,7 +866,7 @@ if __name__ == '__main__':
                         post_card(pt, delay=i * 60) for i, pt in enumerate(POSTS[:4])),
                     'HOME_TEAM_RAIL': people.team_rail(4),
                     # Generated so each card links to its own clinic. The hand-written
-                    # version sent all eleven to the Kirrawee page.
+                    # version sent them all to the Kirrawee page.
                     'HOME_CLINIC_FINDER': ''.join(
                         clinicui.card(c[1], 'home-finder', delay=(n % 4) * 60)
                         for n, c in enumerate(CLINICS)),
@@ -860,7 +875,7 @@ if __name__ == '__main__':
         else:
             print('  !! missing fragment: %s.main.html' % page)
 
-    # One template, eleven clinics, written into /locations/ so the prototype
+    # One template, every clinic, written into /locations/ so the prototype
     # matches the live URL shape (/locations/podiatrist-kirrawee/).
     for name, slug, street, post, overrides in CLINICS:
         f = fields(name, slug, street, post, overrides)
@@ -990,7 +1005,7 @@ if __name__ == '__main__':
               'https://dr-abbie.com/services/%s/' % sv['SLUG'],
               'Book a Session', subdir='services', tokens=f, blocks={'BOOK': bool(_book), 'BOOKPOINTS': bool(_book and _book.get('TYPES'))})
 
-    # One template, eleven conditions, written into /conditions/.
+    # One template, every condition, written into /conditions/.
     for cd in COND_PAGES:
         f = dict(cd)
         for k, v in COND_TEMP.items():
@@ -1154,7 +1169,16 @@ if __name__ == '__main__':
     # ----------------------------------------------------------------------
     CL = dict((c[1], c) for c in CLINICS)
     NUMBER_WORDS = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six',
-                    7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven'}
+                    7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven',
+                    12: 'twelve', 13: 'thirteen'}
+
+    def roster_name(slug_):
+        # A general-treatment-only practitioner is labelled wherever she is
+        # listed, not only on her own page (client feedback V2).
+        t = people.BY_SLUG[slug_]
+        if t.get('NOT_BIOMECHANICAL'):
+            return '%s (general treatment only)' % t['NAME']
+        return t['NAME']
 
     def join_names(xs):
         return xs[0] if len(xs) == 1 else ', '.join(xs[:-1]) + ' and ' + xs[-1]
@@ -1166,7 +1190,7 @@ if __name__ == '__main__':
             if url:
                 extra = ('          <p class="clinic-card__who"><span class="clinic-card__label">'
                          'Book with</span> %s</p>'
-                         % join_names([people.BY_SLUG[s_]['NAME'] for s_ in ROSTER[slug]]))
+                         % join_names([roster_name(s_) for s_ in ROSTER[slug]]))
             else:
                 extra = ('          <p class="clinic-card__who">Online booking is not available '
                          'for this clinic yet. Call and we will book you in.</p>')
@@ -1205,7 +1229,8 @@ if __name__ == '__main__':
     build('locations', 'locations.html',
           'Book a Podiatrist Near You: 11 NSW Clinics | Dr. Abbie Clinics',
           'Choose your nearest Dr. Abbie Clinics podiatry clinic and book online, or call. '
-          'Eleven clinics across Sydney, the Southern Highlands, Hunter and regional NSW.',
+          '%s clinics across Sydney, the Southern Highlands, Hunter and regional NSW.'
+          % NUMBER_WORDS[len(CLINICS)].capitalize(),
           SITE + '/locations/', 'Book a Session', tokens={
               'ONLINE_COUNT': NUMBER_WORDS[online_count],
               'ONLINE_COUNT_CAP': NUMBER_WORDS[online_count].capitalize(),
@@ -1309,6 +1334,12 @@ if __name__ == '__main__':
         f = dict((k, v) for k, v in t.items() if isinstance(v, str))
         f['QUALS_LINE'] = ' &middot; '.join(t['QUALIFICATIONS'])
         f['BIO_PARAS'] = '\n'.join('            <p>%s</p>' % p for p in t['BIO'])
+        # Client feedback V2: one practitioner is general treatment only, at one
+        # clinic. The note says so in her own words on the page, not just in the bio.
+        f['PRAC_NOTE'] = ('          <p class="profile-note">%s does not carry out the '
+                          'Najjarine Biomechanical Assessment. For a biomechanical '
+                          'assessment, <a href="team.html">choose another practitioner</a>.'
+                          '</p>' % t['FIRST']) if t.get('NOT_BIOMECHANICAL') else ''
         f['QUOTE_BLOCK'] = ((
             '          <blockquote class="profile-quote">\n'
             '            <p>“%s”</p>\n'

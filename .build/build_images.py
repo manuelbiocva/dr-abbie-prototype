@@ -194,6 +194,12 @@ JOBS = [
     ('cond-ingrown', 'high-angle-hand-massaging-foot-with-special-tool-scaled.jpg', (1, 1), 720, 'center', False),
     ('cond-children-gait', 'dr-abbie-looking-at-childs-feet-.png', (1, 1), 720, 'center', False),
     ('cond-out-toe', 'Pigeon-Toe-and-Out-Toe.jpg', (1, 1), 252, 'center', False),
+    # Client feedback V2 (29 Sept 2026): two more children's conditions.
+    # Sever's and Osgood both have the client's own branded diagram, so no crop.
+    ('cond-severs', 'SEVERS-DISEASE.jpg', None, 720, 'center', False),
+    ('cond-osgood', 'Osgood-Sclatter.jpg', None, 720, 'center', False),
+    ('hero-severs', 'DrAbbie_assessing-a-child_crop.jpg', None, 1400, 'center', False),
+    ('hero-osgood', 'action-action-energy-american-football-906073.jpg', None, 1400, 'center', False),
     # Closing CTA band. The team outside the Kirrawee clinic -- a different
     # photograph from the hero lineup. No build-time crop: the band's aspect
     # moves with the copy height, so object-position does the framing at

@@ -69,17 +69,7 @@
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="drawer__sub"><div>
-          <a href="service.html">Biomechanics</a>
-          <a href="service.html">Children's Podiatry</a>
-          <a href="service.html">Custom Orthotics</a>
-          <a href="service.html">Dry Needling</a>
-          <a href="service.html">Foot Mobilisation</a>
-          <a href="service.html">General Foot Care</a>
-          <a href="service.html">Neural Therapy</a>
-          <a href="service.html">Shockwave Therapy</a>
-          <a href="service.html">Sports Podiatry</a>
-          <a href="service.html">Foot Strapping</a>
-          <a class="drawer__all" href="index.html#treatments">All treatments</a>
+          {{DRAWER_SERVICES}}
         </div></div>
       </div>
       <div class="drawer__group">
@@ -88,18 +78,7 @@
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="drawer__sub"><div>
-          <a href="condition.html">Heel Pain</a>
-          <a href="condition.html">Plantar Fasciitis</a>
-          <a href="condition.html">Achilles Pain</a>
-          <a href="condition.html">Shin Splints</a>
-          <a href="condition.html">Forefoot Pain</a>
-          <a href="condition.html">Knee Pain</a>
-          <a href="condition.html">Flat Feet</a>
-          <a href="condition.html">Pigeon Toe</a>
-          <a href="condition.html">Out Toe</a>
-          <a href="condition.html">Running Injuries</a>
-          <a href="condition.html">Ingrown Toenails</a>
-          <a class="drawer__all" href="index.html#conditions">All conditions</a>
+          {{DRAWER_CONDITIONS}}
         </div></div>
       </div>
       <div class="drawer__group">
@@ -108,18 +87,7 @@
           <svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="drawer__sub"><div>
-          <a href="locations/podiatrist-kirrawee.html">Kirrawee</a>
-          <a href="locations/podiatrist-mortlake.html">Mortlake</a>
-          <a href="locations/podiatrist-sydney-city.html">Sydney City</a>
-          <a href="locations/podiatrist-manly.html">Manly</a>
-          <a href="locations/podiatrist-hornsby.html">Hornsby</a>
-          <a href="locations/podiatrist-glenhaven.html">Glenhaven</a>
-          <a href="locations/podiatrist-bowral.html">Bowral</a>
-          <a href="locations/podiatrist-wallsend.html">Wallsend</a>
-          <a href="locations/podiatrist-morisset.html">Morisset</a>
-          <a href="locations/podiatrist-forster-tuncurry.html">Forster/Tuncurry</a>
-          <a href="locations/podiatrist-narrabri.html">Narrabri</a>
-          <a class="drawer__all" href="locations.html">All clinics</a>
+          {{DRAWER_CLINICS}}
         </div></div>
       </div>
       <a class="drawer__link" href="team.html">Meet the Team</a>

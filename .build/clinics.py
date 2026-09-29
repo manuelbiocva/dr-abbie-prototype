@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The eleven clinics, and the per-clinic text the location template needs.
+"""The nine clinics, and the per-clinic text the location template needs.
 
 Addresses come from the live site and the developer brief. Everything marked
 TEMP below is invented stand-in copy at the client's request -- it renders
@@ -25,6 +25,17 @@ GENERIC = {
 }
 
 # name, slug, street, postcode, then any overrides
+#
+# CLIENT FEEDBACK V2, 29 September 2026: "There are nine clinics now because
+# Wallsend and Manly have been amalgamated into other locations." Both are
+# removed below, with their details kept here in case they come back:
+#   ('Manly', 'manly', 'Shop 8/48-52 Sydney Rd', 'NSW 2095', {}),
+#     Google profile cid 17765673780551382427, phone (02) 9538 7183
+#   ('Wallsend', 'wallsend', '8 Metcalfe St', 'NSW 2287', {}),
+#     no Google profile found, head office phone
+# CLIENT TO CONFIRM which clinic each one folded into, so /clinics/manly/ and
+# /clinics/wallsend/ (and the old standalone sites) 301 to the right page
+# instead of the clinic list.
 CLINICS = [
     ('Kirrawee', 'kirrawee', '27 Monro Ave', 'NSW 2232', {
         'INTRO': 'Our head office on Monro Ave, where custom orthotics are made on site.',
@@ -42,7 +53,6 @@ CLINICS = [
     }),
     ('Mortlake', 'mortlake', '15 Tennyson Rd, cnr Herbert St', 'NSW 2137', {}),
     ('Sydney City', 'sydney-city', 'Suite 35, Level 7, 88 Pitt St', 'NSW 2000', {}),
-    ('Manly', 'manly', 'Shop 8/48–52 Sydney Rd', 'NSW 2095', {}),
     ('Hornsby', 'hornsby', 'Unit 15/14 Edgeworth David Ave', 'NSW 2077', {
         'INTRO': 'Our children-only clinic on Edgeworth David Ave.',
         'FACT4': 'Children only',
@@ -52,7 +62,6 @@ CLINICS = [
     }),
     ('Glenhaven', 'glenhaven', 'Shop 9/78 Glenhaven Rd', 'NSW 2156', {}),
     ('Bowral', 'bowral', 'Shop 3, 2–4 Boolwey St', 'NSW 2576', {}),
-    ('Wallsend', 'wallsend', '8 Metcalfe St', 'NSW 2287', {}),
     ('Morisset', 'morisset', 'Shop 4/59 Dora St', 'NSW 2264', {}),
     ('Forster/Tuncurry', 'forster-tuncurry', '111 MacIntosh St', 'NSW 2428', {}),
     ('Narrabri', 'narrabri', 'Suite 4/159 Maitland St', 'NSW 2390', {}),
@@ -60,9 +69,9 @@ CLINICS = [
 
 # --------------------------------------------------------------------------
 # Online booking. SUPPLIED BY THE CLIENT, 17 September 2026: one Nookal link per
-# clinic, for seven of the eleven. Every booking button on a clinic's page goes
+# clinic, for seven of the nine. Every booking button on a clinic's page goes
 # to that clinic's link and nowhere else -- a wrong-clinic link is a launch
-# blocker. Manly, Wallsend, Forster/Tuncurry and Narrabri have no link yet, so
+# blocker. Forster/Tuncurry and Narrabri have no link yet, so
 # their pages book by phone instead of pointing at another clinic's diary.
 #
 # Two addresses above were corrected to match the same Nookal pages: Sydney
@@ -85,13 +94,13 @@ BOOKING = {
 # clinic's Nookal page (same date). Team slugs, from team_data.py. A clinic
 # with no Nookal link has no roster: nobody is claimed to work there.
 ROSTER = {
-    'kirrawee':    ['dr-abbie-najjarine', 'dr-abdulla-attar-hamoui', 'dr-ahmad-el-jabali',
+    'kirrawee':    ['dr-abbie-najjarine', 'dr-abdulla-attar-hamoui',
                     'dr-elissa-all', 'dr-mohemed-al-heyoury', 'dr-yousef-najjarine'],
     'sydney-city': ['dr-abbie-najjarine', 'dr-yousef-najjarine'],
     'hornsby':     ['dr-abbie-najjarine', 'dr-abdulla-attar-hamoui'],
     'glenhaven':   ['dr-abbie-najjarine', 'dr-mohemed-al-heyoury'],
-    'mortlake':    ['dr-abbie-najjarine', 'dr-ahmad-el-jabali', 'dr-yousef-najjarine'],
-    'bowral':      ['arega-sarkisian', 'dr-ahmad-el-jabali', 'dr-elissa-all',
+    'mortlake':    ['dr-abbie-najjarine', 'dr-yousef-najjarine'],
+    'bowral':      ['arega-sarkisian', 'dr-elissa-all',
                     'dr-mohemed-al-heyoury', 'dr-yousef-najjarine'],
     'morisset':    ['dr-abdulla-attar-hamoui', 'dr-elissa-all', 'dr-mohemed-al-heyoury'],
 }
@@ -99,9 +108,9 @@ ROSTER = {
 # Geography only, for grouping the booking page so a visitor from the Hunter
 # does not scroll past six Sydney clinics to find theirs.
 REGIONS = [
-    ('Sydney', ['kirrawee', 'mortlake', 'sydney-city', 'manly', 'hornsby', 'glenhaven']),
+    ('Sydney', ['kirrawee', 'mortlake', 'sydney-city', 'hornsby', 'glenhaven']),
     ('Southern Highlands', ['bowral']),
-    ('Newcastle &amp; Lake Macquarie', ['wallsend', 'morisset']),
+    ('Newcastle &amp; Lake Macquarie', ['morisset']),
     ('Mid North Coast', ['forster-tuncurry']),
     ('North West NSW', ['narrabri']),
 ]
@@ -113,8 +122,7 @@ REGIONS = [
 # Taken from the live dr-abbie.com/clinics/ page, which already carries a
 # Google map per clinic. Only THREE of those are Business Profiles (kind
 # 'profile'): Kirrawee, Bowral and Forster/Tuncurry. The rest are Google pins
-# on the street address ('address'), and Manly and Wallsend only have raw
-# coordinates ('search' -- a Maps search for the business name).
+# on the street address ('address').
 # CLIENT TO PROVIDE for every non-profile clinic: the Business Profile's
 # Share -> Copy link (MAPS) and Share -> Embed a map src (EMBED). Paste them
 # here; nothing else changes.
@@ -137,8 +145,6 @@ GOOGLE = {
         '!1m18!1m12!1m3!1d1650!2d151.0735456!3d-34.0306017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12c768feddef85%3A0x91b5d85f46cdce2f!2sDr.%20Abbie%20Clinics%20-%20Podiatry%2C%20Lower%20Limb%20Biomechanics!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr. Abbie Clinics - Podiatry, Lower Limb Biomechanics
     'mortlake': ('profile', _cid(17770434117263619916), _embed(
         '!1m18!1m12!1m3!1d1650!2d151.1079126!3d-33.8449173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a5c5fd0b6a83%3A0xf69d43ad87faf74c!2sDr%20Abbie%20Clinics%20Mortlake%20Podiatrists!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr Abbie Clinics Mortlake Podiatrists
-    'manly': ('profile', _cid(17765673780551382427), _embed(
-        '!1m18!1m12!1m3!1d1650!2d151.2858639!3d-33.7968317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ab416f3e3625%3A0xf68c5a2d453c759b!2sDr%20Abbie%20Clinics%20-%20Podiatry%20Lower%20Limb%20Biomechanics%20%28Manly%29!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr Abbie Clinics - Podiatry Lower Limb Biomechanics (Manly)
     'hornsby': ('profile', _cid(12950514141101368338), _embed(
         '!1m18!1m12!1m3!1d1650!2d151.1021375!3d-33.7061413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a759f889033d%3A0xb3b977ff1f052412!2sDr%20Abbie%20Clinics%20-%20Podiatry%20Lower%20Limb%20Biomechanics%20%28Hornsby%29!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau')),  # Dr Abbie Clinics - Podiatry Lower Limb Biomechanics (Hornsby)
     'glenhaven': ('profile', _cid(2245276739669225483), _embed(
@@ -155,8 +161,6 @@ GOOGLE = {
         '!1m18!1m12!1m3!1d3312.8799405829755!2d151.20623277570854!3d-33.866984873227324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae40389f5703%3A0xb225201c9c02093a!2sSte%2035%20Level%207%2F88%20Pitt%20St%2C%20Sydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1784784971780!5m2!1sen!2sau')),
     'narrabri': ('address', _cid(1703924822551671635), _embed(
         '!1m18!1m12!1m3!1d3443.9349992407706!2d149.77965337556446!3d-30.324366674783896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ba73444dcbb2ea9%3A0x17a58e992c29b353!2s4%2F159%20Maitland%20St%2C%20Narrabri%20NSW%202390!5e0!3m2!1sen!2sau!4v1784783948622!5m2!1sen!2sau')),
-    'wallsend': ('search', 'https://www.google.com/maps/search/?api=1&query=Dr+Abbie+Clinics+Wallsend+NSW',
-                 'https://maps.google.com/maps?q=-32.90391048516466,151.66938021069777&z=16&output=embed'),
 }
 
 # Phone per clinic. Client: "the numbers are different per location, some have
@@ -169,7 +173,6 @@ PHONES = {
     # the website and the listing match, as the client asked. Kirrawee, Hornsby and
     # Glenhaven list the head office number there too.
     'mortlake': ('+61258393160', '(02) 5839 3160'),
-    'manly': ('+61295387183', '(02) 9538 7183'),
     'bowral': ('+61240052668', '(02) 4005 2668'),
     'morisset': ('+61250185116', '(02) 5018 5116'),
     'forster-tuncurry': ('+61264216618', '(02) 6421 6618'),
@@ -191,7 +194,7 @@ TAGS = {'kirrawee': 'Head office', 'hornsby': 'Children only'}
 TEMP = {
     'PARKING':   'Street parking is available nearby. Call the clinic if you need accessible parking.',
     'TRANSPORT': 'Reachable by train and local bus routes. Call the clinic for the nearest stop.',
-    'ROSTER':    'Our podiatrists consult across the eleven clinics. Call to check who is at %s on the day you want.',
+    'ROSTER':    'Our podiatrists consult across our clinics. Call to check who is at %s on the day you want.',
     'FAQ3_A':    'Yes. Children’s podiatry is available here, including assessment for '
                  'in-toeing, flat feet and growing pains. Our Hornsby clinic sees children only.',
 }

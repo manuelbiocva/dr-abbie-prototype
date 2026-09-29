@@ -397,7 +397,7 @@ POSTS = [
 </ul>
 
 <h2 id="booking">Booking an appointment</h2>
-<p>Each of our eleven clinics books into its own diary, so choose the clinic nearest you and book straight in, or call and we will point you to the right practitioner. <span data-temp>Allow about 45 minutes for a first appointment.</span> That covers the assessment, the diagnosis and an explanation of the plan before any treatment starts. For fees and rebates, call the clinic you want to attend and reception will quote you before you book.</p>
+<p>Each of our clinics books into its own diary, so choose the clinic nearest you and book straight in, or call and we will point you to the right practitioner. <span data-temp>Allow about 45 minutes for a first appointment.</span> That covers the assessment, the diagnosis and an explanation of the plan before any treatment starts. For fees and rebates, call the clinic you want to attend and reception will quote you before you book.</p>
 """,
     },
 ]

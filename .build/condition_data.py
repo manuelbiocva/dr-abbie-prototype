@@ -565,6 +565,133 @@ CONDITIONS = [
                   'Took the time to show us what they were seeing as our son walked.'),
                  ('Leanne W.', '2 months ago', 'Honest about what did and did not need doing.')],
      'FACT3': 'TEMP_LENGTH'},
+    {
+        'NAME': "Sever's Disease",
+        'SLUG': 'severs-disease',
+        'HERO_IMG': 'hero-severs',
+        'DIAGRAM': 'cond-severs',
+        'DIAGRAM_ALT': "Diagram of the heel in Sever's disease, showing the Achilles tendon, "
+                       'the calcaneus and the growth plate',
+        'INTRO': 'Heel pain in growing children, usually between eight and fourteen. It is '
+                 'commonly put down to growing pains, but the way the foot is loading is worth '
+                 'assessing.',
+        'FACT1': 'Ages 8 to 14', 'FACT2': "Children's clinic at Hornsby",
+        'FACT3': 'TEMP_LENGTH',
+        'SYMPTOMS': [
+            'Soreness and tenderness at the back of the heel',
+            'Pain that increases when your child stops running, rather than during it',
+            'Pain when getting up after sitting',
+            'Limping or walking on the toes after sport',
+            'Most often in active, fast-growing children, and more often in boys',
+        ],
+        'CAUSES': 'The heel bone in a child has a growth plate that is still soft. Where the foot '
+                  'rolls in or out too far, the Achilles tendon pulls on that growth plate from '
+                  'one direction while the heel bone tilts the other way, and the repeated '
+                  'twisting between the hard bone and the softer growing bone is what hurts. '
+                  'It is also called calcaneal apophysitis. Two other things matter at this age: '
+                  'children grow in bursts, and muscle does not lengthen as fast as bone, so the '
+                  'calf is often tight while the child is growing quickly.',
+        'DIAGNOSE1': 'We assess how your child stands, walks and runs, and measure the position '
+                     'of the heel rather than only pressing the sore spot.',
+        'DIAGNOSE2': 'We look at what is loading the growth plate &mdash; how the foot is '
+                     'aligned, calf tightness, rotation coming from the shin or hip, activity '
+                     'levels and footwear &mdash; and explain what we found.',
+        'DIAGNOSE3': 'Treatment is prescribed against that finding. Dr Najjarine has published '
+                     'on Sever&rsquo;s as a biomechanical problem rather than only a growing '
+                     'problem, which is why the assessment comes first.',
+        'TREATMENTS': ['childrens-podiatry', 'biomechanics', 'custom-orthotics',
+                       'foot-mobilisation', 'foot-strapping'],
+        'FAQ': [
+            ('Is it just growing pains?',
+             'Sever&rsquo;s is often described that way. In our clinical view it is linked to how '
+             'the foot is loading: where the foot rolls in or out excessively, the growth plate '
+             'at the heel takes repeated stress. Growth is part of the picture, not all of it.'),
+            ('Why does it hurt after sport rather than during it?',
+             'That pattern &mdash; pain when your child stops running, or when getting up after '
+             'sitting &mdash; is one of the more recognisable features, and is part of what the '
+             'assessment asks about.'),
+            ('Will my child grow out of it?',
+             'TEMP:Symptoms often settle once the growth plate matures. That is not a reason to '
+             'leave a child in pain in the meantime, and the assessment establishes whether '
+             'anything is loading the heel that can be changed now.'),
+            ('What does treatment involve?',
+             'Depending on what the assessment finds, a plan can include orthotics, heel lifts, '
+             '<a href="services/foot-mobilisation.html">foot mobilisation</a>, '
+             '<a href="services/foot-strapping.html">strapping</a> and calf massage.'),
+            ('Do I need a referral?',
+             'No. You can book directly. If you are on a Medicare care plan your GP will refer '
+             'you, and we can bill that.'),
+        ],
+        'REVIEWS': [
+            ('Rebecca T.', '3 weeks ago', 'He had sore heels after every soccer game. We were '
+             'told it was growing pains. This was the first time anyone measured anything.'),
+            ('Michael D.', '1 month ago', 'Explained what was happening at the heel in a way my '
+             'son actually understood.'),
+            ('Priya S.', '2 months ago', 'Good with a nervous ten-year-old, and clear about what '
+             'to watch for.'),
+        ],
+    },
+    {
+        'NAME': 'Osgood-Schlatter',
+        'SLUG': 'osgood-schlatter',
+        'HERO_IMG': 'hero-osgood',
+        'DIAGRAM': 'cond-osgood',
+        'DIAGRAM_ALT': 'Diagram of Osgood-Schlatter disease, showing the patellar tendon pulling '
+                       'on the growth plate at the top of the shin bone',
+        'INTRO': 'A painful lump just below the kneecap in teenagers, usually between thirteen '
+                 'and seventeen. The knee is where it hurts; the assessment looks at what is '
+                 'twisting it.',
+        'FACT1': 'Ages 13 to 17', 'FACT2': 'Assessed as they grow',
+        'FACT3': 'TEMP_LENGTH',
+        'SYMPTOMS': [
+            'A tender lump at the top of the shin bone, just below the kneecap',
+            'Pain at the front of the knee that is worse with running, jumping and stairs',
+            'Pain when kneeling',
+            'Often during a growth spurt, and more often in boys',
+            'Usually one knee, but it can be both',
+        ],
+        'CAUSES': 'At this age the top of the shin bone is still growing and is softer than the '
+                  'bone around it. The tendon from the kneecap attaches there. Where the shin is '
+                  'rotated &mdash; inwards or outwards &mdash; and the hip muscles tighten to '
+                  'compensate, a twist is created through the knee. The tendon then pulls on the '
+                  'growing area repeatedly, which inflames it and can pull it away from the bone, '
+                  'forming the lump. Bone and soft tissue growing at different rates is part of '
+                  'why it happens when it does.',
+        'DIAGNOSE1': 'We assess the whole limb rather than only the knee, because the twist '
+                     'through the knee usually starts below it or above it.',
+        'DIAGNOSE2': 'We identify where the rotation is coming from &mdash; the shin, the hip, or '
+                     'the way the foot is loading &mdash; and explain what we found.',
+        'DIAGNOSE3': 'Treatment is prescribed against that finding, and staged around your '
+                     'teenager&rsquo;s growth and sport.',
+        'TREATMENTS': ['biomechanics', 'custom-orthotics', 'dry-needling', 'foot-strapping',
+                       'foot-mobilisation', 'shockwave-therapy'],
+        'FAQ': [
+            ('Is the lump permanent?',
+             'TEMP:The lump can remain after the pain settles. What the assessment addresses is '
+             'the pulling that is causing it, and your podiatrist will explain what to expect.'),
+            ('Should my teenager stop sport?',
+             'TEMP:That is a decision for the assessment rather than a blanket rule. We will tell '
+             'you what we found and what it means for their sport.'),
+            ('Should they stretch it?',
+             'Stretching the front of the thigh is often suggested for this condition. Where the '
+             'tendon is already pulling on a growing area, our clinical approach is not to add '
+             'more traction to it. Your podiatrist will explain what to do instead.'),
+            ('Why look at the feet for a knee problem?',
+             'Because the shin rotates between the two. A twist that shows up as knee pain is '
+             'often driven by how the foot is loading and how the hip is compensating, which is '
+             'what the <a href="services/biomechanics.html">assessment</a> measures.'),
+            ('Do I need a referral?',
+             'No. You can book directly. If you are on a Medicare care plan your GP will refer '
+             'you, and we can bill that.'),
+        ],
+        'REVIEWS': [
+            ('Anthony R.', '2 weeks ago', 'Basketball season and a sore knee. They looked at his '
+             'whole leg, not just the knee.'),
+            ('Sharon K.', '1 month ago', 'Clear explanation of why it happens at this age.'),
+            ('Daniel W.', '2 months ago', 'Gave us a plan that worked around her training '
+             'instead of just saying stop.'),
+        ],
+    },
 ]
 
 TEMP_TEXT = {

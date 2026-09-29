@@ -44,13 +44,13 @@ CONDITION_GROUPS = [
     ('Heel &amp; foot', ['Heel Pain', 'Plantar Fasciitis', 'Forefoot Pain', 'Flat Feet',
                          'Ingrown Toenails']),
     ('Leg &amp; sport', ['Achilles Pain', 'Shin Splints', 'Knee Pain', 'Running Injuries']),
-    ('Children', ['Pigeon Toe', 'Out Toe']),
+    ('Children', ['Pigeon Toe', 'Out Toe', "Sever's Disease", 'Osgood-Schlatter']),
 ]
 
 ARROW = ('<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">'
          '<path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" '
          'stroke-linecap="round" stroke-linejoin="round"/></svg>')
-NUMBER_WORDS = {10: 'Ten', 11: 'Eleven', 12: 'Twelve'}
+NUMBER_WORDS = {9: 'Nine', 10: 'Ten', 11: 'Eleven', 12: 'Twelve', 13: 'Thirteen'}
 NL = '\n'
 
 
@@ -196,3 +196,29 @@ def clinics_menu():
         '          </div>',
         '          </div>',
     ])
+
+
+# --------------------------------------------------------------------------
+# The mobile drawer. Same data, same links, plain list -- so the phone menu
+# cannot drift from the desktop one (it had: every service and condition link
+# pointed at a hub page that does not exist).
+# --------------------------------------------------------------------------
+def _drawer_links(rows, all_href, all_label):
+    out = [('          <a href="%s">%s</a>' % (href, name)) for name, href in rows]
+    out.append('          <a class="drawer__all" href="%s">%s</a>' % (all_href, all_label))
+    return NL.join(out)
+
+
+def drawer_services():
+    return _drawer_links([(s['NAME'], 'services/%s.html' % s['SLUG']) for s in SERVICES],
+                         'index.html#treatments', 'All treatments')
+
+
+def drawer_conditions():
+    return _drawer_links([(c['NAME'], 'conditions/%s.html' % c['SLUG']) for c in CONDITIONS],
+                         'index.html#conditions', 'All conditions')
+
+
+def drawer_clinics():
+    return _drawer_links([(c[0], 'locations/podiatrist-%s.html' % c[1]) for c in CLINICS],
+                         'locations.html', 'All clinics')

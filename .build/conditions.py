@@ -7,7 +7,7 @@ card displays them with object-fit: contain on white -- the same white their
 own background uses, so the letterboxing is invisible. Cropping them square
 cuts the labels off.
 
-The remaining five have no diagram in the asset library and use a clinical
+The remaining photographs have no diagram in the asset library and use a clinical
 photograph instead.
 """
 
@@ -23,6 +23,8 @@ CONDITIONS = {
     'Ingrown Toenails':  ('cond-ingrown',       'A foot being treated with a podiatry tool', False),
     'Pigeon Toe':        ('cond-children-gait', 'Dr Abbie Najjarine examining a child\u2019s feet', False),
     'Out Toe':           ('cond-out-toe',       'A young child standing barefoot, showing foot position', False),
+    "Sever's Disease":   ('cond-severs',        'Diagram of the heel in Sever\u2019s disease, showing the Achilles tendon, the calcaneus and the growth plate', True),
+    'Osgood-Schlatter':  ('cond-osgood',        'Diagram of Osgood-Schlatter disease, showing the patellar tendon pulling on the growth plate at the top of the shin bone', True),
 }
 
 
