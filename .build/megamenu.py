@@ -222,3 +222,28 @@ def drawer_conditions():
 def drawer_clinics():
     return _drawer_links([(c[0], 'locations/podiatrist-%s.html' % c[1]) for c in CLINICS],
                          'locations.html', 'All clinics')
+
+
+# --------------------------------------------------------------------------
+# Condition lists outside the menus: the home page's "What we treat" grid, the
+# same grid on every clinic page, and the footer column. Generated here so a
+# condition is added in one place (condition_data.py) and appears everywhere.
+# assemble.link_conditions() turns the placeholder href into the real page.
+# --------------------------------------------------------------------------
+CARD_ARROW = ('<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">'
+              '<path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" '
+              'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+
+def condition_cards(indent='        '):
+    out = []
+    for c in CONDITIONS:
+        out.append('%s<a class="card card--condition reveal" href="condition.html">'
+                   '<h3>%s</h3><p>%s</p><span class="card__more">Learn more %s</span></a>'
+                   % (indent, c['NAME'], CONDITION_BLURBS[c['NAME']], CARD_ARROW))
+    return NL.join(out)
+
+
+def footer_conditions(indent='        '):
+    return NL.join('%s<li><a href="condition.html">%s</a></li>' % (indent, c['NAME'])
+                   for c in CONDITIONS)

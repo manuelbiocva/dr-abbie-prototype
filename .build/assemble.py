@@ -49,6 +49,7 @@ FOOTER = open(os.path.join(ROOT, '.footer.part'), encoding='utf-8').read()
 # Every clinic in the footer: address to Google Maps, Book online, Call.
 import clinicui
 FOOTER = FOOTER.replace('{{FOOTER_CLINICS}}', clinicui.footer_clinics())
+FOOTER = FOOTER.replace('{{FOOTER_CONDITIONS}}', megamenu.footer_conditions())
 
 # The direction signed off for the build. It renders without the review banner.
 
@@ -705,6 +706,7 @@ def build(page, out_name, title, desc, canonical, booklabel='Book a Session',
             '<a class="btn btn--book btn--sm" href="#" data-track="book" data-source="mobile-bar">Book a Session</a>',
             '<a class="btn btn--book btn--sm" href="#" data-track="book" data-source="mobile-bar">%s</a>' % booklabel)
 
+    main = main.replace('{{CONDITION_CARDS_ALL}}', megamenu.condition_cards())
     out = head + chrome + main + footer
     # The clinic count, on every page, from the data rather than typed out.
     out = (out.replace('{{CLINIC_COUNT_CAP}}', CLINIC_COUNT.capitalize())

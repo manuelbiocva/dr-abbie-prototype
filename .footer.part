@@ -40,17 +40,7 @@
     <div class="footer-col">
       <h3>Conditions</h3>
       <ul>
-        <li><a href="condition.html">Heel Pain</a></li>
-        <li><a href="condition.html">Plantar Fasciitis</a></li>
-        <li><a href="condition.html">Achilles Pain</a></li>
-        <li><a href="condition.html">Shin Splints</a></li>
-        <li><a href="condition.html">Forefoot Pain</a></li>
-        <li><a href="condition.html">Knee Pain</a></li>
-        <li><a href="condition.html">Flat Feet</a></li>
-        <li><a href="condition.html">Pigeon Toe</a></li>
-        <li><a href="condition.html">Out Toe</a></li>
-        <li><a href="condition.html">Running Injuries</a></li>
-        <li><a href="condition.html">Ingrown Toenails</a></li>
+        {{FOOTER_CONDITIONS}}
       </ul>
     </div>
 

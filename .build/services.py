@@ -87,6 +87,7 @@ SERVICES = [
         'CONDITIONS': [
             ('Flat Feet', 'Fallen arches in children and adults'),
             ('Plantar Fasciitis', 'Arch and heel pain under load'),
+            ("Sever's Disease", 'Heel pain in children 8 to 14'),
             ('Forefoot Pain', 'Including Morton’s neuroma'),
             ('Knee Pain', 'Where the cause sits below the knee'),
         ],
@@ -132,6 +133,8 @@ SERVICES = [
                  'reviewed as they develop.',
         'CONDITIONS': [
             ('Pigeon Toe', 'In-toeing gait in children'),
+            ("Sever's Disease", 'Heel pain in children 8 to 14'),
+            ('Osgood-Schlatter', 'Knee pain in teenagers 13 to 17'),
             ('Out Toe', 'Out-toeing gait in children'),
             ('Flat Feet', 'Fallen arches in children and adults'),
             ('Heel Pain', 'Including first-step pain in the morning'),
@@ -229,6 +232,7 @@ SERVICES = [
             ('Achilles Pain', 'Tendon pain and tendonitis'),
             ('Heel Pain', 'Including first-step pain in the morning'),
             ('Running Injuries', 'Overuse injury and return to sport'),
+            ('Osgood-Schlatter', 'Knee pain in teenagers 13 to 17'),
         ],
         'FAQ': [
             ('Is dry needling the same as acupuncture?',
@@ -273,6 +277,7 @@ SERVICES = [
             ('Flat Feet', 'Fallen arches in children and adults'),
             ('Heel Pain', 'Including first-step pain in the morning'),
             ('Knee Pain', 'Where the cause sits below the knee'),
+            ("Sever's Disease", 'Heel pain in children 8 to 14'),
         ],
         'FAQ': [
             ('Is foot mobilisation the same as a massage?',
@@ -315,6 +320,7 @@ SERVICES = [
         'CONDITIONS': [
             ('Running Injuries', 'Overuse injury and return to sport'),
             ('Shin Splints', 'Pain along the shin with activity'),
+            ('Osgood-Schlatter', 'Knee pain in teenagers 13 to 17'),
             ('Achilles Pain', 'Tendon pain and tendonitis'),
             ('Knee Pain', 'Where the cause sits below the knee'),
         ],
