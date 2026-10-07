@@ -4,9 +4,8 @@
 Addresses come from the live site and the developer brief. Everything marked
 TEMP below is invented stand-in copy at the client's request -- it renders
 inside a data-temp span so it can be found again. Nothing here asserts a
-clinic-specific fact that is not already published, with two exceptions that
-ARE published: Kirrawee is the head office where orthotics are made on site,
-and Hornsby is children only.
+clinic-specific fact that is not already published, with one exception that
+IS published: Kirrawee is the head office where orthotics are made on site.
 """
 
 GENERIC = {
@@ -53,12 +52,11 @@ CLINICS = [
     }),
     ('Mortlake', 'mortlake', '15 Tennyson Rd, cnr Herbert St', 'NSW 2137', {}),
     ('Sydney City', 'sydney-city', 'Suite 35, Level 7, 88 Pitt St', 'NSW 2000', {}),
+    # CLIENT FEEDBACK V3, 7 Oct 2026: "all clinics treat adults and children", so
+    # Hornsby is no longer presented as children-only.
     ('Hornsby', 'hornsby', 'Unit 15/14 Edgeworth David Ave', 'NSW 2077', {
-        'INTRO': 'Our children-only clinic on Edgeworth David Ave.',
-        'FACT4': 'Children only',
-        'CTA_EYEBROW': 'Children only &middot; treating young feet since 1990',
-        'FAQ3_A': 'Hornsby is our children-only clinic. Every appointment here is a paediatric '
-                  'assessment &mdash; in-toeing, out-toeing, flat feet and growing pains.',
+        'INTRO': 'Biomechanical assessment, custom orthotics and sports podiatry on '
+                 'Edgeworth David Ave.',
     }),
     ('Glenhaven', 'glenhaven', 'Shop 9/78 Glenhaven Rd', 'NSW 2156', {}),
     ('Bowral', 'bowral', 'Shop 3, 2–4 Boolwey St', 'NSW 2576', {}),
@@ -94,15 +92,15 @@ BOOKING = {
 # clinic's Nookal page (same date). Team slugs, from team_data.py. A clinic
 # with no Nookal link has no roster: nobody is claimed to work there.
 ROSTER = {
-    'kirrawee':    ['dr-abbie-najjarine', 'dr-abdulla-attar-hamoui',
+    'kirrawee':    ['dr-abbie-najjarine', 'dr-abdalla-attar-hamoui',
                     'dr-elissa-all', 'dr-mohemed-al-heyoury', 'dr-yousef-najjarine'],
     'sydney-city': ['dr-abbie-najjarine', 'dr-yousef-najjarine'],
-    'hornsby':     ['dr-abbie-najjarine', 'dr-abdulla-attar-hamoui'],
+    'hornsby':     ['dr-abbie-najjarine', 'dr-abdalla-attar-hamoui'],
     'glenhaven':   ['dr-abbie-najjarine', 'dr-mohemed-al-heyoury'],
     'mortlake':    ['dr-abbie-najjarine', 'dr-yousef-najjarine'],
     'bowral':      ['arega-sarkisian', 'dr-elissa-all',
                     'dr-mohemed-al-heyoury', 'dr-yousef-najjarine'],
-    'morisset':    ['dr-abdulla-attar-hamoui', 'dr-elissa-all', 'dr-mohemed-al-heyoury'],
+    'morisset':    ['dr-abdalla-attar-hamoui', 'dr-elissa-all', 'dr-mohemed-al-heyoury'],
 }
 
 # Geography only, for grouping the booking page so a visitor from the Hunter
@@ -186,7 +184,7 @@ def phone(slug):
 
 
 # Published labels shown on clinic cards.
-TAGS = {'kirrawee': 'Head office', 'hornsby': 'Children only'}
+TAGS = {'kirrawee': 'Head office'}
 
 
 # TEMP, and deliberately generic: real parking, transport and rosters are
@@ -196,7 +194,7 @@ TEMP = {
     'TRANSPORT': 'Reachable by train and local bus routes. Call the clinic for the nearest stop.',
     'ROSTER':    'Our podiatrists consult across our clinics. Call to check who is at %s on the day you want.',
     'FAQ3_A':    'Yes. Children’s podiatry is available here, including assessment for '
-                 'in-toeing, flat feet and growing pains. Our Hornsby clinic sees children only.',
+                 'in-toeing, flat feet and growing pains. Children are seen at all of our clinics.',
 }
 
 

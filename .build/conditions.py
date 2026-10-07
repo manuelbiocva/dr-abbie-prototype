@@ -17,7 +17,7 @@ CONDITIONS = {
     'Achilles Pain':     ('cond-achilles',      'Diagram comparing a normal Achilles tendon with tendonitis, rupture and tendonosis', True),
     'Shin Splints':      ('cond-shin-splints',  'Diagram of medial shin splints along the tibia', True),
     'Forefoot Pain':     ('cond-forefoot',      'Diagram of Morton\u2019s neuroma between the metatarsals', True),
-    'Knee Pain':         ('cond-knee',          'Diagram of the knee showing the patellar tendon and growth plate', True),
+    'Knee Pain':         ('cond-knee',          'Pain highlighted at the knee joint', False),
     'Flat Feet':         ('cond-flat-feet',     'A podiatrist assessing the arch of a patient\u2019s foot', False),
     'Running Injuries':  ('cond-running',       'A runner on a downhill road', False),
     'Ingrown Toenails':  ('cond-ingrown',       'A foot being treated with a podiatry tool', False),
@@ -25,6 +25,9 @@ CONDITIONS = {
     'Out Toe':           ('cond-out-toe',       'A young child standing barefoot, showing foot position', False),
     "Sever's Disease":   ('cond-severs',        'Diagram of the heel in Sever\u2019s disease, showing the Achilles tendon, the calcaneus and the growth plate', True),
     'Osgood-Schlatter':  ('cond-osgood',        'Diagram of Osgood-Schlatter disease, showing the patellar tendon pulling on the growth plate at the top of the shin bone', True),
+    'Bunions':           ('cond-bunions',       'Diagram of the four stages of a bunion, from a normal foot to the tertiary stage', True),
+    'Bow Legs':          ('cond-bow-legs',      'A school-aged boy running', False),
+    'Knock Knees':       ('cond-knock-knees',   'School children sitting on a wall with their legs hanging down', False),
 }
 
 

@@ -30,12 +30,11 @@ CONDITIONS = [
             'Tenderness when you press the inside of the heel',
             'Worse after a long day standing, or after exercise rather than during it',
         ],
-        'CAUSES': 'Heel pain is usually a loading problem rather than a heel problem. The tissue '
-                  'under the heel is taking more load, or a different kind of load, than it can '
-                  'cope with — often because of the way the foot is aligned, a change in '
-                  'activity, footwear, or how the leg above is working. A heel spur seen on an '
-                  'X-ray is frequently a result of that loading rather than the cause of the '
-                  'pain.',
+        'CAUSES': 'Most heel pain comes from pronation — the foot rolling in too far. As the '
+                   'arch drops, the foot lengthens and the plantar fascia is elongated, and '
+                   'that repeated stretching causes micro-tears at the base of the heel, where '
+                   'the fascia attaches. A heel spur seen on an X-ray is frequently a result '
+                   'of that loading rather than the cause of the pain.',
         'DIAGNOSE1': 'We assess how you stand, walk and load rather than only pressing the sore '
                      'spot, because the heel is usually where the pain shows up and not where it '
                      'starts.',
@@ -65,8 +64,7 @@ CONDITIONS = [
              'the assessment is aimed at.'),
             ('Do I need a referral?',
              'No. Podiatry is a primary contact profession in Australia, so you can book '
-             'directly. If you are on a Medicare care plan your GP will refer you, and we can '
-             'bill that.'),
+             'directly.'),
         ],
         'REVIEWS': [
             ('Michael B.', '2 weeks ago', 'Six months of heel pain and the first appointment was '
@@ -91,10 +89,11 @@ CONDITIONS = [
                   'Worst with the first steps of the day',
                   'Eases with movement, then returns after rest',
                   'Sore to press along the inside of the arch'],
-     'CAUSES': 'The plantar fascia runs along the sole and takes load every time you push off. '
-               'Pain there usually means it is being loaded more, or differently, than it can '
-               'tolerate — through foot alignment, a change in activity or footwear, or the way '
-               'the leg above is working.',
+     'CAUSES': 'Pronation elongates the plantar fascia. As the foot rolls in and the arch '
+                'drops, the fascia is stretched on every step, and that repeated stretching '
+                'causes micro-tears at the base of the heel, where it attaches. How much load '
+                'it takes, and from which direction, depends on foot alignment, a change in '
+                'activity or footwear, and the way the leg above is working.',
      'DIAGNOSE1': 'We look at how the arch loads when you walk rather than only at rest, because '
                   'the fascia is loaded as you move.',
      'DIAGNOSE2': 'We identify what is increasing that load and explain what we found before '
@@ -104,10 +103,11 @@ CONDITIONS = [
      'TREATMENTS': ['custom-orthotics', 'shockwave-therapy', 'foot-strapping', 'foot-mobilisation'],
      'FAQ': [('Is plantar fasciitis the same as heel pain?',
               'They overlap. Heel pain is the symptom; plantar fasciitis is one of the common '
-              'causes of it. The assessment is what separates them.'),
+              'causes of it.'),
              ('Will stretching fix it?',
-              'TEMP:Stretching helps some people and not others, depending on what is driving the '
-              'load. Your podiatrist will tell you whether it is worth your time.'),
+              'Stretching is often suggested, but where the fascia is already over-stretched and '
+             'tearing, pulling on it can tear it further. Your podiatrist will tell you '
+             'whether stretching has any place in your plan, and what to do instead.'),
              ('How long before it settles?',
               'TEMP:That depends on how long it has been there. You will get a realistic timeframe '
               'at the assessment rather than a standard answer.'),
@@ -115,8 +115,7 @@ CONDITIONS = [
               'Usually not. The diagnosis is made from the assessment. Imaging is requested only '
               'where it would change the plan.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Helen W.',
                   '2 weeks ago',
                   'Arch pain for a year. They found it was how I was pushing off, not the fascia '
@@ -146,12 +145,11 @@ CONDITIONS = [
      'CAUSES': 'The Achilles transmits everything the calf does into the foot. Pain there usually '
                'follows a change in load — more running, faster running, different surfaces or '
                'shoes — or a mechanical reason the tendon is working harder than it should.',
-     'DIAGNOSE1': 'We assess calf function and how the foot loads through push-off, because that '
-                  'is what the tendon has to cope with.',
+     'DIAGNOSE1': 'We assess calf function and how the foot loads through push-off.',
      'DIAGNOSE2': 'We work out whether the problem is the load, the mechanics, or both, and show '
                   'you what we found.',
-     'DIAGNOSE3': 'Treatment usually combines addressing the mechanics with a graded loading plan '
-                  'rather than rest alone.',
+     'DIAGNOSE3': 'Treatment addresses the mechanics alongside a graded loading plan, rather '
+                   'than rest alone.',
      'TREATMENTS': ['shockwave-therapy', 'custom-orthotics', 'dry-needling', 'sports-podiatry'],
      'FAQ': [('Should I stop running?',
               'TEMP:Not always, and not always completely. Load usually needs managing rather than '
@@ -166,8 +164,7 @@ CONDITIONS = [
               'TEMP:Tendons are slow to respond. You will get a realistic timeframe at the '
               'assessment.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Chris V.',
                   '3 weeks ago',
                   'Given a loading plan rather than told to rest, which is what finally worked.'),
@@ -214,8 +211,7 @@ CONDITIONS = [
               'TEMP:That depends on how long you have trained through it. You will get a realistic '
               'timeframe at the assessment.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Ben A.',
                   '2 weeks ago',
                   'Turned out it was my shoes and my training jump together, not one or the '
@@ -238,6 +234,7 @@ CONDITIONS = [
      'FACT2': 'Often footwear related',
      'SYMPTOMS': ['A feeling of standing on a pebble or a fold in your sock',
                   'Burning or tingling that runs into the toes',
+            'Numbness in the toes',
                   'Relief when you take your shoe off and rub the foot',
                   'Worse in narrow or firm-soled shoes'],
      'CAUSES': 'The forefoot takes the highest pressure of any part of the foot at push-off. Pain '
@@ -262,8 +259,7 @@ CONDITIONS = [
               'TEMP:That depends on what is driving the pressure. You will get a realistic '
               'timeframe at the assessment.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Fiona McK.',
                   '3 weeks ago',
                   'The pebble feeling is exactly how I described it and they knew straight away '
@@ -312,8 +308,7 @@ CONDITIONS = [
               'They can, where the way the foot rolls changes the load at the knee. That is one of '
               'the things the assessment looks at.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Lisa K.',
                   '2 weeks ago',
                   'Told me my son did not need anything yet, which is not what I expected to hear '
@@ -342,8 +337,7 @@ CONDITIONS = [
      'CAUSES': 'Running injuries are almost always a mismatch between load and capacity. Either '
                'the training went up faster than the tissue adapted, or the mechanics mean one '
                'structure is doing more work than it should on every stride.',
-     'DIAGNOSE1': 'We assess your gait under load rather than standing still, because that is '
-                  'where a running injury actually happens.',
+     'DIAGNOSE1': 'We assess your running style and your mechanics.',
      'DIAGNOSE2': 'We identify what is failing and why — mechanics, training load, footwear, or a '
                   'combination.',
      'DIAGNOSE3': 'Treatment is paired with a return-to-running plan so load is rebuilt rather '
@@ -359,11 +353,9 @@ CONDITIONS = [
               'Because rest changes the load but not the cause. Finding the cause is what the '
               'assessment is for.'),
              ('Do you assess gait?',
-              'TEMP:Gait is assessed under load as part of the biomechanical assessment. Ask the '
-              'clinic what is available when you book.'),
+              'TEMP:Gait is assessed under load as part of the biomechanical assessment.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Ian C.',
                   '2 weeks ago',
                   'Same calf problem three times. First time anyone asked about my training load.'),
@@ -378,7 +370,7 @@ CONDITIONS = [
      'SLUG': 'knee-pain',
      'HERO_IMG': 'hero-knee',
      'DIAGRAM': 'cond-knee',
-     'DIAGRAM_ALT': 'Diagram of the knee showing the patellar tendon and growth plate',
+     'DIAGRAM_ALT': 'Pain highlighted at the knee joint',
      'INTRO': 'Knee pain where the cause sits below the knee. How the foot loads changes what the '
               'knee has to do.',
      'FACT1': 'Assessed from the feet up',
@@ -409,8 +401,7 @@ CONDITIONS = [
               'TEMP:That depends on the cause and how long it has been there. You will get a '
               'realistic timeframe at the assessment.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Peter S.',
                   '3 weeks ago',
                   'Knee pain for two years and the answer was my foot. Would not have thought to '
@@ -456,8 +447,7 @@ CONDITIONS = [
               'TEMP:Yes, and foot care matters more where circulation or sensation is reduced. '
               'Tell reception when you book so enough time is allowed.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Margaret O.',
                   '2 weeks ago',
                   'Sorted quickly and gently. Wish I had not put it off for so long.'),
@@ -477,7 +467,7 @@ CONDITIONS = [
      'INTRO': 'In-toeing in children, where the feet point inwards when walking or running. '
               'Common, and worth measuring rather than waiting out.',
      'FACT1': 'Assessed as they grow',
-     'FACT2': 'Children’s clinic at Hornsby',
+     'FACT2': 'Children seen at every clinic',
      'SYMPTOMS': ['Feet that turn inwards when walking or running',
                   'Tripping more than other children the same age',
                   'A twisting appearance from the knee or the hip down',
@@ -507,8 +497,7 @@ CONDITIONS = [
              ('Is it causing the tripping?',
               'It can be. That is one of the things we check rather than assume.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Nadia H.',
                   '2 weeks ago',
                   'Explained what was expected for his age and what to watch for. No pressure to '
@@ -528,7 +517,7 @@ CONDITIONS = [
      'INTRO': 'Out-toeing in children, where the feet point outwards when walking. Assessed the '
               'same way as in-toeing.',
      'FACT1': 'Assessed as they grow',
-     'FACT2': 'Children’s clinic at Hornsby',
+     'FACT2': 'Children seen at every clinic',
      'SYMPTOMS': ['Feet that turn outwards when walking or running',
                   'A waddling appearance to the walk',
                   'Tiring quickly compared with other children',
@@ -543,8 +532,7 @@ CONDITIONS = [
                   'is staged around growth.',
      'TREATMENTS': ['childrens-podiatry', 'biomechanics', 'foot-mobilisation', 'custom-orthotics'],
      'FAQ': [('Is out-toeing worse than in-toeing?',
-              'Neither is automatically worse. Both are assessed the same way, and both are often '
-              'within the expected range for the age.'),
+              'Neither is automatically worse. Both are assessed the same way.'),
              ('Will it affect their sport?',
               'TEMP:It can affect comfort and efficiency. Whether it is worth addressing is what '
               'the assessment establishes.'),
@@ -555,8 +543,7 @@ CONDITIONS = [
               'Some rotational patterns do. Your podiatrist will ask about family history as part '
               'of the assessment.'),
              ('Do I need a referral?',
-              'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-              'you, and we can bill that.')],
+              'No. You can book directly.')],
      'REVIEWS': [('Tanya R.',
                   '3 weeks ago',
                   'Reassuring and thorough. We knew where we stood by the end of the appointment.'),
@@ -572,10 +559,9 @@ CONDITIONS = [
         'DIAGRAM': 'cond-severs',
         'DIAGRAM_ALT': "Diagram of the heel in Sever's disease, showing the Achilles tendon, "
                        'the calcaneus and the growth plate',
-        'INTRO': 'Heel pain in growing children, usually between eight and fourteen. It is '
-                 'commonly put down to growing pains, but the way the foot is loading is worth '
-                 'assessing.',
-        'FACT1': 'Ages 8 to 14', 'FACT2': "Children's clinic at Hornsby",
+        'INTRO': 'Heel pain in growing children, usually between the ages of 8 and 14. It is '
+                  'often blamed on growing pains, but the biomechanics should be investigated.',
+        'FACT1': 'Ages 8 to 14', 'FACT2': 'Children seen at every clinic',
         'FACT3': 'TEMP_LENGTH',
         'SYMPTOMS': [
             'Soreness and tenderness at the back of the heel',
@@ -619,8 +605,7 @@ CONDITIONS = [
              '<a href="services/foot-mobilisation.html">foot mobilisation</a>, '
              '<a href="services/foot-strapping.html">strapping</a> and calf massage.'),
             ('Do I need a referral?',
-             'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-             'you, and we can bill that.'),
+             'No. You can book directly.'),
         ],
         'REVIEWS': [
             ('Rebecca T.', '3 weeks ago', 'He had sore heels after every soccer game. We were '
@@ -638,9 +623,9 @@ CONDITIONS = [
         'DIAGRAM': 'cond-osgood',
         'DIAGRAM_ALT': 'Diagram of Osgood-Schlatter disease, showing the patellar tendon pulling '
                        'on the growth plate at the top of the shin bone',
-        'INTRO': 'A painful lump just below the kneecap in teenagers, usually between thirteen '
-                 'and seventeen. The knee is where it hurts; the assessment looks at what is '
-                 'twisting it.',
+        'INTRO': 'A painful lump just below the kneecap in teenagers, usually between '
+                  'thirteen and seventeen. The knee is where it hurts; the assessment looks at '
+                  'what is causing it.',
         'FACT1': 'Ages 13 to 17', 'FACT2': 'Assessed as they grow',
         'FACT3': 'TEMP_LENGTH',
         'SYMPTOMS': [
@@ -670,8 +655,9 @@ CONDITIONS = [
              'TEMP:The lump can remain after the pain settles. What the assessment addresses is '
              'the pulling that is causing it, and your podiatrist will explain what to expect.'),
             ('Should my teenager stop sport?',
-             'TEMP:That is a decision for the assessment rather than a blanket rule. We will tell '
-             'you what we found and what it means for their sport.'),
+             'Until they have been assessed, yes. Running and jumping keep pulling on the '
+             'growing area below the kneecap. Once we know what is causing it, your '
+             'podiatrist will tell you what they can return to and when.'),
             ('Should they stretch it?',
              'Stretching the front of the thigh is often suggested for this condition. Where the '
              'tendon is already pulling on a growing area, our clinical approach is not to add '
@@ -681,8 +667,7 @@ CONDITIONS = [
              'often driven by how the foot is loading and how the hip is compensating, which is '
              'what the <a href="services/biomechanics.html">assessment</a> measures.'),
             ('Do I need a referral?',
-             'No. You can book directly. If you are on a Medicare care plan your GP will refer '
-             'you, and we can bill that.'),
+             'No. You can book directly.'),
         ],
         'REVIEWS': [
             ('Anthony R.', '2 weeks ago', 'Basketball season and a sore knee. They looked at his '
@@ -690,6 +675,180 @@ CONDITIONS = [
             ('Sharon K.', '1 month ago', 'Clear explanation of why it happens at this age.'),
             ('Daniel W.', '2 months ago', 'Gave us a plan that worked around her training '
              'instead of just saying stop.'),
+        ],
+    },
+    {
+        'NAME': 'Bunions',
+        'SLUG': 'bunions',
+        'HERO_IMG': 'hero-bunions',
+        'DIAGRAM': 'cond-bunions',
+        'DIAGRAM_ALT': 'Diagram of the four stages of a bunion, from a normal foot to the '
+                       'tertiary stage',
+        'INTRO': 'A bony bump at the base of the big toe, where the toe drifts across towards '
+                 'the others. Bunions form in stages, and what drives them is mechanical.',
+        'FACT1': 'Forms in three stages', 'FACT2': 'Assessment first',
+        'FACT3': 'TEMP_LENGTH',
+        'SYMPTOMS': [
+            'A bump on the inside of the foot at the base of the big toe',
+            'The big toe drifting across towards the second toe',
+            'Redness or rubbing where the joint presses on the shoe',
+            'Aching at the joint when walking or pushing off',
+            'Sometimes on one foot only',
+        ],
+        'CAUSES': 'The first of the long bones behind the big toe is often naturally a little '
+                  'short, and sits angled in towards the middle of the body. For it to reach the '
+                  'ground, the foot rolls in. As it does, the ground pushes the big toe across '
+                  'and rotates it, and over time the muscles that pull the toe inwards shorten '
+                  'and hold it there. Where a bunion forms on one side only, a longer leg '
+                  'rolling in more than the other is often behind it.',
+        'DIAGNOSE1': 'We assess the foot as it loads, and measure the position of the first '
+                     'metatarsal and the big toe, rather than looking at the bump alone.',
+        'DIAGNOSE2': 'We identify what is driving the toe across — foot alignment, a short '
+                     'first metatarsal, a leg length difference, or footwear — and explain what '
+                     'we found.',
+        'DIAGNOSE3': 'Treatment is aimed at that cause, because a bunion that is not addressed '
+                     'mechanically tends to keep progressing through its stages.',
+        'TREATMENTS': ['biomechanics', 'custom-orthotics', 'foot-mobilisation', 'dry-needling',
+                       'neural-therapy'],
+        'FAQ': [
+            ('Will a night splint straighten it?',
+             'A night splint may ease the pain, but it will not correct the bunion. As soon as '
+             'you walk again the mechanics that caused it are still there, and the drift '
+             'continues.'),
+            ('Can a bunion be reversed?',
+             'Progression can usually be slowed where the cause is addressed early. By the later '
+             'stages, once the joint has changed shape, the deviation itself is not reversible, '
+             'which is why it is worth assessing before it gets there.'),
+            ('Do I need surgery?',
+             'TEMP:That is a decision for you and your surgeon. What we assess is the mechanical '
+             'cause, which surgery does not change on its own.'),
+            ('I have had bunion surgery. Do I still need orthotics?',
+             'Surgery corrects the toe; it does not correct the way the foot loads. Where that is '
+             'left unaddressed, the bunion can return over the years that follow.'),
+            ('Why have I only got one?',
+             'A one-sided bunion often points to a leg length difference, where the longer leg '
+             'rolls in further. That is one of the things the assessment measures.'),
+            ('Do I need a referral?',
+             'No. You can book directly.'),
+        ],
+        'REVIEWS': [
+            ('Helen P.', '3 weeks ago', 'First time anyone explained why it had formed rather '
+             'than just pointing at the bump.'),
+            ('Tony M.', '1 month ago', 'Had surgery years ago and it was coming back. Now I know '
+             'why.'),
+            ('Sandra K.', '2 months ago', 'Clear about what orthotics would and would not do.'),
+        ],
+    },
+    {
+        'NAME': 'Bow Legs',
+        'SLUG': 'bow-legs',
+        'HERO_IMG': 'hero-bow-legs',
+        'DIAGRAM': 'cond-bow-legs',
+        'DIAGRAM_ALT': 'A school-aged boy running',
+        'INTRO': 'Legs that curve outwards at the knees, so the knees sit apart when the feet are '
+                 'together. Known medically as genu varum.',
+        'FACT1': 'Assessed as they grow', 'FACT2': 'Children seen at every clinic',
+        'FACT3': 'TEMP_LENGTH',
+        'SYMPTOMS': [
+            'A gap between the knees when the feet are together',
+            'Feet that roll outwards, wearing the outer edge of the shoes',
+            'Tiring quickly, or complaints of aching legs after activity',
+            'In adults, aching on the outside of the knee or in the hip',
+            'Sometimes one leg more than the other',
+        ],
+        'CAUSES': 'Some bowing is expected in young children and straightens as they grow. What '
+                  'matters is whether it is within the expected range for the age, and what sits '
+                  'above and below the knee. Where the angle of the hip joint sets the thigh bone '
+                  'more upright, the leg tends to bow and the foot to roll outwards, which makes '
+                  'the foot rigid and poor at absorbing shock. A leg length difference can also '
+                  'produce it on the shorter side only.',
+        'DIAGNOSE1': 'We assess your child standing and walking, and measure the angle at the '
+                     'knees against what is expected for their age.',
+        'DIAGNOSE2': 'We look at the hip, the shin and the foot together, because the knee sits '
+                     'between them and usually reflects what they are doing.',
+        'DIAGNOSE3': 'Where nothing needs doing we say so and set a review. Where it does, '
+                     'treatment is staged around growth.',
+        'TREATMENTS': ['biomechanics', 'childrens-podiatry', 'custom-orthotics',
+                       'foot-mobilisation'],
+        'FAQ': [
+            ('Will my child grow out of it?',
+             'Often, yes — a degree of bowing is normal at certain ages and straightens on its '
+             'own. The assessment is what tells you whether your child is within that range or '
+             'outside it.'),
+            ('Is it the same as knock knees?',
+             'They are opposites. Bow legs sit apart at the knees and are linked with a foot that '
+             'rolls out; <a href="conditions/knock-knees.html">knock knees</a> touch at the knees '
+             'and are linked with a foot that rolls in. Both are assessed the same way.'),
+            ('Can it cause problems later?',
+             'Where the leg stays bowed, the load through the knee and the hip is uneven. In '
+             'adults that is linked with wear on the outer side of the joint.'),
+            ('What does treatment involve?',
+             'Where treatment is needed, it is usually orthotics to change how the foot loads, '
+             'alongside hands-on work and stretches for the muscles that have tightened.'),
+            ('Do I need a referral?',
+             'No. You can book directly.'),
+        ],
+        'REVIEWS': [
+            ('Laura B.', '2 weeks ago', 'Measured it properly and told us it was normal for her '
+             'age. No treatment pushed.'),
+            ('Craig D.', '1 month ago', 'Explained how the hip and the foot were involved.'),
+            ('Monica F.', '2 months ago', 'Came back in six months as suggested and compared the '
+             'measurements.'),
+        ],
+    },
+    {
+        'NAME': 'Knock Knees',
+        'SLUG': 'knock-knees',
+        'HERO_IMG': 'hero-knock-knees',
+        'DIAGRAM': 'cond-knock-knees',
+        'DIAGRAM_ALT': 'School children sitting on a wall with their legs hanging down',
+        'INTRO': 'Knees that angle inwards and touch while the ankles stay apart. Known medically '
+                 'as genu valgum.',
+        'FACT1': 'Assessed as they grow', 'FACT2': 'Children seen at every clinic',
+        'FACT3': 'TEMP_LENGTH',
+        'SYMPTOMS': [
+            'Knees that touch while the ankles stay apart',
+            'Feet that roll inwards, with the arches dropping',
+            'A knock-kneed look that is worse when tired or running',
+            'Aching on the inside of the knee, or at the front',
+            'Tripping, or an awkward running style',
+        ],
+        'CAUSES': 'As with bow legs, some of this is expected at certain ages and corrects with '
+                  'growth. Where it persists, the knee is usually reflecting what is happening '
+                  'above and below it: an angle at the hip that drops the thigh bone inwards, a '
+                  'foot that rolls in and lets the arch fall, and tight muscles at the front of '
+                  'the hip that tilt the pelvis forward. A leg length difference can produce it '
+                  'on the longer side only.',
+        'DIAGNOSE1': 'We assess your child standing, walking and running, and measure the angle '
+                     'at the knees against what is expected for their age.',
+        'DIAGNOSE2': 'We look at the hip, the pelvis and the foot together, and explain which of '
+                     'them the knee is responding to.',
+        'DIAGNOSE3': 'Where nothing needs doing we say so and set a review. Where it does, the '
+                     'plan is aimed at the level the problem is coming from.',
+        'TREATMENTS': ['biomechanics', 'childrens-podiatry', 'custom-orthotics',
+                       'foot-mobilisation', 'dry-needling'],
+        'FAQ': [
+            ('Will my child grow out of it?',
+             'Often, yes. A degree of it is normal at certain ages. The assessment tells you '
+             'whether your child is within the expected range, and whether the feet are adding '
+             'to it.'),
+            ('Is it the same as flat feet?',
+             'They travel together. A foot that rolls in and loses its arch lets the knee drop '
+             'inwards, which is why <a href="conditions/flat-feet.html">flat feet</a> and knock '
+             'knees are often assessed at the same time.'),
+            ('Can it cause problems later?',
+             'Where it persists, load concentrates on the inner side of the knee and at the front '
+             'of the kneecap. In adults that is linked with knee pain.'),
+            ('What does treatment involve?',
+             'Usually orthotics to support the foot and change how the knee loads, with hands-on '
+             'work and stretches for the muscles at the front of the hip.'),
+            ('Do I need a referral?',
+             'No. You can book directly.'),
+        ],
+        'REVIEWS': [
+            ('Vanessa L.', '3 weeks ago', 'Showed us how her arches and her knees were connected.'),
+            ('Peter H.', '1 month ago', 'Did not rush into orthotics. Measured first.'),
+            ('Amal S.', '2 months ago', 'Explained what to watch for as he grows.'),
         ],
     },
 ]

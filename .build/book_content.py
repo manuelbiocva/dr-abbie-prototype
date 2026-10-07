@@ -76,8 +76,7 @@ CONDITIONS = {
              'inflammation where the fascia attaches to the heel.'),
             ('Plantarfasciosis', 'Longer term', 'The body lays down thickening and scar tissue. '
              'There is usually no longer inflammation, and it becomes harder to treat.'),
-            ('Heel spur', 'Compensation', 'A small bony growth forms at the attachment. It causes '
-             'the same pain rather than being a separate problem.'),
+            ('Heel spur', 'Compensation', 'A small bony growth forms at the attachment.'),
         ],
         'POINTS': [
             ('What is actually happening',
@@ -86,8 +85,7 @@ CONDITIONS = {
              'under load, which is why getting out of bed hurts most.</p>'),
             ('Inner, centre or outer heel',
              '<p>The fascia has inner, central and outer bands. Inner heel pain is linked with '
-             'rolling in, outer heel pain with rolling out, and central pain with a foot that '
-             'does both in one step.</p>'),
+             'rolling in, outer heel pain with rolling out, and centre heel pain with both.</p>'),
             ('Why leg length can matter',
              '<p>If one leg is longer, that foot may roll in more to level the body up, '
              'straining the inner heel. The plan can then include raising the shorter leg, not '
@@ -122,9 +120,8 @@ CONDITIONS = {
              'finding the biomechanical reason for it. That reason is what the treatment is '
              'aimed at.</p>'),
             ('Why it should not be ignored',
-             '<p>Over time, strain can cause small tears, scarring and adhesions in the tendon. '
-             'Pain on both sides of the tendon puts it under strain from two directions at '
-             'once.</p>'),
+             '<p>Over time, strain can cause small tears, scarring and adhesions in the '
+             'tendon.</p>'),
             ('What a plan can include',
              '<p><a href="services/custom-orthotics.html">Orthotics</a> (with forefoot '
              'additions where needed), <a href="services/shockwave-therapy.html">shockwave</a>, '
@@ -170,8 +167,9 @@ CONDITIONS = {
             ('Metatarsalgia', 'General, burning', 'Pain spread across the ball of the foot. As a '
              'rolled-in foot lengthens, it creates shearing forces on the long bones’ heads '
              'and loses the arch across the forefoot.'),
-            ('Morton’s neuroma', 'Localised, nerve', 'A nerve between the long bones becomes '
-             'trapped and swells, usually between the 2nd/3rd or 3rd/4th toes.'),
+            ('Morton’s neuroma', 'Localised, nerve', 'A swelling of the nerve that runs between the '
+             'metatarsals, the long bones of the foot — usually between the 2nd/3rd or '
+             '3rd/4th toes.'),
         ],
         'POINTS': [
             ('How a neuroma changes over time',
@@ -185,7 +183,7 @@ CONDITIONS = {
              '<p><a href="services/custom-orthotics.html">Orthotics</a> with a metatarsal dome, '
              'which supports the arch across the forefoot, '
              '<a href="services/dry-needling.html">dry needling</a>, foot mobilisation and '
-             'massage. For a neuroma, an injection can help separate the bones.</p>'),
+             'massage.</p>'),
         ],
     },
     'knee-pain': {
@@ -300,8 +298,7 @@ CONDITIONS = {
              'is worth assessing rather than waiting.</p>'),
             ('How it shows up later',
              '<p>With the shin turning in below the knee and the thigh turning out above it, '
-             'the knee is caught in the middle. In adults this is linked to knee pain, '
-             'especially running downhill.</p>'),
+             'the knee is caught in the middle. In adults this is linked to knee pain.</p>'),
             ('What a plan can include',
              '<p>Monitoring as your child grows, stretches for the hip muscles that have '
              'tightened to compensate, orthotics where the feet roll in, and regular '
@@ -331,8 +328,8 @@ CONDITIONS = {
              '<p>An outward-turned shin compensated by tight groin muscles twists the knee. That '
              'adds to the pull on the growing area below the kneecap in active teenagers.</p>'),
             ('What a plan can include',
-             '<p>Stretches, in-toe gait-plate orthotics to guide an outward-turned shin, a slim '
-             'orthotic for dance or sport shoes, and re-measuring every few months. See '
+             '<p>Stretches, in-toe gait-plate orthotics to guide an outward-turned shin, '
+             'and re-measuring every few months. See '
              '<a href="services/childrens-podiatry.html">children’s podiatry</a>.</p>'),
         ],
     },

@@ -242,7 +242,7 @@ POSTS = [
 
 <h2 id="the-appointment">What happens at the appointment</h2>
 <p>A <a href="services/childrens-podiatry.html">children’s podiatry</a> assessment looks at how your child stands, walks and runs, and compares that against what is expected for their age. We explain what we found in plain terms, including when the answer is that nothing needs doing yet. Where something does, treatment is staged around growth and reviewed as they develop.</p>
-<p>Our Hornsby clinic sees children only, and children are also seen at our other clinics. Bring the shoes your child wears most, including school shoes.</p>
+<p>Children are seen at all of our clinics. Bring the shoes your child wears most, including school shoes.</p>
 
 <h2 id="school-shoes">What to check in a school shoe</h2>
 <p>Children spend a large part of the week in their school shoes, so they are worth choosing carefully. Three quick checks you can do in the shop:</p>

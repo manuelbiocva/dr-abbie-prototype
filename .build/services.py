@@ -118,7 +118,7 @@ SERVICES = [
         'ALT': 'Dr Abbie Najjarine examining a child’s feet',
         'INTRO': 'Pigeon toe, flat feet and growing pains, assessed while the foot is still '
                  'developing.',
-        'FACT1': 'Hornsby is children only', 'FACT2': 'Assessed as they grow',
+        'FACT1': 'Seen at every clinic', 'FACT2': 'Assessed as they grow',
         'FACT3': 'TEMP_LENGTH',
         'WHAT': 'Children’s feet are still forming, and some things that look alarming settle '
                 'on their own while others do not. An assessment tells you which you are looking '
@@ -149,8 +149,7 @@ SERVICES = [
              'measuring it is how you know. That is the reason to have it looked at rather than '
              'waiting.'),
             ('Do you have a clinic just for children?',
-             'Yes. Our Hornsby clinic sees children only. Children are also seen at our other '
-             'clinics.'),
+             'Yes. Children are seen at all of our clinics.'),
             ('Will my child need orthotics?',
              'Not necessarily. Many children need nothing beyond monitoring. Orthotics are only '
              'prescribed where the assessment shows they will change something.'),
@@ -329,8 +328,7 @@ SERVICES = [
              'TEMP:Yes. Bring the shoes you train in, including any you have retired recently. '
              'The wear pattern tells us a great deal.'),
             ('Do you do video gait analysis?',
-             'TEMP:Gait is assessed under load as part of the biomechanical assessment. Ask the '
-             'clinic what is available when you book.'),
+             'TEMP:Gait is assessed under load as part of the biomechanical assessment.'),
             ('How soon can I get back to running?',
              'That depends entirely on what the assessment finds. A return-to-sport plan is part '
              'of the treatment rather than an afterthought.'),

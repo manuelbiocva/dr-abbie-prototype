@@ -188,7 +188,7 @@ JOBS = [
     ('cond-achilles', 'Achilles.jpg', None, 720, 'center', False),
     ('cond-shin-splints', 'Shin-splint-medial.jpg', None, 720, 'center', False),
     ('cond-forefoot', 'Mortons-Neuroma-1.jpg', None, 720, 'center', False),
-    ('cond-knee', 'Osgood-Sclatter.jpg', None, 720, 'center', False),
+    ('cond-knee', 'iStock-933150652.jpg', (1, 1), 720, 'center', False),
     ('cond-flat-feet', 'orthotics-95-1-scaled.jpg', (1, 1), 720, 'center', False),
     ('cond-running', 'adult-condition.jpg', (1, 1), 720, 'center', False),
     ('cond-ingrown', 'high-angle-hand-massaging-foot-with-special-tool-scaled.jpg', (1, 1), 720, 'center', False),
@@ -200,6 +200,14 @@ JOBS = [
     ('cond-osgood', 'Osgood-Sclatter.jpg', None, 720, 'center', False),
     ('hero-severs', 'DrAbbie_assessing-a-child_crop.jpg', None, 1400, 'center', False),
     ('hero-osgood', 'action-action-energy-american-football-906073.jpg', None, 1400, 'center', False),
+    # Client feedback V3 (7 Oct 2026): bunions, bow legs and knock knees.
+    # Bunions has the client's own branded stages diagram, so no crop.
+    ('cond-bunions', 'Bunions.jpg', None, 720, 'center', False),
+    ('cond-bow-legs', 'Back-to-school-1.jpg', (1, 1), 720, 'center', False),
+    ('cond-knock-knees', 'Back-To-School.png', (1, 1), 720, 'center', False),
+    ('hero-bunions', 'DrAbbieReception-31-scaled.jpg', None, 1400, 'center', False),
+    ('hero-bow-legs', 'Back-To-School.png', None, 1400, 'center', False),
+    ('hero-knock-knees', 'DrAbbie_assessing-a-child_crop.jpg', None, 1400, 'center', False),
     # Closing CTA band. The team outside the Kirrawee clinic -- a different
     # photograph from the hero lineup. No build-time crop: the band's aspect
     # moves with the copy height, so object-position does the framing at

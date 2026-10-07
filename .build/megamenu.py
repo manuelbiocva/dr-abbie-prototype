@@ -42,15 +42,17 @@ SERVICE_BLURBS = {
 # lists rather than one long one.
 CONDITION_GROUPS = [
     ('Heel &amp; foot', ['Heel Pain', 'Plantar Fasciitis', 'Forefoot Pain', 'Flat Feet',
-                         'Ingrown Toenails']),
+                         'Bunions', 'Ingrown Toenails']),
     ('Leg &amp; sport', ['Achilles Pain', 'Shin Splints', 'Knee Pain', 'Running Injuries']),
-    ('Children', ['Pigeon Toe', 'Out Toe', "Sever's Disease", 'Osgood-Schlatter']),
+    ('Children', ['Pigeon Toe', 'Out Toe', "Sever's Disease", 'Osgood-Schlatter',
+                  'Bow Legs', 'Knock Knees']),
 ]
 
 ARROW = ('<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">'
          '<path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" '
          'stroke-linecap="round" stroke-linejoin="round"/></svg>')
-NUMBER_WORDS = {9: 'Nine', 10: 'Ten', 11: 'Eleven', 12: 'Twelve', 13: 'Thirteen'}
+NUMBER_WORDS = {9: 'Nine', 10: 'Ten', 11: 'Eleven', 12: 'Twelve', 13: 'Thirteen',
+                14: 'Fourteen', 15: 'Fifteen', 16: 'Sixteen'}
 NL = '\n'
 
 

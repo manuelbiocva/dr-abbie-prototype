@@ -1314,7 +1314,8 @@ if __name__ == '__main__':
           'treatments they provide and the clinics where they take bookings.',
           SITE + '/team/', 'Book a Session', tokens={
               'HERO_IMG_TAG': band,
-              'TEAM_COUNT': NUMBER_WORDS[len(TEAM)].capitalize(),
+              'TEAM_COUNT': NUMBER_WORDS[len([t for t in TEAM
+                                             if not t.get('NOT_BIOMECHANICAL')])].capitalize(),
               'TEAM_GRID': people.card_grid(TEAM),
               'ONLINE_COUNT_CAP': NUMBER_WORDS[online_count].capitalize(),
               'CLINIC_CARDS': ''.join(book_card(c[1], 'team-clinics', show_roster=True,

@@ -8,7 +8,7 @@ Two edits worth knowing about:
   - "30 years of clinical practice" is written as "in private practice since
     1990". The live page dates from 2018, so the number is already stale;
     the year cannot go out of date.
-  - Dr Attar-Hamoui's name. The live page heads his profile "Dr Abdulla
+  - Dr Attar-Hamoui's name. The live page heads his profile "Dr Abdalla
     Attar-Hamoui" and then calls him "Dr Abdalla Attar" in the bio. This uses
     the heading spelling throughout, matching people.py and the planned URL,
     and the spelling is still an open question for the client (PROJECT-PLAN §8).
@@ -59,6 +59,7 @@ TEAM = [
         ],
         'INTERESTS': [
             'Lower limb biomechanical assessment',
+            'Special focus on children’s biomechanics',
             'Orthotic therapy',
             'Joint mobilisation',
             'Prolotherapy and neural therapy',
@@ -74,13 +75,15 @@ TEAM = [
             'dysfunction, which has given him extensive experience in the prescription and '
             'application of orthotic therapy.',
             'Alongside his clinical work, Abbie has lectured extensively throughout Australia, '
-            'New Zealand, the United Kingdom, Europe and Asia, teaching medical and allied '
+            'New Zealand, the United Kingdom, Europe, Asia and Africa, teaching medical and '
+            'allied '
             'health professionals lower limb biomechanical assessment and treatment '
             'techniques, joint mobilisation, prolotherapy, neural therapy, dry needling, '
             'strapping and physical therapy treatments.',
-            'He is co-founder and inventor of the patented ICB Dual Density Orthotic, invented '
+            'He is the inventor of the Crown Medical orthotic, patented worldwide, invented '
             'the patented Footronics Football Kick Trainer, and is the author of '
-            '<em>The Orthotic Revolution</em>.',
+            '<em>The Orthotic Revolution</em> and <em>Clinical Biomechanics of the Lower '
+            'Limb</em>.',
             'Abbie is the owner and Director of Dr. Abbie Clinics, and has been Director of AOL '
             'Footcare Centre since 1993. He was Director and Founder of the International '
             'College of Biomechanics from 1996 to 2019, Director of ICB Medical from 2000 to '
@@ -90,9 +93,9 @@ TEAM = [
         'QUOTE': '',
     },
     {
-        'NAME': 'Dr Abdulla Attar-Hamoui',
-        'FIRST': 'Abdulla',
-        'SLUG': 'dr-abdulla-attar-hamoui',
+        'NAME': 'Dr Abdalla Attar-Hamoui',
+        'FIRST': 'Abdalla',
+        'SLUG': 'dr-abdalla-attar-hamoui',
         'ROLE': 'Podiatrist',
         'ROLE_PLAIN': 'Podiatrist',
         'PHOTO': 'pc-attar',
@@ -103,13 +106,13 @@ TEAM = [
         'INTERESTS': ['Sports-centred biomechanics', 'Footwear technology'],
         'SERVICES': ['sports-podiatry', 'biomechanics'],
         'BIO': [
-            'Dr Abdulla Attar-Hamoui (Podiatrist) graduated from Western Sydney University with '
+            'Dr Abdalla Attar-Hamoui (Podiatrist) graduated from Western Sydney University with '
             'a Bachelor of Podiatry. Throughout his time at university he worked as a Fit '
             'Technician at The Athlete’s Foot, and he brings to the team detailed knowledge of '
             'modern footwear technology as well as a passion for sports-centred biomechanics.',
             'Having grown up as an active member of his local rugby league club, with an '
             'ambition to play first grade, he now finds his reward in patient-centred care. As '
-            'an active member of Sports Medicine Australia, Abdulla is driven to keep learning, '
+            'an active member of Sports Medicine Australia, Abdalla is driven to keep learning, '
             'so his professional development continues in and outside the clinic.',
         ],
         'QUOTE': 'Life lived for the betterment of others is a life worth living.',
