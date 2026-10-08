@@ -1,0 +1,669 @@
+<main id="main">
+
+  <!-- HERO — full-bleed photograph, copy overlaid in opposing corners -->
+  <section class="hero hero--bleed">
+    <div class="hero__bg">
+      <picture>
+        <!-- A 21:9 band inside a portrait viewport shows only ~21% of the
+             photo width, so phones get a 4:5 crop framed on the group. -->
+        <source media="(min-width: 900px)" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/hero-wide.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/hero-wide@2x.webp 2x">
+        <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/hero-portrait.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/hero-portrait.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/hero-portrait@2x.webp 2x" width="800" height="1000" alt="The Dr. Abbie Clinics podiatry team, with founder Dr Abbie Najjarine at the centre" loading="eager" fetchpriority="high" decoding="async" sizes="100vw">
+      </picture>
+    </div>
+
+    <div class="container hero__grid">
+      <div class="hero__anchor">
+        <p class="hero__trust">
+          <span class="gbadge">
+            <span class="gbadge__score">5 Stars</span>
+            <span class="gbadge__stars" role="img" aria-label="Rated 5 out of 5 stars"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+            <img class="gbadge__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark@2x.webp 2x" width="78" height="27" alt="Google" loading="eager" decoding="async">
+          </span>
+          <span class="hero__trust-line">Professional Podiatrists in Sydney and Beyond</span>
+        </p>
+
+        <h1>Move well, stand right, <strong>live better</strong></h1>
+
+        <p class="hero__intro">
+          Nine podiatry clinics across New South Wales, practising since 1990. Our Najjarine
+          Biomechanical Assessment traces lower limb pain back to the structure causing it.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--book" href="/locations/" data-track="book" data-source="home-hero">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn--ghost-invert" href="/locations/">Find your clinic</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-slider" data-slider-root data-per-view="3">
+      <div class="hero-slider__head">
+        <span class="hero-slider__label" id="hero-slider-label">Our treatments</span>
+        <div class="hero-slider__nav">
+          <button class="hero-slider__btn" type="button" data-slider="prev" aria-label="Previous treatments"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4 6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="hero-slider__btn" type="button" data-slider="next" aria-label="Next treatments"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m7 4 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="hero-slider__viewport">
+        <div class="hero-slider__track" data-slider-track role="group" aria-labelledby="hero-slider-label" aria-live="off">
+        <a class="hero-slide" data-slide href="/services/biomechanics/">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-biomechanics.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-biomechanics.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-biomechanics@2x.webp 2x" width="440" height="587" alt="A Dr. Abbie Clinics podiatrist examining a patient’s lower leg" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Biomechanics</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/custom-orthotics/">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-orthotics.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-orthotics.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-orthotics@2x.webp 2x" width="440" height="587" alt="A custom orthotic device being fitted against a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Custom Orthotics</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/shockwave-therapy/">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-shockwave.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-shockwave.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-shockwave@2x.webp 2x" width="440" height="587" alt="A shockwave therapy handpiece being applied to a patient’s heel" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Shockwave Therapy</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/childrens-podiatry/">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-childrens.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-childrens.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-childrens@2x.webp 2x" width="440" height="587" alt="Dr Abbie Najjarine assessing a child’s foot in clinic" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Children's Podiatry</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/dry-needling/">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-dry-needling.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-dry-needling.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-dry-needling@2x.webp 2x" width="440" height="587" alt="Dry needling being applied to a patient’s lower leg" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Dry Needling</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/foot-mobilisation/">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-mobilisation.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-mobilisation.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-mobilisation@2x.webp 2x" width="440" height="587" alt="A podiatrist mobilising a patient’s foot by hand" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Foot Mobilisation</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/foot-strapping/">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-strapping.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-strapping.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-strapping@2x.webp 2x" width="440" height="587" alt="Therapeutic strapping being applied to a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Foot Strapping</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/biomechanics/" aria-hidden="true" tabindex="-1">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-biomechanics.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-biomechanics.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-biomechanics@2x.webp 2x" width="440" height="587" alt="" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Biomechanics</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/custom-orthotics/" aria-hidden="true" tabindex="-1">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-orthotics.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-orthotics.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-orthotics@2x.webp 2x" width="440" height="587" alt="" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Custom Orthotics</span>
+        </a>
+        <a class="hero-slide" data-slide href="/services/shockwave-therapy/" aria-hidden="true" tabindex="-1">
+          <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-shockwave.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-shockwave.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/svc-shockwave@2x.webp 2x" width="440" height="587" alt="" loading="lazy" decoding="async" sizes="(min-width: 1600px) 220px, 160px">
+          <span class="hero-slide__label">Shockwave Therapy</span>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO CAROUSEL — professional memberships. The set is rendered twice so
+       the marquee wraps seamlessly; the duplicate is hidden from assistive
+       tech. AHPRA has no logo file in the supplied assets. -->
+  <section class="logo-band section--pale">
+    <div class="container">
+      <div class="logo-strip">
+        <p class="logo-strip__label">Trusted by patients from Sydney to Narrabri</p>
+        <div class="logo-strip__viewport">
+          <div class="logo-strip__track" data-logo-marquee>
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="Podiatry NSW/ACT" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="American Academy of Podiatric Sports Medicine (AAPSM)" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="Sports Medicine Australia" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="AHPRA — Australian Health Practitioner Regulation Agency" loading="lazy" decoding="async">
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med@2x.webp 2x" width="260" height="135" alt="" loading="lazy" decoding="async" aria-hidden="true">
+          <img class="logo-strip__item" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM — stepped slider, same mechanism as the hero treatment slider.
+       The first 4 cards are cloned at the end so the wrap is seamless; the
+       clones are aria-hidden and untabbable. Every portrait is the one
+       dr-abbie.com/practitioners/ uses for that person. -->
+  <section class="section team section--white">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Our practitioners</span>
+          <h2 class="split-head"><span>Our podiatry</span><span>specialists</span></h2>
+        </div>
+        <p class="lede">Our podiatrists work across nine clinics, and every treatment plan starts
+          with the same biomechanical assessment.</p>
+      </div>
+
+      <div class="team-slider reveal" data-slider-root data-per-view="4" data-interval="4200">
+        <div class="team-slider__head">
+          <span class="team-slider__label">Meet the team</span>
+          <div class="team-slider__nav">
+            <button class="team-slider__btn" type="button" data-slider="prev" aria-label="Previous practitioners"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4 6 9l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="team-slider__btn" type="button" data-slider="next" aria-label="Next practitioners"><svg width="15" height="15" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m7 4 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+        <div class="team-slider__viewport">
+          <div class="team-slider__track" data-slider-track>
+            <a class="pcard" data-slide href="/team/dr-abbie-najjarine/">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-najjarine.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-najjarine.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-najjarine@2x.webp 2x" width="480" height="640" alt="Dr Abbie Najjarine, Principal Podiatrist, Owner and Director at Dr. Abbie Clinics" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Abbie Najjarine</h3>
+                <span class="pcard__role">Principal Podiatrist &middot; Owner &amp; Director</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-abdalla-attar-hamoui/">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-attar.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-attar.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-attar@2x.webp 2x" width="480" height="640" alt="Dr Abdalla Attar-Hamoui, Podiatrist at Dr. Abbie Clinics" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Abdalla Attar-Hamoui</h3>
+                <span class="pcard__role">Podiatrist</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-elissa-all/">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-elissa.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-elissa.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-elissa@2x.webp 2x" width="480" height="640" alt="Dr Elissa All, Podiatrist at Dr. Abbie Clinics" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Elissa All</h3>
+                <span class="pcard__role">Podiatrist</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-yousef-najjarine/">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-yousef.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-yousef.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-yousef@2x.webp 2x" width="480" height="640" alt="Dr Yousef Najjarine, Podiatrist at Dr. Abbie Clinics" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Yousef Najjarine</h3>
+                <span class="pcard__role">Podiatrist</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-mohemed-al-heyoury/">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-alheyoury.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-alheyoury.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-alheyoury@2x.webp 2x" width="480" height="640" alt="Dr Mohemed Al-Heyoury, Podiatrist at Dr. Abbie Clinics" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Mohemed Al-Heyoury</h3>
+                <span class="pcard__role">Podiatrist</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-abbie-najjarine/" aria-hidden="true" tabindex="-1">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-najjarine.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-najjarine.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-najjarine@2x.webp 2x" width="480" height="640" alt="" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Abbie Najjarine</h3>
+                <span class="pcard__role">Principal Podiatrist &middot; Owner &amp; Director</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-abdalla-attar-hamoui/" aria-hidden="true" tabindex="-1">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-attar.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-attar.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-attar@2x.webp 2x" width="480" height="640" alt="" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Abdalla Attar-Hamoui</h3>
+                <span class="pcard__role">Podiatrist</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-elissa-all/" aria-hidden="true" tabindex="-1">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-elissa.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-elissa.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-elissa@2x.webp 2x" width="480" height="640" alt="" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Elissa All</h3>
+                <span class="pcard__role">Podiatrist</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+            <a class="pcard" data-slide href="/team/dr-yousef-najjarine/" aria-hidden="true" tabindex="-1">
+              <div class="pcard__photo"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-yousef.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-yousef.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/pc-yousef@2x.webp 2x" width="480" height="640" alt="" loading="lazy" decoding="async" sizes="(min-width: 1000px) 25vw, 80vw"></div>
+              <div class="pcard__plate">
+                <h3>Dr Yousef Najjarine</h3>
+                <span class="pcard__role">Podiatrist</span>
+                <span class="pcard__more">View profile <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cluster cluster--center mt-8">
+        <a class="btn btn--call" href="/team/">Show all practitioners</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS — shaped like the Google review widget that will replace it.
+       The card chrome is real; the review bodies are skeleton bars, not sample
+       copy, so nothing here can be mistaken for a published patient review.
+       No Review or AggregateRating schema until a real feed is connected. -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">Patient feedback</span>
+          <h2 class="split-head"><span>What our</span><span>patients say</span></h2>
+        </div>
+        <div class="grating">
+          <img class="grating__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          <span class="grating__body">
+            <span class="grating__row"><span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span><span class="grating__score" data-temp>4.9</span></span>
+            <span class="grating__count" data-temp>Based on 286 Google reviews</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="grid-auto swipe" data-stagger>
+        <article class="gcard reveal">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">S</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>Sarah M.</span>
+              <span class="gcard__meta" data-temp>Kirrawee &middot; 2 weeks ago</span>
+            </span>
+            <img class="gcard__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>Six months of heel pain and the first appointment was the first time anyone explained what was actually causing it. Walked out with a plan rather than a guess.</p>
+          </article>
+        <article class="gcard reveal">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">D</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>David T.</span>
+              <span class="gcard__meta" data-temp>Morisset &middot; 1 month ago</span>
+            </span>
+            <img class="gcard__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>Took my son in for in-toeing. They took the time to show us what they were seeing and what to watch for as he grows. No pressure, no upsell.</p>
+          </article>
+        <article class="gcard reveal">
+          <div class="gcard__head">
+            <span class="gcard__avatar" aria-hidden="true">P</span>
+            <span class="gcard__who">
+              <span class="gcard__name" data-temp>Priya R.</span>
+              <span class="gcard__meta" data-temp>Sydney City &middot; 1 month ago</span>
+            </span>
+            <img class="gcard__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/google-wordmark@2x.webp 2x" width="81" height="35" alt="Google" loading="lazy" decoding="async">
+          </div>
+          <span class="gstars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m10 1 2.6 5.3 5.9.9-4.3 4.2 1 5.8L10 14.5 4.8 17.2l1-5.8L1.5 7.2l5.9-.9z"/></svg></span>
+          <p class="gcard__text" data-temp>The orthotics were made on site and adjusted twice until they were right. Back running three months later.</p>
+          </article>
+      </div>
+
+      </div>
+  </section>
+
+  <!-- CONDITIONS — card grid. #conditions is the "All conditions" destination
+       in the menu. -->
+  <section class="section section--white" id="conditions">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Conditions</span>
+        <h2>What we treat</h2>
+        <p class="lede">If your pain is in this list, there is a structural reason for it. Start
+          with the condition, and we will show you the assessment and the treatment.</p>
+      </div>
+      <div class="grid-auto grid-auto--sm swipe swipe--two" data-stagger>
+                <a class="card card--condition reveal" href="/conditions/heel-pain/"><h3>Heel Pain</h3><p>Including first-step pain in the morning</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/plantar-fasciitis/"><h3>Plantar Fasciitis</h3><p>Arch and heel pain under load</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/achilles-pain/"><h3>Achilles Pain</h3><p>Tendon pain and tendonitis</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/shin-splints/"><h3>Shin Splints</h3><p>Pain along the shin with activity</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/forefoot-pain/"><h3>Forefoot Pain</h3><p>Including Morton&rsquo;s neuroma</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/flat-feet/"><h3>Flat Feet</h3><p>Fallen arches in children and adults</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/running-injuries/"><h3>Running Injuries</h3><p>Overuse injury and return to sport</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/knee-pain/"><h3>Knee Pain</h3><p>Where the cause sits below the knee</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/ingrown-toenails/"><h3>Ingrown Toenails</h3><p>Routine and recurrent</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/pigeon-toe/"><h3>Pigeon Toe</h3><p>In-toeing gait in children</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/out-toe/"><h3>Out Toe</h3><p>Out-toeing gait in children</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/severs-disease/"><h3>Sever's Disease</h3><p>Heel pain in children 8 to 14</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/osgood-schlatter/"><h3>Osgood-Schlatter</h3><p>Knee pain in teenagers 13 to 17</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/bunions/"><h3>Bunions</h3><p>The big toe drifting across</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/bow-legs/"><h3>Bow Legs</h3><p>Knees apart in children and adults</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="card card--condition reveal" href="/conditions/knock-knees/"><h3>Knock Knees</h3><p>Knees together, ankles apart</p><span class="card__more">Learn more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NBA BAND — bento. Three named stages, because Assess/Diagnose/Treat is the
+       whole documented method; the fourth cell is the booking prompt, not an
+       invented fourth stage. -->
+  <section class="section section--dark nba hex-texture">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow eyebrow--invert">The NBA method</span>
+          <h2 class="split-head"><span>The Najjarine</span><span>Biomechanical Assessment</span></h2>
+        </div>
+        <p class="lede lede--invert">An advanced podiatric biomechanical technique designed to
+          identify the cause of a patient's condition and help prescribe their treatment regime. It
+          originates in engineering principles, and assesses alignment from the feet up.</p>
+      </div>
+
+      <div class="nba-bento">
+        <article class="nba-cell nba-cell--tall reveal">
+          <div class="nba-cell__media">
+            <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/nba-gait.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/nba-gait.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/nba-gait@2x.webp 2x" width="640" height="400" alt="Dr Abbie Najjarine assessing a patient’s gait on a treadmill" loading="lazy" decoding="async" sizes="(min-width: 900px) 34vw, 100vw">
+          </div>
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">01</span>
+            <h3>Assess</h3>
+            <p>A full biomechanical examination of how you stand, walk and load &mdash; not just the
+              painful area.</p>
+          </div>
+        </article>
+
+        <article class="nba-cell reveal" data-reveal-delay="60">
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">02</span>
+            <h3>Diagnose</h3>
+            <p>We identify the structural or muscular irregularity causing the pain, and explain
+              what we found.</p>
+          </div>
+        </article>
+
+        <article class="nba-cell reveal" data-reveal-delay="120">
+          <div class="nba-cell__body">
+            <span class="nba-cell__num">03</span>
+            <h3>Treat</h3>
+            <p>A treatment regime prescribed against that diagnosis, drawing on all ten
+              treatments.</p>
+          </div>
+        </article>
+
+        <article class="nba-cell nba-cell--wide reveal" data-reveal-delay="180">
+          <div class="nba-cell__media">
+            <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/nba-teaching.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/nba-teaching.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/nba-teaching@2x.webp 2x" width="480" height="480" alt="Dr Abbie Najjarine demonstrating a lower limb assessment, with alignment marked on the leg and practitioners observing" loading="lazy" decoding="async" sizes="(min-width: 900px) 260px, 100vw">
+          </div>
+          <div class="nba-cell__body">
+            <span class="eyebrow eyebrow--invert">Start here</span>
+            <h3>Book an assessment</h3>
+            <p>The assessment that sets the treatment plan. Available at all nine NSW clinics.</p>
+            <div class="cluster mt-5">
+              <a class="btn btn--book" href="/locations/" data-track="book" data-source="home-nba">Book a session <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT — copy left, photograph bleeding off the right edge -->
+  <section class="section about--bleed section--pale" id="about">
+    <div class="container">
+      <div class="about__copy reveal">
+        <span class="eyebrow">About us</span>
+        <h2 class="split-head"><span>Thirty-five years of</span><span>looking further up the leg</span></h2>
+        <div class="prose mt-6">
+          <p>Dr. Abbie Clinics, previously known as AOL Footcare Centres, has been assessing and
+            treating lower limb pain since 1990. What began as a single practice is now nine
+            clinics across New South Wales, from Sydney City to Narrabri.</p>
+          <p>The practice is built around one idea: where it hurts is not always where the
+            problem starts. Our founder, Dr. Abbie Najjarine, developed the Najjarine Biomechanical
+            Assessment to find the structure that is actually causing the pain &mdash; and to explain
+            that to the patient, rather than simply treating the sore spot.</p>
+        </div>
+        <div class="cluster mt-8">
+          <a class="btn btn--call" href="/team/">Meet the team</a>
+          <a class="link-arrow" href="/locations/">Find your nearest clinic
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__media">
+      <img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/clinic-reception.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/clinic-reception.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/clinic-reception@2x.webp 2x" width="1000" height="667" alt="Reception at a Dr. Abbie Clinics practice" loading="lazy" decoding="async" sizes="(min-width: 900px) 46vw, 100vw">
+    </div>
+  </section>
+
+
+
+
+  <!-- POSITIONING -->
+  <section class="positioning section--white">
+    <div class="container reveal">
+      <p>We find and treat the <strong>cause</strong>. Not just the symptoms.</p>
+    </div>
+  </section>
+
+
+  <!-- TREATMENTS — MindCare's four-up programs grid with Read More.
+       #treatments is the "All treatments" destination in the menu. -->
+  <section class="section section--pale" id="treatments">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2 class="split-head"><span>Ten treatments,</span><span>one starting point</span></h2>
+      </div>
+
+      <div class="grid-auto grid-auto--badged swipe" data-stagger>
+
+        <a class="card reveal" href="/services/biomechanics/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12.6 4C12.6 4.88 11.88 5.6 11 5.6C10.12 5.6 9.4 4.88 9.4 4C9.4 3.12 10.12 2.4 11 2.4C11.88 2.4 12.6 3.12 12.6 4ZM14.2 11.2C14.2 12.08 13.48 12.8 12.6 12.8C11.72 12.8 11 12.08 11 11.2C11 10.32 11.72 9.6 12.6 9.6C13.48 9.6 14.2 10.32 14.2 11.2ZM12.8 17.2C12.8 17.97 12.17 18.6 11.4 18.6C10.63 18.6 10 17.97 10 17.2C10 16.43 10.63 15.8 11.4 15.8C12.17 15.8 12.8 16.43 12.8 17.2ZM11.35 5.55L12.25 9.65M12.45 12.8L11.6 15.8M10.3 18.3L9 20.6H18.4C19.3 20.6 19.4 19.5 18.6 19.2L12.8 17.6M4.5 3v2.2M4.5 7.6v2.2M4.5 12.2v2.2M4.5 16.8v2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-biomechanics.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-biomechanics.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-biomechanics@2x.webp 2x" width="640" height="400" alt="A Dr. Abbie Clinics podiatrist examining a patient’s lower leg and foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Biomechanics</h3>
+          <p>A full lower limb assessment from the feet up. The foundation of every treatment plan
+            we prescribe.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/custom-orthotics/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3.6 9.4C3.3 12.6 3.9 16 7 16.5C10.6 17 15.2 16.2 20.4 14.2L20.1 13.1C16.6 14 14.1 13.2 12 12.1C9.9 11 8.4 12.4 6.9 12.3C5.6 12.2 5.2 11 5.1 9.4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-orthotics.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-orthotics.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-orthotics@2x.webp 2x" width="640" height="400" alt="A custom orthotic device being fitted against a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Custom Orthotics</h3>
+          <p>Prescribed devices that correct how your foot meets the ground. Manufactured on site at
+            our Kirrawee head office.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/shockwave-therapy/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3.4 12.9L8.7 7.6C9.3 7 10.2 7 10.8 7.6L11.8 8.6C12.4 9.2 12.4 10.1 11.8 10.7L6.5 16C5.9 16.6 5 16.6 4.4 16L3.4 15C2.8 14.4 2.8 13.5 3.4 12.9ZM11.6 10.9L13.4 12.7M16.46 12.75C16.61 13.58 16.34 14.44 15.74 15.04C15.14 15.64 14.28 15.91 13.45 15.76M18.73 11.91C19.19 13.63 18.7 15.47 17.44 16.74C16.17 18 14.33 18.49 12.61 18.03M20.94 10.91C21.8 13.56 21.1 16.46 19.13 18.43C17.16 20.4 14.26 21.1 11.61 20.24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-shockwave.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-shockwave.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-shockwave@2x.webp 2x" width="640" height="400" alt="A shockwave therapy handpiece being applied to a patient’s heel" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Shockwave Therapy</h3>
+          <p>Acoustic waves that use kinetic energy to repair tissue and reduce chronic
+            inflammation.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/childrens-podiatry/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12.4 21C10.5 21 9.5 19.6 9.5 17.9C9.5 16.5 9.9 15.7 9.9 14.5C9.9 13 8.7 12.1 8.7 10.4C8.7 8.3 10.3 6.9 12.4 6.9C14.5 6.9 16.1 8.3 16.1 10.4C16.1 12.1 14.9 13 14.9 14.5C14.9 15.7 15.3 16.5 15.3 17.9C15.3 19.6 14.3 21 12.4 21ZM9.7 5.2h.01M11.7 4h.01M13.8 3.9h.01M15.7 4.8h.01M17.2 6.4h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-childrens.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-childrens.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-childrens@2x.webp 2x" width="640" height="400" alt="Dr Abbie Najjarine assessing a child’s foot in clinic" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Children's Podiatry</h3>
+          <p>Pigeon toe, flat feet and growing pains, assessed while the foot is still
+            developing.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/dry-needling/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3.5 19h17M14.5 4.2L9.6 19M13.1 4.7L15.3 5.5M12.5 6.5L14.7 7.3M11.9 8.3L14.1 9.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-dry-needling.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-dry-needling.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-dry-needling@2x.webp 2x" width="640" height="400" alt="Dry needling being applied to a patient’s lower leg" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Dry Needling</h3>
+          <p>Fine needles inserted into trigger points to break down restrictive tissue.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/foot-mobilisation/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8.2 11.2V15.6C8.2 16.3 8.6 16.7 9.3 16.7H16.4C17.2 16.7 17.3 15.8 16.7 15.5L13.1 14.2C12.2 13.9 11.6 13.2 11.4 12.3L11.1 11.2M3.54 8.92C4.64 5.9 7.27 3.7 10.44 3.14C13.6 2.58 16.83 3.75 18.89 6.21M4.3 5.9L3.6 8.9L6.5 9.2M20.46 15.08C19.36 18.1 16.73 20.3 13.56 20.86C10.4 21.42 7.17 20.25 5.11 17.79M19.7 18.1L20.4 15.1L17.5 14.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-mobilisation.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-mobilisation.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-mobilisation@2x.webp 2x" width="640" height="400" alt="A podiatrist mobilising a patient’s foot by hand" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Foot Mobilisation</h3>
+          <p>Hands-on work addressing restrictions across the foot’s 26 bones.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/sports-podiatry/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.6 4.6C14.6 3.7 15.3 3 16.2 3C17.1 3 17.8 3.7 17.8 4.6C17.8 5.5 17.1 6.2 16.2 6.2C15.3 6.2 14.6 5.5 14.6 4.6ZM17.2 7.8L13.6 10.2L14.6 13.6L17.4 15.8L18 20.6M14.6 13.6L11 15.2L9.4 19.4M13.6 10.2L9.8 9.2L7.2 11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-sports.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-sports.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-sports@2x.webp 2x" width="640" height="400" alt="A runner holding their knee" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Sports Podiatry</h3>
+          <p>Running injuries, return to sport, and footwear that matches your gait.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/general-foot-care/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12.4 21.4C10.3 21.4 9.2 19.9 9.2 18C9.2 16.4 9.7 15.4 9.7 14.1C9.7 12.4 8.2 11.3 8.2 9.4C8.2 7.3 9.8 6.1 11.9 6.1C14.6 6.1 16.4 7.9 16.4 10.4C16.4 12.4 15.1 13.4 15.1 15C15.1 16.2 15.6 17 15.6 18.3C15.6 20.1 14.4 21.4 12.4 21.4ZM10.6 3.6C10.6 4.32 10.02 4.9 9.3 4.9C8.58 4.9 8 4.32 8 3.6C8 2.88 8.58 2.3 9.3 2.3C10.02 2.3 10.6 2.88 10.6 3.6ZM13.2 2.9C13.2 3.45 12.75 3.9 12.2 3.9C11.65 3.9 11.2 3.45 11.2 2.9C11.2 2.35 11.65 1.9 12.2 1.9C12.75 1.9 13.2 2.35 13.2 2.9ZM15.35 3.4C15.35 3.87 14.97 4.25 14.5 4.25C14.03 4.25 13.65 3.87 13.65 3.4C13.65 2.93 14.03 2.55 14.5 2.55C14.97 2.55 15.35 2.93 15.35 3.4ZM17.05 4.7C17.05 5.11 16.71 5.45 16.3 5.45C15.89 5.45 15.55 5.11 15.55 4.7C15.55 4.29 15.89 3.95 16.3 3.95C16.71 3.95 17.05 4.29 17.05 4.7ZM18.25 6.4C18.25 6.76 17.96 7.05 17.6 7.05C17.24 7.05 16.95 6.76 16.95 6.4C16.95 6.04 17.24 5.75 17.6 5.75C17.96 5.75 18.25 6.04 18.25 6.4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-foot-care.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-foot-care.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-foot-care@2x.webp 2x" width="640" height="400" alt="A foot being treated with a podiatry tool" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>General Foot Care</h3>
+          <p>Routine care including ingrown toenails, corns and calluses.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/neural-therapy/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v3M9.6 5h4.8M10.2 5h3.6v11h-3.6zM12 16v5M10.2 8h1.4M10.2 10.4h1.4M10.2 12.8h1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-neural.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-neural.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-neural@2x.webp 2x" width="300" height="188" alt="An injection being administered to a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Neural Therapy</h3>
+          <p>Injectable therapy to stimulate a repair response. Paired with prolotherapy.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+        <a class="card reveal" href="/services/foot-strapping/">
+          <span class="card__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M15.5 11.5C15.5 14.81 12.81 17.5 9.5 17.5C6.19 17.5 3.5 14.81 3.5 11.5C3.5 8.19 6.19 5.5 9.5 5.5C12.81 5.5 15.5 8.19 15.5 11.5ZM11.8 11.5C11.8 12.77 10.77 13.8 9.5 13.8C8.23 13.8 7.2 12.77 7.2 11.5C7.2 10.23 8.23 9.2 9.5 9.2C10.77 9.2 11.8 10.23 11.8 11.5ZM9.5 17.5H20.4L19.6 16.6L20.4 15.7L19.6 14.8L20.4 13.9H14.9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="card__media"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-strapping.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-strapping.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/tx-strapping@2x.webp 2x" width="640" height="400" alt="Therapeutic strapping being applied to a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 900px) 30vw, 100vw"></div>
+          <h3>Foot Strapping</h3>
+          <p>Therapeutic support to offload tissue while it recovers.</p>
+          <span class="card__more">Read more <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIPS — static logo row.
+       Four marks, all real files. APodA is listed on dr-abbie.com but no
+       logo file was supplied; tracked in PROJECT-PLAN.md rather than shown
+       as an on-page placeholder. -->
+  <section class="section section--tight memberships section--white">
+    <div class="container">
+      <div class="text-center">
+        <span class="eyebrow">Professional memberships</span>
+      </div>
+      <div class="memberships__row mt-6 reveal">
+        <img class="memberships__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-ahpra@2x.webp 2x" width="300" height="228" alt="AHPRA — Australian Health Practitioner Regulation Agency" loading="lazy" decoding="async">
+        <img class="memberships__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-aapsm@2x.webp 2x" width="260" height="107" alt="American Academy of Podiatric Sports Medicine (AAPSM)" loading="lazy" decoding="async">
+        <img class="memberships__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-sports-med@2x.webp 2x" width="260" height="107" alt="Sports Medicine Australia" loading="lazy" decoding="async">
+        <img class="memberships__mark" src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/assoc-podiatry-nsw@2x.webp 2x" width="260" height="79" alt="Podiatry NSW/ACT" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BLOG — the four newest posts, generated from blog_data.py so the cards
+       always link to real posts. Article schema renders per post, not here. -->
+  <section class="section section--pale">
+    <div class="container">
+      <div class="section-head section-head--split reveal">
+        <div>
+          <span class="eyebrow">From the blog</span>
+          <h2 class="split-head"><span>Advice from</span><span>our practitioners</span></h2>
+        </div>
+        <p class="lede">Plain-English answers to the questions patients ask most, written by the
+          practitioners who do the assessments.</p>
+      </div>
+
+      <div class="grid-auto blog-grid swipe" data-stagger>
+        <a class="card post-card reveal" href="/blog/sharp-heel-pain-when-waking-up/">
+          <div class="post-card__img"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-heel-pain.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-heel-pain.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-heel-pain@2x.webp 2x" width="640" height="400" alt="Hands supporting the heel and sole of a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 1100px) 25vw, 100vw"></div>
+          <div class="post-card__body">
+            <span class="post-card__cat">Heel pain</span>
+            <h3>Sharp Heel Pain When Waking Up in the Morning: Causes and Treatment</h3>
+            <span class="card__more">Read article <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+        <a class="card post-card reveal" href="/blog/custom-orthotics-flat-feet-nba-assessment/" data-reveal-delay="60">
+          <div class="post-card__img"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-orthotics.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-orthotics.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-orthotics@2x.webp 2x" width="640" height="400" alt="A podiatrist holding a custom orthotic against a patient’s foot" loading="lazy" decoding="async" sizes="(min-width: 1100px) 25vw, 100vw"></div>
+          <div class="post-card__body">
+            <span class="post-card__cat">Orthotics</span>
+            <h3>Custom Orthotics for Flat Feet: How the NBA Assessment Shapes the Prescription</h3>
+            <span class="card__more">Read article <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+        <a class="card post-card reveal" href="/blog/growing-pains-pigeon-toe-flat-feet-children/" data-reveal-delay="120">
+          <div class="post-card__img"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-children.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-children.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-children@2x.webp 2x" width="640" height="400" alt="School children in uniform sitting on a brick wall" loading="lazy" decoding="async" sizes="(min-width: 1100px) 25vw, 100vw"></div>
+          <div class="post-card__body">
+            <span class="post-card__cat">Children</span>
+            <h3>Growing Pains, Pigeon Toe and Flat Feet: When to Get Your Child Assessed</h3>
+            <span class="card__more">Read article <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+        <a class="card post-card reveal" href="/blog/shockwave-therapy-heel-achilles-pain/" data-reveal-delay="180">
+          <div class="post-card__img"><img src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-shockwave.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-shockwave.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/blog-shockwave@2x.webp 2x" width="473" height="296" alt="A practitioner holding a handheld applicator against a patient’s heel" loading="lazy" decoding="async" sizes="(min-width: 1100px) 25vw, 100vw"></div>
+          <div class="post-card__body">
+            <span class="post-card__cat">Shockwave</span>
+            <h3>Shockwave Therapy for Heel and Achilles Pain: What to Expect</h3>
+            <span class="card__more">Read article <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="cluster cluster--center mt-8">
+        <a class="btn btn--call" href="/blog/">Read all posts <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — carries the FAQPage schema and answers the questions that stop a
+       booking. Every answer the client has not supplied stays a placeholder. -->
+  <section class="section section--white">
+    <div class="container container--narrow">
+      <div class="section-head reveal">
+        <span class="eyebrow">Common questions</span>
+        <h2 class="split-head"><span>Before you</span><span>book with us</span></h2>
+      </div>
+
+      <div class="accordion accordion--plain">
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Do I need a referral to see a podiatrist? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p><span data-temp>No. Podiatry is a primary contact profession in Australia, so you can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that.</span></p>
+          </div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">What happens at a biomechanical assessment? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p>We assess how you stand, walk and load, identify the structure causing the pain, and
+              explain what we found before any treatment starts. That is the
+              <a href="/#about">Najjarine Biomechanical Assessment</a>.
+              <span data-temp>Allow about 45 minutes for a first appointment.</span></p>
+          </div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">How much does an appointment cost? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p><span data-temp>Fees vary by appointment type and by clinic. Call the clinic you want to attend and reception will quote you before you book.</span></p>
+          </div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Can I claim on the day? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p><span data-temp>Yes. We have HICAPS at every clinic, so private health rebates come off on the spot. Medicare care plans and NDIS plans are accepted.</span></p>
+          </div></div></div>
+        </div>
+        <div class="acc-item reveal">
+          <h3><button class="acc-trigger" aria-expanded="false">Which clinic should I book at? <svg width="20" height="20" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h3>
+          <div class="acc-panel"><div><div class="acc-panel__inner">
+            <p>Each of our <a href="/locations/">nine clinics</a> books into its own diary.
+              Choose the one nearest you and you will see the practitioners who work there.</p>
+          </div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA — full-bleed photograph. No enquiry form: the two conversion
+       paths are the booking link and the tracked phone number. The reference
+       pairs its CTA with a video play button; there is no video, so the
+       secondary action stays the phone call.
+       The photograph is stock — every clinic photograph is already used
+       elsewhere on this page. Flagged in PROJECT-PLAN.md for replacement. -->
+  <section class="cta-band cta-band--photo">
+    <div class="cta-band__inner">
+      <div class="cta-band__bg" aria-hidden="true" data-parallax-host>
+        <img data-parallax src="https://dr-abbie.com/wp-content/dr-abbie-assets/img/cta-band.webp" srcset="https://dr-abbie.com/wp-content/dr-abbie-assets/img/cta-band.webp 1x, https://dr-abbie.com/wp-content/dr-abbie-assets/img/cta-band@2x.webp 2x" width="1000" height="628" alt="" loading="lazy" decoding="async" sizes="100vw">
+      </div>
+      <div class="container">
+        <div class="cta-band__copy reveal">
+          <p class="cta-band__eyebrow">Treating lower limb pain since 1990</p>
+          <h2 class="split-head"><span>Book your</span><span>assessment</span></h2>
+          <p>Choose your clinic and book straight into its diary, or call and we will point you to
+            the right practitioner.</p>
+          <div class="cta-band__actions">
+            <a class="btn btn--book" href="/locations/" data-track="book" data-source="home-closing">Book a session <span class="btn__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M4.5 9.5 9.5 4.5M5.5 4.5h4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="btn btn--ghost-invert" href="tel:+61295454378">Call (02) 9545 4378</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
