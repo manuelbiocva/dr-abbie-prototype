@@ -1,0 +1,2025 @@
+{
+ "generated": "prototype/.build/export_wp.py",
+ "clinics": [
+  {
+   "slug": "podiatrist-kirrawee",
+   "data_slug": "kirrawee",
+   "title": "Podiatrist in Kirrawee",
+   "name": "Kirrawee",
+   "region": "Sydney",
+   "fields": {
+    "street": "27 Monro Ave",
+    "suburb_state": "NSW 2232",
+    "phone_display": "(02) 9545 4378",
+    "phone_tel": "+61295454378",
+    "booking_url": "https://book.nookal.com/bookings/book/9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location/TJJQH",
+    "maps_url": "https://maps.google.com/?cid=10499536010005564975",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650!2d151.0735456!3d-34.0306017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12c768feddef85%3A0x91b5d85f46cdce2f!2sDr.%20Abbie%20Clinics%20-%20Podiatry%2C%20Lower%20Limb%20Biomechanics!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau",
+    "tag": "Head office",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Kirrawee."
+   },
+   "practitioners": [
+    "dr-abbie-najjarine",
+    "dr-abdalla-attar-hamoui",
+    "dr-elissa-all",
+    "dr-mohemed-al-heyoury",
+    "dr-yousef-najjarine"
+   ]
+  },
+  {
+   "slug": "podiatrist-mortlake",
+   "data_slug": "mortlake",
+   "title": "Podiatrist in Mortlake",
+   "name": "Mortlake",
+   "region": "Sydney",
+   "fields": {
+    "street": "15 Tennyson Rd, cnr Herbert St",
+    "suburb_state": "NSW 2137",
+    "phone_display": "(02) 5839 3160",
+    "phone_tel": "+61258393160",
+    "booking_url": "https://book.nookal.com/bookings/book/9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location/YPPNN",
+    "maps_url": "https://maps.google.com/?cid=17770434117263619916",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650!2d151.1079126!3d-33.8449173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a5c5fd0b6a83%3A0xf69d43ad87faf74c!2sDr%20Abbie%20Clinics%20Mortlake%20Podiatrists!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Mortlake."
+   },
+   "practitioners": [
+    "dr-abbie-najjarine",
+    "dr-yousef-najjarine"
+   ]
+  },
+  {
+   "slug": "podiatrist-sydney-city",
+   "data_slug": "sydney-city",
+   "title": "Podiatrist in Sydney City",
+   "name": "Sydney City",
+   "region": "Sydney",
+   "fields": {
+    "street": "Suite 35, Level 7, 88 Pitt St",
+    "suburb_state": "NSW 2000",
+    "phone_display": "(02) 9545 4378",
+    "phone_tel": "+61295454378",
+    "booking_url": "https://book.nookal.com/bookings/book/9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location/EUHHG",
+    "maps_url": "https://maps.google.com/?cid=12836701620138019130",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.8799405829755!2d151.20623277570854!3d-33.866984873227324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae40389f5703%3A0xb225201c9c02093a!2sSte%2035%20Level%207%2F88%20Pitt%20St%2C%20Sydney%20NSW%202000!5e0!3m2!1sen!2sau!4v1784784971780!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Sydney City."
+   },
+   "practitioners": [
+    "dr-abbie-najjarine",
+    "dr-yousef-najjarine"
+   ]
+  },
+  {
+   "slug": "podiatrist-hornsby",
+   "data_slug": "hornsby",
+   "title": "Podiatrist in Hornsby",
+   "name": "Hornsby",
+   "region": "Sydney",
+   "fields": {
+    "street": "Unit 15/14 Edgeworth David Ave",
+    "suburb_state": "NSW 2077",
+    "phone_display": "(02) 9545 4378",
+    "phone_tel": "+61295454378",
+    "booking_url": "https://book.nookal.com/bookings/book/9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location/JTJPP",
+    "maps_url": "https://maps.google.com/?cid=12950514141101368338",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650!2d151.1021375!3d-33.7061413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a759f889033d%3A0xb3b977ff1f052412!2sDr%20Abbie%20Clinics%20-%20Podiatry%20Lower%20Limb%20Biomechanics%20%28Hornsby%29!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Hornsby."
+   },
+   "practitioners": [
+    "dr-abbie-najjarine",
+    "dr-abdalla-attar-hamoui"
+   ]
+  },
+  {
+   "slug": "podiatrist-glenhaven",
+   "data_slug": "glenhaven",
+   "title": "Podiatrist in Glenhaven",
+   "name": "Glenhaven",
+   "region": "Sydney",
+   "fields": {
+    "street": "Shop 9/78 Glenhaven Rd",
+    "suburb_state": "NSW 2156",
+    "phone_display": "(02) 9545 4378",
+    "phone_tel": "+61295454378",
+    "booking_url": "https://book.nookal.com/bookings/book/9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location/QVAEG",
+    "maps_url": "https://maps.google.com/?cid=2245276739669225483",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650!2d151.0011555!3d-33.6982865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a1cf69e190ef%3A0x1f28d34c7a6e700b!2sDr%20Abbie%20Clinics%20-%20Podiatry%20Lower%20Limb%20Biomechanics%20%28Glenhaven%29!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Glenhaven."
+   },
+   "practitioners": [
+    "dr-abbie-najjarine",
+    "dr-mohemed-al-heyoury"
+   ]
+  },
+  {
+   "slug": "podiatrist-bowral",
+   "data_slug": "bowral",
+   "title": "Podiatrist in Bowral",
+   "name": "Bowral",
+   "region": "Southern Highlands",
+   "fields": {
+    "street": "Shop 3, 2–4 Boolwey St",
+    "suburb_state": "NSW 2576",
+    "phone_display": "(02) 4005 2668",
+    "phone_tel": "+61240052668",
+    "booking_url": "https://book.nookal.com/bookings/book/9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location/BVMNW",
+    "maps_url": "https://maps.google.com/?cid=6356753673856291458",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650!2d150.4162915!3d-34.4797896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b13a296b836c485%3A0x5837b9c96edd1282!2sThe%20Bowral%20Foot%20Clinic!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Bowral."
+   },
+   "practitioners": [
+    "arega-sarkisian",
+    "dr-elissa-all",
+    "dr-mohemed-al-heyoury",
+    "dr-yousef-najjarine"
+   ]
+  },
+  {
+   "slug": "podiatrist-morisset",
+   "data_slug": "morisset",
+   "title": "Podiatrist in Morisset",
+   "name": "Morisset",
+   "region": "Newcastle & Lake Macquarie",
+   "fields": {
+    "street": "Shop 4/59 Dora St",
+    "suburb_state": "NSW 2264",
+    "phone_display": "(02) 5018 5116",
+    "phone_tel": "+61250185116",
+    "booking_url": "https://book.nookal.com/bookings/book/9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location/MSHVU",
+    "maps_url": "https://maps.google.com/?cid=18170367588417253921",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650!2d151.489752!3d-33.1075437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b732842a37926c3%3A0xfc2a1d0d09e1b221!2sPodiatrist%20Morisset%20%7C%20Custom%20Foot%20Australia!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Morisset."
+   },
+   "practitioners": [
+    "dr-abdalla-attar-hamoui",
+    "dr-elissa-all",
+    "dr-mohemed-al-heyoury"
+   ]
+  },
+  {
+   "slug": "podiatrist-forster-tuncurry",
+   "data_slug": "forster-tuncurry",
+   "title": "Podiatrist in Forster/Tuncurry",
+   "name": "Forster/Tuncurry",
+   "region": "Mid North Coast",
+   "fields": {
+    "street": "111 MacIntosh St",
+    "suburb_state": "NSW 2428",
+    "phone_display": "(02) 6421 6618",
+    "phone_tel": "+61264216618",
+    "booking_url": "",
+    "maps_url": "https://maps.google.com/?cid=10310421264267720003",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650!2d152.5142164!3d-32.1924416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b7437114f27484b%3A0x8f15f9834d4fb543!2sPodiatrist%20Forster%20Tuncurry%20Sports%20Podiatry!5e0!3m2!1sen!2sau!4v1726617600000!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Forster/Tuncurry."
+   },
+   "practitioners": []
+  },
+  {
+   "slug": "podiatrist-narrabri",
+   "data_slug": "narrabri",
+   "title": "Podiatrist in Narrabri",
+   "name": "Narrabri",
+   "region": "North West NSW",
+   "fields": {
+    "street": "Suite 4/159 Maitland St",
+    "suburb_state": "NSW 2390",
+    "phone_display": "0438 922 249",
+    "phone_tel": "+61438922249",
+    "booking_url": "",
+    "maps_url": "https://maps.google.com/?cid=1703924822551671635",
+    "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.9349992407706!2d149.77965337556446!3d-30.324366674783896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ba73444dcbb2ea9%3A0x17a58e992c29b353!2s4%2F159%20Maitland%20St%2C%20Narrabri%20NSW%202390!5e0!3m2!1sen!2sau!4v1784783948622!5m2!1sen!2sau",
+    "tag": "",
+    "intro": "Biomechanical assessment, custom orthotics and sports podiatry in Narrabri."
+   },
+   "practitioners": []
+  }
+ ],
+ "treatments": [
+  {
+   "slug": "biomechanics",
+   "title": "Biomechanics",
+   "fields": {
+    "intro": "A full lower limb assessment from the feet up. It is the foundation of every treatment plan we prescribe.",
+    "fact1": "The NBA method",
+    "fact2": "Assessment first",
+    "who": "Anyone whose pain has not settled, or who has been treated for the sore spot without the cause being found. It is the starting point for every other treatment on this site.",
+    "step1": "We examine your alignment from the feet up, and watch how you move under load rather than only at rest.",
+    "step2": "We identify the structural or muscular irregularity causing the pain, and show you what we found before anything is prescribed.",
+    "step3": "Treatment is then prescribed against that diagnosis — orthotics, mobilisation, shockwave or a loading programme, depending on what the assessment showed."
+   },
+   "faq": [
+    {
+     "question": "What is the Najjarine Biomechanical Assessment?",
+     "answer": "It is the assessment method developed by our founder, Dr. Abbie Najjarine. It assesses alignment from the feet up and originates in engineering principles, so treatment is prescribed against a diagnosis rather than a symptom."
+    },
+    {
+     "question": "How long does the assessment take?",
+     "answer": "TEMP:Allow about 45 minutes for a first appointment. That covers the assessment, the diagnosis and an explanation of the plan."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. Podiatry is a primary contact profession in Australia, so you can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    },
+    {
+     "question": "Will I need orthotics?",
+     "answer": "Not necessarily. Orthotics are one of ten treatments and are only prescribed if the assessment shows they are the right answer."
+    },
+    {
+     "question": "What should I bring?",
+     "answer": "TEMP:Bring the shoes you wear most, and any previous orthotics, scans or reports. Wear or bring shorts if your knees or hips are involved."
+    }
+   ],
+   "conditions": [
+    "Heel Pain",
+    "Knee Pain",
+    "Shin Splints",
+    "Flat Feet"
+   ],
+   "hero": "assets/img/hero-biomechanics.webp",
+   "card": "assets/img/tx-biomechanics.webp"
+  },
+  {
+   "slug": "custom-orthotics",
+   "title": "Custom Orthotics",
+   "fields": {
+    "intro": "Prescribed devices that change how your foot meets the ground. Manufactured on site at our Kirrawee head office.",
+    "fact1": "Made on site",
+    "fact2": "Prescribed, not off the shelf",
+    "who": "People whose assessment shows the way they load the foot is driving their pain — commonly heel pain, arch pain, forefoot pain or knee pain that traces back to the foot.",
+    "step1": "The assessment establishes what your foot is doing under load and why it is causing pain where it does.",
+    "step2": "We take the prescription and the device is manufactured at our Kirrawee head office rather than sent away.",
+    "step3": "You come back for fitting and adjustment. Orthotics are normally paired with footwear advice so the device is not working against your shoes."
+   },
+   "faq": [
+    {
+     "question": "How long do custom orthotics take to make?",
+     "answer": "TEMP:Usually 7 to 10 days. They are manufactured at our Kirrawee head office rather than sent to an external lab."
+    },
+    {
+     "question": "Will they fit in my normal shoes?",
+     "answer": "TEMP:That is part of the prescription. Bring the shoes you wear most to your appointment so the device is made for them."
+    },
+    {
+     "question": "How are these different from chemist insoles?",
+     "answer": "An off-the-shelf insole is a generic shape. A custom orthotic is made to a prescription from your own assessment, to change a specific problem the assessment identified."
+    },
+    {
+     "question": "Do orthotics hurt to wear at first?",
+     "answer": "TEMP:There is usually a break-in period. Your podiatrist will tell you how to introduce them and will adjust the device if needed."
+    },
+    {
+     "question": "Can I claim orthotics on private health?",
+     "answer": "TEMP:Yes, under most extras policies. We have HICAPS, so the rebate comes off at reception. Check your own limits with your fund."
+    }
+   ],
+   "conditions": [
+    "Flat Feet",
+    "Plantar Fasciitis",
+    "Sever's Disease",
+    "Forefoot Pain",
+    "Knee Pain"
+   ],
+   "hero": "assets/img/hero-orthotics.webp",
+   "card": "assets/img/tx-orthotics.webp"
+  },
+  {
+   "slug": "childrens-podiatry",
+   "title": "Children's Podiatry",
+   "fields": {
+    "intro": "Pigeon toe, flat feet and growing pains, assessed while the foot is still developing.",
+    "fact1": "Seen at every clinic",
+    "fact2": "Assessed as they grow",
+    "who": "Parents who have noticed in-toeing, out-toeing, flat feet, tripping, or a child who complains of sore legs after activity or at night.",
+    "step1": "We assess how your child stands, walks and runs, and compare that against what is normal for their age.",
+    "step2": "We explain what we found in plain terms, including when the answer is that no treatment is needed yet.",
+    "step3": "If something does need addressing, treatment is staged around growth and reviewed as they develop."
+   },
+   "faq": [
+    {
+     "question": "At what age should my child be assessed?",
+     "answer": "TEMP:There is no fixed age. If you have noticed something about the way they walk or they are complaining of pain, that is the time to have it looked at."
+    },
+    {
+     "question": "Is in-toeing something they grow out of?",
+     "answer": "It often looks better with age. Where it comes from a twist in the shin bone, the body tends to hide it by tightening the hip muscles rather than correcting it, so measuring it is how you know. That is the reason to have it looked at rather than waiting."
+    },
+    {
+     "question": "Do you have a clinic just for children?",
+     "answer": "Yes. Children are seen at all of our clinics."
+    },
+    {
+     "question": "Will my child need orthotics?",
+     "answer": "Not necessarily. Many children need nothing beyond monitoring. Orthotics are only prescribed where the assessment shows they will change something."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    }
+   ],
+   "conditions": [
+    "Pigeon Toe",
+    "Sever's Disease",
+    "Osgood-Schlatter",
+    "Out Toe",
+    "Flat Feet",
+    "Heel Pain"
+   ],
+   "hero": "assets/img/hero-childrens.webp",
+   "card": "assets/img/tx-childrens.webp"
+  },
+  {
+   "slug": "shockwave-therapy",
+   "title": "Shockwave Therapy",
+   "fields": {
+    "intro": "Acoustic waves using kinetic energy to stimulate repair in tendon and soft tissue. We use it most often for persistent heel pain and Achilles pain.",
+    "fact1": "Non-surgical",
+    "fact2": "No anaesthetic",
+    "who": "It is usually considered for pain that has persisted despite rest, footwear changes and load management — most commonly under the heel or in the Achilles tendon. Whether it suits you is decided at the assessment, not before.",
+    "step1": "A full biomechanical examination establishes what is loading the tissue and why. Shockwave treats the painful tissue; the assessment works out what put the load there.",
+    "step2": "If shockwave is appropriate, the applicator is worked over the area for a few minutes. No anaesthetic is needed and you can walk out and drive.",
+    "step3": "Shockwave is rarely used alone. It is normally paired with orthotic therapy, footwear changes or a loading programme so the cause is addressed as well."
+   },
+   "faq": [
+    {
+     "question": "Does shockwave therapy hurt?",
+     "answer": "TEMP:Most patients describe it as uncomfortable rather than painful, and the intensity is adjusted during the session. No anaesthetic is used."
+    },
+    {
+     "question": "How many sessions will I need?",
+     "answer": "TEMP:That is decided at your assessment and depends on how long the problem has been there. Your podiatrist will tell you before you commit to a course."
+    },
+    {
+     "question": "Can I walk and drive afterwards?",
+     "answer": "TEMP:Yes. There is no recovery period and no anaesthetic, so you can leave and drive straight away."
+    },
+    {
+     "question": "Is shockwave available at every clinic?",
+     "answer": "TEMP:Shockwave is available at selected clinics. Call the clinic nearest you, or check the clinic list below, before you book."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. Podiatry is a primary contact profession in Australia, so you can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    }
+   ],
+   "conditions": [
+    "Heel Pain",
+    "Plantar Fasciitis",
+    "Achilles Pain",
+    "Shin Splints"
+   ],
+   "hero": "assets/img/hero-shockwave.webp",
+   "card": "assets/img/tx-shockwave.webp"
+  },
+  {
+   "slug": "dry-needling",
+   "title": "Dry Needling",
+   "fields": {
+    "intro": "Fine needles inserted into trigger points to break down restrictive tissue.",
+    "fact1": "Fine needles",
+    "fact2": "No medication injected",
+    "who": "People with tight or restricted soft tissue in the calf, foot or lower leg that is contributing to how they load and where they hurt.",
+    "step1": "The assessment identifies which tissue is restricted and whether that restriction is part of what is causing your pain.",
+    "step2": "Needles are placed into the trigger points and left briefly. Most people feel a dull ache or a twitch rather than a sharp pain.",
+    "step3": "Needling is normally combined with mobilisation, stretching or orthotic therapy so the tissue does not simply tighten again."
+   },
+   "faq": [
+    {
+     "question": "Is dry needling the same as acupuncture?",
+     "answer": "They use similar needles but not the same reasoning. Dry needling targets specific trigger points identified in your assessment."
+    },
+    {
+     "question": "Does it hurt?",
+     "answer": "TEMP:Most people describe a dull ache or a brief twitch rather than a sharp pain. Tell your podiatrist during the session if it is uncomfortable."
+    },
+    {
+     "question": "Is anything injected?",
+     "answer": "No. Nothing is injected in dry needling — the needle itself is the treatment. Injectable treatment is a separate service, Neural Therapy."
+    },
+    {
+     "question": "How will I feel afterwards?",
+     "answer": "TEMP:Some people feel mild soreness for a day, similar to after exercise. Your podiatrist will tell you what to expect for your case."
+    },
+    {
+     "question": "How many sessions will I need?",
+     "answer": "TEMP:It depends on what the assessment found. Your podiatrist will set that out before you commit to a course."
+    }
+   ],
+   "conditions": [
+    "Shin Splints",
+    "Achilles Pain",
+    "Heel Pain",
+    "Running Injuries",
+    "Osgood-Schlatter"
+   ],
+   "hero": "assets/img/hero-dry-needling.webp",
+   "card": "assets/img/tx-dry-needling.webp"
+  },
+  {
+   "slug": "foot-mobilisation",
+   "title": "Foot Mobilisation",
+   "fields": {
+    "intro": "Hands-on work addressing restrictions across the foot’s 26 bones.",
+    "fact1": "Hands-on",
+    "fact2": "No equipment needed",
+    "who": "People whose assessment shows a joint is not moving as it should, and that the restriction is changing how load passes through the foot.",
+    "step1": "The assessment establishes which joints are restricted and whether that restriction is relevant to your pain.",
+    "step2": "The joint is mobilised by hand, working through its range rather than forcing it.",
+    "step3": "Mobilisation is usually paired with exercises or orthotic therapy so the range gained is kept."
+   },
+   "faq": [
+    {
+     "question": "Is foot mobilisation the same as a massage?",
+     "answer": "No. Massage works on soft tissue. Mobilisation works on the joints themselves and is directed at specific restrictions the assessment found."
+    },
+    {
+     "question": "Does it hurt?",
+     "answer": "TEMP:It should not. The joint is worked through its range rather than forced. Tell your podiatrist if anything is uncomfortable."
+    },
+    {
+     "question": "How many sessions will I need?",
+     "answer": "TEMP:That depends on what the assessment found and how long the restriction has been there. Your podiatrist will tell you before you commit."
+    },
+    {
+     "question": "Will I need exercises at home?",
+     "answer": "TEMP:Usually. Range gained in the clinic is easier to keep if it is loaded between appointments."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    }
+   ],
+   "conditions": [
+    "Forefoot Pain",
+    "Flat Feet",
+    "Heel Pain",
+    "Knee Pain",
+    "Sever's Disease"
+   ],
+   "hero": "assets/img/hero-mobilisation.webp",
+   "card": "assets/img/tx-mobilisation.webp"
+  },
+  {
+   "slug": "sports-podiatry",
+   "title": "Sports Podiatry",
+   "fields": {
+    "intro": "Running injuries, return to sport, and footwear that matches your gait.",
+    "fact1": "Gait assessed under load",
+    "fact2": "Return-to-sport planning",
+    "who": "Runners and athletes with overuse injuries, anyone returning to sport after one, and people whose pain only appears at a certain distance, pace or surface.",
+    "step1": "We assess your gait under load rather than standing still, because that is where a running injury actually happens.",
+    "step2": "We identify what is failing and why — mechanics, load, footwear, or a combination.",
+    "step3": "Treatment is paired with a return-to-sport plan, so load is rebuilt rather than resumed all at once."
+   },
+   "faq": [
+    {
+     "question": "Do I need to bring my running shoes?",
+     "answer": "TEMP:Yes. Bring the shoes you train in, including any you have retired recently. The wear pattern tells us a great deal."
+    },
+    {
+     "question": "Do you do video gait analysis?",
+     "answer": "TEMP:Gait is assessed under load as part of the biomechanical assessment."
+    },
+    {
+     "question": "How soon can I get back to running?",
+     "answer": "That depends entirely on what the assessment finds. A return-to-sport plan is part of the treatment rather than an afterthought."
+    },
+    {
+     "question": "Will you just tell me to rest?",
+     "answer": "Rest alone rarely fixes an overuse injury, because it does not change what caused the overload. The assessment is aimed at that cause."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    }
+   ],
+   "conditions": [
+    "Running Injuries",
+    "Shin Splints",
+    "Osgood-Schlatter",
+    "Achilles Pain",
+    "Knee Pain"
+   ],
+   "hero": "assets/img/hero-sports.webp",
+   "card": "assets/img/tx-sports.webp"
+  },
+  {
+   "slug": "general-foot-care",
+   "title": "General Foot Care",
+   "fields": {
+    "intro": "Routine care including ingrown toenails, corns and calluses.",
+    "fact1": "Routine and recurrent",
+    "fact2": "Sterile instruments",
+    "who": "Anyone with an ingrown nail, painful callus or corn, or who needs nail care they cannot manage themselves — including patients with diabetes or reduced circulation, where foot care matters more.",
+    "step1": "We look at the problem itself and at whether something about how you load the foot is causing it to keep coming back.",
+    "step2": "The nail, corn or callus is treated with sterile instruments.",
+    "step3": "Where a callus or corn keeps returning, that is usually a loading problem, and the assessment is what addresses it."
+   },
+   "faq": [
+    {
+     "question": "Does treating an ingrown toenail hurt?",
+     "answer": "TEMP:Routine treatment is usually not painful. If a procedure is needed, local anaesthetic is used and your podiatrist will explain it first."
+    },
+    {
+     "question": "Why does my callus keep coming back?",
+     "answer": "A callus forms where load concentrates. Removing it treats the symptom; the assessment is what identifies why the load is there."
+    },
+    {
+     "question": "I have diabetes. Can you see me?",
+     "answer": "TEMP:Yes. Foot care matters more where circulation or sensation is reduced. Tell reception when you book so enough time is allowed."
+    },
+    {
+     "question": "How often should I come in?",
+     "answer": "TEMP:That depends on the problem. Your podiatrist will recommend an interval rather than booking you in indefinitely."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    }
+   ],
+   "conditions": [
+    "Ingrown Toenails",
+    "Forefoot Pain",
+    "Heel Pain",
+    "Flat Feet"
+   ],
+   "hero": "assets/img/hero-foot-care.webp",
+   "card": "assets/img/tx-foot-care.webp"
+  },
+  {
+   "slug": "foot-strapping",
+   "title": "Foot Strapping",
+   "fields": {
+    "intro": "Therapeutic support to offload tissue while it recovers.",
+    "fact1": "Immediate support",
+    "fact2": "Often a diagnostic step",
+    "who": "People who need support straight away, and people for whom strapping is a test: if taping the foot a certain way relieves the pain, that tells us something useful about what an orthotic would need to do.",
+    "step1": "The assessment establishes which tissue is overloaded and which direction needs supporting.",
+    "step2": "Tape is applied to offload that tissue. You will usually know within a day or two whether it has helped.",
+    "step3": "Strapping is short-term by design. Where it works, it often points towards orthotic therapy as the longer-term answer."
+   },
+   "faq": [
+    {
+     "question": "How long does strapping stay on?",
+     "answer": "TEMP:Usually a few days. Your podiatrist will tell you when to remove it and what to watch for."
+    },
+    {
+     "question": "Can I shower with it on?",
+     "answer": "TEMP:Ask your podiatrist — it depends on the tape used. Most strapping tolerates a shower if it is dried properly afterwards."
+    },
+    {
+     "question": "Is strapping a long-term fix?",
+     "answer": "No, and it is not meant to be. It offloads tissue while it settles, and it helps confirm what a longer-term treatment would need to do."
+    },
+    {
+     "question": "Can I strap my own foot at home?",
+     "answer": "TEMP:Your podiatrist can show you a simple version. Getting the direction and tension right is what makes it work, and that comes from the assessment."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    }
+   ],
+   "conditions": [
+    "Plantar Fasciitis",
+    "Heel Pain",
+    "Flat Feet",
+    "Running Injuries"
+   ],
+   "hero": "assets/img/hero-strapping.webp",
+   "card": "assets/img/tx-strapping.webp"
+  },
+  {
+   "slug": "neural-therapy",
+   "title": "Neural Therapy",
+   "fields": {
+    "intro": "Injectable therapy to stimulate a repair response. Paired with prolotherapy.",
+    "fact1": "Injectable",
+    "fact2": "Paired with prolotherapy",
+    "who": "It is considered for persistent problems where other treatment has not resolved the pain. Whether it is appropriate for you is decided at the assessment.",
+    "step1": "The assessment establishes the diagnosis and whether injectable therapy is a reasonable step for it.",
+    "step2": "If it is, your podiatrist will explain what is involved, including what to expect afterwards, before anything goes ahead.",
+    "step3": "As with every treatment here, it is paired with addressing the mechanical cause rather than used on its own."
+   },
+   "faq": [
+    {
+     "question": "What is neural therapy?",
+     "answer": "An injectable treatment used to stimulate a repair response in tissue that has not healed on its own. It is used here alongside prolotherapy."
+    },
+    {
+     "question": "Is it painful?",
+     "answer": "TEMP:Your podiatrist will explain what to expect before anything goes ahead, including how the injection is managed."
+    },
+    {
+     "question": "How many treatments are needed?",
+     "answer": "TEMP:That is decided case by case at the assessment rather than set in advance."
+    },
+    {
+     "question": "Is it available at every clinic?",
+     "answer": "TEMP:Neural therapy is available at selected clinics. Call the clinic nearest you before booking if this is what you are after."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly. If you are on a Medicare care plan your GP will refer you, and we can bill that."
+    }
+   ],
+   "conditions": [
+    "Heel Pain",
+    "Achilles Pain",
+    "Plantar Fasciitis",
+    "Forefoot Pain"
+   ],
+   "hero": "assets/img/hero-neural.webp",
+   "card": "assets/img/tx-neural.webp"
+  }
+ ],
+ "conditions": [
+  {
+   "slug": "heel-pain",
+   "title": "Heel Pain",
+   "fields": {
+    "intro": "Pain under or behind the heel, most often worst with the first few steps in the morning. It is the single most common problem we see.",
+    "fact1": "Most common presentation",
+    "fact2": "Assessment first",
+    "fact3": "TEMP_LENGTH",
+    "causes": "Most heel pain comes from pronation — the foot rolling in too far. As the arch drops, the foot lengthens and the plantar fascia is elongated, and that repeated stretching causes micro-tears at the base of the heel, where the fascia attaches. A heel spur seen on an X-ray is frequently a result of that loading rather than the cause of the pain.",
+    "diagnose1": "We assess how you stand, walk and load rather than only pressing the sore spot, because the heel is usually where the pain shows up and not where it starts.",
+    "diagnose2": "We identify what is overloading the tissue — alignment, footwear, activity, or the way the leg above the foot is working — and explain what we found.",
+    "diagnose3": "Treatment is then prescribed against that finding, which is why two people with the same heel pain can leave with different plans.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "Sharp pain under the heel with the first steps out of bed",
+    "Pain that eases as you warm up, then returns after sitting",
+    "Tenderness when you press the inside of the heel",
+    "Worse after a long day standing, or after exercise rather than during it"
+   ],
+   "faq": [
+    {
+     "question": "Why does my heel hurt most first thing in the morning?",
+     "answer": "The tissue under the heel shortens overnight and is loaded suddenly when you stand. That first-step pain is one of the most recognisable features of the problem and is part of what the assessment asks about."
+    },
+    {
+     "question": "Is a heel spur causing my pain?",
+     "answer": "Often not. Spurs show up on X-rays of people with no pain at all, and plenty of people with heel pain have no spur. The assessment looks at loading rather than at the spur alone."
+    },
+    {
+     "question": "How long does heel pain take to settle?",
+     "answer": "TEMP:That depends on how long it has been there and what is causing it. Your podiatrist will give you a realistic timeframe at the assessment rather than a standard answer."
+    },
+    {
+     "question": "Should I just rest it?",
+     "answer": "Rest alone often helps while you are resting and returns when you go back to normal, because it does not change what caused the overload. That cause is what the assessment is aimed at."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. Podiatry is a primary contact profession in Australia, so you can book directly."
+    }
+   ],
+   "treatments": [
+    "shockwave-therapy",
+    "custom-orthotics",
+    "foot-strapping",
+    "foot-mobilisation"
+   ],
+   "hero": "assets/img/hero-heel-pain.webp",
+   "diagram": "assets/img/cond-heel-pain.webp",
+   "diagram_alt": "Diagram of a heel spur and the calcaneal attachment of the plantar fascia",
+   "understanding": {
+    "intro": "Most heel pain comes from the thick band of tissue under the foot (the plantar fascia) pulling where it attaches to the heel bone. Where on the heel it hurts is a clue to how your foot is moving.",
+    "types_title": "Where it hurts points to why",
+    "types": [
+     {
+      "label": "Inner heel",
+      "sub": "Foot rolls in",
+      "text": "Linked with the foot rolling inwards too far (over-pronation), which stretches the inner edge of the fascia."
+     },
+     {
+      "label": "Centre of the heel",
+      "sub": "Rolls out, then in",
+      "text": "The foot lands on its outer edge, then rolls in. The heel becomes a pivot point for both movements."
+     },
+     {
+      "label": "Outer heel",
+      "sub": "Foot rolls out",
+      "text": "Linked with the foot rolling outwards (supination), loading the outer attachment."
+     }
+    ],
+    "points": [
+     {
+      "heading": "Why the first steps hurt most",
+      "html": "<p>People often describe it as a hot, sharp pain through the heel when they get out of bed, taking 5&ndash;10 minutes to ease. It returns after sitting, and burns after a long day standing.</p>"
+     },
+     {
+      "heading": "Three names, one process",
+      "html": "<ul><li><strong>Plantar fasciitis</strong>: repeated strain causes tiny tears and inflammation at the attachment.</li><li><strong>Plantarfasciosis</strong>: over time the tissue thickens and scars, often without inflammation. It can be seen on ultrasound and is harder to treat the longer it is left.</li><li><strong>Heel spur</strong>: a bony growth that forms as the body compensates. The pain feels the same.</li></ul>"
+     },
+     {
+      "heading": "Same diagnosis, different plan",
+      "html": "<p>Two people can both be told they have plantar fasciitis for opposite reasons: one whose longer leg rolls in to level up with the shorter one, another whose foot rolls out. The treatment is different for each, which is why the assessment comes first.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p>Orthotics with additions, strapping, massage and foot adjustments, <a href=\"services/shockwave-therapy.html\">shockwave</a>, <a href=\"services/dry-needling.html\">dry needling</a> and injection therapy, each aimed at the area that hurts.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "plantar-fasciitis",
+   "title": "Plantar Fasciitis",
+   "fields": {
+    "intro": "Pain along the arch and into the heel, usually worst first thing in the morning and after sitting.",
+    "fact1": "Common in adults",
+    "fact2": "Loading problem",
+    "fact3": "TEMP_LENGTH",
+    "causes": "Pronation elongates the plantar fascia. As the foot rolls in and the arch drops, the fascia is stretched on every step, and that repeated stretching causes micro-tears at the base of the heel, where it attaches. How much load it takes, and from which direction, depends on foot alignment, a change in activity or footwear, and the way the leg above is working.",
+    "diagnose1": "We look at how the arch loads when you walk rather than only at rest, because the fascia is loaded as you move.",
+    "diagnose2": "We identify what is increasing that load and explain what we found before anything is prescribed.",
+    "diagnose3": "Treatment is matched to the finding, which is why the plan differs between two people with the same diagnosis.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "Pain along the arch or where it meets the heel",
+    "Worst with the first steps of the day",
+    "Eases with movement, then returns after rest",
+    "Sore to press along the inside of the arch"
+   ],
+   "faq": [
+    {
+     "question": "Is plantar fasciitis the same as heel pain?",
+     "answer": "They overlap. Heel pain is the symptom; plantar fasciitis is one of the common causes of it."
+    },
+    {
+     "question": "Will stretching fix it?",
+     "answer": "Stretching is often suggested, but where the fascia is already over-stretched and tearing, pulling on it can tear it further. Your podiatrist will tell you whether stretching has any place in your plan, and what to do instead."
+    },
+    {
+     "question": "How long before it settles?",
+     "answer": "TEMP:That depends on how long it has been there. You will get a realistic timeframe at the assessment rather than a standard answer."
+    },
+    {
+     "question": "Do I need a scan?",
+     "answer": "Usually not. The diagnosis is made from the assessment. Imaging is requested only where it would change the plan."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "custom-orthotics",
+    "shockwave-therapy",
+    "foot-strapping",
+    "foot-mobilisation"
+   ],
+   "hero": "assets/img/hero-plantar.webp",
+   "diagram": "assets/img/cond-plantar.webp",
+   "diagram_alt": "Diagram of the plantar fascia showing inflammation and tearing",
+   "understanding": {
+    "intro": "The plantar fascia is a band of tissue running from the heel bone to the ball of the foot. Plantar fasciitis is what happens when it is repeatedly over-stretched at its attachment on the heel.",
+    "types_title": "How it progresses",
+    "types": [
+     {
+      "label": "Plantar fasciitis",
+      "sub": "Early",
+      "text": "Constant, repetitive strain causes tiny tears and inflammation where the fascia attaches to the heel."
+     },
+     {
+      "label": "Plantarfasciosis",
+      "sub": "Longer term",
+      "text": "The body lays down thickening and scar tissue. There is usually no longer inflammation, and it becomes harder to treat."
+     },
+     {
+      "label": "Heel spur",
+      "sub": "Compensation",
+      "text": "A small bony growth forms at the attachment."
+     }
+    ],
+    "points": [
+     {
+      "heading": "What is actually happening",
+      "html": "<p>When the foot rolls in too far, the arch drops and the foot lengthens. That stretches the fascia at its heel attachment on every step. Overnight it is not under load, which is why getting out of bed hurts most.</p>"
+     },
+     {
+      "heading": "Inner, centre or outer heel",
+      "html": "<p>The fascia has inner, central and outer bands. Inner heel pain is linked with rolling in, outer heel pain with rolling out, and centre heel pain with both.</p>"
+     },
+     {
+      "heading": "Why leg length can matter",
+      "html": "<p>If one leg is longer, that foot may roll in more to level the body up, straining the inner heel. The plan can then include raising the shorter leg, not just supporting the arch.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p><a href=\"services/custom-orthotics.html\">Orthotics</a> and additions, <a href=\"services/foot-strapping.html\">strapping</a>, massage and foot adjustments, shockwave, dry needling and injection therapy.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "achilles-pain",
+   "title": "Achilles Pain",
+   "fields": {
+    "intro": "Pain in the tendon at the back of the heel, often stiff in the morning and sore after activity rather than during it.",
+    "fact1": "Common in runners",
+    "fact2": "Load related",
+    "fact3": "TEMP_LENGTH",
+    "causes": "The Achilles transmits everything the calf does into the foot. Pain there usually follows a change in load — more running, faster running, different surfaces or shoes — or a mechanical reason the tendon is working harder than it should.",
+    "diagnose1": "We assess calf function and how the foot loads through push-off.",
+    "diagnose2": "We work out whether the problem is the load, the mechanics, or both, and show you what we found.",
+    "diagnose3": "Treatment addresses the mechanics alongside a graded loading plan, rather than rest alone.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "Stiffness in the tendon first thing in the morning",
+    "Pain that warms up during activity and returns afterwards",
+    "Tenderness when you squeeze the tendon above the heel",
+    "Thickening or a tender lump along the tendon"
+   ],
+   "faq": [
+    {
+     "question": "Should I stop running?",
+     "answer": "TEMP:Not always, and not always completely. Load usually needs managing rather than stopping. Your podiatrist will set that out for your case."
+    },
+    {
+     "question": "Is it tendonitis or tendonosis?",
+     "answer": "They are different stages and are managed differently, which is part of what the assessment establishes."
+    },
+    {
+     "question": "Why is it worse in the morning?",
+     "answer": "The tendon stiffens overnight and is loaded suddenly when you stand. That pattern is one of the things we ask about."
+    },
+    {
+     "question": "How long does it take?",
+     "answer": "TEMP:Tendons are slow to respond. You will get a realistic timeframe at the assessment."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "shockwave-therapy",
+    "custom-orthotics",
+    "dry-needling",
+    "sports-podiatry"
+   ],
+   "hero": "assets/img/hero-achilles.webp",
+   "diagram": "assets/img/cond-achilles.webp",
+   "diagram_alt": "Diagram comparing a normal Achilles tendon with tendonitis, rupture and tendonosis",
+   "understanding": {
+    "intro": "The Achilles tendon joins the calf to the back of the heel. Our assessment looks at which side of the tendon hurts, because each side points to a different way the foot is moving.",
+    "types_title": "Which side of the tendon",
+    "types": [
+     {
+      "label": "Inner side",
+      "sub": "Foot rolls in",
+      "text": "Burning pain and inflammation on the inside of the ankle, behind the ankle bone. Rolling in puts extra strain on the inner tendon."
+     },
+     {
+      "label": "Both sides",
+      "sub": "Rolls out, then in",
+      "text": "Burning, sharp pain and swelling either side of the attachment, sometimes with a hard lump on the tendon."
+     },
+     {
+      "label": "Outer side",
+      "sub": "Foot rolls out",
+      "text": "Pain and swelling on the outer side. Often a high-arched foot that stays rolled out through the whole step."
+     }
+    ],
+    "points": [
+     {
+      "heading": "Tendonitis or tendonosis?",
+      "html": "<p>The main difference is time. <strong>Tendonitis</strong> is short-term inflammation, often after a direct injury. <strong>Tendonosis</strong> is long-term, from repeated strain or an injury that has not healed.</p>"
+     },
+     {
+      "heading": "The name matters less than the cause",
+      "html": "<p>It matters less what the diagnosis is called than finding the biomechanical reason for it. That reason is what the treatment is aimed at.</p>"
+     },
+     {
+      "heading": "Why it should not be ignored",
+      "html": "<p>Over time, strain can cause small tears, scarring and adhesions in the tendon.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p><a href=\"services/custom-orthotics.html\">Orthotics</a> (with forefoot additions where needed), <a href=\"services/shockwave-therapy.html\">shockwave</a>, dry needling, manipulation and massage, and injection therapy.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "shin-splints",
+   "title": "Shin Splints",
+   "fields": {
+    "intro": "Pain along the shin that comes on with activity, usually running, and settles with rest.",
+    "fact1": "Activity related",
+    "fact2": "Common in new runners",
+    "fact3": "TEMP_LENGTH",
+    "causes": "Shin pain usually reflects how load is being transmitted up from the foot. A sudden increase in training, a change of surface, worn footwear or the way the foot rolls through stance can all concentrate stress along the tibia.",
+    "diagnose1": "We assess your gait under load, because shin pain appears with activity rather than at rest.",
+    "diagnose2": "We identify what is concentrating the stress and explain what we found.",
+    "diagnose3": "Treatment addresses the mechanics and the training load together, since changing one without the other usually brings it back.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "Aching along the inside edge of the shin",
+    "Comes on during or after running and eases with rest",
+    "Tender along a stretch of bone rather than one point",
+    "Worse on hard surfaces or in worn shoes"
+   ],
+   "faq": [
+    {
+     "question": "Is it a stress fracture?",
+     "answer": "They can feel similar. One important difference is whether the tenderness is spread along the bone or sits at one point. If a fracture is suspected we will say so and arrange imaging."
+    },
+    {
+     "question": "Can I keep training?",
+     "answer": "TEMP:Often in a modified form. Your podiatrist will set out what to change rather than simply stopping you."
+    },
+    {
+     "question": "Will new shoes fix it?",
+     "answer": "Sometimes shoes are part of it and sometimes they are not. Bring the ones you train in to the appointment."
+    },
+    {
+     "question": "How long does it take?",
+     "answer": "TEMP:That depends on how long you have trained through it. You will get a realistic timeframe at the assessment."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "sports-podiatry",
+    "custom-orthotics",
+    "dry-needling",
+    "foot-mobilisation"
+   ],
+   "hero": "assets/img/hero-shin-splints.webp",
+   "diagram": "assets/img/cond-shin-splints.webp",
+   "diagram_alt": "Diagram of medial shin splints along the tibia",
+   "understanding": {
+    "intro": "There are three types of shin splints. Each is named for the part of the shin that hurts, and each is linked to a different muscle and a different way the foot moves.",
+    "types_title": "Three types of shin splints",
+    "types": [
+     {
+      "label": "Inner edge (medial)",
+      "sub": "Foot rolls in",
+      "text": "The arch drops and the foot lengthens, stretching the tibialis posterior muscle until it develops tiny tears."
+     },
+     {
+      "label": "Front (anterior)",
+      "sub": "Rolls out, then in",
+      "text": "The foot lands on its outer edge, then snaps inwards. The sudden change strains the tibialis anterior muscle at the front."
+     },
+     {
+      "label": "Outer edge (lateral)",
+      "sub": "Foot rolls out",
+      "text": "The foot stays rolled out through the whole step, straining the peroneal muscles on the outside of the leg."
+     }
+    ],
+    "points": [
+     {
+      "heading": "Why it builds with training",
+      "html": "<p>The strain is repetitive, so it gets worse as training volume and intensity go up, because the same foot movement repeats with every step.</p>"
+     },
+     {
+      "heading": "Where it hurts guides the orthotic",
+      "html": "<p>An inner-edge type usually needs the rolling-in controlled. Front and outer types need the forefoot corrected so the foot stops landing on its outer edge.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p><a href=\"services/custom-orthotics.html\">Orthotics</a>, <a href=\"services/dry-needling.html\">dry needling</a>, <a href=\"services/shockwave-therapy.html\">shockwave</a>, manipulation and massage.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "forefoot-pain",
+   "title": "Forefoot Pain",
+   "fields": {
+    "intro": "Pain in the ball of the foot, including Morton’s neuroma. Often described as standing on a pebble, or burning between the toes.",
+    "fact1": "Includes Morton’s neuroma",
+    "fact2": "Often footwear related",
+    "fact3": "TEMP_LENGTH",
+    "causes": "The forefoot takes the highest pressure of any part of the foot at push-off. Pain there usually means pressure is concentrating where it should be spread — through foot alignment, footwear width, or the way load moves across the ball of the foot.",
+    "diagnose1": "We assess where pressure is concentrating across the forefoot as you walk.",
+    "diagnose2": "We work out whether the problem is mechanical, footwear, or both, and explain what we found.",
+    "diagnose3": "Treatment is aimed at redistributing that pressure rather than only settling the symptom.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "A feeling of standing on a pebble or a fold in your sock",
+    "Burning or tingling that runs into the toes",
+    "Numbness in the toes",
+    "Relief when you take your shoe off and rub the foot",
+    "Worse in narrow or firm-soled shoes"
+   ],
+   "faq": [
+    {
+     "question": "What is a Morton’s neuroma?",
+     "answer": "A thickening of tissue around a nerve between the metatarsals, which is why the pain often burns or runs into the toes rather than staying in one spot."
+    },
+    {
+     "question": "Are my shoes causing it?",
+     "answer": "TEMP:Footwear is often part of it, particularly width. Bring the shoes you wear most to your appointment."
+    },
+    {
+     "question": "Will I need surgery?",
+     "answer": "Most forefoot pain is managed without it. That conversation only arises if conservative treatment has not worked."
+    },
+    {
+     "question": "How long does it take?",
+     "answer": "TEMP:That depends on what is driving the pressure. You will get a realistic timeframe at the assessment."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "custom-orthotics",
+    "foot-mobilisation",
+    "neural-therapy",
+    "general-foot-care"
+   ],
+   "hero": "assets/img/hero-forefoot.webp",
+   "diagram": "assets/img/cond-forefoot.webp",
+   "diagram_alt": "Diagram of Morton’s neuroma between the metatarsals",
+   "understanding": {
+    "intro": "Pain in the ball of the foot falls into two main types. They feel different and have different causes.",
+    "types_title": "Two main types",
+    "types": [
+     {
+      "label": "Metatarsalgia",
+      "sub": "General, burning",
+      "text": "Pain spread across the ball of the foot. As a rolled-in foot lengthens, it creates shearing forces on the long bones’ heads and loses the arch across the forefoot."
+     },
+     {
+      "label": "Morton’s neuroma",
+      "sub": "Localised, nerve",
+      "text": "A swelling of the nerve that runs between the metatarsals, the long bones of the foot — usually between the 2nd/3rd or 3rd/4th toes."
+     }
+    ],
+    "points": [
+     {
+      "heading": "How a neuroma changes over time",
+      "html": "<p>It starts as localised pain, then numbness, tingling or pins and needles into the toes. Over time the body forms scar tissue around the nerve to protect it.</p>"
+     },
+     {
+      "heading": "Why it needs a proper look",
+      "html": "<p>A cyst between the toes, bursitis or a torn plantar plate can feel similar. Telling them apart is part of the assessment.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p><a href=\"services/custom-orthotics.html\">Orthotics</a> with a metatarsal dome, which supports the arch across the forefoot, <a href=\"services/dry-needling.html\">dry needling</a>, foot mobilisation and massage.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "flat-feet",
+   "title": "Flat Feet",
+   "fields": {
+    "intro": "Fallen or low arches in children and adults. Flat feet are common, and only some of them need treating.",
+    "fact1": "Common and often painless",
+    "fact2": "Assessed, not assumed",
+    "fact3": "TEMP_LENGTH",
+    "causes": "A low arch is a shape, not automatically a problem. It matters when the way the foot rolls through stance puts strain on tissue further up — the arch, the knee, or the hip. That is the difference between flat feet that need treating and flat feet that do not.",
+    "diagnose1": "We assess whether your arch position is actually causing the symptoms you have come in with.",
+    "diagnose2": "If it is, we identify what is happening through stance and show you what we found.",
+    "diagnose3": "Where treatment is needed it is aimed at how the foot loads, not at forcing an arch shape.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "Arches that flatten when you stand",
+    "Aching in the arch, heel or inside of the ankle after activity",
+    "Shoes wearing unevenly on the inside edge",
+    "Tired legs after standing rather than sharp pain"
+   ],
+   "faq": [
+    {
+     "question": "Do flat feet always need treating?",
+     "answer": "No. Plenty of people have low arches and no pain. Treatment is for what the assessment finds, not for the shape itself."
+    },
+    {
+     "question": "Will my child grow out of it?",
+     "answer": "Often, yes. Arches develop through childhood. The assessment tells you whether yours is developing as expected."
+    },
+    {
+     "question": "Do I need arch supports?",
+     "answer": "TEMP:Only if the assessment shows they will change something. They are not automatic."
+    },
+    {
+     "question": "Can flat feet cause knee pain?",
+     "answer": "They can, where the way the foot rolls changes the load at the knee. That is one of the things the assessment looks at."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "biomechanics",
+    "custom-orthotics",
+    "childrens-podiatry",
+    "foot-mobilisation"
+   ],
+   "hero": "assets/img/hero-flat-feet.webp",
+   "diagram": "assets/img/cond-flat-feet.webp",
+   "diagram_alt": "A podiatrist assessing the arch of a patient’s foot",
+   "understanding": {
+    "intro": "A flat or rolled-in foot is called over-pronation. Some rolling in is normal: it is how the foot absorbs shock. The problem is when it goes too far for too long.",
+    "types_title": "How far should a foot roll in?",
+    "types": [
+     {
+      "label": "Ideal",
+      "sub": "Heel upright",
+      "text": "Standing relaxed, the heel sits between upright and a few degrees tilted: 0&ndash;4&deg;."
+     },
+     {
+      "label": "Normal shock absorption",
+      "sub": "Up to 4&deg;",
+      "text": "When walking, the foot should only roll in about 4&deg; from its neutral position to absorb impact."
+     },
+     {
+      "label": "Over-pronation",
+      "sub": "Beyond that",
+      "text": "The arch drops, the foot lengthens and the strain moves up the leg."
+     }
+    ],
+    "points": [
+     {
+      "heading": "When the foundation drops",
+      "html": "<p>The foot is the body’s foundation: when it collapses, it brings everything above with it. A common pattern is inner heel pain in the morning, inner shin pain and inner knee pain together.</p>"
+     },
+     {
+      "heading": "It runs in families",
+      "html": "<p>These biomechanical traits are often inherited and passed down through generations, often alongside a twist in the shin (pigeon-toed or out-toed).</p>"
+     },
+     {
+      "heading": "Checking an orthotic",
+      "html": "<p>A support that flattens like a pancake under thumb pressure is not supporting much. An orthotic should also sit stable on a flat surface without wobbling.</p>"
+     },
+     {
+      "heading": "Matched to you",
+      "html": "<p>How firm the orthotic needs to be depends on how far your foot rolls in and on your body weight. Different shoes may need different styles.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "running-injuries",
+   "title": "Running Injuries",
+   "fields": {
+    "intro": "Overuse injuries from running, and getting back to it afterwards without the same thing happening again.",
+    "fact1": "Gait assessed under load",
+    "fact2": "Return-to-running plans",
+    "fact3": "TEMP_LENGTH",
+    "causes": "Running injuries are almost always a mismatch between load and capacity. Either the training went up faster than the tissue adapted, or the mechanics mean one structure is doing more work than it should on every stride.",
+    "diagnose1": "We assess your running style and your mechanics.",
+    "diagnose2": "We identify what is failing and why — mechanics, training load, footwear, or a combination.",
+    "diagnose3": "Treatment is paired with a return-to-running plan so load is rebuilt rather than resumed all at once.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "Pain that appears at a certain distance, pace or surface",
+    "Settles with rest and returns when you build back up",
+    "One side consistently worse than the other",
+    "Shoes wearing unevenly or wearing out quickly"
+   ],
+   "faq": [
+    {
+     "question": "Do I have to stop running?",
+     "answer": "TEMP:Often not entirely. Load usually needs managing rather than stopping, and your podiatrist will set out what that looks like."
+    },
+    {
+     "question": "Should I bring my shoes?",
+     "answer": "Yes, including any you have retired recently. The wear pattern tells us a great deal."
+    },
+    {
+     "question": "Why does it keep coming back?",
+     "answer": "Because rest changes the load but not the cause. Finding the cause is what the assessment is for."
+    },
+    {
+     "question": "Do you assess gait?",
+     "answer": "TEMP:Gait is assessed under load as part of the biomechanical assessment."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "sports-podiatry",
+    "biomechanics",
+    "custom-orthotics",
+    "dry-needling"
+   ],
+   "hero": "assets/img/hero-running.webp",
+   "diagram": "assets/img/cond-running.webp",
+   "diagram_alt": "A runner on a downhill road",
+   "understanding": {
+    "intro": "Running multiplies every small misalignment. This is why a foot that copes with walking can break down with mileage.",
+    "types_title": "What changes when you run",
+    "types": [
+     {
+      "label": "4&ndash;5&times; body weight",
+      "sub": "Every stride",
+      "text": "The force through the feet when running on hard ground is four to five times your body weight."
+     },
+     {
+      "label": "Hard, flat surfaces",
+      "sub": "Roads and synthetic turf",
+      "text": "Hard, flat ground returns more force to the body than natural terrain, and footwear has not changed to match."
+     },
+     {
+      "label": "Hidden compensation",
+      "sub": "Shows up downhill",
+      "text": "A twisted shin the hips have been compensating for can show up as ankle and knee pain, often worse running downhill."
+     }
+    ],
+    "points": [
+     {
+      "heading": "One pair may not be enough",
+      "html": "<p>A running orthotic needs different materials and angles from an everyday one, because the forces are so much higher. Many runners wear the same pair for everything.</p>"
+     },
+     {
+      "heading": "What to look for in a sports shoe",
+      "html": "<ul><li>Does not lean in when viewed from behind</li><li>Sturdy through the middle of the sole</li><li>Bends only at the toes</li><li>Firm heel counter</li><li>Laces up high to support the foot</li></ul>"
+     },
+     {
+      "heading": "More than the foot",
+      "html": "<p>A plan can include strengthening the inner quadriceps (VMO), stretching the glutes and ITB, <a href=\"services/foot-mobilisation.html\">foot mobilisation</a> and <a href=\"services/dry-needling.html\">dry needling</a> of the muscles that have been compensating.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "knee-pain",
+   "title": "Knee Pain",
+   "fields": {
+    "intro": "Knee pain where the cause sits below the knee. How the foot loads changes what the knee has to do.",
+    "fact1": "Assessed from the feet up",
+    "fact2": "Includes Osgood-Schlatter",
+    "fact3": "TEMP_LENGTH",
+    "causes": "The knee sits between the hip and the foot and is affected by both. Where the foot rolls in or out more than it should, the knee has to absorb that difference on every step — which is why knee pain with no injury behind it is often a lower limb alignment problem.",
+    "diagnose1": "We assess alignment from the feet up rather than starting at the knee, because the knee is often where the pain shows up and not where it starts.",
+    "diagnose2": "We identify what is changing the load at the knee and explain what we found.",
+    "diagnose3": "Treatment addresses that cause. Where the foot is driving it, treating the foot is what changes the knee.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "Pain around or under the kneecap",
+    "Worse on stairs, hills or after sitting for a while",
+    "Aching after activity rather than from a specific injury",
+    "One knee consistently worse than the other"
+   ],
+   "faq": [
+    {
+     "question": "Why would a podiatrist treat my knee?",
+     "answer": "Because the knee is loaded by what the foot does underneath it. Where that is the cause, the foot is where the treatment goes."
+    },
+    {
+     "question": "What is Osgood-Schlatter?",
+     "answer": "An irritation of the growth plate at the top of the shin, seen in active children and adolescents. It is one of the knee problems we assess."
+    },
+    {
+     "question": "Do I need a scan?",
+     "answer": "Usually not. Imaging is requested only where it would change the plan."
+    },
+    {
+     "question": "How long does it take?",
+     "answer": "TEMP:That depends on the cause and how long it has been there. You will get a realistic timeframe at the assessment."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "biomechanics",
+    "custom-orthotics",
+    "sports-podiatry",
+    "childrens-podiatry"
+   ],
+   "hero": "assets/img/hero-knee.webp",
+   "diagram": "assets/img/cond-knee.webp",
+   "diagram_alt": "Pain highlighted at the knee joint",
+   "understanding": {
+    "intro": "Knee pain without an injury often starts at the foot. There are three areas of the knee, each linked to a different foot movement.",
+    "types_title": "Which part of the knee",
+    "types": [
+     {
+      "label": "Inner knee",
+      "sub": "Foot rolls in",
+      "text": "For every degree the foot rolls in, the shin turns in by about the same amount, straining the inner knee ligament. The hip muscles tighten to compensate."
+     },
+     {
+      "label": "Front of the knee",
+      "sub": "Rolls out, then in",
+      "text": "The shin turns out, then suddenly in, twisting the knee so the kneecap tracks from side to side."
+     },
+     {
+      "label": "Outer knee",
+      "sub": "Foot rolls out",
+      "text": "Rolling out through the whole step strains the outer knee ligament and can contribute to ITB syndrome."
+     }
+    ],
+    "points": [
+     {
+      "heading": "Osgood-Schlatter in teenagers",
+      "html": "<p>A tender lump just below the kneecap, most often in active teenagers aged about 13&ndash;17 and more often boys. The kneecap tendon pulls on the growing area of the shin bone, and a twist in the leg can add to that pull.</p>"
+     },
+     {
+      "heading": "Why the hips come into it",
+      "html": "<p>When the shin is twisted, the hip muscles tighten to straighten the leg up. The knee is caught between the two, which is why the assessment includes the hips.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p><a href=\"services/custom-orthotics.html\">Orthotics</a>, knee <a href=\"services/foot-strapping.html\">taping</a>, dry needling, strengthening and stretching, mobilisation, shockwave and injection therapy.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "ingrown-toenails",
+   "title": "Ingrown Toenails",
+   "fields": {
+    "intro": "Nails that dig into the surrounding skin, whether it is a one-off or keeps coming back.",
+    "fact1": "One-off or recurring",
+    "fact2": "Sterile instruments",
+    "fact3": "TEMP_LENGTH",
+    "causes": "Ingrown nails come from the shape of the nail, how it has been cut, pressure from footwear, or the way the toe loads when you walk. A nail that keeps becoming ingrown usually has a reason behind it rather than being bad luck.",
+    "diagnose1": "We look at the nail itself and at whether something about how the toe loads is causing it to recur.",
+    "diagnose2": "We explain what we found, including whether a procedure is the right answer or not.",
+    "diagnose3": "Where it keeps coming back, treatment addresses the cause rather than removing the same nail edge repeatedly.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "Pain along the edge of the nail, usually the big toe",
+    "Redness or swelling of the skin beside the nail",
+    "Tender to pressure from shoes or bedsheets",
+    "Keeps returning after it seems to settle"
+   ],
+   "faq": [
+    {
+     "question": "Does treatment hurt?",
+     "answer": "TEMP:Routine treatment is usually not painful. Where a procedure is needed, local anaesthetic is used and your podiatrist will explain it first."
+    },
+    {
+     "question": "Can I treat it myself?",
+     "answer": "Digging at the nail edge tends to make it worse and risks infection. It is straightforward to treat properly."
+    },
+    {
+     "question": "Why does it keep coming back?",
+     "answer": "Usually because of nail shape, cutting technique or pressure. That cause is what the assessment looks at."
+    },
+    {
+     "question": "I have diabetes. Can you see me?",
+     "answer": "TEMP:Yes, and foot care matters more where circulation or sensation is reduced. Tell reception when you book so enough time is allowed."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "general-foot-care",
+    "biomechanics",
+    "custom-orthotics",
+    "foot-strapping"
+   ],
+   "hero": "assets/img/hero-ingrown.webp",
+   "diagram": "assets/img/cond-ingrown.webp",
+   "diagram_alt": "A foot being cared for with a podiatry instrument",
+   "understanding": null
+  },
+  {
+   "slug": "pigeon-toe",
+   "title": "Pigeon Toe",
+   "fields": {
+    "intro": "In-toeing in children, where the feet point inwards when walking or running. Common, and worth measuring rather than waiting out.",
+    "fact1": "Assessed as they grow",
+    "fact2": "Children seen at every clinic",
+    "fact3": "TEMP_LENGTH",
+    "causes": "In-toeing can come from the foot, the shin or the hip, and which one it is matters because they behave differently as a child grows. Where the shin bone itself is twisted inwards, the body often hides it by tightening the hip muscles rather than correcting it, so it can look better while the twist is still there.",
+    "diagnose1": "We assess how your child stands, walks and runs, and compare that against what is expected for their age.",
+    "diagnose2": "We work out which level the rotation is coming from and explain it in plain terms.",
+    "diagnose3": "Where nothing needs doing we will say so and set a review. Where it does, treatment is staged around growth.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "Feet that turn inwards when walking or running",
+    "Tripping more than other children the same age",
+    "A twisting appearance from the knee or the hip down",
+    "Complaints of tired or sore legs after activity"
+   ],
+   "faq": [
+    {
+     "question": "Will my child grow out of it?",
+     "answer": "The in-toeing you can see often lessens. But where it comes from a twist in the shin bone, Dr Najjarine’s clinical view is that the body usually compensates at the hips rather than the twist resolving. That is the reason to have it measured rather than waiting to find out."
+    },
+    {
+     "question": "At what age should it be looked at?",
+     "answer": "TEMP:There is no fixed age. If you have noticed it or your child is complaining of pain, that is the time."
+    },
+    {
+     "question": "Do special shoes help?",
+     "answer": "TEMP:Usually not on their own. The assessment establishes whether anything is worth doing at all."
+    },
+    {
+     "question": "Is it causing the tripping?",
+     "answer": "It can be. That is one of the things we check rather than assume."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "childrens-podiatry",
+    "biomechanics",
+    "custom-orthotics",
+    "foot-mobilisation"
+   ],
+   "hero": "assets/img/hero-pigeon-toe.webp",
+   "diagram": "assets/img/cond-children-gait.webp",
+   "diagram_alt": "Dr Abbie Najjarine examining a child’s feet",
+   "understanding": {
+    "intro": "Pigeon toe often comes from the shin bone being twisted inwards, called internal tibial torsion. It is often inherited, passed down from a parent.",
+    "types_title": "The measurements behind it",
+    "types": [
+     {
+      "label": "Shin angle",
+      "sub": "13&ndash;18&deg; from age 6",
+      "text": "Measured at the ankle, a healthy shin turns slightly outwards. A negative angle means it turns in."
+     },
+     {
+      "label": "Hip rotation",
+      "sub": "45&deg; each way",
+      "text": "Ideally the hip turns equally in and out. Tight outer hip muscles show the body is compensating."
+     },
+     {
+      "label": "Heel position",
+      "sub": "0&ndash;4&deg;",
+      "text": "A twisted shin often makes the feet roll in as well."
+     }
+    ],
+    "points": [
+     {
+      "heading": "\"They’ll grow out of it\"",
+      "html": "<p>The in-toeing you can see often lessens. But where it comes from the shin, the body usually hides it rather than correcting it: the hip muscles tighten to turn the leg back out. That is why it is worth assessing rather than waiting.</p>"
+     },
+     {
+      "heading": "How it shows up later",
+      "html": "<p>With the shin turning in below the knee and the thigh turning out above it, the knee is caught in the middle. In adults this is linked to knee pain.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p>Monitoring as your child grows, stretches for the hip muscles that have tightened to compensate, orthotics where the feet roll in, and regular re-measurement. See <a href=\"services/childrens-podiatry.html\">children’s podiatry</a>.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "out-toe",
+   "title": "Out Toe",
+   "fields": {
+    "intro": "Out-toeing in children, where the feet point outwards when walking. Assessed the same way as in-toeing.",
+    "fact1": "Assessed as they grow",
+    "fact2": "Children seen at every clinic",
+    "fact3": "TEMP_LENGTH",
+    "causes": "Like in-toeing, out-toeing can originate at the foot, the shin or the hip. Some is expected at particular ages and resolves with growth. What matters is whether it is within the expected range for your child and whether it is causing symptoms.",
+    "diagnose1": "We assess how your child stands, walks and runs against what is expected for their age.",
+    "diagnose2": "We identify which level the rotation is coming from and explain what we found.",
+    "diagnose3": "Where nothing needs doing we say so and set a review. Where it does, treatment is staged around growth.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "Feet that turn outwards when walking or running",
+    "A waddling appearance to the walk",
+    "Tiring quickly compared with other children",
+    "Uneven wear on the outside of the shoes"
+   ],
+   "faq": [
+    {
+     "question": "Is out-toeing worse than in-toeing?",
+     "answer": "Neither is automatically worse. Both are assessed the same way."
+    },
+    {
+     "question": "Will it affect their sport?",
+     "answer": "TEMP:It can affect comfort and efficiency. Whether it is worth addressing is what the assessment establishes."
+    },
+    {
+     "question": "At what age should it be looked at?",
+     "answer": "TEMP:There is no fixed age. If you have noticed it or your child is complaining, that is the time."
+    },
+    {
+     "question": "Does it run in families?",
+     "answer": "Some rotational patterns do. Your podiatrist will ask about family history as part of the assessment."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "childrens-podiatry",
+    "biomechanics",
+    "foot-mobilisation",
+    "custom-orthotics"
+   ],
+   "hero": "assets/img/hero-out-toe.webp",
+   "diagram": "assets/img/cond-out-toe.webp",
+   "diagram_alt": "A young child standing barefoot, showing foot position",
+   "understanding": {
+    "intro": "Out-toeing often comes from the shin bone being twisted outwards, called external tibial torsion. Like pigeon toe, it is often inherited.",
+    "types_title": "The measurements behind it",
+    "types": [
+     {
+      "label": "Shin angle",
+      "sub": "13&ndash;18&deg; from age 6",
+      "text": "Some outward turn is healthy. Well beyond that range, the foot points out from the knee down."
+     },
+     {
+      "label": "Hip rotation",
+      "sub": "45&deg; each way",
+      "text": "Tight groin and hip-flexor muscles show the body is compensating for an outward-turned shin."
+     },
+     {
+      "label": "Heel position",
+      "sub": "0&ndash;4&deg;",
+      "text": "Checked alongside the shin, because the two affect each other."
+     }
+    ],
+    "points": [
+     {
+      "heading": "Turnout from the hip, not the foot",
+      "html": "<p>In dancers, forcing turnout from the knee or foot, rather than the hip, can lead to knee, groin, lower back and stomach pain over time.</p>"
+     },
+     {
+      "heading": "A link to Osgood-Schlatter",
+      "html": "<p>An outward-turned shin compensated by tight groin muscles twists the knee. That adds to the pull on the growing area below the kneecap in active teenagers.</p>"
+     },
+     {
+      "heading": "What a plan can include",
+      "html": "<p>Stretches, in-toe gait-plate orthotics to guide an outward-turned shin, and re-measuring every few months. See <a href=\"services/childrens-podiatry.html\">children’s podiatry</a>.</p>"
+     }
+    ]
+   }
+  },
+  {
+   "slug": "severs-disease",
+   "title": "Sever's Disease",
+   "fields": {
+    "intro": "Heel pain in growing children, usually between the ages of 8 and 14. It is often blamed on growing pains, but the biomechanics should be investigated.",
+    "fact1": "Ages 8 to 14",
+    "fact2": "Children seen at every clinic",
+    "fact3": "TEMP_LENGTH",
+    "causes": "The heel bone in a child has a growth plate that is still soft. Where the foot rolls in or out too far, the Achilles tendon pulls on that growth plate from one direction while the heel bone tilts the other way, and the repeated twisting between the hard bone and the softer growing bone is what hurts. It is also called calcaneal apophysitis. Two other things matter at this age: children grow in bursts, and muscle does not lengthen as fast as bone, so the calf is often tight while the child is growing quickly.",
+    "diagnose1": "We assess how your child stands, walks and runs, and measure the position of the heel rather than only pressing the sore spot.",
+    "diagnose2": "We look at what is loading the growth plate &mdash; how the foot is aligned, calf tightness, rotation coming from the shin or hip, activity levels and footwear &mdash; and explain what we found.",
+    "diagnose3": "Treatment is prescribed against that finding. Dr Najjarine has published on Sever&rsquo;s as a biomechanical problem rather than only a growing problem, which is why the assessment comes first.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "Soreness and tenderness at the back of the heel",
+    "Pain that increases when your child stops running, rather than during it",
+    "Pain when getting up after sitting",
+    "Limping or walking on the toes after sport",
+    "Most often in active, fast-growing children, and more often in boys"
+   ],
+   "faq": [
+    {
+     "question": "Is it just growing pains?",
+     "answer": "Sever&rsquo;s is often described that way. In our clinical view it is linked to how the foot is loading: where the foot rolls in or out excessively, the growth plate at the heel takes repeated stress. Growth is part of the picture, not all of it."
+    },
+    {
+     "question": "Why does it hurt after sport rather than during it?",
+     "answer": "That pattern &mdash; pain when your child stops running, or when getting up after sitting &mdash; is one of the more recognisable features, and is part of what the assessment asks about."
+    },
+    {
+     "question": "Will my child grow out of it?",
+     "answer": "TEMP:Symptoms often settle once the growth plate matures. That is not a reason to leave a child in pain in the meantime, and the assessment establishes whether anything is loading the heel that can be changed now."
+    },
+    {
+     "question": "What does treatment involve?",
+     "answer": "Depending on what the assessment finds, a plan can include orthotics, heel lifts, <a href=\"services/foot-mobilisation.html\">foot mobilisation</a>, <a href=\"services/foot-strapping.html\">strapping</a> and calf massage."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "childrens-podiatry",
+    "biomechanics",
+    "custom-orthotics",
+    "foot-mobilisation",
+    "foot-strapping"
+   ],
+   "hero": "assets/img/hero-severs.webp",
+   "diagram": "assets/img/cond-severs.webp",
+   "diagram_alt": "Diagram of the heel in Sever's disease, showing the Achilles tendon, the calcaneus and the growth plate",
+   "understanding": null
+  },
+  {
+   "slug": "osgood-schlatter",
+   "title": "Osgood-Schlatter",
+   "fields": {
+    "intro": "A painful lump just below the kneecap in teenagers, usually between thirteen and seventeen. The knee is where it hurts; the assessment looks at what is causing it.",
+    "fact1": "Ages 13 to 17",
+    "fact2": "Assessed as they grow",
+    "fact3": "TEMP_LENGTH",
+    "causes": "At this age the top of the shin bone is still growing and is softer than the bone around it. The tendon from the kneecap attaches there. Where the shin is rotated &mdash; inwards or outwards &mdash; and the hip muscles tighten to compensate, a twist is created through the knee. The tendon then pulls on the growing area repeatedly, which inflames it and can pull it away from the bone, forming the lump. Bone and soft tissue growing at different rates is part of why it happens when it does.",
+    "diagnose1": "We assess the whole limb rather than only the knee, because the twist through the knee usually starts below it or above it.",
+    "diagnose2": "We identify where the rotation is coming from &mdash; the shin, the hip, or the way the foot is loading &mdash; and explain what we found.",
+    "diagnose3": "Treatment is prescribed against that finding, and staged around your teenager&rsquo;s growth and sport.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "A tender lump at the top of the shin bone, just below the kneecap",
+    "Pain at the front of the knee that is worse with running, jumping and stairs",
+    "Pain when kneeling",
+    "Often during a growth spurt, and more often in boys",
+    "Usually one knee, but it can be both"
+   ],
+   "faq": [
+    {
+     "question": "Is the lump permanent?",
+     "answer": "TEMP:The lump can remain after the pain settles. What the assessment addresses is the pulling that is causing it, and your podiatrist will explain what to expect."
+    },
+    {
+     "question": "Should my teenager stop sport?",
+     "answer": "Until they have been assessed, yes. Running and jumping keep pulling on the growing area below the kneecap. Once we know what is causing it, your podiatrist will tell you what they can return to and when."
+    },
+    {
+     "question": "Should they stretch it?",
+     "answer": "Stretching the front of the thigh is often suggested for this condition. Where the tendon is already pulling on a growing area, our clinical approach is not to add more traction to it. Your podiatrist will explain what to do instead."
+    },
+    {
+     "question": "Why look at the feet for a knee problem?",
+     "answer": "Because the shin rotates between the two. A twist that shows up as knee pain is often driven by how the foot is loading and how the hip is compensating, which is what the <a href=\"services/biomechanics.html\">assessment</a> measures."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "biomechanics",
+    "custom-orthotics",
+    "dry-needling",
+    "foot-strapping",
+    "foot-mobilisation",
+    "shockwave-therapy"
+   ],
+   "hero": "assets/img/hero-osgood.webp",
+   "diagram": "assets/img/cond-osgood.webp",
+   "diagram_alt": "Diagram of Osgood-Schlatter disease, showing the patellar tendon pulling on the growth plate at the top of the shin bone",
+   "understanding": null
+  },
+  {
+   "slug": "bunions",
+   "title": "Bunions",
+   "fields": {
+    "intro": "A bony bump at the base of the big toe, where the toe drifts across towards the others. Bunions form in stages, and what drives them is mechanical.",
+    "fact1": "Forms in three stages",
+    "fact2": "Assessment first",
+    "fact3": "TEMP_LENGTH",
+    "causes": "The first of the long bones behind the big toe is often naturally a little short, and sits angled in towards the middle of the body. For it to reach the ground, the foot rolls in. As it does, the ground pushes the big toe across and rotates it, and over time the muscles that pull the toe inwards shorten and hold it there. Where a bunion forms on one side only, a longer leg rolling in more than the other is often behind it.",
+    "diagnose1": "We assess the foot as it loads, and measure the position of the first metatarsal and the big toe, rather than looking at the bump alone.",
+    "diagnose2": "We identify what is driving the toe across — foot alignment, a short first metatarsal, a leg length difference, or footwear — and explain what we found.",
+    "diagnose3": "Treatment is aimed at that cause, because a bunion that is not addressed mechanically tends to keep progressing through its stages.",
+    "diagram_is_diagram": 1
+   },
+   "symptoms": [
+    "A bump on the inside of the foot at the base of the big toe",
+    "The big toe drifting across towards the second toe",
+    "Redness or rubbing where the joint presses on the shoe",
+    "Aching at the joint when walking or pushing off",
+    "Sometimes on one foot only"
+   ],
+   "faq": [
+    {
+     "question": "Will a night splint straighten it?",
+     "answer": "A night splint may ease the pain, but it will not correct the bunion. As soon as you walk again the mechanics that caused it are still there, and the drift continues."
+    },
+    {
+     "question": "Can a bunion be reversed?",
+     "answer": "Progression can usually be slowed where the cause is addressed early. By the later stages, once the joint has changed shape, the deviation itself is not reversible, which is why it is worth assessing before it gets there."
+    },
+    {
+     "question": "Do I need surgery?",
+     "answer": "TEMP:That is a decision for you and your surgeon. What we assess is the mechanical cause, which surgery does not change on its own."
+    },
+    {
+     "question": "I have had bunion surgery. Do I still need orthotics?",
+     "answer": "Surgery corrects the toe; it does not correct the way the foot loads. Where that is left unaddressed, the bunion can return over the years that follow."
+    },
+    {
+     "question": "Why have I only got one?",
+     "answer": "A one-sided bunion often points to a leg length difference, where the longer leg rolls in further. That is one of the things the assessment measures."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "biomechanics",
+    "custom-orthotics",
+    "foot-mobilisation",
+    "dry-needling",
+    "neural-therapy"
+   ],
+   "hero": "assets/img/hero-bunions.webp",
+   "diagram": "assets/img/cond-bunions.webp",
+   "diagram_alt": "Diagram of the four stages of a bunion, from a normal foot to the tertiary stage",
+   "understanding": null
+  },
+  {
+   "slug": "bow-legs",
+   "title": "Bow Legs",
+   "fields": {
+    "intro": "Legs that curve outwards at the knees, so the knees sit apart when the feet are together. Known medically as genu varum.",
+    "fact1": "Assessed as they grow",
+    "fact2": "Children seen at every clinic",
+    "fact3": "TEMP_LENGTH",
+    "causes": "Some bowing is expected in young children and straightens as they grow. What matters is whether it is within the expected range for the age, and what sits above and below the knee. Where the angle of the hip joint sets the thigh bone more upright, the leg tends to bow and the foot to roll outwards, which makes the foot rigid and poor at absorbing shock. A leg length difference can also produce it on the shorter side only.",
+    "diagnose1": "We assess your child standing and walking, and measure the angle at the knees against what is expected for their age.",
+    "diagnose2": "We look at the hip, the shin and the foot together, because the knee sits between them and usually reflects what they are doing.",
+    "diagnose3": "Where nothing needs doing we say so and set a review. Where it does, treatment is staged around growth.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "A gap between the knees when the feet are together",
+    "Feet that roll outwards, wearing the outer edge of the shoes",
+    "Tiring quickly, or complaints of aching legs after activity",
+    "In adults, aching on the outside of the knee or in the hip",
+    "Sometimes one leg more than the other"
+   ],
+   "faq": [
+    {
+     "question": "Will my child grow out of it?",
+     "answer": "Often, yes — a degree of bowing is normal at certain ages and straightens on its own. The assessment is what tells you whether your child is within that range or outside it."
+    },
+    {
+     "question": "Is it the same as knock knees?",
+     "answer": "They are opposites. Bow legs sit apart at the knees and are linked with a foot that rolls out; <a href=\"conditions/knock-knees.html\">knock knees</a> touch at the knees and are linked with a foot that rolls in. Both are assessed the same way."
+    },
+    {
+     "question": "Can it cause problems later?",
+     "answer": "Where the leg stays bowed, the load through the knee and the hip is uneven. In adults that is linked with wear on the outer side of the joint."
+    },
+    {
+     "question": "What does treatment involve?",
+     "answer": "Where treatment is needed, it is usually orthotics to change how the foot loads, alongside hands-on work and stretches for the muscles that have tightened."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "biomechanics",
+    "childrens-podiatry",
+    "custom-orthotics",
+    "foot-mobilisation"
+   ],
+   "hero": "assets/img/hero-bow-legs.webp",
+   "diagram": "assets/img/cond-bow-legs.webp",
+   "diagram_alt": "A school-aged boy running",
+   "understanding": null
+  },
+  {
+   "slug": "knock-knees",
+   "title": "Knock Knees",
+   "fields": {
+    "intro": "Knees that angle inwards and touch while the ankles stay apart. Known medically as genu valgum.",
+    "fact1": "Assessed as they grow",
+    "fact2": "Children seen at every clinic",
+    "fact3": "TEMP_LENGTH",
+    "causes": "As with bow legs, some of this is expected at certain ages and corrects with growth. Where it persists, the knee is usually reflecting what is happening above and below it: an angle at the hip that drops the thigh bone inwards, a foot that rolls in and lets the arch fall, and tight muscles at the front of the hip that tilt the pelvis forward. A leg length difference can produce it on the longer side only.",
+    "diagnose1": "We assess your child standing, walking and running, and measure the angle at the knees against what is expected for their age.",
+    "diagnose2": "We look at the hip, the pelvis and the foot together, and explain which of them the knee is responding to.",
+    "diagnose3": "Where nothing needs doing we say so and set a review. Where it does, the plan is aimed at the level the problem is coming from.",
+    "diagram_is_diagram": 0
+   },
+   "symptoms": [
+    "Knees that touch while the ankles stay apart",
+    "Feet that roll inwards, with the arches dropping",
+    "A knock-kneed look that is worse when tired or running",
+    "Aching on the inside of the knee, or at the front",
+    "Tripping, or an awkward running style"
+   ],
+   "faq": [
+    {
+     "question": "Will my child grow out of it?",
+     "answer": "Often, yes. A degree of it is normal at certain ages. The assessment tells you whether your child is within the expected range, and whether the feet are adding to it."
+    },
+    {
+     "question": "Is it the same as flat feet?",
+     "answer": "They travel together. A foot that rolls in and loses its arch lets the knee drop inwards, which is why <a href=\"conditions/flat-feet.html\">flat feet</a> and knock knees are often assessed at the same time."
+    },
+    {
+     "question": "Can it cause problems later?",
+     "answer": "Where it persists, load concentrates on the inner side of the knee and at the front of the kneecap. In adults that is linked with knee pain."
+    },
+    {
+     "question": "What does treatment involve?",
+     "answer": "Usually orthotics to support the foot and change how the knee loads, with hands-on work and stretches for the muscles at the front of the hip."
+    },
+    {
+     "question": "Do I need a referral?",
+     "answer": "No. You can book directly."
+    }
+   ],
+   "treatments": [
+    "biomechanics",
+    "childrens-podiatry",
+    "custom-orthotics",
+    "foot-mobilisation",
+    "dry-needling"
+   ],
+   "hero": "assets/img/hero-knock-knees.webp",
+   "diagram": "assets/img/cond-knock-knees.webp",
+   "diagram_alt": "School children sitting on a wall with their legs hanging down",
+   "understanding": null
+  }
+ ],
+ "practitioners": [
+  {
+   "slug": "dr-abbie-najjarine",
+   "title": "Dr Abbie Najjarine",
+   "fields": {
+    "role": "Principal Podiatrist · Owner &amp; Director",
+    "intro": "Podiatric biomechanical practitioner, developer of the Najjarine Biomechanical Assessment, and in private practice since 1990.",
+    "bio": "<p>Dr Abbie Najjarine (Podiatrist) is a podiatric biomechanical practitioner and lectures in his Najjarine Biomechanical Assessment (NBA) technique, the assessment behind every treatment plan at Dr. Abbie Clinics. He has been in private practice since 1990, treating patients with lower limb biomechanical dysfunction, which has given him extensive experience in the prescription and application of orthotic therapy.</p><p>Alongside his clinical work, Abbie has lectured extensively throughout Australia, New Zealand, the United Kingdom, Europe, Asia and Africa, teaching medical and allied health professionals lower limb biomechanical assessment and treatment techniques, joint mobilisation, prolotherapy, neural therapy, dry needling, strapping and physical therapy treatments.</p><p>He is the inventor of the Crown Medical orthotic, patented worldwide, invented the patented Footronics Football Kick Trainer, and is the author of <em>The Orthotic Revolution</em> and <em>Clinical Biomechanics of the Lower Limb</em>.</p><p>Abbie is the owner and Director of Dr. Abbie Clinics, and has been Director of AOL Footcare Centre since 1993. He was Director and Founder of the International College of Biomechanics from 1996 to 2019, Director of ICB Medical from 2000 to 2019 and of ICB Gait and Posture Clinics from 2003 to 2019, and a board member of the Australian Podiatry Association (NSW &amp; ACT) from 2010 to 2013.</p>",
+    "general_treatment_only": 0
+   },
+   "qualifications": [
+    "B.Sc Pod (QMU), United Kingdom",
+    "Dip Hlth Sc Pod (NSW)",
+    "Dip Sport Inj (ACNT)",
+    "Dip Rem M (ACNT)"
+   ],
+   "memberships": [
+    "Australian Podiatry Association (APodA)",
+    "Sports Medicine Australia (SMA)",
+    "American Academy of Podiatric Sports Medicine (AAPSM)"
+   ],
+   "interests": [
+    "Lower limb biomechanical assessment",
+    "Special focus on children’s biomechanics",
+    "Orthotic therapy",
+    "Joint mobilisation",
+    "Prolotherapy and neural therapy",
+    "Dry needling",
+    "Strapping"
+   ],
+   "services": [
+    "biomechanics",
+    "custom-orthotics",
+    "foot-mobilisation",
+    "neural-therapy"
+   ],
+   "photo": "assets/img/pc-najjarine.webp"
+  },
+  {
+   "slug": "dr-abdalla-attar-hamoui",
+   "title": "Dr Abdalla Attar-Hamoui",
+   "fields": {
+    "role": "Podiatrist",
+    "intro": "Podiatrist with a background in footwear technology and a passion for sports-centred biomechanics.",
+    "bio": "<p>Dr Abdalla Attar-Hamoui (Podiatrist) graduated from Western Sydney University with a Bachelor of Podiatry. Throughout his time at university he worked as a Fit Technician at The Athlete’s Foot, and he brings to the team detailed knowledge of modern footwear technology as well as a passion for sports-centred biomechanics.</p><p>Having grown up as an active member of his local rugby league club, with an ambition to play first grade, he now finds his reward in patient-centred care. As an active member of Sports Medicine Australia, Abdalla is driven to keep learning, so his professional development continues in and outside the clinic.</p>",
+    "general_treatment_only": 0
+   },
+   "qualifications": [
+    "Bachelor of Podiatry (Western Sydney University)"
+   ],
+   "memberships": [
+    "Sports Medicine Australia (SMA)"
+   ],
+   "interests": [
+    "Sports-centred biomechanics",
+    "Footwear technology"
+   ],
+   "services": [
+    "sports-podiatry",
+    "biomechanics"
+   ],
+   "photo": "assets/img/pc-attar.webp"
+  },
+  {
+   "slug": "dr-elissa-all",
+   "title": "Dr Elissa All",
+   "fields": {
+    "role": "Podiatrist",
+    "intro": "Podiatrist with further training in lower limb biomechanics, graduated with distinction from Western Sydney University.",
+    "bio": "<p>Dr Elissa All (Podiatrist) graduated with distinction from Western Sydney University with a Bachelor of Podiatric Medicine. She has further training in lower limb biomechanics, with a core focus on massage therapy, foot mobilisations, dry needling, orthotic prescription and injection therapies.</p><p>Having grown up with lower limb abnormalities herself, Elissa was inspired to focus on biomechanics, and is passionate about helping others through quality, patient-centred care. As a member of the Australian Podiatry Association, she is committed to her ongoing professional development.</p>",
+    "general_treatment_only": 0
+   },
+   "qualifications": [
+    "Bachelor of Podiatric Medicine, with distinction (Western Sydney University)"
+   ],
+   "memberships": [
+    "Australian Podiatry Association (APodA)"
+   ],
+   "interests": [
+    "Lower limb biomechanics",
+    "Massage therapy",
+    "Foot mobilisations",
+    "Dry needling",
+    "Orthotic prescription",
+    "Injection therapies"
+   ],
+   "services": [
+    "foot-mobilisation",
+    "dry-needling",
+    "custom-orthotics",
+    "biomechanics"
+   ],
+   "photo": "assets/img/pc-elissa.webp"
+  },
+  {
+   "slug": "dr-yousef-najjarine",
+   "title": "Dr Yousef Najjarine",
+   "fields": {
+    "role": "Podiatrist",
+    "intro": "Podiatrist with further biomechanical training in dry needling, foot mobilisation, shockwave and orthotic therapy.",
+    "bio": "<p>Dr Yousef Najjarine (Podiatrist) completed his Bachelor of Podiatric Medicine at Western Sydney University in 2023.</p><p>He has since taken part in further biomechanical training covering dry needling, foot mobilisations, shockwave therapy, orthotic therapy and injection therapy.</p>",
+    "general_treatment_only": 0
+   },
+   "qualifications": [
+    "Bachelor of Podiatric Medicine (Western Sydney University), 2023"
+   ],
+   "memberships": [],
+   "interests": [
+    "Dry needling",
+    "Foot mobilisations",
+    "Shockwave therapy",
+    "Orthotic therapy",
+    "Injection therapy"
+   ],
+   "services": [
+    "dry-needling",
+    "foot-mobilisation",
+    "shockwave-therapy",
+    "custom-orthotics"
+   ],
+   "photo": "assets/img/pc-yousef.webp"
+  },
+  {
+   "slug": "dr-mohemed-al-heyoury",
+   "title": "Dr Mohemed Al-Heyoury",
+   "fields": {
+    "role": "Podiatrist",
+    "intro": "Western Sydney University graduate with further biomechanical training in shockwave therapy, orthotic therapy and dry needling.",
+    "bio": "<p>Dr Mohemed Al-Heyoury (Podiatrist) completed his Bachelor of Podiatric Medicine at Western Sydney University in 2023.</p><p>He has since taken part in further biomechanical training covering dry needling, foot mobilisations, shockwave therapy, orthotic therapy and injection therapy.</p>",
+    "general_treatment_only": 0
+   },
+   "qualifications": [
+    "Bachelor of Podiatric Medicine (Western Sydney University), 2023"
+   ],
+   "memberships": [],
+   "interests": [
+    "Dry needling",
+    "Foot mobilisations",
+    "Shockwave therapy",
+    "Orthotic therapy",
+    "Injection therapy"
+   ],
+   "services": [
+    "shockwave-therapy",
+    "dry-needling",
+    "foot-mobilisation",
+    "custom-orthotics"
+   ],
+   "photo": "assets/img/pc-alheyoury.webp"
+  },
+  {
+   "slug": "arega-sarkisian",
+   "title": "Arega Sarkisian",
+   "fields": {
+    "role": "General treatment podiatrist · Bowral",
+    "intro": "General treatment podiatry at The Bowral Foot Clinic.",
+    "bio": "<p>Arega Sarkisian (B Pod) is a general treatment podiatrist at The Bowral Foot Clinic, where she provides general foot care.</p><p>Arega does not practise at our other clinics.</p>",
+    "general_treatment_only": 1
+   },
+   "qualifications": [
+    "B Pod"
+   ],
+   "memberships": [],
+   "interests": [],
+   "services": [],
+   "photo": null
+  }
+ ]
+}
