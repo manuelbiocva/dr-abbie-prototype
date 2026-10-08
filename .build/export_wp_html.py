@@ -31,6 +31,8 @@ def rewrite(html, depth=0):
 
     def link(m):
         href = m.group(2)
+        if href.startswith('#') or href.startswith('http') or href.startswith('tel:') or href.startswith('mailto:'):
+            return m.group(0)
         href = re.sub(r'^(?:\.\./)+', '', href)
         frag = ''
         if '#' in href:
