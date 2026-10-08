@@ -87,8 +87,8 @@ body .section-head{ max-width: 46ch; margin-bottom: var(--sp-8); }
    .section-head sets max-width at the same specificity and would otherwise
    win or lose on source order alone. The intro keeps its own measure so the
    wider container does not turn it into long lines. */
-@media (min-width: 900px){
-  .section-head.section-head--split {
+@media (min-width: 900px) {
+  body .section-head.section-head--split{
     max-width: none;
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
@@ -96,13 +96,13 @@ body .section-head{ max-width: 46ch; margin-bottom: var(--sp-8); }
     align-items: end;
   }
   body .section-head--split .lede{ margin-top: 0; max-width: 46ch; }
-body }
+}
 
-/* Section intros were clamp(18px, 1.6vw, 21px), body so on a wide screen they sat a
+/* Section intros were clamp(18px, 1.6vw, 21px), so on a wide screen they sat a
    step above the About paragraphs. Pinned to the body size: every descriptive
-   paragraph on the page is now 18px, body and the intro still reads as an intro
+   paragraph on the page is now 18px, and the intro still reads as an intro
    through colour and placement rather than scale. */
-.lede{ font-size: var(--fs-body); }
+body .lede{ font-size: var(--fs-body); }
 
 /* Vertical padding is deliberately small: the badge is the tallest thing in
    the button, so padding + badge must stay under min-height or the pill grows
@@ -294,11 +294,11 @@ body .hero--photo .hero__actions{ margin-top: var(--sp-7); }
 
 /* The slider only appears from 1200px up, so the extra height is scoped to
    the same breakpoint -- below it the hero stays as tall as its copy needs. */
-@media (min-width: 1200px){ .hero--photo { min-height: 34rem; } body }
+@media (min-width: 1200px) { body .hero--photo{ min-height: 34rem; } }
 
 /* Second line inside a hero slide's caption. The home slider's slides carry a
-   treatment name only; these carry a person, body so the role sits under the name. */
-.hero-slide__role{
+   treatment name only; these carry a person, so the role sits under the name. */
+body .hero-slide__role{
   display: block;
   margin-top: 2px;
   font-size: 0.6875rem;
@@ -407,20 +407,20 @@ body .hero--bleed .hero__bg img.is-paused{ animation-play-state: paused; }
 
 /* The global reduced-motion rule collapses durations to 0.01ms, which would
    leave this flickering at the end frame. Kill it outright instead. */
-@media (prefers-reduced-motion: reduce){
-  .hero--bleed .hero__bg img {
+@media (prefers-reduced-motion: reduce) {
+  body .hero--bleed .hero__bg img{
     animation: none !important;
     transform: none !important;
     will-change: auto;
   }
-body }
+}
 
 /* Scrim. A left-to-right wash ran full height and so sat darkest exactly
    where the first three faces are. Instead: an elliptical pool anchored at
-   the bottom-left, body which is the only place copy sits, body plus a light even tint
+   the bottom-left, which is the only place copy sits, plus a light even tint
    for cohesion. Faces in the upper third take the 16% tint and nothing more.
    Contrast is measured in .build/sim_hero_full.py before shipping. */
-.hero__bg::after{
+body .hero__bg::after{
   content: "";
   position: absolute;
   inset: 0;
@@ -465,8 +465,8 @@ body .hero-slider{ display: none; }
 /* Sits against the right edge of the viewport rather than inside the
    container, so the cards have room to be legible. The copy block is capped
    at 62% of the container, so the two never meet. */
-@media (min-width: 1200px){
-  .hero-slider {
+@media (min-width: 1200px) {
+  body .hero-slider{
     display: block;
     position: absolute;
     right: var(--gutter);
@@ -474,9 +474,9 @@ body .hero-slider{ display: none; }
     z-index: 2;
     width: clamp(400px, 35vw, 700px);
   }
-body }
+}
 
-.hero-slider__head{
+body .hero-slider__head{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -639,13 +639,13 @@ body .hero h1 strong{ font-weight: 700; }
 /* Short viewports: a 397px copy block does not fit above the faces on a
    720px screen, and 800px was only just clearing them. Shrinking the type shortens the block by ~75px, which is
    what buys the clearance back. */
-@media (min-width: 900px) and (max-height: 820px){
-  .hero--bleed h1 { font-size: clamp(2rem, 3.6vw, 3rem); }
+@media (min-width: 900px) and (max-height: 820px) {
+  body .hero--bleed h1{ font-size: clamp(2rem, 3.6vw, 3rem); }
   body .hero--bleed .hero__intro{ font-size: 1.0625rem; margin-top: var(--sp-4); }
   body .hero--bleed .hero__anchor .hero__actions{ margin-top: var(--sp-5); }
-body }
+}
 
-.hero--inner h1{ font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+body .hero--inner h1{ font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
 
 body .hero__actions{ margin-top: var(--sp-7); }
 
@@ -857,11 +857,11 @@ body a.card:hover .card__badge{
   background: var(--deep-blue);
 }
 
-body /* the badge is absolutely positioned against the card. Deliberately NOT
-   setting overflow here: .card's default is already visible, body and declaring
-   it would have beaten `.post-card{ overflow: hidden }body ` from components.css
-   on equal specificity, body letting blog-card images escape their rounded corners. */
-.card{ position: relative; }
+/* the badge is absolutely positioned against the card. Deliberately NOT
+   setting overflow here: .card's default is already visible, and declaring
+   it would have beaten `.post-card { overflow: hidden }` from components.css
+   on equal specificity, letting blog-card images escape their rounded corners. */
+body .card{ position: relative; }
 
 /* and the row needs headroom so the badges are not cut by the section above */
 /* The badge overflows the card by half its height. padding-top clears that
@@ -1520,21 +1520,21 @@ body .cta-band--photo .cta-band__actions{
    leaves 415px at that width against 428px of buttons -- nowrap there would
    overflow the panel instead of wrapping. 900px is the first width where they
    genuinely fit (486px against 428px); below it, wrapping is correct. */
-@media (min-width: 900px){
-  .cta-band--photo .cta-band__actions { flex-wrap: nowrap; }
+@media (min-width: 900px) {
+  body .cta-band--photo .cta-band__actions{ flex-wrap: nowrap; }
   body .cta-band--photo .cta-band__actions .btn{ white-space: nowrap; }
-body }
+}
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   /* the copy fills the panel on phones, so the gradient runs vertically */
-  .cta-band__copy { max-width: none; }
+  body .cta-band__copy{ max-width: none; }
   body .cta-band__bg::after{
     background: linear-gradient(180deg,
       rgba(12, 46, 71, 0.86) 0%,
       rgba(12, 46, 71, 0.90) 100%);
   }
-body }
-.cta-band h2{ font-weight: 300; }
+}
+body .cta-band h2{ font-weight: 300; }
 body .cta-band h2 strong{ font-weight: 700; }
 
 /* --------------------------------------------------------------------------
@@ -1557,8 +1557,8 @@ body .map-embed{ border-radius: var(--radius-card); }
    ratio and fills the row instead. The column also widens from 1.1fr to
    1.35fr. Placed in theme.css so it lands after the components.css rule
    rather than depending on order within one file. */
-@media (min-width: 900px){
-  .visit { grid-template-columns: 1fr 1.15fr; }
+@media (min-width: 900px) {
+  body .visit{ grid-template-columns: 1fr 1.15fr; }
   body .map-embed{
     aspect-ratio: auto;
     /* fills the row, but capped -- the details column runs to about 700px and
@@ -1570,8 +1570,8 @@ body .map-embed{ border-radius: var(--radius-card); }
     max-height: 30rem;
     align-self: start;
   }
-body }
-.chip{ border-radius: var(--radius-pill); }
+}
+body .chip{ border-radius: var(--radius-pill); }
 
 /* --------------------------------------------------------------------------
    ABOUT — image bleeds off the right edge
@@ -1611,11 +1611,11 @@ body .about--bleed .about__media img{ width: 100%; height: 100%; object-fit: cov
      - --azure-deep drops to 4.10:1 on this ground, under AA for small text.
    #0E71AA is --azure-deep at 6% less lightness, same hue: 4.53:1 here. */
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
   /* copy keeps the left half; the photograph becomes the right-hand backdrop */
   /* viewport-relative, not a percentage of the container: at ~900px a
      container-relative cap let the copy run under the bleeding panel. */
-  .about--bleed .about__copy { max-width: min(34rem, 42vw); }
+  body .about--bleed .about__copy{ max-width: min(34rem, 42vw); }
 
   /* Fills the section top to bottom so there is no band of ground above or
      below it. The cost is that object-fit now crops the width: the whole frame
@@ -1675,32 +1675,32 @@ body .about--bleed .about__media img{ width: 100%; height: 100%; object-fit: cov
   /* The media panel is positioned and paints above static content, so the copy
      needs its own stacking context or it renders behind the photograph. */
   body .about--bleed > .container{ position: relative; z-index: 2; }
-body }
+}
 
 
 /* --------------------------------------------------------------------------
    LOGO CAROUSEL
-   Label on the left, body a continuously scrolling logo track on the right.
+   Label on the left, a continuously scrolling logo track on the right.
 
-   Third perpetual animation on this page — see DESIGN.md §7, body which says the
-   budget is two. It is the mildest of the three (small marks, body linear, body no
-   scale) and carries the same guards: pauses on hover and focus, body pauses
-   off-screen, body and holds still under prefers-reduced-motion, body where it becomes
+   Third perpetual animation on this page — see DESIGN.md §7, which says the
+   budget is two. It is the mildest of the three (small marks, linear, no
+   scale) and carries the same guards: pauses on hover and focus, pauses
+   off-screen, and holds still under prefers-reduced-motion, where it becomes
    a plain scrollable row.
    -------------------------------------------------------------------------- */
 
-/* The band itself carries the Pale Blue ground, body so it reads as a distinct
+/* The band itself carries the Pale Blue ground, so it reads as a distinct
    accreditation strip rather than a rule floating on white. */
 /* --------------------------------------------------------------------------
    CLINIC FINDER — map background.
 
-   The map is a real <img> in its own layer rather than a CSS background, body so
-   it keeps srcset and lazy loading, body and so a Google embed iframe can replace
+   The map is a real <img> in its own layer rather than a CSS background, so
+   it keeps srcset and lazy loading, and so a Google embed iframe can replace
    it without touching the layout. aria-hidden: it carries no information the
    eleven cards below do not already state in text.
    -------------------------------------------------------------------------- */
 
-.clinics--map{ position: relative; overflow: hidden; }
+body .clinics--map{ position: relative; overflow: hidden; }
 
 body .clinics__map{ position: absolute; inset: 0; z-index: 0; }
 body .clinics__map img, body .clinics__map iframe{
@@ -1854,11 +1854,11 @@ body .logo-strip__label{
   max-width: 22ch;
 }
 /* a short rule ties the label to the row on wide screens */
-@media (min-width: 860px){
-  .logo-strip__label { border-left: 3px solid var(--azure); padding-left: var(--sp-4); }
-body }
+@media (min-width: 860px) {
+  body .logo-strip__label{ border-left: 3px solid var(--azure); padding-left: var(--sp-4); }
+}
 
-.logo-strip__viewport{
+body .logo-strip__viewport{
   overflow: hidden;
   /* fade the marks out at both ends instead of clipping them mid-glyph */
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
@@ -1879,15 +1879,15 @@ body .logo-strip:hover .logo-strip__track, body .logo-strip:focus-within .logo-s
 body .logo-strip__track.is-paused{ animation-play-state: paused; }
 
 /* the set is rendered twice, so -50% lands exactly on the start of the copy */
-@keyframes logo-marquee{
+@keyframes logo-marquee {
   from { transform: translateX(0); }
-  to{ transform: translateX(-50%); }
-body }
+  to   { transform: translateX(-50%); }
+}
 
-/* Full colour, body not greyscale: these are accreditations, body and on a coloured
+/* Full colour, not greyscale: these are accreditations, and on a coloured
    ground the real marks read as more credible than washed-out ones. The
-   white matte is keyed out at build time, body so nothing sits in a white box. */
-.logo-strip__item{
+   white matte is keyed out at build time, so nothing sits in a white box. */
+body .logo-strip__item{
   flex: none;
   height: clamp(42px, 4.4vw, 58px);
   width: auto;
@@ -1991,15 +1991,15 @@ body .accordion:not(.accordion--plain) .acc-item.is-open .acc-trigger:hover{ bac
 /* Compact photo hero. .hero--photo reserves 34rem from 1200px for the
    practitioner slider; the blog heroes carry no slider, so they size to their
    copy. Two classes to beat that rule on specificity, not source order. */
-@media (min-width: 1200px){ .hero--photo.hero--compact { min-height: 0; } body }
+@media (min-width: 1200px) { body .hero--photo.hero--compact{ min-height: 0; } }
 /* A post title runs to ~80 characters. At the site's h1 size that is five
-   lines in a 40rem column, body so the blog heroes get a wider column and the post
+   lines in a 40rem column, so the blog heroes get a wider column and the post
    title a smaller size. Scoped to 768px up: below it the mobile rule already
-   releases the width, body and this selector would otherwise override it. */
-@media (min-width: 768px){
-  .hero--photo.hero--compact .hero__anchor { max-width: min(48rem, 68%); }
-body }
-.hero--compact .eyebrow--invert{ margin-top: var(--sp-2); }
+   releases the width, and this selector would otherwise override it. */
+@media (min-width: 768px) {
+  body .hero--photo.hero--compact .hero__anchor{ max-width: min(48rem, 68%); }
+}
+body .hero--compact .eyebrow--invert{ margin-top: var(--sp-2); }
 body .hero--photo h1.post-title{
   margin-top: var(--sp-4);
   font-size: clamp(2rem, 3.8vw, 3.125rem);
@@ -2159,9 +2159,9 @@ body .post-toc .post-toc__list a[aria-current="true"]{
 }
 /* below 1000px the aside drops under the article, where a contents list
    pointing back up the page is no use */
-@media (max-width: 999px){ .post-toc { display: none; } body }
+@media (max-width: 999px) { body .post-toc{ display: none; } }
 
-.aside-book{
+body .aside-book{
   display: grid;
   justify-items: start;
   gap: var(--sp-3);
@@ -2214,12 +2214,12 @@ body .post-card .post-card__excerpt{ font-size: var(--fs-small); color: var(--in
 body .post-card .post-card__meta{ margin-top: var(--sp-3); font-size: 0.8125rem; color: var(--ink-muted); }
 
 /* three-up variant for "More from the blog" */
-@media (min-width: 1100px){
-  .grid-auto.blog-grid.blog-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-body }
+@media (min-width: 1100px) {
+  body .grid-auto.blog-grid.blog-grid--3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 
 /* hub: browse by topic */
-.topic-groups{ display: grid; gap: var(--sp-7); }
+body .topic-groups{ display: grid; gap: var(--sp-7); }
 @media (min-width: 900px) { body .topic-groups{ grid-template-columns: 1fr 1fr; gap: var(--sp-8); } }
 body .topic-links.topic-links{ display: flex; flex-wrap: wrap; gap: var(--sp-2); }
 body .topic-links a{
@@ -2437,8 +2437,8 @@ body .legal.post-prose .legal-meta{
    aside itself does not stick: the help box scrolls away with the page and only
    the contents list is pinned, capped to the viewport (it only scrolls inside
    itself on a very short screen). */
-@media (min-width: 1000px){
-  .article__aside.article__aside--legal { position: static; align-self: stretch; align-content: start; }
+@media (min-width: 1000px) {
+  body .article__aside.article__aside--legal{ position: static; align-self: stretch; align-content: start; }
   body .article__aside--legal .post-toc{
     position: sticky;
     top: calc(var(--header-h) + var(--sp-5));
@@ -2446,9 +2446,9 @@ body .legal.post-prose .legal-meta{
     overflow-y: auto;
     overscroll-behavior: contain;
   }
-body }
+}
 /* tighter list rows so fifteen entries fit a laptop screen without scrolling */
-.article__aside--legal .post-toc .post-toc__list a{ padding-block: 4px; }
+body .article__aside--legal .post-toc .post-toc__list a{ padding-block: 4px; }
 /* .post-toc__h is only sized inside .post-toc; this box needs its own */
 body .legal-help .post-toc__h{ margin: 0 0 var(--sp-2); font-size: 1rem; line-height: 1.35; }
 body .legal-help p{ font-size: var(--fs-small); color: var(--ink-muted); }
@@ -2470,10 +2470,10 @@ body .contact-methods{ display: grid; gap: var(--sp-5); }
 
 body .enquiry{ display: grid; gap: var(--sp-7); align-items: start; }
 body .enquiry__copy .tick-list{ margin-top: var(--sp-6); }   /* .tick-list resets its own margin */
-@media (min-width: 960px){
-  .enquiry { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--sp-9); }
-body }
-.enquiry__panel{
+@media (min-width: 960px) {
+  body .enquiry{ grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--sp-9); }
+}
+body .enquiry__panel{
   padding: var(--sp-6);
   background: #fff;
   border-radius: var(--radius-card);
@@ -2597,13 +2597,13 @@ body .contact-method .contact-method__action:hover{ text-decoration: underline; 
 
 /* Four facts in the compact hero's wider column fell 3 + 1; two by two reads
    as a set. Three classes to beat the .hero--photo rule on specificity. */
-@media (min-width: 560px){
-  .hero--photo.hero--compact .hero__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-body }
+@media (min-width: 560px) {
+  body .hero--photo.hero--compact .hero__facts{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 /* .tick-list resets its margin later in this file than the .mt-* utilities
-   load, body so the spacing above the list is set here */
-.founder__copy .tick-list{ margin-top: var(--sp-6); }
+   load, so the spacing above the list is set here */
+body .founder__copy .tick-list{ margin-top: var(--sp-6); }
 
 /* founder feature */
 body .founder{ display: grid; gap: var(--sp-7); align-items: center; }
@@ -2704,27 +2704,27 @@ body .profile-facts .profile-facts__list li::before{
    the number is in the mobile bar, footer and every page body -- and the menu
    links lose a little side padding.
    -------------------------------------------------------------------------- */
-@media (min-width: 1081px) and (max-width: 1339px){
-  .header-phone .header-phone__num {
+@media (min-width: 1081px) and (max-width: 1339px) {
+  body .header-phone .header-phone__num{
     position: absolute; width: 1px; height: 1px; overflow: hidden;
     clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
   }
   body .header-phone{ width: 44px; height: 44px; justify-content: center; padding: 0; }
   body .header-phone svg{ width: 18px; height: 18px; }
   body .nav__list .nav__link{ padding-inline: var(--sp-2); }
-body }
+}
 
 
 /* --------------------------------------------------------------------------
    HEADER WIDTH
-   The header shared the 1240px content container, body so on a wide screen the
-   logo, body six menu items, body phone and Book button were packed into the middle
+   The header shared the 1240px content container, so on a wide screen the
+   logo, six menu items, phone and Book button were packed into the middle
    third with empty bands either side. The header gets a wider container of
-   its own; page content keeps 1240px for line length. From 1340px, body where
-   everything fits at full size, body the menu sits centred between the logo and
+   its own; page content keeps 1240px for line length. From 1340px, where
+   everything fits at full size, the menu sits centred between the logo and
    the actions and the items get more room.
    -------------------------------------------------------------------------- */
-.site-header .header-inner{ max-width: 1600px; }
+body .site-header .header-inner{ max-width: 1600px; }
 @media (min-width: 1340px) {
   body .site-header .nav{ margin-inline: auto; }
   body .site-header .nav__list{ gap: var(--sp-2); }
@@ -2885,16 +2885,16 @@ body .mega__more{
 }
 
 /* narrower desktops: the feature card goes, the links keep their room */
-@media (max-width: 1279px){
-  .mega__inner { grid-template-columns: 220px minmax(0, 1fr); }
+@media (max-width: 1279px) {
+  body .mega__inner{ grid-template-columns: 220px minmax(0, 1fr); }
   body .mega__feature{ display: none; }
-body }
-@media (prefers-reduced-motion: reduce){
-  .mega__feature-img img, .mega__all svg, .mega__more svg { transition: none; }
-body }
+}
+@media (prefers-reduced-motion: reduce) {
+  body .mega__feature-img img, body .mega__all svg, body .mega__more svg{ transition: none; }
+}
 
-/* clinics mega menu: region columns, body two regions stacked in a column */
-.mega__col{ display: grid; gap: var(--sp-5); align-content: start; }
+/* clinics mega menu: region columns, two regions stacked in a column */
+body .mega__col{ display: grid; gap: var(--sp-5); align-content: start; }
 body .mega__tag{
   display: inline-block;
   margin-left: 6px;
@@ -3047,8 +3047,8 @@ body .section--pale .accordion:not(.accordion--plain) .acc-item{ background: #ff
    added by initSwipe() and only appear when the row actually overflows.
    `html .swipe.swipe` outranks every grid rule it overrides.
    -------------------------------------------------------------------------- */
-@media (max-width: 767px){
-  html .swipe.swipe:not(.swipe--always) {
+@media (max-width: 767px) {
+  html .swipe.swipe:not(.swipe--always){
     display: grid;
     grid-template-columns: none;
     grid-auto-flow: column;
@@ -3067,7 +3067,7 @@ body .section--pale .accordion:not(.accordion--plain) .acc-item{ background: #ff
   /* flex-based grids (practitioners) */
   html .swipe.pcard-grid--center:not(.swipe--always){ display: grid; }
   html .swipe.pcard-grid--center > *{ flex: none; width: auto; }
-body }
+}
 html .swipe.swipe--always{
   display: grid;
   grid-template-columns: none;
@@ -3228,10 +3228,10 @@ body .edu-source cite{ font-style: italic; }
    its margin later than the .mt-8 utility loads. Symptoms are now scannable
    tick cards, the cause a callout, and the diagram a supporting size.
    -------------------------------------------------------------------------- */
-@media (min-width: 900px){
-  .cond-split.cond-split { grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.75fr); gap: var(--sp-9); }
-body }
-.tick-list.symptom-list{ display: grid; gap: var(--sp-3); }
+@media (min-width: 900px) {
+  body .cond-split.cond-split{ grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.75fr); gap: var(--sp-9); }
+}
+body .tick-list.symptom-list{ display: grid; gap: var(--sp-3); }
 @media (min-width: 640px) { body .tick-list.symptom-list{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 body .tick-list.symptom-list li{
   padding: var(--sp-4) var(--sp-4) var(--sp-4) 2.75rem;
@@ -3302,35 +3302,36 @@ body .edu-grid.edu-grid--two{ margin: 0; }
 
 /* With the sticky bar gone, the header keeps a compact Book button on phones
    so booking is still one tap away without using any screen height. */
-@media (max-width: 560px){
-  .site-header .btn--header-book { padding-inline: var(--sp-4); font-size: 0.8125rem; min-height: 40px; }
+@media (max-width: 560px) {
+  body .site-header .btn--header-book{ padding-inline: var(--sp-4); font-size: 0.8125rem; min-height: 40px; }
   body .site-header .btn--header-book .btn__icon{ display: none; }
   body .site-header .header-actions{ gap: var(--sp-2); }
-body }
-@media (max-width: 360px){
-  .site-header .btn--header-book { display: none; }
-body }
+}
+@media (max-width: 360px) {
+  body .site-header .btn--header-book{ display: none; }
+}
 
-/* Team cards on phones: two to a row instead of one full-width portrait, body with a compact name plate so the photo is not hidden behind it. */
-@media (max-width: 519px){
-  .team-slider { --per: 2; }
+/* Team cards on phones: two to a row instead of one full-width portrait,
+   with a compact name plate so the photo is not hidden behind it. */
+@media (max-width: 519px) {
+  body .team-slider{ --per: 2; }
   body .team-slider__track{ gap: var(--sp-3); }
   body .team-slider__track > .pcard{ width: calc((100% - var(--sp-3)) / 2); }
   body .pcard .pcard__plate{ left: 6px; right: 6px; bottom: 6px; padding: 8px 10px; border-radius: 10px; }
   body .pcard .pcard__plate h3{ font-size: 0.8125rem; line-height: 1.25; }
   body .pcard .pcard__role{ font-size: 0.6875rem; line-height: 1.3; margin-top: 1px; }
-body }
+}
 
 /* --------------------------------------------------------------------------
-   HOME HERO ON PHONES (client: "cannot read much, body the title is small")
+   HOME HERO ON PHONES (client: "cannot read much, the title is small")
    The desktop scrim is a pool at the bottom-left; on a narrow screen the copy
-   spans the full width and runs up over the faces, body so text sat on busy suits.
+   spans the full width and runs up over the faces, so text sat on busy suits.
    Phones get a bottom-up gradient that is near solid behind the copy and
-   clear over the faces, body a larger headline, body and a heavier light weight (300
+   clear over the faces, a larger headline, and a heavier light weight (300
    is too thin to read on a photograph at this size).
    -------------------------------------------------------------------------- */
-@media (max-width: 599px){
-  .hero--bleed .hero__bg::after {
+@media (max-width: 599px) {
+  body .hero--bleed .hero__bg::after{
     background: linear-gradient(to top,
       rgba(12, 46, 71, 0.97) 0%,
       rgba(12, 46, 71, 0.93) 38%,
@@ -3348,27 +3349,27 @@ body }
   body .hero--bleed .hero__trust-line{ font-size: 0.75rem; letter-spacing: 0.08em; }
   body .hero--bleed .hero__anchor .hero__actions{ margin-top: var(--sp-6); gap: var(--sp-3); }
   body .hero--bleed{ min-height: min(92dvh, 760px); }
-body }
-@media (max-width: 599px){
-  .hero--bleed .hero__trust-line { display: none; }
+}
+@media (max-width: 599px) {
+  body .hero--bleed .hero__trust-line{ display: none; }
   body .hero--bleed .hero__trust{ margin-bottom: var(--sp-3); }
-body }
+}
 
 /* --------------------------------------------------------------------------
    SECTION HEADS ON PHONES (client: patient section spacing)
-   Stacked, body the split head's right-hand block (rating box or intro) sat flush
+   Stacked, the split head's right-hand block (rating box or intro) sat flush
    against the heading while the eyebrow gap above and the gap before the
-   cards were large. Even rhythm: eyebrow 12px, body heading, 20px, body block, 28px.
+   cards were large. Even rhythm: eyebrow 12px, heading, 20px, block, 28px.
    -------------------------------------------------------------------------- */
-@media (max-width: 899px){
-  .section-head .eyebrow { margin-bottom: var(--sp-3); }
+@media (max-width: 899px) {
+  body .section-head .eyebrow{ margin-bottom: var(--sp-3); }
   body .section-head.section-head--split > :nth-child(2){ margin-top: var(--sp-5); }
   body .section-head{ margin-bottom: var(--sp-7); }
   body .section-head .grating{ width: 100%; }
-body }
+}
 
 /* Visible call to action on cards that used to rely on hover alone */
-.loc-card{ display: flex; flex-direction: column; }
+body .loc-card{ display: flex; flex-direction: column; }
 body .loc-card .loc-card__more{ margin-top: auto; padding-top: var(--sp-4); }
 body a.loc-card:hover .loc-card__more svg{ transform: translateX(4px); }
 body .pcard .pcard__more{

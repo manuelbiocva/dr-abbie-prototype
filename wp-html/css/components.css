@@ -856,15 +856,15 @@ body .footer-main{
 /* Brand leads and the booking column closes, with the three link columns
    between. Explicit tracks: auto-fit would give all five equal width and
    squeeze both prose columns into ribbons. */
-@media (min-width: 1100px){
-  .footer-main {
+@media (min-width: 1100px) {
+  body .footer-main{
     grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)) 1.4fr;
     column-gap: var(--sp-7);
   }
-body }
+}
 
-/* chevron bullets on the link lists, body as in the reference */
-.footer-col ul li{ position: relative; padding-left: 1.1em; }
+/* chevron bullets on the link lists, as in the reference */
+body .footer-col ul li{ position: relative; padding-left: 1.1em; }
 body .footer-col ul li::before{
   content: "";
   position: absolute;
@@ -901,11 +901,11 @@ body .footer-phone:hover{ background: rgba(255, 255, 255, 0.1); border-color: rg
 /* Brand column leads, wider than the link columns. Explicit tracks rather than
    auto-fit here: with five children auto-fit gives them all equal width and the
    blurb ends up in a 190px ribbon. */
-@media (min-width: 1000px){
-  .footer-main { grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr)); }
-body }
+@media (min-width: 1000px) {
+  body .footer-main{ grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr)); }
+}
 
-.footer-brand{ display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-4); }
+body .footer-brand{ display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-4); }
 body .footer-brand__logo{ width: clamp(150px, 14vw, 190px); height: auto; }
 body .footer-brand__blurb{ font-size: var(--fs-small); max-width: 34ch; margin: 0; }
 
