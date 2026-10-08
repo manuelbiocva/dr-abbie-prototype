@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="https://dr-abbie.com/wp-content/uploads/2026/07/cropped-01LogoStacked-6.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azure:#1188CF; --orange:#F0682C; --deep:#0C2E47;
+    --charcoal:#232629; --pale:#DDF0FB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;
+    background:var(--deep);
+    color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    padding:48px 20px;
+    position:relative; overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* hexagon motif, kept as subtle texture */
+  body::before{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='104' viewBox='0 0 120 104'%3E%3Cpath d='M30 2 L90 2 L120 52 L90 102 L30 102 L0 52 Z' fill='none' stroke='%231188CF' stroke-width='1.4' opacity='0.26'/%3E%3C/svg%3E");
+    background-size:150px 130px;
+  }
+  body::after{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:radial-gradient(circle at 50% 38%, rgba(17,136,207,0.30), rgba(12,46,71,0) 62%);
+  }
+  .wrap{position:relative; z-index:1; width:100%; max-width:660px; text-align:center}
+  .logo{width:min(290px,76vw); height:auto; margin:0 auto 42px; display:block}
+  .eyebrow{
+    display:inline-block; padding:.5em 1.25em; margin-bottom:26px;
+    background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2);
+    border-radius:999px; font-size:.8125rem; font-weight:600;
+    letter-spacing:.06em; text-transform:uppercase; color:#9FD3EF;
+  }
+  h1{
+    font-weight:300; line-height:1.08; letter-spacing:-0.01em;
+    font-size:clamp(2.1rem,7vw,3.4rem); margin-bottom:22px;
+  }
+  h1 strong{display:block; font-weight:700}
+  .lede{
+    font-size:clamp(1rem,2.4vw,1.1875rem); line-height:1.65;
+    color:rgba(255,255,255,0.84); max-width:30em; margin:0 auto 38px;
+  }
+  .call-label{
+    font-size:.8125rem; font-weight:600; letter-spacing:.08em;
+    text-transform:uppercase; color:#9FD3EF; margin-bottom:14px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:12px;
+    background:var(--orange); color:#fff; text-decoration:none;
+    font-size:clamp(1.0625rem,3.4vw,1.375rem); font-weight:700;
+    padding:18px 38px; border-radius:999px;
+    box-shadow:0 14px 34px rgba(240,104,44,.32);
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn:hover,.btn:focus-visible{
+    background:#e05a1f; transform:translateY(-2px);
+    box-shadow:0 18px 40px rgba(240,104,44,.42);
+  }
+  .btn svg{flex:none}
+  .hours{margin-top:30px; font-size:.9375rem; color:rgba(255,255,255,0.62)}
+  .rule{
+    width:64px; height:3px; border-radius:3px; margin:44px auto 22px;
+    background:linear-gradient(90deg,var(--azure),transparent);
+  }
+  .foot{font-size:.875rem; color:rgba(255,255,255,0.5); line-height:1.7}
+  .foot strong{color:rgba(255,255,255,0.74); font-weight:600}
+  @media (max-width:520px){
+    .btn{width:100%; padding:17px 24px}
+    .logo{margin-bottom:34px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .btn{transition:none}
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="logo" src="https://dr-abbie.com/wp-content/uploads/2026/07/01LogoHorizontal-7.png"
+         alt="Dr. Abbie Clinics" width="2480" height="1259">
+
+    <span class="eyebrow">{{EYEBROW}}</span>
+
+    <h1>{{HEADLINE}}<strong>{{HEADLINE_STRONG}}</strong></h1>
+
+    <p class="lede">{{MESSAGE}}</p>
+
+    <p class="call-label">{{CALL_LABEL}}</p>
+    <a class="btn" href="tel:{{PHONE_TEL}}">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 6.2 2 2 0 0 1 6.5 3Z"
+              stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+      </svg>
+      {{PHONE_DISPLAY}}
+    </a>
+
+    <div class="rule"></div>
+
+    <p class="foot">
+      <strong>Dr. Abbie Clinics</strong><br>
+      Podiatry and lower limb biomechanics across New South Wales since 1990
+    </p>
+  </main>
+</body>
+</html>
