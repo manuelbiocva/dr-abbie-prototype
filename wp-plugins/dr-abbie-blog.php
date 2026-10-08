@@ -64,6 +64,40 @@ function dra_blog_card($post) {
     return $out;
 }
 
+
+/**
+ * Which page of the blog is being viewed.
+ *
+ * The number travels in the path (/blog/page/2/) rather than a query string,
+ * because the host's page cache ignores query strings and would serve page one
+ * for every page.
+ */
+function dra_blog_current_page() {
+    $n = (int) get_query_var('dra_bp');
+    if (!$n && isset($_GET['bp'])) { $n = (int) $_GET['bp']; }
+    return max(1, $n);
+}
+
+function dra_blog_page_url($n) {
+    $blog = get_posts(array('post_type' => 'page', 'name' => 'blog', 'numberposts' => 1));
+    $base = $blog ? get_permalink($blog[0]->ID) : home_url('/blog/');
+    return $n <= 1 ? $base : trailingslashit($base) . 'page/' . (int) $n . '/';
+}
+
+/**
+ * /blog/page/2/ resolves to the Blog page carrying a page number.
+ */
+function dra_blog_rewrite() {
+    add_rewrite_rule('^blog/page/([0-9]+)/?$', 'index.php?pagename=blog&dra_bp=$matches[1]', 'top');
+}
+add_action('init', 'dra_blog_rewrite');
+
+function dra_blog_query_var($vars) {
+    $vars[] = 'dra_bp';
+    return $vars;
+}
+add_filter('query_vars', 'dra_blog_query_var');
+
 /**
  * Every published post as a grid of cards.
  *
@@ -73,7 +107,7 @@ function dra_blog_card($post) {
 function dra_blog_grid_shortcode($atts = array()) {
     $atts = shortcode_atts(array('exclude' => '', 'per_page' => 8), $atts, 'dr_blog_grid');
     $per  = (int) $atts['per_page'];
-    $page = isset($_GET['bp']) ? max(1, (int) $_GET['bp']) : 1;
+    $page = dra_blog_current_page();
 
     $args = array(
         'post_type'           => 'post',
@@ -103,10 +137,7 @@ function dra_blog_grid_shortcode($atts = array()) {
  */
 function dra_blog_pager($current, $total) {
     if ($total < 2) { return ''; }
-    $base = strtok($_SERVER['REQUEST_URI'], '?');
-    $link = function ($n) use ($base) {
-        return esc_url($n <= 1 ? $base : add_query_arg('bp', $n, $base));
-    };
+    $link = function ($n) { return esc_url(dra_blog_page_url($n)); };
 
     $out = '<nav class="blog-pager" aria-label="Blog pages">';
     if ($current > 1) {
