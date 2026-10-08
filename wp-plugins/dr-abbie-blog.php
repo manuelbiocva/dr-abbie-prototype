@@ -34,16 +34,20 @@ function dra_blog_card($post) {
     }
     $thumb = get_post_thumbnail_id($id);
 
-    $img = '';
+    // every card carries a picture, so a row of cards lines up. Posts without
+    // a featured image get the brand's hexagon texture rather than a gap.
     if ($thumb) {
         $src = wp_get_attachment_image_url($thumb, 'large');
         $alt = get_post_meta($thumb, '_wp_attachment_image_alt', true);
         $img = '<div class="post-card__img"><img src="' . esc_url($src) . '" alt="' . esc_attr($alt) . '" loading="lazy" decoding="async"></div>';
+    } else {
+        $img = '<div class="post-card__img post-card__img--placeholder" aria-hidden="true"></div>';
     }
 
     $excerpt = has_excerpt($id)
         ? get_the_excerpt($id)
-        : wp_trim_words(wp_strip_all_tags(strip_shortcodes($post->post_content)), 22, '');
+        : wp_trim_words(wp_strip_all_tags(strip_shortcodes($post->post_content)), 20, '');
+    $excerpt = wp_trim_words($excerpt, 20, '');
 
     $arrow = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">'
            . '<path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.7" '
