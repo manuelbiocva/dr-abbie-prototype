@@ -40,6 +40,10 @@ def rewrite(html, depth=0):
             frag = '#' + frag
         if href in ('', 'index.html'):
             path = '/'
+        elif href.startswith('blog/') and href.endswith('.html'):
+            # posts keep the URLs they already have on the live site, at the
+            # root, so nothing that is indexed today needs a redirect
+            path = '/' + href[len('blog/'):-5].strip('/') + '/'
         elif href.endswith('.html'):
             path = '/' + href[:-5].strip('/') + '/'
         else:
