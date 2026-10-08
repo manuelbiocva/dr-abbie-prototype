@@ -27,6 +27,11 @@ function dra_blog_card($post) {
     $id    = $post->ID;
     $cats  = get_the_category($id);
     $cat   = $cats ? $cats[0]->name : '';
+    // the inherited posts were never categorised; "Uncategorized" is not a
+    // label worth showing a patient
+    if ($cat === '' || strtolower($cat) === 'uncategorized' || strtolower($cat) === 'uncategorised') {
+        $cat = 'Articles';
+    }
     $thumb = get_post_thumbnail_id($id);
 
     $img = '';
