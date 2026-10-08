@@ -71,25 +71,63 @@ function dra_blog_card($post) {
  * limit    how many to show, -1 for all
  */
 function dra_blog_grid_shortcode($atts = array()) {
-    $atts = shortcode_atts(array('exclude' => '', 'limit' => -1), $atts, 'dr_blog_grid');
+    $atts = shortcode_atts(array('exclude' => '', 'per_page' => 8), $atts, 'dr_blog_grid');
+    $per  = (int) $atts['per_page'];
+    $page = isset($_GET['bp']) ? max(1, (int) $_GET['bp']) : 1;
+
     $args = array(
-        'post_type'      => 'post',
-        'post_status'    => 'publish',
-        'posts_per_page' => (int) $atts['limit'],
-        'orderby'        => 'date',
-        'order'          => 'DESC',
+        'post_type'           => 'post',
+        'post_status'         => 'publish',
+        'posts_per_page'      => $per > 0 ? $per : -1,
+        'paged'               => $page,
+        'orderby'             => 'date',
+        'order'               => 'DESC',
         'ignore_sticky_posts' => true,
     );
     if ($atts['exclude'] !== '') {
         $args['post__not_in'] = array_filter(array_map('intval', explode(',', $atts['exclude'])));
     }
-    $posts = get_posts($args);
-    if (!$posts) { return ''; }
+    $query = new WP_Query($args);
+    if (!$query->have_posts()) { return ''; }
 
     $out = '';
-    foreach ($posts as $p) { $out .= dra_blog_card($p); }
+    foreach ($query->posts as $p) { $out .= dra_blog_card($p); }
+    $out .= dra_blog_pager($page, (int) $query->max_num_pages);
+    wp_reset_postdata();
     return $out;
 }
+
+/**
+ * Page links under the grid. The hub is a static page, so the page number
+ * travels in its own query argument rather than WordPress's /page/2/.
+ */
+function dra_blog_pager($current, $total) {
+    if ($total < 2) { return ''; }
+    $base = strtok($_SERVER['REQUEST_URI'], '?');
+    $link = function ($n) use ($base) {
+        return esc_url($n <= 1 ? $base : add_query_arg('bp', $n, $base));
+    };
+
+    $out = '<nav class="blog-pager" aria-label="Blog pages">';
+    if ($current > 1) {
+        $out .= '<a class="blog-pager__step" href="' . $link($current - 1) . '" rel="prev">Previous</a>';
+    }
+    $out .= '<span class="blog-pager__pages">';
+    for ($n = 1; $n <= $total; $n++) {
+        if ($n === $current) {
+            $out .= '<span class="blog-pager__page is-current" aria-current="page">' . $n . '</span>';
+        } else {
+            $out .= '<a class="blog-pager__page" href="' . $link($n) . '">' . $n . '</a>';
+        }
+    }
+    $out .= '</span>';
+    if ($current < $total) {
+        $out .= '<a class="blog-pager__step" href="' . $link($current + 1) . '" rel="next">Next</a>';
+    }
+    $out .= '</nav>';
+    return $out;
+}
+
 add_shortcode('dr_blog_grid', 'dra_blog_grid_shortcode');
 
 /**
