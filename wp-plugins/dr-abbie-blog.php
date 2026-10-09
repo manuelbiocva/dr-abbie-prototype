@@ -73,6 +73,10 @@ function dra_blog_card($post) {
  * for every page.
  */
 function dra_blog_current_page() {
+    // read it from the path first: the rewrite's query var does not always
+    // survive, and the URL is the one thing that is always right
+    $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+    if (preg_match('#/page/(\d+)/?#', $uri, $m)) { return max(1, (int) $m[1]); }
     $n = (int) get_query_var('dra_bp');
     if (!$n && isset($_GET['bp'])) { $n = (int) $_GET['bp']; }
     return max(1, $n);
