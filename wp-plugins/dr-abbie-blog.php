@@ -85,7 +85,10 @@ function dra_blog_current_page() {
 function dra_blog_page_url($n) {
     $blog = get_posts(array('post_type' => 'page', 'name' => 'blog', 'numberposts' => 1));
     $base = $blog ? get_permalink($blog[0]->ID) : home_url('/blog/');
-    return $n <= 1 ? $base : trailingslashit($base) . 'page/' . (int) $n . '/';
+    $url  = $n <= 1 ? $base : trailingslashit($base) . 'page/' . (int) $n . '/';
+    // land on the grid rather than the top of the page: turning a page is a
+    // move within one list, not an arrival at the hub
+    return $url . '#all-articles';
 }
 
 /**
