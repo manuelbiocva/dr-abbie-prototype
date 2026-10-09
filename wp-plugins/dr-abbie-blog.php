@@ -133,7 +133,10 @@ function dra_blog_grid_shortcode($atts = array()) {
 
     $out = '';
     foreach ($query->posts as $p) { $out .= dra_blog_card($p); }
-    $out .= dra_blog_pager($page, (int) $query->max_num_pages);
+    // the pager is printed separately by [dr_blog_pager], outside this
+    // container: on mobile the grid is a horizontal swipe rail and a child
+    // of it would be dragged along as another slide
+    $GLOBALS['dra_blog_total_pages'] = (int) $query->max_num_pages;
     wp_reset_postdata();
     return $out;
 }
@@ -167,6 +170,26 @@ function dra_blog_pager($current, $total) {
 }
 
 add_shortcode('dr_blog_grid', 'dra_blog_grid_shortcode');
+
+/**
+ * The page links, printed as a sibling of the grid rather than inside it.
+ */
+function dra_blog_pager_shortcode($atts = array()) {
+    $atts = shortcode_atts(array('exclude' => '', 'per_page' => 8), $atts, 'dr_blog_pager');
+    $total = isset($GLOBALS['dra_blog_total_pages']) ? (int) $GLOBALS['dra_blog_total_pages'] : 0;
+    if (!$total) {
+        $per  = (int) $atts['per_page'];
+        $args = array('post_type' => 'post', 'post_status' => 'publish', 'fields' => 'ids',
+                      'posts_per_page' => $per > 0 ? $per : -1, 'ignore_sticky_posts' => true);
+        if ($atts['exclude'] !== '') {
+            $args['post__not_in'] = array_filter(array_map('intval', explode(',', $atts['exclude'])));
+        }
+        $q = new WP_Query($args);
+        $total = (int) $q->max_num_pages;
+    }
+    return dra_blog_pager(dra_blog_current_page(), $total);
+}
+add_shortcode('dr_blog_pager', 'dra_blog_pager_shortcode');
 
 /**
  * The newest post, for the featured slot at the top of the hub.
