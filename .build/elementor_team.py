@@ -343,8 +343,11 @@ def cta_band(html, first, phone, phone_text, slug):
     body = re.sub(r'<[^>]+>', '', grab(r'</h2>\s*<p>(.*?)</p>', c)).strip()
     photo = grab(r'<div class="cta-band__bg"[^>]*>\s*<img[^>]+src="([^"]+)"', html)
 
+    # the photo is the band's own background rather than a positioned image
+    # layer: one less wrapper, and the client can swap it in the builder
+    shade = ('linear-gradient(90deg, rgba(12,46,71,0.92) 0%, '
+             'rgba(12,46,71,0.55) 55%, rgba(12,46,71,0.25) 100%)')
     return container([
-        container([image(photo, '')], classes='cta-band__bg', direction=None),
         container([
             container([
                 text('<p class="cta-band__eyebrow">%s</p>' % eyebrow),
@@ -361,7 +364,15 @@ def cta_band(html, first, phone, phone_text, slug):
                     extra={'flex_wrap': 'wrap'}),
             ], classes='cta-band__copy reveal', direction=None),
         ], classes='container', extra=boxed()),
-    ], classes='cta-band cta-band--photo', direction=None)
+    ], classes='cta-band cta-band--photo', direction=None, extra={
+        'background_background': 'classic',
+        'background_image': {'url': photo, 'id': ''},
+        'background_size': 'cover',
+        'background_position': 'center center',
+        'background_overlay_background': 'gradient',
+        'padding': spacing(96, 0, 96, 0),
+        'padding_mobile': spacing(64, 0, 64, 0),
+    })
 
 
 # --------------------------------------------------------------------------

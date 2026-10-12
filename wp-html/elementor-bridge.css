@@ -266,24 +266,14 @@ body .elementor-element.cond-grid,
 body .elementor-element.pcard-grid,
 body .elementor-element.section-head { padding: 0; }
 
-/* The CTA's photo layer sits behind the copy and must fill the band. A
-   percentage height here resolves against a wrapper of its own height, which
-   is how it collapsed to nothing. */
+/* The CTA band carries its photo as a background image set in the builder,
+   with the design's dark wash over it so the white copy stays readable. */
 body .elementor-element.cta-band { position: relative; overflow: hidden; }
-body .elementor-element.cta-band__bg {
+body .elementor-element.cta-band::before {
+  content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(90deg, rgba(12,46,71,0.92) 0%, rgba(12,46,71,0.6) 55%, rgba(12,46,71,0.3) 100%);
   z-index: 0;
-}
-body .cta-band__bg .elementor-widget-image,
-body .cta-band__bg .elementor-widget-container { position: absolute; inset: 0; }
-body .cta-band__bg img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 body .elementor-element.cta-band > .elementor-element.container { position: relative; z-index: 1; }
