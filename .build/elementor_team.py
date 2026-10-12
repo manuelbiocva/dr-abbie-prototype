@@ -54,6 +54,32 @@ def spacing(top=0, right=0, bottom=0, left=0):
             'bottom': str(bottom), 'left': str(left), 'isLinked': False}
 
 
+BOXED = 1240          # --container
+SECTION_Y = 96        # --section-y, mid of the clamp
+DEEP_BLUE = '#0C2E47'
+PALE_BLUE = '#DDF0FB'
+
+
+def bg(color):
+    """Background as an Elementor setting, so the client can change it."""
+    return {'background_background': 'classic', 'background_color': color}
+
+
+def band(color=None, pad_y=SECTION_Y):
+    """A full-width strip: the design's section rhythm, set in the builder."""
+    s = {'padding': spacing(pad_y, 0, pad_y, 0)}
+    if color:
+        s.update(bg(color))
+    return s
+
+
+def boxed():
+    """The design's centred column, as Elementor's own boxed width."""
+    return {'content_width': 'boxed',
+            'boxed_width': {'unit': 'px', 'size': BOXED, 'sizes': []},
+            'padding': spacing(0, 24, 0, 24)}
+
+
 def container(children, classes='', direction='column', gap=None, width=None,
               content_width='full', extra=None, link=None, tag=None):
     s = {'content_width': content_width,
@@ -180,7 +206,15 @@ def card_grid(cards, grid_classes):
             text('<p>%s</p>' % blurb) if blurb else text(''),
             text('<span class="card__more card__more--arrow">Read more</span>'),
         ], classes='card cond-card reveal', gap=0, link=href,
-            width={'unit': 'px', 'size': 260}))
+            width={'unit': 'px', 'size': 272}, extra={
+                'background_background': 'classic',
+                'background_color': '#FFFFFF',
+                'border_border': 'solid',
+                'border_width': spacing(1, 1, 1, 1),
+                'border_color': 'rgba(12, 46, 71, 0.12)',
+                'border_radius': spacing(16, 16, 16, 16),
+                'overflow': 'hidden',
+            }))
     return container(items, classes=grid_classes, direction='row', gap=24,
                      extra={'flex_wrap': 'wrap'})
 
@@ -230,7 +264,8 @@ def build(slug):
                    classes='dra-btn dra-btn--ghost-invert'),
         ], classes='hero__actions', direction='row', gap=12,
             extra={'flex_wrap': 'wrap'}),
-    ], classes='hero__anchor', gap=10)
+    ], classes='hero__anchor', gap=10,
+        width={'unit': '%', 'size': 58})
 
     hero_photo = container([image(portrait, portrait_alt)],
                            classes='profile-hero__photo', gap=0,
@@ -241,8 +276,9 @@ def build(slug):
             container([hero_copy, hero_photo], classes='profile-hero',
                       direction='row', gap=48,
                       extra={'flex_wrap': 'wrap', 'align_items': 'center'}),
-        ], classes='container'),
-    ], classes='hero hero--photo hero--compact hero--profile hex-texture', gap=0)
+        ], classes='container', extra=boxed()),
+    ], classes='hero hero--photo hero--compact hero--profile hex-texture', gap=0,
+        extra=band(DEEP_BLUE, 120))
 
     # ---- about + aside ---------------------------------------------------
     _, about = section_html(html, 1)
@@ -282,8 +318,8 @@ def build(slug):
         container([
             container([bio_col, aside], classes='article', direction='row',
                       gap=48, extra={'flex_wrap': 'wrap'}),
-        ], classes='container'),
-    ], classes='section section--white', gap=0)
+        ], classes='container', extra=boxed()),
+    ], classes='section section--white', gap=0, extra=band('#FFFFFF'))
 
     # ---- treatments and conditions --------------------------------------
     grids = []
@@ -297,27 +333,29 @@ def build(slug):
                              grab(r'<p class="lede">(.*?)</p>', body))).strip()
         cards = cards_from(body)
         shade = 'section--pale' if 'section--pale' in tag else 'section--white'
+        tone = PALE_BLUE if shade == 'section--pale' else '#FFFFFF'
         grids.append(container([
             container([
                 split_head(eyebrow, l1, l2, lede),
                 card_grid(cards, 'grid-auto cond-grid'),
-            ], classes='container', gap=32),
-        ], classes='section %s' % shade, gap=0))
+            ], classes='container', gap=40, extra=boxed()),
+        ], classes='section %s' % shade, gap=0, extra=band(tone)))
 
     # ---- where to book: stays HTML, see the module docstring -------------
     book_tag, book_body = section_html(html, 4)
+    book_extra = band(PALE_BLUE)
+    book_extra['_element_id'] = 'book'
     book_section = container([
         container([raw_html('<div class="dra-booking-cards">%s</div>' % book_body)],
-                  classes='container'),
-    ], classes='section section--pale', gap=0,
-        extra={'_element_id': 'book'})
+                  classes='container', extra=boxed()),
+    ], classes='section section--pale', gap=0, extra=book_extra)
 
     # ---- other practitioners and the closing CTA stay as the design has
     #      them: both are built from shared partials used across the site ---
     other_tag, other_body = section_html(html, 5)
     other_section = container([
-        container([raw_html(other_body)], classes='container'),
-    ], classes='section section--white', gap=0)
+        container([raw_html(other_body)], classes='container', extra=boxed()),
+    ], classes='section section--white', gap=0, extra=band('#FFFFFF'))
 
     cta_m = re.search(r'<section class="cta-band[^"]*"[^>]*>(.*?)</section>', html, re.S)
     cta_section = raw_html('<section class="cta-band cta-band--photo">%s</section>'
