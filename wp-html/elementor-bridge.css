@@ -236,3 +236,13 @@ body .elementor-element.elementor-element.pcard__plate {
   padding: var(--sp-4);
   box-shadow: 0 8px 24px rgba(12, 46, 71, 0.14);
 }
+
+/* Elementor containers default to flex-direction: column, so the design's
+   flex-basis on these cards was sizing their height and letting the width
+   stretch to the full row. */
+body .elementor-element.elementor-element.pcard-grid--center {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-5);
+}
