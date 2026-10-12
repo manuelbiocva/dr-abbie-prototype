@@ -362,20 +362,20 @@ body .e-con.team-slider__nav,
 body .e-con.team-slider__track,
 body .e-con.topic-links { --flex-direction: row; }
 
-
 /* Pictures the design sizes by a class on the <img> itself.
    As an image widget that class lands on the wrapper, leaving the picture at
    its natural size -- the membership logos came out three times too wide and
-   wrapped onto a second row. The wrapper keeps the design's height and the
-   picture follows it.
+   wrapped onto a second row. Elementor's optimized markup drops the usual
+   .elementor-widget-container, so the picture is matched as a descendant
+   rather than through a fixed chain of children.
    Generated from the stylesheet, not hand-listed. */
-body .elementor-widget-image.gbadge__mark > .elementor-widget-container,
-body .elementor-widget-image.gcard__mark > .elementor-widget-container,
-body .elementor-widget-image.grating__mark > .elementor-widget-container,
-body .elementor-widget-image.logo-strip__item > .elementor-widget-container,
-body .elementor-widget-image.memberships__mark > .elementor-widget-container { height: 100%; }
-body .elementor-widget-image.gbadge__mark > .elementor-widget-container > img,
-body .elementor-widget-image.gcard__mark > .elementor-widget-container > img,
-body .elementor-widget-image.grating__mark > .elementor-widget-container > img,
-body .elementor-widget-image.logo-strip__item > .elementor-widget-container > img,
-body .elementor-widget-image.memberships__mark > .elementor-widget-container > img { height: 100%; width: auto; max-width: 100%; display: block; }
+body .elementor-widget-image.gbadge__mark > *,
+body .elementor-widget-image.gcard__mark > *,
+body .elementor-widget-image.grating__mark > *,
+body .elementor-widget-image.logo-strip__item > *,
+body .elementor-widget-image.memberships__mark > * { height: 100%; }
+body .elementor-widget-image.gbadge__mark img,
+body .elementor-widget-image.gcard__mark img,
+body .elementor-widget-image.grating__mark img,
+body .elementor-widget-image.logo-strip__item img,
+body .elementor-widget-image.memberships__mark img { height: 100%; width: auto; max-width: 100%; display: block; }
