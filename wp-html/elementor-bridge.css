@@ -273,7 +273,7 @@ body .elementor-element.cta-band::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(12,46,71,0.92) 0%, rgba(12,46,71,0.6) 55%, rgba(12,46,71,0.3) 100%);
+  background: linear-gradient(90deg, rgba(12,46,71,0.94) 0%, rgba(12,46,71,0.82) 38%, rgba(12,46,71,0.45) 72%, rgba(12,46,71,0.3) 100%);
   z-index: 0;
 }
 body .elementor-element.cta-band > .elementor-element.container { position: relative; z-index: 1; }

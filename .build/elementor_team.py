@@ -345,8 +345,6 @@ def cta_band(html, first, phone, phone_text, slug):
 
     # the photo is the band's own background rather than a positioned image
     # layer: one less wrapper, and the client can swap it in the builder
-    shade = ('linear-gradient(90deg, rgba(12,46,71,0.92) 0%, '
-             'rgba(12,46,71,0.55) 55%, rgba(12,46,71,0.25) 100%)')
     return container([
         container([
             container([
@@ -369,7 +367,6 @@ def cta_band(html, first, phone, phone_text, slug):
         'background_image': {'url': photo, 'id': ''},
         'background_size': 'cover',
         'background_position': 'center center',
-        'background_overlay_background': 'gradient',
         'padding': spacing(96, 0, 96, 0),
         'padding_mobile': spacing(64, 0, 64, 0),
     })
