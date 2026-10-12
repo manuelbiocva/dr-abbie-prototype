@@ -209,3 +209,30 @@ body .pcard-grid--center > .e-con { flex: 0 0 100%; }
 @media (min-width: 1000px) {
   body .pcard-grid--center > .e-con { flex-basis: calc((100% - 3 * var(--sp-5)) / 4); }
 }
+
+/* Practitioner cards. The design stacks a white plate over a 3:4 portrait;
+   Elementor's per-element rules are (0,3,0), so the class is repeated here to
+   reach (0,3,1) and win without !important, which would block the client from
+   changing these in the builder later. */
+body .elementor-element.elementor-element.pcard { display: block; position: relative; }
+body .elementor-element.elementor-element.pcard__photo {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  padding: 0;
+}
+body .pcard__photo .elementor-widget-image,
+body .pcard__photo .elementor-widget-container { width: 100%; height: 100%; }
+body .pcard__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+body .elementor-element.elementor-element.pcard__plate {
+  position: absolute;
+  left: var(--sp-3);
+  right: var(--sp-3);
+  bottom: var(--sp-3);
+  width: auto;
+  background: #fff;
+  border-radius: calc(var(--radius-card) - 2px);
+  padding: var(--sp-4);
+  box-shadow: 0 8px 24px rgba(12, 46, 71, 0.14);
+}
