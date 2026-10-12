@@ -270,8 +270,10 @@ def build(slug):
                    classes='dra-btn dra-btn--ghost-invert'),
         ], classes='hero__actions', direction='row', gap=12,
             extra={'flex_wrap': 'wrap'}),
-    ], classes='hero__anchor', gap=10,
-        width={'unit': '%', 'size': 58})
+    # the copy column takes whatever the portrait leaves, the way the design
+    # lays it out: pinning it to a percentage narrowed it and wrapped the
+    # headline onto extra lines
+    ], classes='hero__anchor', gap=8, extra={'_flex_size': 'grow'})
 
     hero_photo = container([image(portrait, portrait_alt)],
                            classes='profile-hero__photo', gap=0,
