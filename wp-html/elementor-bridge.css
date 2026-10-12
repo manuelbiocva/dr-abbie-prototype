@@ -246,3 +246,44 @@ body .elementor-element.elementor-element.pcard-grid--center {
   justify-content: center;
   gap: var(--sp-5);
 }
+
+/* Elementor's kit gives every container a default 10px padding. Panels in the
+   design supply their own, but these wrappers must have none: the padding was
+   insetting the portrait inside its card and shrinking the CTA's background
+   layer to 20px wide, so its image never loaded. */
+body .elementor-element.pcard,
+body .elementor-element.pcard__photo,
+body .elementor-element.cond-card__media,
+body .elementor-element.cta-band__bg,
+body .elementor-element.cta-band,
+body .elementor-element.hero__anchor,
+body .elementor-element.profile-hero,
+body .elementor-element.profile-hero__photo,
+body .elementor-element.article,
+body .elementor-element.article__aside,
+body .elementor-element.clinic-grid,
+body .elementor-element.cond-grid,
+body .elementor-element.pcard-grid,
+body .elementor-element.section-head { padding: 0; }
+
+/* The CTA's photo layer sits behind the copy and must fill the band. A
+   percentage height here resolves against a wrapper of its own height, which
+   is how it collapsed to nothing. */
+body .elementor-element.cta-band { position: relative; overflow: hidden; }
+body .elementor-element.cta-band__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+body .cta-band__bg .elementor-widget-image,
+body .cta-band__bg .elementor-widget-container { position: absolute; inset: 0; }
+body .cta-band__bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .elementor-element.cta-band > .elementor-element.container { position: relative; z-index: 1; }
