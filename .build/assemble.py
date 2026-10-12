@@ -470,6 +470,13 @@ def link_services(html, out_name):
 PHONE = '+61295454378'
 NEW_TAB = '<span class="sr-only"> (opens online booking in a new tab)</span>'
 
+# Where a booking button goes when it is not tied to one clinic: the practice's
+# own Nookal diary, which asks for the clinic itself. Sending people to our
+# locations page first put an extra step in front of every generic CTA.
+# No trailing slash -- Nookal 404s on it.
+BOOK_ALL = ('https://book.nookal.com/bookings/book/'
+            '9E0edcA3-35A8-9fFF-0C33-59ECb896F885/location')
+
 
 def book_button(url, location, source, label, cls='btn btn--book btn--sm', sr_place=''):
     """A single booking button for a known clinic, online or by phone."""
@@ -496,7 +503,14 @@ def apply_booking(html, mode, target=None, location=None):
             tag = tag.replace('href="#"', 'href="tel:%s" data-book-method="phone"' % (clinic_phone(location)[0] if location else PHONE), 1)
             body = re.sub(r'^\s*[^<]+', 'Call to book ', body, count=1)
         else:
-            tag = tag.replace('href="#"', 'href="%s"' % target, 1)
+            # an off-site chooser is still a booking diary, so it opens in a
+            # new tab and says so, exactly as a per-clinic link does
+            if target.startswith('http'):
+                tag = tag.replace('href="#"', 'href="%s" target="_blank" '
+                                  'rel="noopener"' % target, 1)
+                body = body + NEW_TAB
+            else:
+                tag = tag.replace('href="#"', 'href="%s"' % target, 1)
         if location and 'data-location=' not in tag:
             tag = tag.replace('data-track="book"', 'data-track="book" data-location="%s"' % location, 1)
         return tag + body + '</a>'
@@ -687,7 +701,7 @@ def book_tokens(entry, slug=None):
 
 
 def build(page, out_name, title, desc, canonical, booklabel='Book a Session',
-          subdir='', tokens=None, booking=('chooser', 'locations.html', None),
+          subdir='', tokens=None, booking=('chooser', BOOK_ALL, None),
           blocks=None):
     main = open(os.path.join(HERE, '%s.main.html' % page), encoding='utf-8').read()
     for key, on in (blocks or {}).items():
