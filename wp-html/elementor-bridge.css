@@ -124,3 +124,37 @@ body .profile-hero__photo img {
   display: block;
   border-radius: var(--radius-card);
 }
+
+/* The eyebrow is a pill around its own text. As a widget its wrapper is a
+   full-width block, which would stretch the pill across the column. */
+body .elementor-widget.eyebrow {
+  display: inline-flex;
+  width: auto;
+  align-self: flex-start;
+}
+
+/* Panels whose padding and ground come from the design, not the builder. */
+body .elementor-element.aside-box {
+  padding: var(--sp-5);
+  background: var(--surface-alt);
+  border-radius: var(--radius-card);
+}
+body .elementor-element.aside-book {
+  padding: var(--sp-6) var(--sp-5);
+  background: var(--deep-blue);
+  border-radius: var(--radius-card);
+  color: #fff;
+}
+body .aside-box .elementor-widget-heading .elementor-heading-title {
+  font-size: 1rem;
+  margin-bottom: var(--sp-3);
+}
+
+/* Square card media, the way the design crops it. */
+body .elementor-element.cond-card__media {
+  aspect-ratio: 1;
+  overflow: hidden;
+  width: 100%;
+}
+body .elementor-element.cond-card__media .elementor-widget-image,
+body .elementor-element.cond-card__media .elementor-widget-container { height: 100%; }

@@ -82,9 +82,10 @@ def boxed():
 
 def container(children, classes='', direction='column', gap=None, width=None,
               content_width='full', extra=None, link=None, tag=None):
-    s = {'content_width': content_width,
-         'padding': spacing(),
-         'margin': spacing()}
+    # padding is deliberately not forced to zero: the design's own classes
+    # carry the padding for panels like .aside-box and .card, and an
+    # explicit 0 here would outrank them
+    s = {'content_width': content_width}
     if direction:
         s['flex_direction'] = direction
     if gap is not None:
