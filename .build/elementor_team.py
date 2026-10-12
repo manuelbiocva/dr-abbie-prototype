@@ -102,9 +102,12 @@ def container(children, classes='', direction='column', gap=None, width=None,
         # underscored '_css_classes'
         s['css_classes'] = classes
     if link:
+        # Elementor only honours a container's link when the container is
+        # rendered as an anchor; without this the card is not clickable at all
+        s['html_tag'] = 'a'
         s['link'] = {'url': link, 'is_external': '', 'nofollow': ''}
     if tag:
-        s['_element_tag'] = tag
+        s['html_tag'] = tag
     if extra:
         s.update(extra)
     return {'id': uid(), 'elType': 'container', 'settings': s,
