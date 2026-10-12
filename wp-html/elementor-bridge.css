@@ -1,0 +1,126 @@
+/* === NATIVE ELEMENTOR BRIDGE =============================================
+   The practitioner page is built from native Elementor widgets rather than
+   one HTML block. Elementor wraps every widget in its own markup, so these
+   rules hand the approved design's styling to the elements it renders.
+   ====================================================================== */
+
+/* Elementor spaces widgets apart by default; the containers already carry the
+   design's own gaps, so that margin would double them up. */
+body .elementor-widget:not(:last-child) { margin-bottom: 0; }
+
+/* Elementor's containers set their own display, which outranks the design's
+   classes. The layout for these pages is set in the builder, so only the
+   decorative classes need to win here. */
+body .elementor-element.hero,
+body .elementor-element.section,
+body .elementor-element.container { width: 100%; }
+
+/* Buttons. The class sits on the widget wrapper and reaches through to the
+   <a> Elementor renders. Values mirror .btn in the design system. */
+body .dra-btn .elementor-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: 52px;
+  padding: var(--sp-4) var(--sp-6);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  background: transparent;
+  transition: background-color var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease);
+}
+body .dra-btn--book .elementor-button {
+  background: var(--orange-deep);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(203, 76, 18, 0.25);
+}
+body .dra-btn--book .elementor-button:hover { background: var(--orange); }
+body .dra-btn--ghost-invert .elementor-button {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+body .dra-btn--ghost-invert .elementor-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+body .dra-btn--sm .elementor-button {
+  min-height: 44px;
+  padding: var(--sp-3) var(--sp-5);
+  font-size: var(--fs-small);
+}
+
+/* Icon list standing in for the design's plain bullet lists. */
+body .profile-facts__list .elementor-icon-list-items {
+  display: grid;
+  gap: var(--sp-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body .profile-facts__list .elementor-icon-list-item {
+  position: relative;
+  padding-left: 16px;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+body .profile-facts__list .elementor-icon-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--azure);
+}
+body .profile-facts__list .elementor-icon-list-text { padding: 0; }
+
+/* The card arrow was an inline SVG inside the markup; as a native card it
+   comes from CSS instead. */
+body .card__more--arrow::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+  vertical-align: -2px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 7h8M7.5 3.5L11 7l-3.5 3.5' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M3 7h8M7.5 3.5L11 7l-3.5 3.5' fill='none' stroke='%23000' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* A native card is a linked container, so the image widget sits one level
+   deeper than the design's markup expects. */
+body .cond-card .elementor-widget-image,
+body .cond-card .elementor-widget-image .elementor-widget-container { height: 100%; }
+body .cond-card__media { aspect-ratio: 1; overflow: hidden; }
+body .cond-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+body .cond-card { height: 100%; }
+body .cond-card .elementor-widget-heading,
+body .cond-card .elementor-widget-text-editor { padding: 0 var(--sp-5); }
+body .cond-card .elementor-widget-heading:first-of-type { padding-top: var(--sp-5); }
+body .cond-card .elementor-widget-text-editor:last-child { padding-bottom: var(--sp-5); }
+
+/* The portrait keeps the design's framing. */
+body .profile-hero__photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-card);
+}
