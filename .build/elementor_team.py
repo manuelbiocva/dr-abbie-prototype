@@ -95,7 +95,9 @@ def container(children, classes='', direction='column', gap=None, width=None,
         s['width'] = width
         s['_flex_size'] = 'none'
     if classes:
-        s['_css_classes'] = classes
+        # containers take 'css_classes'; only widgets use the
+        # underscored '_css_classes'
+        s['css_classes'] = classes
     if link:
         s['link'] = {'url': link, 'is_external': '', 'nofollow': ''}
     if tag:
