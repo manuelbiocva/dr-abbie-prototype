@@ -55,7 +55,8 @@ def spacing(top=0, right=0, bottom=0, left=0):
 
 
 BOXED = 1240          # --container
-SECTION_Y = 96        # --section-y, mid of the clamp
+SECTION_Y = 112       # --section-y resolves to its 7rem cap on desktop
+SECTION_Y_SM = 64     # and to roughly 4rem on a phone
 DEEP_BLUE = '#0C2E47'
 PALE_BLUE = '#DDF0FB'
 
@@ -65,9 +66,11 @@ def bg(color):
     return {'background_background': 'classic', 'background_color': color}
 
 
-def band(color=None, pad_y=SECTION_Y):
+def band(color=None, pad_y=SECTION_Y, pad_y_sm=None):
     """A full-width strip: the design's section rhythm, set in the builder."""
-    s = {'padding': spacing(pad_y, 0, pad_y, 0)}
+    small = pad_y_sm if pad_y_sm is not None else min(pad_y, SECTION_Y_SM)
+    s = {'padding': spacing(pad_y, 0, pad_y, 0),
+         'padding_mobile': spacing(small, 0, small, 0)}
     if color:
         s.update(bg(color))
     return s
@@ -281,7 +284,7 @@ def build(slug):
                       extra={'flex_wrap': 'wrap', 'align_items': 'center'}),
         ], classes='container', extra=boxed()),
     ], classes='hero hero--photo hero--compact hero--profile hex-texture', gap=0,
-        extra=band(DEEP_BLUE, 120))
+        extra=band(DEEP_BLUE, 24, 24))
 
     # ---- about + aside ---------------------------------------------------
     _, about = section_html(html, 1)
