@@ -235,6 +235,131 @@ def split_head(eyebrow, line1, line2, lede):
     ], classes='section-head section-head--split reveal', direction=None)
 
 
+def link_widget(label, url, classes='', external=False, icon=''):
+    """A plain anchor as a text widget.
+
+    The button widget renders its own wrapper markup, which fights the inline
+    icon-and-label rows the design uses inside cards. A text widget keeps the
+    anchor the design expects while staying editable in the builder.
+    """
+    ico = '<span class="dra-ico dra-ico--%s" aria-hidden="true"></span>' % icon if icon else ''
+    tgt = ' target="_blank" rel="noopener"' if external else ''
+    return text('<a class="%s" href="%s"%s>%s<span>%s</span></a>'
+                % (classes, url, tgt, ico, label))
+
+
+def track_classes(source, location=None, method=None):
+    """Class hooks main.js reads in place of data attributes."""
+    out = ['js-book', 'js-src-%s' % source]
+    if location:
+        out.append('js-loc-%s' % location)
+    if method:
+        out.append('js-method-%s' % method)
+    return ' '.join(out)
+
+
+def _count_word(body):
+    """'three' for three clinics -- the design writes the number out."""
+    n = len(re.findall(r'<article class="clinic-card', body))
+    words = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five',
+             6: 'six', 7: 'seven', 8: 'eight', 9: 'nine'}
+    return words.get(n, str(n))
+
+
+def clinic_cards(body):
+    """The 'where to book' clinics, as native widgets.
+
+    Each booking button keeps its clinic's own Nookal link -- a wrong-clinic
+    link is a launch blocker -- and carries the tracking as classes.
+    """
+    cards = []
+    for m in re.finditer(r'<article class="clinic-card[^"]*"[^>]*>(.*?)</article>',
+                         body, re.S):
+        c = m.group(1)
+        name = grab(r'<h3 class="clinic-card__name"><a href="[^"]+">(.*?)</a>', c)
+        page = grab(r'<h3 class="clinic-card__name"><a href="([^"]+)"', c)
+        tag = grab(r'<span class="loc-card__tag">(.*?)</span>', c)
+        maps = grab(r'<a class="clinic-card__addr" href="([^"]+)"', c)
+        where = grab(r'data-location="([^"]+)"', c)
+        addr = grab(r'<a class="clinic-card__addr".*?<span>(.*?)</span>', c)
+        booking = grab(r'href="(https://book\.nookal\.com[^"]+)"', c)
+        tel = grab(r'href="tel:([^"]+)"', c)
+        tel_text = grab(r'<span class="callrail-number">(.*?)</span>', c)
+
+        title = '<a href="%s">%s</a>' % (page, name)
+        if tag:
+            title += ' <span class="loc-card__tag">%s</span>' % tag
+
+        kids = [
+            heading(title, 'h3', classes='clinic-card__name'),
+            link_widget(addr, maps, classes='clinic-card__addr',
+                        external=True, icon='pin'),
+            container([
+                text('<a class="btn btn--book btn--sm" href="%s" target="_blank" '
+                     'rel="noopener"><span class="dra-ico dra-ico--cal" aria-hidden="true">'
+                     '</span><span>Book online</span></a>' % booking,
+                     classes=track_classes('practitioner-clinics', where, 'online')),
+                text('<a class="btn btn--phone btn--sm" href="tel:%s"><span '
+                     'class="dra-ico dra-ico--tel" aria-hidden="true"></span>'
+                     '<span class="callrail-number">%s</span></a>' % (tel, tel_text),
+                     classes='js-loc-%s' % where),
+            ], classes='clinic-card__actions', direction=None),
+        ]
+        cards.append(container(kids, classes='clinic-card reveal', direction=None))
+    return container(cards, classes='clinic-grid', direction=None)
+
+
+def practitioner_cards(body):
+    """The rest of the team, as native widgets."""
+    cards = []
+    for m in re.finditer(r'<a class="pcard reveal"[^>]*href="([^"]+)"[^>]*>(.*?)</a>',
+                         body, re.S):
+        href, inner = m.group(1), m.group(2)
+        img = grab(r'<img[^>]+src="([^"]+)"', inner)
+        alt = grab(r'<img[^>]+alt="([^"]*)"', inner)
+        name = re.sub(r'<[^>]+>', '', grab(r'<h3[^>]*>(.*?)</h3>', inner)).strip()
+        role = re.sub(r'<[^>]+>', '',
+                      grab(r'<span class="pcard__role">(.*?)</span>', inner)).strip()
+        cards.append(container([
+            container([image(img, alt)], classes='pcard__photo', direction=None),
+            container([
+                heading(name, 'h3'),
+                text('<span class="pcard__role">%s</span>' % role),
+                text('<span class="pcard__more card__more--arrow">View profile</span>'),
+            ], classes='pcard__plate', direction=None),
+        ], classes='pcard reveal', direction=None, link=href))
+    return container(cards, classes='pcard-grid pcard-grid--center', direction=None)
+
+
+def cta_band(html, first, phone, phone_text, slug):
+    """The closing booking band, as native widgets."""
+    c = grab(r'<div class="cta-band__copy reveal">(.*?)</div>\s*</div>', html)
+    eyebrow = grab(r'<p class="cta-band__eyebrow">(.*?)</p>', c)
+    line1 = grab(r'<h2 class="split-head"><span>(.*?)</span>', c)
+    body = re.sub(r'<[^>]+>', '', grab(r'</h2>\s*<p>(.*?)</p>', c)).strip()
+    photo = grab(r'<div class="cta-band__bg"[^>]*>\s*<img[^>]+src="([^"]+)"', html)
+
+    return container([
+        container([image(photo, '')], classes='cta-band__bg', direction=None),
+        container([
+            container([
+                text('<p class="cta-band__eyebrow">%s</p>' % eyebrow),
+                heading('<span>%s</span><span>%s</span>' % (line1, first), 'h2',
+                        classes='split-head'),
+                text('<p>%s</p>' % body),
+                container([
+                    button('Book with %s' % first, '#book',
+                           classes='dra-btn dra-btn--book '
+                                   + track_classes('practitioner-closing')),
+                    button('Call %s' % phone_text, 'tel:%s' % phone,
+                           classes='dra-btn dra-btn--ghost-invert'),
+                ], classes='cta-band__actions', direction='row', gap=12,
+                    extra={'flex_wrap': 'wrap'}),
+            ], classes='cta-band__copy reveal', direction=None),
+        ], classes='container', extra=boxed()),
+    ], classes='cta-band cta-band--photo', direction=None)
+
+
 # --------------------------------------------------------------------------
 # the page
 # --------------------------------------------------------------------------
@@ -347,30 +472,35 @@ def build(slug):
             ], classes='container', gap=40, extra=boxed()),
         ], classes='section %s' % shade, gap=0, extra=band(tone)))
 
-    # ---- where to book: stays HTML, see the module docstring -------------
+    # ---- where to book --------------------------------------------------
     book_tag, book_body = section_html(html, 4)
+    book_lede = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '',
+                       grab(r'<p class="lede">(.*?)</p>', book_body))).strip()
     book_extra = band(PALE_BLUE)
     book_extra['_element_id'] = 'book'
     book_section = container([
-        container([raw_html('<div class="dra-booking-cards">%s</div>' % book_body)],
-                  classes='container', extra=boxed()),
+        container([
+            split_head('Where to book', 'Book with %s' % first,
+                       'at %s clinics' % _count_word(book_body), book_lede),
+            clinic_cards(book_body),
+        ], classes='container', gap=40, extra=boxed()),
     ], classes='section section--pale', gap=0, extra=book_extra)
 
-    # ---- other practitioners and the closing CTA stay as the design has
-    #      them: both are built from shared partials used across the site ---
+    # ---- the rest of the team -------------------------------------------
     other_tag, other_body = section_html(html, 5)
+    other_lede = grab(r'<p class="lede">(.*?)</p>', other_body)
     other_section = container([
-        container([raw_html(other_body)], classes='container', extra=boxed()),
+        container([
+            split_head('The team', 'Our other', 'practitioners', other_lede),
+            practitioner_cards(other_body),
+        ], classes='container', gap=40, extra=boxed()),
     ], classes='section section--white', gap=0, extra=band('#FFFFFF'))
-
-    cta_m = re.search(r'<section class="cta-band[^"]*"[^>]*>(.*?)</section>', html, re.S)
-    cta_section = raw_html('<section class="cta-band cta-band--photo">%s</section>'
-                           % cta_m.group(1)) if cta_m else None
 
     page = [hero_section, about_section, grids[0], grids[1], book_section,
             other_section]
-    if cta_section:
-        page.append(container([cta_section], gap=0))
+    cta_m = re.search(r'<section class="cta-band.*?</section>', html, re.S)
+    if cta_m:
+        page.append(cta_band(cta_m.group(0), first, phone, phone_text, slug))
     return page
 
 

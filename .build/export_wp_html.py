@@ -23,7 +23,7 @@ SITE = 'https://dr-abbie.com'
 ASSETS = SITE + '/wp-content/dr-abbie-assets/img/'
 
 
-def rewrite(html, depth=0):
+def rewrite(html, folder=''):
     """Point assets at the uploaded copies and links at WordPress permalinks."""
     # images: assets/img/x.webp and ../assets/img/x.webp both become absolute
     html = re.sub(r'(?:\.\./)*assets/img/', ASSETS, html)
@@ -33,7 +33,15 @@ def rewrite(html, depth=0):
         href = m.group(2)
         if href.startswith('#') or href.startswith('http') or href.startswith('tel:') or href.startswith('mailto:'):
             return m.group(0)
-        href = re.sub(r'^(?:\.\./)+', '', href)
+        # resolve the link against the folder the page lives in. A link from
+        # team/x.html to a sibling is written "y.html"; dropping the folder
+        # sent every practitioner cross-link to the site root instead.
+        base = folder
+        while href.startswith('../'):
+            href = href[3:]
+            base = base.rpartition('/')[0]
+        if base and not href.startswith('/'):
+            href = base + '/' + href
         frag = ''
         if '#' in href:
             href, frag = href.split('#', 1)
@@ -105,7 +113,7 @@ def main():
                 continue
             slug = folder + '--' + f[:-5]
             io.open(os.path.join(OUT, 'pages', slug + '.html'), 'w', encoding='utf-8').write(
-                rewrite(split_page(os.path.join(d, f))['main']))
+                rewrite(split_page(os.path.join(d, f))['main'], folder))
             written.append(slug)
 
     print('header  %d bytes' % os.path.getsize(os.path.join(OUT, 'parts', 'header.html')))

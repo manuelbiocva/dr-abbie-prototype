@@ -506,25 +506,36 @@
   function initTracking() {
     window.dataLayer = window.dataLayer || [];
 
+    // Pages built with native page-builder widgets cannot carry data
+    // attributes without the builder's paid tier, but they can carry classes.
+    // js-book marks a booking click; js-loc-*, js-src-* and js-method-* carry
+    // what the data attributes carry elsewhere. Attributes still win.
+    function meta(el, attr, prefix, fallback) {
+      if (el.dataset[attr]) return el.dataset[attr];
+      var m = String(el.className || '').match(new RegExp('js-' + prefix + '-([a-z0-9-]+)'));
+      return m ? m[1] : fallback;
+    }
+
     document.addEventListener('click', function (e) {
-      var book = e.target.closest('[data-track="book"]');
+      var book = e.target.closest('[data-track="book"], .js-book');
       if (book) {
         // method: online (a clinic's Nookal diary), phone ("Call to book"), or
         // chooser (a generic button on its way to the choose-your-clinic page)
         window.dataLayer.push({
           event: 'booking_click',
-          location: book.dataset.location || 'sitewide',
-          source: book.dataset.source || 'unknown',
-          method: book.dataset.bookMethod || 'chooser'
+          location: meta(book, 'location', 'loc', 'sitewide'),
+          source: meta(book, 'source', 'src', 'unknown'),
+          method: meta(book, 'bookMethod', 'method', 'chooser')
         });
         return;
       }
 
       var call = e.target.closest('a[href^="tel:"]');
       if (call) {
+        var holder = call.closest('[data-location], [class*="js-loc-"]') || call;
         window.dataLayer.push({
           event: 'phone_click',
-          location: call.dataset.location || 'sitewide',
+          location: meta(holder, 'location', 'loc', 'sitewide'),
           number: call.getAttribute('href').replace('tel:', '')
         });
       }

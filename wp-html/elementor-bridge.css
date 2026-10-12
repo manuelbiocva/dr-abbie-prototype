@@ -158,3 +158,40 @@ body .elementor-element.cond-card__media {
 }
 body .elementor-element.cond-card__media .elementor-widget-image,
 body .elementor-element.cond-card__media .elementor-widget-container { height: 100%; }
+
+/* Icons that were inline SVGs inside the markup. As native widgets they come
+   from CSS instead, so the builder shows plain editable text. */
+body .dra-ico {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain;    mask-size: contain;
+}
+body .dra-ico--pin {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z' stroke='%23000' stroke-width='1.8' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='10' r='2.5' stroke='%23000' stroke-width='1.8'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z' stroke='%23000' stroke-width='1.8' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='10' r='2.5' stroke='%23000' stroke-width='1.8'/%3E%3C/svg%3E");
+}
+body .dra-ico--cal {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='3.5' y='5' width='17' height='15.5' rx='2' stroke='%23000' stroke-width='1.8'/%3E%3Cpath d='M3.5 10h17M8 3v4M16 3v4' stroke='%23000' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='3.5' y='5' width='17' height='15.5' rx='2' stroke='%23000' stroke-width='1.8'/%3E%3Cpath d='M3.5 10h17M8 3v4M16 3v4' stroke='%23000' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+body .dra-ico--tel {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 6.2 2 2 0 0 1 6.5 3Z' stroke='%23000' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 6.2 2 2 0 0 1 6.5 3Z' stroke='%23000' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Anchors rendered inside a text widget keep the design's button and link
+   shapes; the widget wrapper would otherwise break the inline row. */
+body .clinic-card__addr .elementor-widget-container,
+body .clinic-card__actions .elementor-widget-container { display: contents; }
+body .clinic-card__addr a,
+body .clinic-card__actions a { display: inline-flex; align-items: center; gap: var(--sp-2); }
+body .elementor-element.clinic-card__actions { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+body .elementor-element.pcard__photo { overflow: hidden; }
+body .pcard .elementor-widget-image,
+body .pcard .elementor-widget-image .elementor-widget-container { height: 100%; }
+body .elementor-element.cta-band__bg img { width: 100%; height: 100%; object-fit: cover; }
