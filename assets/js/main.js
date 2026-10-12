@@ -268,7 +268,9 @@
 
   /* Stagger cards inside a grid — 60ms cascade, set as data attributes */
   function initStagger() {
-    document.querySelectorAll('[data-stagger]').forEach(function (group) {
+    // .js-stagger is the class form, for grids built as page-builder
+    // containers, which cannot carry a data attribute without the paid tier
+    document.querySelectorAll('[data-stagger], .js-stagger').forEach(function (group) {
       Array.prototype.forEach.call(group.children, function (child, i) {
         if (child.classList.contains('reveal')) {
           child.dataset.revealDelay = String(Math.min(i, 6) * 60);
