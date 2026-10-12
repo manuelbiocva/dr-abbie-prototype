@@ -211,8 +211,7 @@ def card_grid(cards, grid_classes):
             heading(title, 'h3'),
             text('<p>%s</p>' % blurb) if blurb else text(''),
             text('<span class="card__more card__more--arrow">Read more</span>'),
-        ], classes='card cond-card reveal', gap=0, link=href,
-            width={'unit': 'px', 'size': 272}, extra={
+        ], classes='card cond-card reveal', gap=0, link=href, extra={
                 'background_background': 'classic',
                 'background_color': '#FFFFFF',
                 'border_border': 'solid',
@@ -221,8 +220,8 @@ def card_grid(cards, grid_classes):
                 'border_radius': spacing(16, 16, 16, 16),
                 'overflow': 'hidden',
             }))
-    return container(items, classes=grid_classes, direction='row', gap=24,
-                     extra={'flex_wrap': 'wrap'})
+    # no flex settings: .grid-auto/.cond-grid already lay this out as a grid
+    return container(items, classes=grid_classes, direction=None)
 
 
 def split_head(eyebrow, line1, line2, lede):
@@ -231,10 +230,9 @@ def split_head(eyebrow, line1, line2, lede):
             heading(eyebrow, 'div', classes='eyebrow'),
             heading('<span>%s</span><span>%s</span>' % (line1, line2), 'h2',
                     classes='split-head'),
-        ], gap=12, width={'unit': '%', 'size': 55}),
+        ], gap=12),
         text('<p>%s</p>' % lede, classes='lede'),
-    ], classes='section-head section-head--split reveal', direction='row',
-        gap=32, extra={'flex_wrap': 'wrap'})
+    ], classes='section-head section-head--split reveal', direction=None)
 
 
 # --------------------------------------------------------------------------
