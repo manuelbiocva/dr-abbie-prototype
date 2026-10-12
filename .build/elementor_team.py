@@ -309,7 +309,7 @@ def clinic_cards(body):
             ], classes='clinic-card__actions', direction=None),
         ]
         cards.append(container(kids, classes='clinic-card reveal', direction=None))
-    return container(cards, classes='clinic-grid', direction=None)
+    return container(cards, classes='clinic-grid swipe', direction=None)
 
 
 def practitioner_cards(body):
@@ -331,7 +331,8 @@ def practitioner_cards(body):
                 text('<span class="pcard__more card__more--arrow">View profile</span>'),
             ], classes='pcard__plate', direction=None),
         ], classes='pcard reveal', direction=None, link=href))
-    return container(cards, classes='pcard-grid pcard-grid--center', direction=None)
+    return container(cards, classes='pcard-grid pcard-grid--center swipe swipe--two',
+                     direction=None)
 
 
 def cta_band(html, first, phone, phone_text, slug):
@@ -471,7 +472,7 @@ def build(slug):
         grids.append(container([
             container([
                 split_head(eyebrow, l1, l2, lede),
-                card_grid(cards, 'grid-auto cond-grid'),
+                card_grid(cards, 'grid-auto cond-grid swipe'),
             ], classes='container', gap=40, extra=boxed()),
         ], classes='section %s' % shade, gap=0, extra=band(tone)))
 
