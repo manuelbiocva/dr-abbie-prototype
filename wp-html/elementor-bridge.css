@@ -431,3 +431,9 @@ body .elementor-widget.profile-quote.profile-quote { margin: var(--sp-7) 0 0; }
 body .elementor-widget.tick-list.tick-list { margin: 0; }
 
 /* 13 classes */
+
+/* Photos the client can swap in the builder. The image widget's wrapper is
+   taken out of layout so each <img> sits directly inside its classed frame,
+   which is the shape the design's CSS is written against -- .hero__bg img,
+   .about__media img and so on. */
+body .elementor-widget-image.dra-img { display: contents; }

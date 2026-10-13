@@ -435,7 +435,7 @@
     // querySelectorAll, not querySelector: the strip now appears on more than
     // one template, and a page could carry two.
     Array.prototype.forEach.call(
-      document.querySelectorAll('[data-logo-marquee]'), function (track) {
+      document.querySelectorAll('[data-logo-marquee], .js-logo-marquee'), function (track) {
         var host = track.closest('.logo-strip');
         if (!host) return;
         new IntersectionObserver(function (entries) {
@@ -456,7 +456,7 @@
      ------------------------------------------------------------------------ */
   function initParallax() {
     var items = [];
-    Array.prototype.forEach.call(document.querySelectorAll('[data-parallax]'), function (el) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-parallax], .js-parallax'), function (el) {
       var host = el.closest ? el.closest('section') : null;
       items.push({ el: el, host: host || el.parentNode, on: false });
     });

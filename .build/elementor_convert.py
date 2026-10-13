@@ -328,8 +328,30 @@ def convert_node(node):
     if needs_raw(node):
         return widget('html', {'html': to_html(node)}, RAW_MARK)
 
-    # components main.js drives, and frames whose only job is to hold a
-    # picture, are kept as written -- see drives_behaviour / is_media_frame
+    # a frame holding only pictures becomes a container of image widgets, so
+    # the client can swap the photo in the builder. The bridge gives those
+    # widgets display:contents, so each <img> sits directly inside the
+    # classed frame exactly as the design's CSS expects.
+    if is_media_frame(node) and not drives_behaviour(node):
+        kids = []
+        for k in node.kids:
+            if k.is_text() or k.tag != 'img':
+                continue
+            cls = 'dra-img ' + (k.attrs.get('class', '') or '')
+            if 'data-parallax' in k.attrs:
+                cls += ' js-parallax'
+            kids.append(widget('image', {
+                'image': {'url': k.attrs.get('src', ''), 'id': '',
+                          'alt': k.attrs.get('alt', ''), 'source': 'library'},
+                'image_size': 'full',
+            }, cls.strip()))
+        if kids:
+            s = {'content_width': 'full', 'css_classes': classes}
+            if el_id:
+                s['_element_id'] = el_id
+            return container(kids, s)
+
+    # components main.js drives are kept as written -- see drives_behaviour
     if drives_behaviour(node) or is_media_frame(node):
         return widget('html', {'html': to_html(node)}, RAW_MARK)
 
