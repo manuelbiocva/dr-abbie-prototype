@@ -4,9 +4,6 @@
    rules hand the approved design's styling to the elements it renders.
    ====================================================================== */
 
-/* Elementor spaces widgets apart by default; the containers already carry the
-   design's own gaps, so that margin would double them up. */
-body .elementor-widget:not(:last-child) { margin-bottom: 0; }
 
 /* Elementor's containers set their own display, which outranks the design's
    classes. The layout for these pages is set in the builder, so only the
@@ -386,3 +383,27 @@ body .elementor-widget-image.memberships__mark img { height: 100%; width: auto; 
    otherwise an absolutely positioned child, like the CTA photo, has no box
    to resolve against and collapses to nothing. */
 body .elementor-widget.dra-raw { display: contents; }
+
+/* Headings the design styles through a class. As a heading widget the class
+   sits on the wrapper, so the heading inside kept its own size -- the
+   COMMON SYMPTOMS label rendered as a plain h3 rather than a small caps
+   label. Inheriting takes the typography from the classed wrapper. */
+body .elementor-widget-heading.edu-card__h .elementor-heading-title,
+body .elementor-widget-heading.edu-type__h .elementor-heading-title,
+body .elementor-widget-heading.clinic-card__name .elementor-heading-title,
+body .elementor-widget-heading.cond-split__h .elementor-heading-title,
+body .elementor-widget-heading.region__h .elementor-heading-title,
+body .elementor-widget-heading.aside-book__h .elementor-heading-title,
+body .elementor-widget-heading.post-toc__h .elementor-heading-title,
+body .elementor-widget-heading.legal-title .elementor-heading-title,
+body .elementor-widget-heading.post-feature__title .elementor-heading-title {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+/* FAQ answers read smaller than the question they sit under. A deliberate
+   change from the prototype, where the answer was the larger of the two. */
+body .acc-panel__inner p,
+body .acc-panel__inner li { font-size: 15px; line-height: 1.65; }
