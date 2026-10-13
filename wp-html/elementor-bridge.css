@@ -474,3 +474,16 @@ body .map-embed iframe {
   border: 0;
   display: block;
 }
+
+/* Boxes the design insets with a horizontal margin. An Elementor container is
+   width:100%, so the margin pushed the box past its column instead of pulling
+   it in -- the About photo ran edge to edge on a phone rather than sitting
+   inside the gutter. Auto width lets the margin do what it was written to do.
+   Generated from the stylesheet, not hand-listed. */
+body .elementor-element.about__media,
+body .elementor-element.card__media,
+body .elementor-element.card__more,
+body .elementor-element.mega__feature,
+body .elementor-element.mega__group-h,
+body .elementor-element.preferred-source--band,
+body .elementor-element.swipe--always { width: auto; }
