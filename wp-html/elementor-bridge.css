@@ -359,23 +359,18 @@ body .e-con.team-slider__nav,
 body .e-con.team-slider__track,
 body .e-con.topic-links { --flex-direction: row; }
 
-/* Pictures the design sizes by a class on the <img> itself.
-   As an image widget that class lands on the wrapper, leaving the picture at
-   its natural size -- the membership logos came out three times too wide and
-   wrapped onto a second row. Elementor's optimized markup drops the usual
-   .elementor-widget-container, so the picture is matched as a descendant
-   rather than through a fixed chain of children.
+/* Pictures the design sizes by a class on the <img> itself. As an image
+   widget that class lands on the wrapper, and because the wrapper is
+   display:contents it has no box for a percentage height to resolve
+   against -- the membership logos rendered at full size and wrapped onto
+   two rows. The design's own values are applied to the picture instead.
    Generated from the stylesheet, not hand-listed. */
-body .elementor-widget-image.gbadge__mark > *,
-body .elementor-widget-image.gcard__mark > *,
-body .elementor-widget-image.grating__mark > *,
-body .elementor-widget-image.logo-strip__item > *,
-body .elementor-widget-image.memberships__mark > * { height: 100%; }
-body .elementor-widget-image.gbadge__mark img,
-body .elementor-widget-image.gcard__mark img,
-body .elementor-widget-image.grating__mark img,
-body .elementor-widget-image.logo-strip__item img,
-body .elementor-widget-image.memberships__mark img { height: 100%; width: auto; max-width: 100%; display: block; }
+body .elementor-widget-image.gbadge__mark img { height: 19px; width: auto; }
+body .elementor-widget-image.gcard__mark img { height: 18px; width: auto; flex: none; opacity: 0.85; }
+body .elementor-widget-image.grating__mark img { height: 22px; width: auto; flex: none; }
+body .elementor-widget-image.logo-strip__item img { flex: none; height: clamp(42px, 4.4vw, 58px); width: auto; opacity: 0.9; transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
+body .elementor-widget-image.memberships__mark img { height: clamp(54px, 5.8vw, 78px); width: auto; opacity: 0.92; }
+
 
 /* Widgets that only carry markup through (media frames, the components
    main.js drives, headings holding an icon). The wrapper is taken out of
