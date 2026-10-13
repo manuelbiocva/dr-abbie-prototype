@@ -455,3 +455,14 @@ body .acc-trigger::after {
 body .acc-trigger[aria-expanded="true"]::after { transform: rotate(180deg); }
 body .acc-trigger { cursor: pointer; }
 body .acc-trigger .elementor-heading-title { margin: 0; text-align: left; }
+
+/* The hero's art direction, as the design wrote it: a wide crop above 900px,
+   a taller one below. Both are image widgets the client can swap. The
+   builder's own responsive visibility cannot be used here, because the
+   display:contents above would override it. */
+body .elementor-widget-image.dra-hero-wide { display: none; }
+body .elementor-widget-image.dra-hero-tall { display: contents; }
+@media (min-width: 900px) {
+  body .elementor-widget-image.dra-hero-wide { display: contents; }
+  body .elementor-widget-image.dra-hero-tall { display: none; }
+}

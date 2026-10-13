@@ -358,12 +358,11 @@ def convert_node(node):
             alt = img.attrs.get('alt', '')
             out.append(widget('image', {
                 'image': {'url': wide, 'id': '', 'alt': alt, 'source': 'library'},
-                'image_size': 'full', 'hide_tablet': 'hidden-tablet',
-                'hide_mobile': 'hidden-mobile'}, 'dra-img'))
+                'image_size': 'full'}, 'dra-img dra-hero-wide'))
             out.append(widget('image', {
                 'image': {'url': img.attrs.get('src', ''), 'id': '', 'alt': alt,
                           'source': 'library'},
-                'image_size': 'full', 'hide_desktop': 'hidden-desktop'}, 'dra-img'))
+                'image_size': 'full'}, 'dra-img dra-hero-tall'))
             return container(out, {'content_width': 'full'})
 
     if tag in HEADINGS:
