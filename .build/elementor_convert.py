@@ -442,8 +442,11 @@ def convert_node(node):
             s['html_tag'] = 'a'
             s['link'] = {'url': href, 'is_external': '', 'nofollow': ''}
         s.update(band_settings(classes))
-        if 'container' in classes.split():
-            s.update(boxed_settings())
+        # deliberately not Elementor's boxed width: that wraps the children
+        # in an .e-con-inner, and the design's own .container rule already
+        # supplies the max-width, centring and gutter. The extra wrapper
+        # became the hero grid's only child, so align-content:end had
+        # nothing to push down and the copy sat at the top.
         return container(kids, s)
 
     # a link wrapping blocks (a whole card) is a container rendered as an
