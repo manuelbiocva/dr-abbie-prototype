@@ -152,7 +152,7 @@
      ------------------------------------------------------------------------ */
   function initAccordions() {
     document.querySelectorAll('.accordion').forEach(function (acc) {
-      var single = acc.hasAttribute('data-single');
+      var single = acc.hasAttribute('data-single') || acc.classList.contains('js-single');
 
       acc.querySelectorAll('.acc-trigger').forEach(function (trigger) {
         // Built as a heading rather than a <button>, because a page-builder
@@ -300,7 +300,7 @@
   function initHours() {
     var days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
     var today = days[new Date().getDay()];
-    document.querySelectorAll('.hours-table tr[data-day="' + today + '"]').forEach(function (row) {
+    document.querySelectorAll('.hours-table tr[data-day="' + today + '"], .hours-table tr.js-day-' + today).forEach(function (row) {
       row.classList.add('is-today');
       var label = row.querySelector('th');
       if (label && !label.querySelector('.sr-only')) {
@@ -354,13 +354,20 @@
      was switched from a continuous marquee to the same stepped behaviour --
      two copies of this logic was the alternative.
      ------------------------------------------------------------------------ */
+  /* Reads a component parameter from a class, e.g. js-per-view-4. Page
+     builder containers cannot carry data attributes without the paid tier. */
+  function clsNum(el, name) {
+    var m = String(el.className || '').match(new RegExp('js-' + name + '-(\d+)'));
+    return m ? parseInt(m[1], 10) : 0;
+  }
+
   function initSlider(root) {
-    var track = root.querySelector('[data-slider-track]');
+    var track = root.querySelector('[data-slider-track], .js-slider-track');
     if (!track) return;
-    var slides = track.querySelectorAll('[data-slide]');
-    var prev = root.querySelector('[data-slider="prev"]');
-    var next = root.querySelector('[data-slider="next"]');
-    var PER_VIEW = parseInt(root.getAttribute('data-per-view'), 10) || 3;
+    var slides = track.querySelectorAll('[data-slide], .js-slide');
+    var prev = root.querySelector('[data-slider="prev"], .js-slider-prev');
+    var next = root.querySelector('[data-slider="next"], .js-slider-next');
+    var PER_VIEW = parseInt(root.getAttribute('data-per-view'), 10) || clsNum(root, 'per-view') || 3;
     var real = slides.length - PER_VIEW;   // clones sit at the end
     if (real < 1) return;
 
@@ -368,7 +375,7 @@
     var timer = null;
     var visible = true;
     var hovered = false;
-    var delay = parseInt(root.getAttribute('data-interval'), 10) || 3600;
+    var delay = parseInt(root.getAttribute('data-interval'), 10) || clsNum(root, 'interval') || 3600;
 
     function offset() {
       var slide = slides[0];
@@ -435,7 +442,7 @@
 
   function initSliders() {
     Array.prototype.forEach.call(
-      document.querySelectorAll('[data-slider-root]'), initSlider);
+      document.querySelectorAll('[data-slider-root], .js-slider-root'), initSlider);
   }
 
 
@@ -584,7 +591,7 @@
      already scrolled past still counts as the current section.
      ------------------------------------------------------------------------ */
   function initToc() {
-    var toc = document.querySelector('[data-toc]');
+    var toc = document.querySelector('[data-toc], .js-toc');
     if (!toc) return;
     var heads = [];
     Array.prototype.forEach.call(toc.querySelectorAll('a[href^="#"]'), function (a) {

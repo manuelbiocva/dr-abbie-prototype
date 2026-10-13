@@ -196,14 +196,28 @@ def has_block_kids(node):
 
 
 def needs_raw(node):
-    """Shortcodes and forms must keep working, so they stay HTML."""
-    html = to_html(node)
-    if re.search(r'\[[a-zA-Z][a-zA-Z0-9_-]*[^\]]*\]', html):
+    """Only the element that is itself the problem, not its whole section.
+
+    Testing the rendered subtree meant one map embed held an entire section
+    as markup. Recursion reaches the embed itself, so everything around it
+    can still become editable widgets.
+    """
+    if node.tag in KEEP_RAW:
         return True
-    for t in KEEP_RAW:
-        if '<' + t in html:
-            return True
     return False
+
+
+def behaviour_classes(node):
+    """Class hooks standing in for the data attributes main.js reads."""
+    out = []
+    for k, v in node.attrs.items():
+        if k == 'data-slider':
+            out.append('js-slider-' + (v or ''))
+        elif k in ('data-per-view', 'data-interval') and v:
+            out.append('js-' + k[5:] + '-' + v)
+        elif k in BEHAVIOUR_ATTRS or k == 'data-slide':
+            out.append('js-' + k[5:])
+    return ' '.join(out)
 
 
 def drives_behaviour(node):
@@ -298,7 +312,13 @@ def convert_node(node):
     """One source element -> one Elementor element (or None to skip)."""
     if node.is_text():
         txt = node.text.strip()
-        return widget('text-editor', {'editor': txt}) if txt else None
+        if not txt:
+            return None
+        # Elementor's own Shortcode widget: the client sees a labelled
+        # field rather than a block of markup
+        if re.match(r'^\[[a-zA-Z][a-zA-Z0-9_-]*[^\]]*\]$', txt):
+            return widget('shortcode', {'shortcode': txt})
+        return widget('text-editor', {'editor': txt})
 
     tag = node.tag
     classes = node.cls()
@@ -313,6 +333,38 @@ def convert_node(node):
                       'alt': node.attrs.get('alt', ''), 'source': 'library'},
             'image_size': 'full',
         }, classes, el_id)
+
+    if tag == 'iframe' and 'map' in node.attrs.get('src', ''):
+        # the address rides in the title the design already writes for
+        # screen readers: 'Google map: <name>, <address>'
+        title = node.attrs.get('title', '')
+        addr = re.sub(r'^\s*Google map:\s*', '', title).strip()
+        if addr:
+            return widget('google_maps', {
+                'address': addr,
+                'zoom': {'unit': 'px', 'size': 16, 'sizes': []},
+                'height': {'unit': 'px', 'size': 420, 'sizes': []},
+            }, classes, el_id)
+
+    if tag == 'picture':
+        # art direction: a wide crop above 900px, a tall one below. Two
+        # image widgets with the builder's own responsive visibility, so
+        # both crops stay swappable.
+        out = []
+        src = next((k for k in node.kids if not k.is_text() and k.tag == 'source'), None)
+        img = next((k for k in node.kids if not k.is_text() and k.tag == 'img'), None)
+        if src is not None and img is not None:
+            wide = src.attrs.get('srcset', '').split(',')[0].strip().split(' ')[0]
+            alt = img.attrs.get('alt', '')
+            out.append(widget('image', {
+                'image': {'url': wide, 'id': '', 'alt': alt, 'source': 'library'},
+                'image_size': 'full', 'hide_tablet': 'hidden-tablet',
+                'hide_mobile': 'hidden-mobile'}, 'dra-img'))
+            out.append(widget('image', {
+                'image': {'url': img.attrs.get('src', ''), 'id': '', 'alt': alt,
+                          'source': 'library'},
+                'image_size': 'full', 'hide_desktop': 'hidden-desktop'}, 'dra-img'))
+            return container(out, {'content_width': 'full'})
 
     if tag in HEADINGS:
         inner = inner_html(node).strip()
@@ -346,7 +398,14 @@ def convert_node(node):
     if is_media_frame(node) and not drives_behaviour(node):
         kids = []
         for k in node.kids:
-            if k.is_text() or k.tag != 'img':
+            if k.is_text():
+                continue
+            if k.tag != 'img':
+                # a <picture> has its own handling, two image widgets with
+                # the builder's responsive visibility
+                sub = convert_node(k)
+                if sub:
+                    kids.append(sub)
                 continue
             cls = 'dra-img ' + (k.attrs.get('class', '') or '')
             if 'data-parallax' in k.attrs:
@@ -362,17 +421,19 @@ def convert_node(node):
                 s['_element_id'] = el_id
             return container(kids, s)
 
-    # components main.js drives are kept as written -- see drives_behaviour
-    if drives_behaviour(node) or is_media_frame(node):
+    # a frame that also drives a component (the logo marquee is both) must
+    # convert, so its hooks survive as classes
+    if is_media_frame(node) and not drives_behaviour(node):
         return widget('html', {'html': to_html(node)}, RAW_MARK)
 
     if tag in BLOCKISH and has_block_kids(node):
         kids = [c for c in (convert_node(k) for k in node.kids) if c]
         if not kids:
             return None
+        hooks = behaviour_classes(node)
         s = {'content_width': 'full'}
-        if classes:
-            s['css_classes'] = classes
+        if classes or hooks:
+            s['css_classes'] = (classes + ' ' + hooks).strip()
         if el_id:
             s['_element_id'] = el_id
         if 'data-stagger' in attrs_html(node):
@@ -392,6 +453,9 @@ def convert_node(node):
         kids = [c for c in (convert_node(k) for k in node.kids) if c]
         if not kids:
             return None
+        hooks = behaviour_classes(node)
+        if hooks:
+            classes = (classes + ' ' + hooks).strip()
         s = {'content_width': 'full', 'html_tag': 'a',
              'link': {'url': node.attrs.get('href', ''),
                       'is_external': 'on' if node.attrs.get('target') else '',
