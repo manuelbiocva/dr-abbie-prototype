@@ -472,6 +472,7 @@ body .elementor-widget-image.dra-hero-tall { display: contents; }
    them are taken out of layout. */
 body .map-embed > .elementor-widget,
 body .map-embed .elementor-custom-embed { display: contents; }
+body .map-embed .elementor-widget-google_maps.elementor-widget-google_maps iframe,
 body .map-embed iframe {
   width: 100%;
   height: 100%;
