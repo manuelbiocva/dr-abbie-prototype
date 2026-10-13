@@ -496,3 +496,8 @@ body .elementor-element.swipe--always {
 /* Hero copy sits centred in the band rather than pinned to the bottom.
    A deliberate change from the prototype, which anchored it to the end. */
 body .hero--bleed .hero__grid { align-content: center; }
+
+/* Elements the design ships hidden. A container cannot carry the hidden
+   attribute, so the intent travels as a class -- without it the enquiry
+   form's thank-you panel showed before anything had been sent. */
+body .dra-hidden { display: none; }

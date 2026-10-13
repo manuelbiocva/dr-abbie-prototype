@@ -169,12 +169,18 @@ def attrs_html(node):
     return ''.join(out)
 
 
+SVG_VOID = {'path', 'circle', 'rect', 'line', 'polygon', 'polyline',
+            'ellipse', 'use', 'stop'}
+
+
 def to_html(node):
     if node.is_text():
         return node.text
     if node.tag == '#root':
         return ''.join(to_html(k) for k in node.kids)
     if node.tag in VOID:
+        if node.tag in SVG_VOID:
+            return '<%s%s />' % (node.tag, attrs_html(node))
         return '<%s%s>' % (node.tag, attrs_html(node))
     return '<%s%s>%s</%s>' % (node.tag, attrs_html(node),
                               ''.join(to_html(k) for k in node.kids), node.tag)
@@ -435,6 +441,8 @@ def convert_node(node):
             s['css_classes'] = (classes + ' ' + hooks).strip()
         if el_id:
             s['_element_id'] = el_id
+        if 'hidden' in node.attrs:
+            s['css_classes'] = (s.get('css_classes', '') + ' dra-hidden').strip()
         if 'data-stagger' in attrs_html(node):
             s['css_classes'] = (s.get('css_classes', '') + ' js-stagger').strip()
         href = node.attrs.get('href')
