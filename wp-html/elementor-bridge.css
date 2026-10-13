@@ -379,3 +379,10 @@ body .elementor-widget-image.gcard__mark img,
 body .elementor-widget-image.grating__mark img,
 body .elementor-widget-image.logo-strip__item img,
 body .elementor-widget-image.memberships__mark img { height: 100%; width: auto; max-width: 100%; display: block; }
+
+/* Widgets that only carry markup through (media frames, the components
+   main.js drives, headings holding an icon). The wrapper is taken out of
+   layout so the element inside sits exactly where the design puts it --
+   otherwise an absolutely positioned child, like the CTA photo, has no box
+   to resolve against and collapses to nothing. */
+body .elementor-widget.dra-raw { display: contents; }
