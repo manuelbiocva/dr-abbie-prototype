@@ -486,4 +486,9 @@ body .elementor-element.card__more,
 body .elementor-element.mega__feature,
 body .elementor-element.mega__group-h,
 body .elementor-element.preferred-source--band,
-body .elementor-element.swipe--always { width: auto; }
+body .elementor-element.swipe--always {
+  width: auto;
+  /* as a flex item, auto width alone leaves aspect-ratio without a
+     definite width to work from, and the box collapses to nothing */
+  align-self: stretch;
+}
