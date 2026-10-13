@@ -68,6 +68,11 @@ BEHAVIOUR_ATTRS = {
 
 MEDIA_TAGS = {'img', 'picture', 'svg', 'source', 'video'}
 
+# Marks a widget whose job is only to carry markup through. The bridge gives
+# it display:contents so the element inside sits where the design expects,
+# rather than inside a wrapper box that breaks absolute positioning.
+RAW_MARK = 'dra-raw'
+
 SECTION_TONES = {
     'section--white': '#FFFFFF',
     'section--pale': '#DDF0FB',
@@ -300,7 +305,7 @@ def convert_node(node):
     el_id = node.attrs.get('id', '')
 
     if tag in ('script', 'style', 'noscript'):
-        return widget('html', {'html': to_html(node)})
+        return widget('html', {'html': to_html(node)}, RAW_MARK)
 
     if tag == 'img':
         return widget('image', {
@@ -315,18 +320,18 @@ def convert_node(node):
         # form controls. The FAQ question is a <button> with the open/close
         # chevron inside it, so converting it lost the icon.
         if '<svg' in inner or '<button' in inner or '<input' in inner:
-            return widget('html', {'html': to_html(node)})
+            return widget('html', {'html': to_html(node)}, RAW_MARK)
         return widget('heading', {'title': inner, 'header_size': tag},
                       classes, el_id)
 
     # anything carrying a shortcode or a form keeps working as markup
     if needs_raw(node):
-        return widget('html', {'html': to_html(node)})
+        return widget('html', {'html': to_html(node)}, RAW_MARK)
 
     # components main.js drives, and frames whose only job is to hold a
     # picture, are kept as written -- see drives_behaviour / is_media_frame
     if drives_behaviour(node) or is_media_frame(node):
-        return widget('html', {'html': to_html(node)})
+        return widget('html', {'html': to_html(node)}, RAW_MARK)
 
     if tag in BLOCKISH and has_block_kids(node):
         kids = [c for c in (convert_node(k) for k in node.kids) if c]
