@@ -492,3 +492,7 @@ body .elementor-element.swipe--always {
      definite width to work from, and the box collapses to nothing */
   align-self: stretch;
 }
+
+/* Hero copy sits centred in the band rather than pinned to the bottom.
+   A deliberate change from the prototype, which anchored it to the end. */
+body .hero--bleed .hero__grid { align-content: center; }
