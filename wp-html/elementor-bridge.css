@@ -388,6 +388,7 @@ body .elementor-widget.dra-raw { display: contents; }
    sits on the wrapper, so the heading inside kept its own size -- the
    COMMON SYMPTOMS label rendered as a plain h3 rather than a small caps
    label. Inheriting takes the typography from the classed wrapper. */
+body .elementor-widget-heading.acc-trigger .elementor-heading-title,
 body .elementor-widget-heading.edu-card__h .elementor-heading-title,
 body .elementor-widget-heading.edu-type__h .elementor-heading-title,
 body .elementor-widget-heading.clinic-card__name .elementor-heading-title,
@@ -437,3 +438,20 @@ body .elementor-widget.tick-list.tick-list { margin: 0; }
    which is the shape the design's CSS is written against -- .hero__bg img,
    .about__media img and so on. */
 body .elementor-widget-image.dra-img { display: contents; }
+
+/* The accordion chevron. It used to be an inline SVG inside the question's
+   <button>; the question is now a heading the client can edit, so the icon
+   comes from CSS instead. */
+body .acc-trigger::after {
+  content: "";
+  flex: none;
+  width: 20px;
+  height: 20px;
+  background: var(--azure-deep);
+  transition: transform var(--dur) var(--ease);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px 20px no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px 20px no-repeat;
+}
+body .acc-trigger[aria-expanded="true"]::after { transform: rotate(180deg); }
+body .acc-trigger { cursor: pointer; }
+body .acc-trigger .elementor-heading-title { margin: 0; text-align: left; }

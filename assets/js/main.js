@@ -155,6 +155,20 @@
       var single = acc.hasAttribute('data-single');
 
       acc.querySelectorAll('.acc-trigger').forEach(function (trigger) {
+        // Built as a heading rather than a <button>, because a page-builder
+        // heading is what the client can edit. Give it back what a button
+        // provides: a role, a tab stop, and Enter/Space.
+        if (trigger.tagName !== 'BUTTON') {
+          trigger.setAttribute('role', 'button');
+          if (!trigger.hasAttribute('tabindex')) { trigger.setAttribute('tabindex', '0'); }
+          if (!trigger.hasAttribute('aria-expanded')) { trigger.setAttribute('aria-expanded', 'false'); }
+          trigger.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+              e.preventDefault();
+              trigger.click();
+            }
+          });
+        }
         trigger.addEventListener('click', function () {
           var item = trigger.closest('.acc-item');
           var isOpen = item.classList.contains('is-open');

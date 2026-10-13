@@ -319,6 +319,17 @@ def convert_node(node):
         # Elementor sanitises a heading's title, which drops inline SVG and
         # form controls. The FAQ question is a <button> with the open/close
         # chevron inside it, so converting it lost the icon.
+        # an accordion question is a <button> carrying the open/close chevron.
+        # As a heading widget it keeps the button's classes, the chevron comes
+        # from CSS, and main.js gives it back the button's keyboard behaviour.
+        btns = [k for k in node.kids if not k.is_text() and k.tag == 'button']
+        if len(btns) == 1 and len([k for k in node.kids
+                                   if not k.is_text()]) == 1:
+            b = btns[0]
+            label = re.sub(r'<svg.*?</svg>', '', inner_html(b), flags=re.S)
+            label = re.sub(r'<[^>]+>', '', label).strip()
+            return widget('heading', {'title': label, 'header_size': tag},
+                          b.attrs.get('class', ''))
         if '<svg' in inner or '<button' in inner or '<input' in inner:
             return widget('html', {'html': to_html(node)}, RAW_MARK)
         return widget('heading', {'title': inner, 'header_size': tag},
