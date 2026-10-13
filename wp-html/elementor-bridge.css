@@ -407,3 +407,27 @@ body .elementor-widget-heading.post-feature__title .elementor-heading-title {
    change from the prototype, where the answer was the larger of the two. */
 body .acc-panel__inner p,
 body .acc-panel__inner li { font-size: 15px; line-height: 1.65; }
+
+
+/* Margins the design puts on classes that become their own widget.
+   The kit's widget spacing is zero, so Elementor emits margin-block-end: 0
+   at a specificity the design's own rules cannot reach -- which left the
+   COMMON SYMPTOMS heading flush against the list under it. The class is
+   repeated to win on specificity rather than with !important, so these stay
+   changeable in the builder.
+   Generated from the stylesheet, not hand-listed. */
+body .elementor-widget.cond-split__figure.cond-split__figure { margin: 0; }
+body .elementor-widget.cond-split__h.cond-split__h { margin: 0 0 var(--sp-4); }
+body .elementor-widget.cta-band__eyebrow.cta-band__eyebrow { margin: 0 0 var(--sp-4); }
+body .elementor-widget.edu-figure.edu-figure { margin: 0; }
+body .elementor-widget.founder__photo.founder__photo { margin: 0; }
+body .elementor-widget.gcard__text.gcard__text { margin: 0; }
+body .elementor-widget.hero__intro.hero__intro { margin-top: var(--sp-5); }
+body .elementor-widget.hero__trust.hero__trust { margin-bottom: var(--sp-5); }
+body .elementor-widget.mt-4.mt-4 { margin-top: var(--sp-4); }
+body .elementor-widget.mt-6.mt-6 { margin-top: var(--sp-6); }
+body .elementor-widget.profile-hero__photo.profile-hero__photo { margin: 0; }
+body .elementor-widget.profile-quote.profile-quote { margin: var(--sp-7) 0 0; }
+body .elementor-widget.tick-list.tick-list { margin: 0; }
+
+/* 13 classes */
