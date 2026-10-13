@@ -53,7 +53,20 @@ BLOCKISH = {'div', 'section', 'article', 'aside', 'figure', 'header', 'footer',
 
 # kept whole: re-creating these as widgets would lose behaviour
 KEEP_RAW = {'script', 'style', 'noscript', 'iframe', 'form', 'table', 'select',
-            'textarea', 'video', 'audio'}
+            'textarea', 'video', 'audio', 'picture'}
+
+# Attributes main.js reads to drive a component. A container cannot carry a
+# data attribute without Elementor Pro, so an element holding one of these is
+# kept as markup -- otherwise the slider, the parallax and the logo marquee
+# simply never start. data-stagger is the exception: it is handled by a class.
+BEHAVIOUR_ATTRS = {
+    'data-slider-root', 'data-slider-track', 'data-slider', 'data-slide',
+    'data-carousel', 'data-logo-marquee', 'data-parallax', 'data-toc',
+    'data-enquiry-form', 'data-enquiry-done', 'data-day', 'data-interval',
+    'data-per-view', 'data-single', 'data-dir',
+}
+
+MEDIA_TAGS = {'img', 'picture', 'svg', 'source', 'video'}
 
 SECTION_TONES = {
     'section--white': '#FFFFFF',
@@ -188,6 +201,40 @@ def needs_raw(node):
     return False
 
 
+def drives_behaviour(node):
+    """Does this element carry a hook main.js needs to start a component?"""
+    for k in node.attrs:
+        if k in BEHAVIOUR_ATTRS:
+            return True
+    return False
+
+
+def is_media_frame(node):
+    """A wrapper whose whole job is to hold a picture.
+
+    The design sizes and crops these through CSS aimed at the exact shape of
+    the markup -- `.about__media img`, `.bento__media img`. Rebuilding the
+    picture as an image widget puts a wrapper in the middle of that, which is
+    what left the About photo short of full width and the NBA tile empty. The
+    frame is kept exactly as written.
+    """
+    if node.is_text() or node.tag not in BLOCKISH:
+        return False
+    if not node.cls():
+        return False
+    seen_media = False
+    for k in node.kids:
+        if k.is_text():
+            if k.text.strip():
+                return False
+            continue
+        if k.tag in MEDIA_TAGS:
+            seen_media = True
+            continue
+        return False
+    return seen_media
+
+
 # --------------------------------------------------------------------------
 # Elementor pieces
 # --------------------------------------------------------------------------
@@ -268,6 +315,11 @@ def convert_node(node):
 
     # anything carrying a shortcode or a form keeps working as markup
     if needs_raw(node):
+        return widget('html', {'html': to_html(node)}, classes, el_id)
+
+    # components main.js drives, and frames whose only job is to hold a
+    # picture, are kept as written -- see drives_behaviour / is_media_frame
+    if drives_behaviour(node) or is_media_frame(node):
         return widget('html', {'html': to_html(node)}, classes, el_id)
 
     if tag in BLOCKISH and has_block_kids(node):
