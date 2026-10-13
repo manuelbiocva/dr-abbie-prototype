@@ -315,18 +315,18 @@ def convert_node(node):
         # form controls. The FAQ question is a <button> with the open/close
         # chevron inside it, so converting it lost the icon.
         if '<svg' in inner or '<button' in inner or '<input' in inner:
-            return widget('html', {'html': to_html(node)}, classes, el_id)
+            return widget('html', {'html': to_html(node)})
         return widget('heading', {'title': inner, 'header_size': tag},
                       classes, el_id)
 
     # anything carrying a shortcode or a form keeps working as markup
     if needs_raw(node):
-        return widget('html', {'html': to_html(node)}, classes, el_id)
+        return widget('html', {'html': to_html(node)})
 
     # components main.js drives, and frames whose only job is to hold a
     # picture, are kept as written -- see drives_behaviour / is_media_frame
     if drives_behaviour(node) or is_media_frame(node):
-        return widget('html', {'html': to_html(node)}, classes, el_id)
+        return widget('html', {'html': to_html(node)})
 
     if tag in BLOCKISH and has_block_kids(node):
         kids = [c for c in (convert_node(k) for k in node.kids) if c]
