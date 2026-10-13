@@ -501,3 +501,19 @@ body .hero--bleed .hero__grid { align-content: center; }
    attribute, so the intent travels as a class -- without it the enquiry
    form's thank-you panel showed before anything had been sent. */
 body .dra-hidden { display: none; }
+
+/* Opening hours. The design draws only a hairline under each row; the theme's
+   own table styling was adding a box around the table and rules between the
+   columns, which is the grid that appeared on the Contact page. */
+body .hours-table {
+  border: 0;
+  background: transparent;
+}
+body .hours-table th,
+body .hours-table td {
+  border: 0;
+  border-bottom: 1px solid var(--hairline-soft);
+  background: transparent;
+}
+body .hours-table tr:last-child th,
+body .hours-table tr:last-child td { border-bottom: 0; }
