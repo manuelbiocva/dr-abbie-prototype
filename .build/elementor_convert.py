@@ -310,8 +310,14 @@ def convert_node(node):
         }, classes, el_id)
 
     if tag in HEADINGS:
-        return widget('heading', {'title': inner_html(node).strip(),
-                                  'header_size': tag}, classes, el_id)
+        inner = inner_html(node).strip()
+        # Elementor sanitises a heading's title, which drops inline SVG and
+        # form controls. The FAQ question is a <button> with the open/close
+        # chevron inside it, so converting it lost the icon.
+        if '<svg' in inner or '<button' in inner or '<input' in inner:
+            return widget('html', {'html': to_html(node)}, classes, el_id)
+        return widget('heading', {'title': inner, 'header_size': tag},
+                      classes, el_id)
 
     # anything carrying a shortcode or a form keeps working as markup
     if needs_raw(node):
