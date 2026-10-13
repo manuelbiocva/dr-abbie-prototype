@@ -475,22 +475,19 @@ body .map-embed iframe {
   display: block;
 }
 
-/* Boxes the design insets with a horizontal margin. An Elementor container is
-   width:100%, so the margin pushed the box past its column instead of pulling
-   it in -- the About photo ran edge to edge on a phone rather than sitting
-   inside the gutter. Auto width lets the margin do what it was written to do.
-   Generated from the stylesheet, not hand-listed. */
-body .elementor-element.about__media,
-body .elementor-element.card__media,
-body .elementor-element.card__more,
-body .elementor-element.mega__feature,
-body .elementor-element.mega__group-h,
-body .elementor-element.preferred-source--band,
-body .elementor-element.swipe--always {
-  width: auto;
-  /* as a flex item, auto width alone leaves aspect-ratio without a
-     definite width to work from, and the box collapses to nothing */
-  align-self: stretch;
+/* Boxes the design insets with a horizontal margin. An Elementor container
+   is width:100%, so the margin pushed the box past its column instead of
+   pulling it in -- the About photo ran edge to edge on a phone.
+   Scoped to the narrow layout on purpose: above 900px the design gives this
+   photo an explicit width:50vw, and overriding that stretched it across the
+   copy. */
+@media (max-width: 899px) {
+  body .elementor-element.about__media {
+    width: auto;
+    /* as a flex item, auto width alone leaves aspect-ratio without a
+       definite width to work from, and the box collapses to nothing */
+    align-self: stretch;
+  }
 }
 
 /* Hero copy sits centred in the band rather than pinned to the bottom.
