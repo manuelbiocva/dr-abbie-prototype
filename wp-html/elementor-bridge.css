@@ -191,7 +191,7 @@ body .elementor-element.clinic-card__actions { display: flex; flex-wrap: wrap; g
 body .elementor-element.pcard__photo { overflow: hidden; }
 body .pcard .elementor-widget-image,
 body .pcard .elementor-widget-image .elementor-widget-container { height: 100%; }
-body .elementor-element.cta-band__bg img { width: 100%; height: 100%; object-fit: cover; }
+
 
 /* The design's card rows size their children with grid tracks or flex-basis.
    Elementor gives every child container width:100%, which collapses those
