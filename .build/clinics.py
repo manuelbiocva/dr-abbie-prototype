@@ -11,7 +11,7 @@ IS published: Kirrawee is the head office where orthotics are made on site.
 GENERIC = {
     'ORTHO_SUFFIX':    '',
     'ORTHO_BLURB':     'Custom orthotics are prescribed here and manufactured at our Kirrawee head office.',
-    'TREATMENTS_NOTE': 'All ten treatments are available at %s.',
+    'TREATMENTS_NOTE': 'Our full range of treatments is available at %s.',
     'NBA_BLURB':       'The assessment that sets the treatment plan.',
     'FACT4':           'Full biomechanical assessment',
     'FAQ2_Q':          'Do you make custom orthotics at %s?',
@@ -36,12 +36,12 @@ GENERIC = {
 # /clinics/wallsend/ (and the old standalone sites) 301 to the right page
 # instead of the clinic list.
 CLINICS = [
-    ('Kirrawee', 'kirrawee', '27 Monro Ave', 'NSW 2232', {
+    ('Kirrawee', 'kirrawee', '27 Monro Ave', 'Kirrawee NSW 2232', {
         'INTRO': 'Our head office on Monro Ave, where custom orthotics are made on site.',
         'FACT4': 'Orthotics made on site',
         'ORTHO_SUFFIX': ' &mdash; made on site',
         'ORTHO_BLURB': 'Kirrawee is our head office, where orthotics are manufactured on site.',
-        'TREATMENTS_NOTE': 'All ten treatments are available at Kirrawee, including orthotics manufactured on site.',
+        'TREATMENTS_NOTE': 'Our full range of treatments is available at Kirrawee, including orthotics manufactured on site.',
         'NBA_BLURB': 'The assessment that sets the treatment plan. Orthotics are made on site here.',
         'FAQ2_Q': 'Are orthotics made on site at Kirrawee?',
         'FAQ2_A': 'Kirrawee is our head office and orthotics are manufactured on site. '
@@ -50,19 +50,19 @@ CLINICS = [
         'REVIEW1': 'Orthotics made on site and fitted the same week. First time in years I have '
                    'walked the dog without heel pain afterwards.',
     }),
-    ('Mortlake', 'mortlake', '15 Tennyson Rd, cnr Herbert St', 'NSW 2137', {}),
-    ('Sydney City', 'sydney-city', 'Suite 35, Level 7, 88 Pitt St', 'NSW 2000', {}),
+    ('Mortlake', 'mortlake', '15 Tennyson Rd, cnr Herbert St', 'Mortlake NSW 2137', {}),
+    ('Sydney City', 'sydney-city', 'Suite 35, Level 7, 88 Pitt St', 'Sydney NSW 2000', {}),
     # CLIENT FEEDBACK V3, 7 Oct 2026: "all clinics treat adults and children", so
     # Hornsby is no longer presented as children-only.
-    ('Hornsby', 'hornsby', 'Unit 15/14 Edgeworth David Ave', 'NSW 2077', {
+    ('Hornsby', 'hornsby', 'Unit 15/14 Edgeworth David Ave', 'Hornsby NSW 2077', {
         'INTRO': 'Biomechanical assessment, custom orthotics and sports podiatry on '
                  'Edgeworth David Ave.',
     }),
-    ('Glenhaven', 'glenhaven', 'Shop 9/78 Glenhaven Rd', 'NSW 2156', {}),
-    ('Bowral', 'bowral', 'Shop 3, 2–4 Boolwey St', 'NSW 2576', {}),
-    ('Morisset', 'morisset', 'Shop 4/59 Dora St', 'NSW 2264', {}),
-    ('Forster/Tuncurry', 'forster-tuncurry', '111 MacIntosh St', 'NSW 2428', {}),
-    ('Narrabri', 'narrabri', 'Suite 4/159 Maitland St', 'NSW 2390', {}),
+    ('Glenhaven', 'glenhaven', 'Shop 9/78 Glenhaven Rd', 'Glenhaven NSW 2156', {}),
+    ('Bowral', 'bowral', 'Shop 3, 2–4 Boolwey St', 'Bowral NSW 2576', {}),
+    ('Morisset', 'morisset', 'Shop 4/59 Dora St', 'Morisset NSW 2264', {}),
+    ('Forster/Tuncurry', 'forster-tuncurry', '111 MacIntosh St', 'Forster NSW 2428', {}),
+    ('Narrabri', 'narrabri', 'Suite 4/159 Maitland St', 'Narrabri NSW 2390', {}),
 ]
 
 # --------------------------------------------------------------------------
@@ -86,6 +86,9 @@ BOOKING = {
     'mortlake':    NOOKAL + 'YPPNN',
     'bowral':      NOOKAL + 'BVMNW',
     'morisset':    NOOKAL + 'MSHVU',
+    # CLIENT, 14 Oct 2026. Forster books through Cliniko, not Nookal, and the
+    # link is the practice's whole diary rather than one location.
+    'forster-tuncurry': 'https://ftspodiatry.au1.cliniko.com/bookings',
 }
 
 # Who takes bookings where, read off the "Select Practitioner" step of each
@@ -97,10 +100,10 @@ ROSTER = {
     'sydney-city': ['dr-abbie-najjarine', 'dr-yousef-najjarine'],
     'hornsby':     ['dr-abbie-najjarine', 'dr-abdalla-attar-hamoui'],
     'glenhaven':   ['dr-abbie-najjarine', 'dr-mohemed-al-heyoury'],
-    'mortlake':    ['dr-abbie-najjarine', 'dr-yousef-najjarine'],
+    'mortlake':    ['dr-yousef-najjarine'],
     'bowral':      ['arega-sarkisian', 'dr-elissa-all',
                     'dr-mohemed-al-heyoury', 'dr-yousef-najjarine'],
-    'morisset':    ['dr-abdalla-attar-hamoui', 'dr-elissa-all', 'dr-mohemed-al-heyoury'],
+    'morisset':    ['dr-elissa-all', 'dr-mohemed-al-heyoury'],
 }
 
 # Geography only, for grouping the booking page so a visitor from the Hunter

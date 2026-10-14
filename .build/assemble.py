@@ -10,7 +10,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from clinics import CLINICS, fields, BOOKING, ROSTER, REGIONS, TAGS, GOOGLE, phone as clinic_phone
+from clinics import CLINICS, fields, BOOKING, ROSTER, REGIONS, TAGS, GOOGLE, phone as clinic_phone
+BOOKING_NO_ROSTER = None   # book online, but no practitioner list to show
 from services import SERVICES, TEMP_TEXT
 import people
 import conditions
@@ -912,7 +913,10 @@ if __name__ == '__main__':
         }[kind]
         f['PHONE_TEL'], f['PHONE_SHOWN'] = clinic_phone(slug)
         url = BOOKING.get(slug)
-        if url:
+        # A clinic can take online bookings without us knowing who works
+        # there: Forster's diary arrived before its roster. The page then
+        # books online but claims no practitioner, rather than guessing.
+        if url and ROSTER.get(slug):
             here = [people.BY_SLUG[s] for s in ROSTER[slug]]
             f['PRACTITIONER_SLIDER'] = people.hero_slider('Practitioners at %s' % name, here)
             f['PRACTITIONER_GRID'] = people.card_grid(here)
@@ -957,7 +961,18 @@ if __name__ == '__main__':
             f['TREATMENT_LEDE'] = ('Call to book any of these treatments at %s.' % name)
             f['BOOKING_STEPS'] = ''
             f['RESERVE_ACTION'] = ''
-            booking = ('phone', None, slug)
+            # Forster takes online bookings but its roster has not been
+            # supplied, so the page books online while showing the whole
+            # team rather than claiming who consults there.
+            if url:
+                f['ROSTER_LEDE'] = ('Book online at %s, or call '
+                                    '<a href="tel:%s" data-location="%s">%s</a> and we '
+                                    'will book you in.' % (name, clinic_phone(slug)[0], slug,
+                                                           clinic_phone(slug)[1]))
+                f['TREATMENT_LEDE'] = ('Our full range of treatments is available at %s.' % name)
+                booking = ('online', url, slug)
+            else:
+                booking = ('phone', None, slug)
         plain = street.replace('&mdash;', '-').replace('–', '-')
         build('location', 'podiatrist-%s.html' % slug,
               'Podiatrist in %s | Dr. Abbie Clinics' % name,
@@ -1203,10 +1218,13 @@ if __name__ == '__main__':
         url = BOOKING.get(slug)
         extra = ''
         if show_roster:
-            if url:
+            if url and ROSTER.get(slug):
                 extra = ('          <p class="clinic-card__who"><span class="clinic-card__label">'
                          'Book with</span> %s</p>'
                          % join_names([roster_name(s_) for s_ in ROSTER[slug]]))
+            elif url:
+                # books online, roster not supplied yet
+                extra = ''
             else:
                 extra = ('          <p class="clinic-card__who">Online booking is not available '
                          'for this clinic yet. Call and we will book you in.</p>')

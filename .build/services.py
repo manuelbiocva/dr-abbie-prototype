@@ -55,8 +55,8 @@ SERVICES = [
              'directly. If you are on a Medicare care plan your GP will refer you, and we can '
              'bill that.'),
             ('Will I need orthotics?',
-             'Not necessarily. Orthotics are one of ten treatments and are only prescribed if the '
-             'assessment shows they are the right answer.'),
+             'Not necessarily. Orthotics are one of the treatments we offer, and are only prescribed '
+             'if the assessment shows they are the right answer.'),
             ('What should I bring?',
              'TEMP:Bring the shoes you wear most, and any previous orthotics, scans or reports. '
              'Wear or bring shorts if your knees or hips are involved.'),
@@ -68,10 +68,8 @@ SERVICES = [
         'HERO_IMG': 'hero-orthotics',
         'CARD_IMG': 'tx-orthotics',
         'ALT': 'A custom orthotic device held against a patient’s foot',
-        'INTRO': 'Prescribed devices that change how your foot meets the ground. Manufactured on '
-                 'site at our Kirrawee head office.',
+        'INTRO': 'Prescribed devices that change how your foot meets the ground.',
         'FACT1': 'Made on site', 'FACT2': 'Prescribed, not off the shelf',
-        'FACT3': 'TEMP_TURNAROUND',
         'WHAT': 'A custom orthotic is made to your prescription, not picked off a shelf. It is '
                 'designed to change the way load passes through the foot and up the leg, based on '
                 'what the biomechanical assessment found.',
@@ -92,9 +90,6 @@ SERVICES = [
             ('Knee Pain', 'Where the cause sits below the knee'),
         ],
         'FAQ': [
-            ('How long do custom orthotics take to make?',
-             'TEMP:Usually 7 to 10 days. They are manufactured at our Kirrawee head office rather '
-             'than sent to an external lab.'),
             ('Will they fit in my normal shoes?',
              'TEMP:That is part of the prescription. Bring the shoes you wear most to your '
              'appointment so the device is made for them.'),

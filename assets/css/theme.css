@@ -3401,3 +3401,11 @@ a.loc-card:hover .loc-card__more svg { transform: translateX(4px); }
   color: var(--deep-blue);
   text-decoration: none;
 }
+
+/* Standing notice in the footer, added at the client's request 14 Oct 2026:
+   practitioners are registered podiatrists, not medical practitioners. */
+body .footer-note{
+  margin-bottom: var(--sp-2);
+  font-size: var(--fs-small);
+  color: rgba(255, 255, 255, 0.72);
+}
