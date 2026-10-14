@@ -27,7 +27,7 @@ CONDITION_BLURBS = _SRC['conds']
 
 SERVICE_BLURBS = {
     'biomechanics':       'Full lower limb assessment, from the feet up',
-    'custom-orthotics':   'Prescribed devices, made on site at Kirrawee',
+    'custom-orthotics':   'Prescribed devices, not off the shelf',
     'childrens-podiatry': 'Pigeon toe, flat feet and growing pains',
     'shockwave-therapy':  'For persistent heel and Achilles pain',
     'dry-needling':       'Fine needles to release trigger points',
