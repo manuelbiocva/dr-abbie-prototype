@@ -78,8 +78,7 @@ SERVICES = [
                'the foot.',
         'STEP1': 'The assessment establishes what your foot is doing under load and why it is '
                  'causing pain where it does.',
-        'STEP2': 'We take the prescription and the device is manufactured at our Kirrawee head '
-                 'office rather than sent away.',
+        'STEP2': 'The device is made to that prescription, not picked off a shelf.',
         'STEP3': 'You come back for fitting and adjustment. Orthotics are normally paired with '
                  'footwear advice so the device is not working against your shoes.',
         'CONDITIONS': [

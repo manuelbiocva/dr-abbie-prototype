@@ -1034,7 +1034,7 @@ if __name__ == '__main__':
               '%s | Dr. Abbie Clinics' % sv['NAME'],
               sv['INTRO'][:155],
               'https://dr-abbie.com/services/%s/' % sv['SLUG'],
-              'Book a Session', subdir='services', tokens=f, blocks={'BOOK': bool(_book), 'BOOKPOINTS': bool(_book and _book.get('TYPES'))})
+              'Book a Session', subdir='services', tokens=f, blocks={'BOOK': bool(_book), 'BOOKPOINTS': bool(_book and _book.get('TYPES')), 'FACT3': bool(f.get('FACT3'))})
 
     # One template, every condition, written into /conditions/.
     for cd in COND_PAGES:
