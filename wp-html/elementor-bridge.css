@@ -455,6 +455,9 @@ body .acc-trigger .elementor-heading-title { margin: 0; text-align: left; }
    a taller one below. Both are image widgets the client can swap. The
    builder's own responsive visibility cannot be used here, because the
    display:contents above would override it. */
+/* the two crops sit in a container of their own, which the hero stretches
+   so the insets below have a box to resolve against */
+body .hero__bg > .e-con,
 body .elementor-widget-image.dra-hero-wide,
 body .elementor-widget-image.dra-hero-tall {
   position: absolute;
