@@ -132,7 +132,7 @@ REVIEWS = {
         ('Raj P.', '2 months ago', 'Showed me a simple version to do myself between '
          'appointments.'),
     ],
-    'neural-therapy': [
+    'injection-therapy': [
         ('Diane L.', '3 weeks ago', 'Talked me through exactly what was involved before anything '
          'went ahead. No surprises.'),
         ('Stuart G.', '1 month ago', 'Persistent problem that had not responded to anything else. '

@@ -245,7 +245,7 @@ CONDITIONS = [
                   'what we found.',
      'DIAGNOSE3': 'Treatment is aimed at redistributing that pressure rather than only settling '
                   'the symptom.',
-     'TREATMENTS': ['custom-orthotics', 'foot-mobilisation', 'neural-therapy', 'general-foot-care'],
+     'TREATMENTS': ['custom-orthotics', 'foot-mobilisation', 'injection-therapy', 'general-foot-care'],
      'FAQ': [('What is a Morton’s neuroma?',
               'A thickening of tissue around a nerve between the metatarsals, which is why the '
               'pain often burns or runs into the toes rather than staying in one spot.'),
@@ -709,7 +709,7 @@ CONDITIONS = [
         'DIAGNOSE3': 'Treatment is aimed at that cause, because a bunion that is not addressed '
                      'mechanically tends to keep progressing through its stages.',
         'TREATMENTS': ['biomechanics', 'custom-orthotics', 'foot-mobilisation', 'dry-needling',
-                       'neural-therapy'],
+                       'injection-therapy'],
         'FAQ': [
             ('Will a night splint straighten it?',
              'A night splint may ease the pain, but it will not correct the bunion. As soon as '

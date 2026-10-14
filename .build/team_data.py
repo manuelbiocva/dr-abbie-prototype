@@ -66,7 +66,7 @@ TEAM = [
             'Dry needling',
             'Strapping',
         ],
-        'SERVICES': ['biomechanics', 'custom-orthotics', 'foot-mobilisation', 'neural-therapy'],
+        'SERVICES': ['biomechanics', 'custom-orthotics', 'foot-mobilisation', 'injection-therapy'],
         'BIO': [
             'Dr Abbie Najjarine (Podiatrist) is a podiatric biomechanical practitioner and '
             'lectures in his Najjarine Biomechanical Assessment (NBA) technique, the '

@@ -439,7 +439,7 @@ SERVICES = {
              'these first.</p>'),
         ],
     },
-    'neural-therapy': {
+    'injection-therapy': {
         'PAGES': 'Chapter 12 (pp. 241&ndash;242)',
         'INTRO': 'Our injection therapies include prolotherapy, short for proliferation therapy: '
                  'an injection that encourages the body to grow new tissue where it has become '
@@ -585,7 +585,7 @@ EDU_IMAGES = {
     'custom-orthotics': ('edu-orthotics', 'Different styles of orthotic for different shoes'),
     'dry-needling': ('edu-needling', 'Fine needles placed in a muscle'),
     'foot-mobilisation': ('edu-mobilisation', 'A practitioner mobilising the joints of a foot'),
-    'neural-therapy': ('edu-neural', 'Dr Abbie Najjarine assessing a patient before treatment'),
+    'injection-therapy': ('edu-neural', 'Dr Abbie Najjarine assessing a patient before treatment'),
     'shockwave-therapy': ('edu-shockwave', 'A shockwave applicator held against the back of the heel'),
     'foot-strapping': ('edu-strapping', 'Strapping tape applied around the foot and ankle'),
     'sports-podiatry': ('edu-sports', 'A football player running with the ball'),

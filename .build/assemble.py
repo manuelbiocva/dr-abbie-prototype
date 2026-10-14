@@ -1030,8 +1030,12 @@ if __name__ == '__main__':
 
         _book = book_content.SERVICES.get(sv['SLUG'])
         f.update(book_tokens(_book, sv['SLUG']))
+        # a service may carry a longer formal title for its heading and
+        # <title> while the short NAME is what reads well in lists and
+        # mid-sentence
+        f['NAME_FULL'] = sv.get('NAME_FULL', sv['NAME'])
         build('service', '%s.html' % sv['SLUG'],
-              '%s | Dr. Abbie Clinics' % sv['NAME'],
+              '%s | Dr. Abbie Clinics' % f['NAME_FULL'],
               sv['INTRO'][:155],
               'https://dr-abbie.com/services/%s/' % sv['SLUG'],
               'Book a Session', subdir='services', tokens=f, blocks={'BOOK': bool(_book), 'BOOKPOINTS': bool(_book and _book.get('TYPES')), 'FACT3': bool(f.get('FACT3'))})

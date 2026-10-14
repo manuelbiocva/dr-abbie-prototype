@@ -34,7 +34,7 @@ SERVICE_BLURBS = {
     'foot-mobilisation':  'Hands-on work to restore joint movement',
     'sports-podiatry':    'Running injuries and return to sport',
     'general-foot-care':  'Ingrown toenails, corns and calluses',
-    'neural-therapy':     'Injectable therapy to stimulate repair',
+    'injection-therapy':     'Prolotherapy and neural therapy',
     'foot-strapping':     'Support that offloads tissue while it heals',
 }
 

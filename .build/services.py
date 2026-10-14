@@ -236,7 +236,7 @@ SERVICES = [
              'Tell your podiatrist during the session if it is uncomfortable.'),
             ('Is anything injected?',
              'No. Nothing is injected in dry needling — the needle itself is the treatment. '
-             'Injectable treatment is a separate service, Neural Therapy.'),
+             'Injectable treatment is a separate service, Injection Therapy.'),
             ('How will I feel afterwards?',
              'TEMP:Some people feel mild soreness for a day, similar to after exercise. Your '
              'podiatrist will tell you what to expect for your case.'),
@@ -422,8 +422,9 @@ SERVICES = [
         ],
     },
     {
-        'NAME': 'Neural Therapy',
-        'SLUG': 'neural-therapy',
+        'NAME': 'Injection Therapy',
+        'NAME_FULL': 'Injection Therapy &ndash; Prolotherapy &amp; Neural Therapy',
+        'SLUG': 'injection-therapy',
         'HERO_IMG': 'hero-neural',
         'CARD_IMG': 'tx-neural',
         'ALT': 'A podiatrist supporting a patient’s foot during treatment',
