@@ -455,10 +455,15 @@ body .acc-trigger .elementor-heading-title { margin: 0; text-align: left; }
    a taller one below. Both are image widgets the client can swap. The
    builder's own responsive visibility cannot be used here, because the
    display:contents above would override it. */
+body .elementor-widget-image.dra-hero-wide,
+body .elementor-widget-image.dra-hero-tall {
+  position: absolute;
+  inset: 0;
+}
 body .elementor-widget-image.dra-hero-wide { display: none; }
-body .elementor-widget-image.dra-hero-tall { display: contents; }
+body .elementor-widget-image.dra-hero-tall { display: block; }
 @media (min-width: 900px) {
-  body .elementor-widget-image.dra-hero-wide { display: contents; }
+  body .elementor-widget-image.dra-hero-wide { display: block; }
   body .elementor-widget-image.dra-hero-tall { display: none; }
 }
 
@@ -520,11 +525,6 @@ body .hours-table tr:last-child td { border-bottom: 0; }
    down the hero with the dark ground showing beneath it. */
 body .hero__bg .elementor-widget-image img,
 body .hero__bg img {
-  /* positioned rather than height:100%. The widget wrapper is display:contents,
-     so a percentage height has no parent box to resolve against and the photo
-     fell back to its natural ratio -- two thirds of the way down the hero. */
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
